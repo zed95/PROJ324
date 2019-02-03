@@ -20,15 +20,15 @@ float readSerialData()
                                                  //Declare and initalise value that will store the data from the serial port.
   String x;
   
-    //while(myPort.available() == 0) {}                             //Wait until something is available
-    if(myPort.available() > 0) {
-      x = myPort.readStringUntil('\n');
-      println(x);
-      if(x == null) {                            //Had a problem with Null sometimes being received which messed around with my values so when i receive it now, i make the value equal to current value of val.
+    //while(myPort.available() == 0) {}         //Wait until something is available
+    if(myPort.available() > 0) {                //If something is available then continue
+      x = myPort.readStringUntil('\n');         //Save the string number into variable x 
+      println(x);                               //Print the strings in serial monitor
+      if(x == null) {                           //Make the current value equal to the previous value when null is received.
        return val; 
       }
-      x = x.trim();                      //
-      val = Float.parseFloat(x);         // read data from the serial port and convert it to a float and then store the result in val 
+      //x = x.trim();                           //Remove the whitespace characters
+      val = Float.parseFloat(x);                // read data from the serial port and convert it to a float and then store the result in val 
     }
   return val;
 }
@@ -45,10 +45,10 @@ void DisplayAngle(float val, int xpos, int ypos, String axis )
   //float n = (2*PI/360)*val*100;
   
    pushMatrix();
-     translate(xpos, ypos, 0);
-     textSize(14);
-     fill(0,0,0);
-     text(axis + "-axis = " + val , 0, 0); 
+     translate(xpos, ypos, 0);                //Translate the text to the specified position in the window
+     textSize(14);                            //Set text size
+     fill(255,0,0);                           //Set colour (RGB)
+     text(axis + "-axis = " + val , 0, 0);    //Text to be displayed
    popMatrix();
 }
 //------------------------------------Display-The-Angle-Data-Received------------------------------------------
@@ -71,23 +71,27 @@ void setup()
   bg = loadImage("Background1.jpg");                               //save the background image in bg
 }
 
+
+
+
+
 void draw()
 {
     background(bg);                           //Display background
-    xVal = readSerialData();                  //get x value
-   // yVal = readSerialData();                  //get y value
-   // zVal = readSerialData();                  //get z value
+    xVal = readSerialData();                  //get x value from serial port
+   // yVal = readSerialData();                  //get y value from serial port
+   // zVal = readSerialData();                  //get z value from serial port
    // println(xVal);
     
-    DisplayAngle(xVal, 300, 425, "x");        //Display angle x
-    DisplayAngle(yVal, 300, 455, "y");        //Display angle y
-    DisplayAngle(zVal, 300, 485, "z");        //Display angle z
+    DisplayAngle(xVal, 300, 425, "x");        //Display angle x in the simulation
+    DisplayAngle(yVal, 300, 455, "y");        //Display angle y in the simulation
+    DisplayAngle(zVal, 300, 485, "z");        //Display angle z in the simulation
     
     pushMatrix();                              //Create a new coordinate frame to maniuplate for Phidget2
       translate(width/2, height/2, 0);         //Translate the created coordinate frame which is occupied by the Phidget2 to 200x, 250y
       rotateX((2*PI/360)*xVal);                //Rotate object to the specified angle in the x-axis created coordinate frame
       rotateY((2*PI/360)*yVal);                //Rotate object to the specified angle in the y-axis in the created coordinate frame
-      rotateZ((2*PI/360)*zVal); 
-      Phidget1.display();                      //Now that commands to manipulate the Phidget2 have been specified, display the object in the created coordinate frame
+      rotateZ((2*PI/360)*zVal);                //Rotate object to the specified angle in the z-axis in the created coordinate frame
+      Phidget1.display();                      //Now that commands to manipulate the object have been specified, display the object in the created coordinate frame
     popMatrix();                               //Return to the original coordinate frame
 }
