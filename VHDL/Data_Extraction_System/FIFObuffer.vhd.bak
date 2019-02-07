@@ -1,0 +1,49 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+
+entity FIFObuffer is
+	  GENERIC(
+		Array_Size : INTEGER := 12;     
+		dw : INTEGER := 16
+	 );
+	port 
+	(
+		--Inputs
+		CLK			: in std_logic;
+		storeData	: in std_logic;	
+		sendData		: in std_logic;
+		--Outputs
+		dataOut 		: OUT std_logic_vector(dw - 1 downto 0)
+	);
+end entity;
+
+
+architecture FIFObuffer of FIFObuffer is		
+type stateBUFFER is (IDLE, STORE, SEND);	
+signal state   : stateBUFFER;		
+	TYPE storage_array IS ARRAY (0 TO Array_Size - 1) OF STD_LOGIC_VECTOR(dw - 1 DOWNTO 0); -- array of size Array_size which stores ADC data
+	SIGNAL datArray: storage_array;	
+begin	
+	process(CLK)
+		VARIABLE NS : integer range 0 to (Array_Size - 1) := 1; 		-- NS - Newest Sample. Points to the location of the newest sample in the array
+		VARIABLE FS : integer range 0 to (Array_Size - 1) := 1; 		-- FS - Free Space. Points to the next free space in the Array
+		VARIABLE OS : integer range 0 to (Array_Size - 1) := 0; 	--Oldest_Sample pointer variable
+	BEGIN
+		if(rising_edge(CLK)) then
+			case state is
+			when IDLE =>
+				
+			when sTORE =>
+			
+			when SEND =>
+			
+			when others =>
+			end case;
+		end if;
+	END PROCESS;
+	
+end FIFObuffer;

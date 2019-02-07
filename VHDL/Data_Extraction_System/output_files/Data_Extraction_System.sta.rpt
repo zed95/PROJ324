@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Data_Extraction_System
-Thu Feb 07 01:19:18 2019
+Thu Feb 07 20:09:46 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -17,31 +17,55 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   9. Slow 1200mV 85C Model Recovery Summary
  10. Slow 1200mV 85C Model Removal Summary
  11. Slow 1200mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1200mV 85C Model Metastability Summary
- 13. Slow 1200mV 0C Model Fmax Summary
- 14. Slow 1200mV 0C Model Setup Summary
- 15. Slow 1200mV 0C Model Hold Summary
- 16. Slow 1200mV 0C Model Recovery Summary
- 17. Slow 1200mV 0C Model Removal Summary
- 18. Slow 1200mV 0C Model Minimum Pulse Width Summary
- 19. Slow 1200mV 0C Model Metastability Summary
- 20. Fast 1200mV 0C Model Setup Summary
- 21. Fast 1200mV 0C Model Hold Summary
- 22. Fast 1200mV 0C Model Recovery Summary
- 23. Fast 1200mV 0C Model Removal Summary
- 24. Fast 1200mV 0C Model Minimum Pulse Width Summary
- 25. Fast 1200mV 0C Model Metastability Summary
- 26. Multicorner Timing Analysis Summary
- 27. Board Trace Model Assignments
- 28. Input Transition Times
- 29. Signal Integrity Metrics (Slow 1200mv 0c Model)
- 30. Signal Integrity Metrics (Slow 1200mv 85c Model)
- 31. Signal Integrity Metrics (Fast 1200mv 0c Model)
- 32. Clock Transfers
- 33. Report TCCS
- 34. Report RSKM
- 35. Unconstrained Paths Summary
- 36. TimeQuest Timing Analyzer Messages
+ 12. Slow 1200mV 85C Model Setup: 'CLK'
+ 13. Slow 1200mV 85C Model Setup: 'state.NXTrx'
+ 14. Slow 1200mV 85C Model Setup: 'state.NXTtx'
+ 15. Slow 1200mV 85C Model Hold: 'state.NXTrx'
+ 16. Slow 1200mV 85C Model Hold: 'state.NXTtx'
+ 17. Slow 1200mV 85C Model Hold: 'CLK'
+ 18. Slow 1200mV 85C Model Metastability Summary
+ 19. Slow 1200mV 0C Model Fmax Summary
+ 20. Slow 1200mV 0C Model Setup Summary
+ 21. Slow 1200mV 0C Model Hold Summary
+ 22. Slow 1200mV 0C Model Recovery Summary
+ 23. Slow 1200mV 0C Model Removal Summary
+ 24. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Slow 1200mV 0C Model Setup: 'CLK'
+ 26. Slow 1200mV 0C Model Setup: 'state.NXTrx'
+ 27. Slow 1200mV 0C Model Setup: 'state.NXTtx'
+ 28. Slow 1200mV 0C Model Hold: 'state.NXTrx'
+ 29. Slow 1200mV 0C Model Hold: 'state.NXTtx'
+ 30. Slow 1200mV 0C Model Hold: 'CLK'
+ 31. Slow 1200mV 0C Model Metastability Summary
+ 32. Fast 1200mV 0C Model Setup Summary
+ 33. Fast 1200mV 0C Model Hold Summary
+ 34. Fast 1200mV 0C Model Recovery Summary
+ 35. Fast 1200mV 0C Model Removal Summary
+ 36. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 37. Fast 1200mV 0C Model Setup: 'CLK'
+ 38. Fast 1200mV 0C Model Setup: 'state.NXTtx'
+ 39. Fast 1200mV 0C Model Setup: 'state.NXTrx'
+ 40. Fast 1200mV 0C Model Hold: 'state.NXTrx'
+ 41. Fast 1200mV 0C Model Hold: 'CLK'
+ 42. Fast 1200mV 0C Model Hold: 'state.NXTtx'
+ 43. Fast 1200mV 0C Model Metastability Summary
+ 44. Multicorner Timing Analysis Summary
+ 45. Board Trace Model Assignments
+ 46. Input Transition Times
+ 47. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 48. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 49. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 50. Setup Transfers
+ 51. Hold Transfers
+ 52. Report TCCS
+ 53. Report RSKM
+ 54. Unconstrained Paths Summary
+ 55. Clock Status Summary
+ 56. Unconstrained Input Ports
+ 57. Unconstrained Output Ports
+ 58. Unconstrained Input Ports
+ 59. Unconstrained Output Ports
+ 60. TimeQuest Timing Analyzer Messages
 
 
 
@@ -87,25 +111,38 @@ agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.09        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.3%      ;
+;     Processor 2            ;   3.2%      ;
+;     Processor 3            ;   0.8%      ;
+;     Processor 4            ;   0.7%      ;
+;     Processors 5-12        ;   0.6%      ;
 +----------------------------+-------------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                   ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; Clock Name  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets         ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; CLK         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK }         ;
+; state.NXTrx ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { state.NXTrx } ;
+; state.NXTtx ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { state.NXTtx } ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
 
 
---------------------------------------
-; Slow 1200mV 85C Model Fmax Summary ;
---------------------------------------
-No paths to report.
++---------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                ;
++------------+-----------------+-------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
++------------+-----------------+-------------+------+
+; 245.7 MHz  ; 245.7 MHz       ; CLK         ;      ;
+; 338.29 MHz ; 338.29 MHz      ; state.NXTtx ;      ;
++------------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 ----------------------------------
@@ -114,16 +151,26 @@ No paths to report.
 HTML report is unavailable in plain text report export.
 
 
----------------------------------------
-; Slow 1200mV 85C Model Setup Summary ;
----------------------------------------
-No paths to report.
++--------------------------------------+
+; Slow 1200mV 85C Model Setup Summary  ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; CLK         ; -3.070 ; -107.743      ;
+; state.NXTrx ; -2.001 ; -2.001        ;
+; state.NXTtx ; -1.601 ; -4.211        ;
++-------------+--------+---------------+
 
 
---------------------------------------
-; Slow 1200mV 85C Model Hold Summary ;
---------------------------------------
-No paths to report.
++-------------------------------------+
+; Slow 1200mV 85C Model Hold Summary  ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; state.NXTrx ; 0.263 ; 0.000         ;
+; state.NXTtx ; 0.292 ; 0.000         ;
+; CLK         ; 0.382 ; 0.000         ;
++-------------+-------+---------------+
 
 
 ------------------------------------------
@@ -138,10 +185,287 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------------------
++---------------------------------------------------+
 ; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
------------------------------------------------------
-No paths to report.
++-------------+--------+----------------------------+
+; Clock       ; Slack  ; End Point TNS              ;
++-------------+--------+----------------------------+
+; CLK         ; -3.000 ; -74.000                    ;
+; state.NXTtx ; 0.346  ; 0.000                      ;
+; state.NXTrx ; 0.389  ; 0.000                      ;
++-------------+--------+----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLK'                                                                            ;
++--------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
+; -3.070 ; addNo[6]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 4.003      ;
+; -3.021 ; addNo[23]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.954      ;
+; -2.946 ; addNo[0]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.879      ;
+; -2.902 ; addNo[15]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.835      ;
+; -2.899 ; addNo[4]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.832      ;
+; -2.893 ; addNo[12]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.826      ;
+; -2.877 ; addNo[13]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.810      ;
+; -2.850 ; addNo[22]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.783      ;
+; -2.813 ; addNo[5]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.746      ;
+; -2.807 ; addNo[8]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.740      ;
+; -2.800 ; addNo[2]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.732      ;
+; -2.794 ; addNo[9]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.727      ;
+; -2.775 ; addNo[16]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.708      ;
+; -2.771 ; state.WAITINGtx ; state.NXTtx  ; CLK          ; CLK         ; 1.000        ; 0.060      ; 3.826      ;
+; -2.763 ; addNo[10]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.696      ;
+; -2.757 ; addNo[21]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.690      ;
+; -2.756 ; addNo[31]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.689      ;
+; -2.727 ; addNo[1]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.660      ;
+; -2.725 ; addNo[7]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.658      ;
+; -2.725 ; addNo[3]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.657      ;
+; -2.723 ; addNo[29]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.656      ;
+; -2.720 ; addNo[30]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.653      ;
+; -2.694 ; addNo[25]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.627      ;
+; -2.694 ; addNo[20]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.627      ;
+; -2.690 ; state.WAITINGtx ; state.NXTrx  ; CLK          ; CLK         ; 1.000        ; 0.062      ; 3.747      ;
+; -2.674 ; addNo[26]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.607      ;
+; -2.672 ; addNo[27]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.605      ;
+; -2.651 ; addNo[17]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.584      ;
+; -2.587 ; addNo[14]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.520      ;
+; -2.582 ; addNo[18]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.515      ;
+; -2.510 ; addNo[11]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.443      ;
+; -2.482 ; addNo[28]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.415      ;
+; -2.465 ; state.IDLE      ; state.NXTtx  ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.397      ;
+; -2.406 ; addNo[24]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.339      ;
+; -2.384 ; state.IDLE      ; state.NXTrx  ; CLK          ; CLK         ; 1.000        ; -0.061     ; 3.318      ;
+; -2.362 ; addNo[19]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.295      ;
+; -2.350 ; nextTx[31]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.285      ;
+; -2.325 ; nextTx[31]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.260      ;
+; -2.259 ; state.WAITINGrx ; state.NXTtx  ; CLK          ; CLK         ; 1.000        ; 0.160      ; 3.414      ;
+; -2.253 ; addNo[3]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.185      ;
+; -2.247 ; addNo[3]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.179      ;
+; -2.234 ; addNo[2]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.166      ;
+; -2.212 ; nextTx[22]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.147      ;
+; -2.208 ; nextTx[1]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.140      ;
+; -2.207 ; addNo[1]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.140      ;
+; -2.206 ; nextTx[0]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.138      ;
+; -2.205 ; addNo[0]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.138      ;
+; -2.202 ; nextTx[1]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.134      ;
+; -2.201 ; addNo[1]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.134      ;
+; -2.184 ; nextTx[22]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.119      ;
+; -2.178 ; state.WAITINGrx ; state.NXTrx  ; CLK          ; CLK         ; 1.000        ; 0.162      ; 3.335      ;
+; -2.167 ; nextTx[30]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.102      ;
+; -2.149 ; addNo[2]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.081      ;
+; -2.147 ; addNo[6]        ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.082      ;
+; -2.144 ; addNo[6]        ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.079      ;
+; -2.142 ; nextTx[30]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.077      ;
+; -2.137 ; addNo[3]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.069      ;
+; -2.131 ; addNo[3]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.063      ;
+; -2.125 ; nextTx[0]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.057      ;
+; -2.124 ; addNo[0]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.057      ;
+; -2.118 ; addNo[2]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.050      ;
+; -2.109 ; nextTx[16]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.044      ;
+; -2.105 ; nextTx[29]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.040      ;
+; -2.104 ; nextTx[28]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.039      ;
+; -2.096 ; addNo[23]       ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.031      ;
+; -2.096 ; addNo[23]       ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.031      ;
+; -2.092 ; nextTx[1]       ; nextTx[28]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.024      ;
+; -2.091 ; nextTx[2]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.023      ;
+; -2.091 ; addNo[1]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.024      ;
+; -2.090 ; nextTx[0]       ; nextTx[29]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.022      ;
+; -2.090 ; nextTx[3]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.022      ;
+; -2.089 ; addNo[0]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.022      ;
+; -2.087 ; nextTx[6]       ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.061     ; 3.021      ;
+; -2.086 ; nextTx[1]       ; nextTx[29]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.018      ;
+; -2.085 ; addNo[1]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.062     ; 3.018      ;
+; -2.084 ; nextTx[3]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 3.016      ;
+; -2.081 ; nextTx[16]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.016      ;
+; -2.078 ; nextTx[19]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.013      ;
+; -2.077 ; nextTx[29]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.012      ;
+; -2.076 ; nextTx[28]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 3.011      ;
+; -2.071 ; nextTx[6]       ; state.STRTtx ; CLK          ; CLK         ; 1.000        ; -0.224     ; 2.842      ;
+; -2.060 ; nextTx[1]       ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.061     ; 2.994      ;
+; -2.058 ; nextTx[6]       ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.061     ; 2.992      ;
+; -2.050 ; nextTx[19]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 2.985      ;
+; -2.033 ; addNo[2]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 2.965      ;
+; -2.031 ; addNo[6]        ; state.STRTrx ; CLK          ; CLK         ; 1.000        ; -0.311     ; 2.715      ;
+; -2.023 ; addNo[0]        ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.060     ; 2.958      ;
+; -2.021 ; addNo[3]        ; addNo[26]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 2.953      ;
+; -2.020 ; addNo[0]        ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.060     ; 2.955      ;
+; -2.015 ; addNo[3]        ; addNo[27]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 2.947      ;
+; -2.014 ; nextTx[21]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 2.949      ;
+; -2.010 ; nextTx[2]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 2.942      ;
+; -2.009 ; nextTx[0]       ; nextTx[28]   ; CLK          ; CLK         ; 1.000        ; -0.063     ; 2.941      ;
+; -2.008 ; addNo[0]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.062     ; 2.941      ;
+; -2.007 ; nextTx[31]      ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.059     ; 2.943      ;
+; -2.007 ; nextTx[23]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 2.942      ;
+; -2.002 ; addNo[2]        ; addNo[27]    ; CLK          ; CLK         ; 1.000        ; -0.063     ; 2.934      ;
+; -1.986 ; nextTx[21]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 2.921      ;
+; -1.983 ; nextTx[20]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 2.918      ;
+; -1.982 ; nextTx[23]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.060     ; 2.917      ;
++--------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'state.NXTrx'                                                                 ;
++--------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; -2.001 ; state.WAITINGtx ; R2S$latch ; CLK          ; state.NXTrx ; 1.000        ; -0.691     ; 1.699      ;
+; -1.836 ; state.STRTtx    ; R2S$latch ; CLK          ; state.NXTrx ; 1.000        ; -0.691     ; 1.534      ;
+; -0.708 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; 0.500        ; 1.356      ; 2.162      ;
+; -0.085 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; 1.000        ; 1.356      ; 2.039      ;
++--------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'state.NXTtx'                                                                      ;
++--------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; -1.601 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; 0.500        ; 3.435      ; 5.023      ;
+; -1.078 ; state.STRTrx    ; EXTRACT$latch  ; CLK          ; state.NXTtx ; 1.000        ; 1.478      ; 2.825      ;
+; -0.978 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; 0.500        ; 3.568      ; 4.467      ;
+; -0.947 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; 1.000        ; 3.435      ; 4.869      ;
+; -0.627 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; 1.000        ; 3.568      ; 4.616      ;
+; -0.624 ; state.WAITINGtx ; TRANSMIT$latch ; CLK          ; state.NXTtx ; 0.500        ; 1.521      ; 1.857      ;
+; -0.554 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; 0.500        ; 3.570      ; 4.205      ;
+; -0.276 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; 1.000        ; 3.570      ; 4.427      ;
++--------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'state.NXTrx'                                                                 ;
++-------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; 0.263 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; 0.000        ; 1.429      ; 1.901      ;
+; 0.869 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; -0.500       ; 1.429      ; 2.007      ;
+; 1.855 ; state.STRTtx    ; R2S$latch ; CLK          ; state.NXTrx ; 0.000        ; -0.539     ; 1.336      ;
+; 1.980 ; state.WAITINGtx ; R2S$latch ; CLK          ; state.NXTrx ; 0.000        ; -0.539     ; 1.461      ;
++-------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'state.NXTtx'                                                                      ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; 0.292 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; 0.000        ; 3.738      ; 4.229      ;
+; 0.424 ; state.WAITINGtx ; TRANSMIT$latch ; CLK          ; state.NXTtx ; -0.500       ; 1.768      ; 1.722      ;
+; 0.504 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; 0.000        ; 3.736      ; 4.439      ;
+; 0.574 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; -0.500       ; 3.738      ; 4.031      ;
+; 0.841 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; -0.500       ; 3.736      ; 4.296      ;
+; 0.870 ; state.STRTrx    ; EXTRACT$latch  ; CLK          ; state.NXTtx ; 0.000        ; 1.711      ; 2.611      ;
+; 0.879 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; 0.000        ; 3.594      ; 4.682      ;
+; 1.527 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; -0.500       ; 3.594      ; 4.830      ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLK'                                                                               ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.382 ; state.WAITINGrx ; state.WAITINGrx ; CLK          ; CLK         ; 0.000        ; 0.038      ; 0.577      ;
+; 0.382 ; state.WAITINGtx ; state.WAITINGtx ; CLK          ; CLK         ; 0.000        ; 0.038      ; 0.577      ;
+; 0.552 ; state.STRTtx    ; state.WAITINGtx ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.753      ;
+; 0.569 ; addNo[29]       ; addNo[29]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.788      ;
+; 0.569 ; addNo[19]       ; addNo[19]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.788      ;
+; 0.569 ; addNo[15]       ; addNo[15]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.787      ;
+; 0.569 ; addNo[13]       ; addNo[13]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.787      ;
+; 0.569 ; nextTx[29]      ; nextTx[29]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.788      ;
+; 0.569 ; nextTx[19]      ; nextTx[19]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.788      ;
+; 0.569 ; nextTx[15]      ; nextTx[15]      ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.787      ;
+; 0.569 ; nextTx[13]      ; nextTx[13]      ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.787      ;
+; 0.570 ; addNo[21]       ; addNo[21]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; addNo[27]       ; addNo[27]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; addNo[31]       ; addNo[31]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; addNo[17]       ; addNo[17]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; addNo[11]       ; addNo[11]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.788      ;
+; 0.570 ; addNo[5]        ; addNo[5]        ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.788      ;
+; 0.570 ; addNo[1]        ; addNo[1]        ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.788      ;
+; 0.570 ; nextTx[27]      ; nextTx[27]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; nextTx[31]      ; nextTx[31]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; nextTx[21]      ; nextTx[21]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; nextTx[17]      ; nextTx[17]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.570 ; nextTx[11]      ; nextTx[11]      ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.788      ;
+; 0.570 ; nextTx[5]       ; nextTx[5]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.788      ;
+; 0.570 ; nextTx[1]       ; nextTx[1]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.788      ;
+; 0.571 ; addNo[22]       ; addNo[22]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.790      ;
+; 0.571 ; addNo[16]       ; addNo[16]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.790      ;
+; 0.571 ; addNo[6]        ; addNo[6]        ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.789      ;
+; 0.571 ; nextTx[22]      ; nextTx[22]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.790      ;
+; 0.571 ; nextTx[16]      ; nextTx[16]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.790      ;
+; 0.571 ; nextTx[6]       ; nextTx[6]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.789      ;
+; 0.572 ; addNo[23]       ; addNo[23]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.791      ;
+; 0.572 ; addNo[25]       ; addNo[25]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.791      ;
+; 0.572 ; addNo[18]       ; addNo[18]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.791      ;
+; 0.572 ; addNo[9]        ; addNo[9]        ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.790      ;
+; 0.572 ; addNo[7]        ; addNo[7]        ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.790      ;
+; 0.572 ; nextTx[25]      ; nextTx[25]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.791      ;
+; 0.572 ; nextTx[23]      ; nextTx[23]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.791      ;
+; 0.572 ; nextTx[18]      ; nextTx[18]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.791      ;
+; 0.572 ; nextTx[9]       ; nextTx[9]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.790      ;
+; 0.572 ; nextTx[7]       ; nextTx[7]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.790      ;
+; 0.573 ; addNo[30]       ; addNo[30]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.792      ;
+; 0.573 ; addNo[14]       ; addNo[14]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.791      ;
+; 0.573 ; nextTx[30]      ; nextTx[30]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.792      ;
+; 0.573 ; nextTx[14]      ; nextTx[14]      ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.791      ;
+; 0.574 ; addNo[24]       ; addNo[24]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.574 ; addNo[28]       ; addNo[28]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.574 ; addNo[26]       ; addNo[26]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.574 ; addNo[20]       ; addNo[20]       ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.574 ; addNo[12]       ; addNo[12]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.792      ;
+; 0.574 ; addNo[10]       ; addNo[10]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.792      ;
+; 0.574 ; addNo[8]        ; addNo[8]        ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.792      ;
+; 0.574 ; addNo[4]        ; addNo[4]        ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.792      ;
+; 0.574 ; nextTx[26]      ; nextTx[26]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.574 ; nextTx[28]      ; nextTx[28]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.574 ; nextTx[24]      ; nextTx[24]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.574 ; nextTx[20]      ; nextTx[20]      ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.574 ; nextTx[12]      ; nextTx[12]      ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.792      ;
+; 0.574 ; nextTx[10]      ; nextTx[10]      ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.792      ;
+; 0.574 ; nextTx[8]       ; nextTx[8]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.792      ;
+; 0.574 ; nextTx[4]       ; nextTx[4]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.792      ;
+; 0.592 ; addNo[0]        ; addNo[0]        ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.810      ;
+; 0.592 ; nextTx[0]       ; nextTx[0]       ; CLK          ; CLK         ; 0.000        ; 0.061      ; 0.810      ;
+; 0.611 ; state.NXTrx     ; state.STRTrx    ; state.NXTrx  ; CLK         ; 0.000        ; 1.957      ; 2.944      ;
+; 0.636 ; state.NXTtx     ; state.STRTtx    ; state.NXTtx  ; CLK         ; 0.000        ; 2.047      ; 3.069      ;
+; 0.649 ; state.NXTtx     ; state.IDLE      ; state.NXTtx  ; CLK         ; 0.000        ; 2.193      ; 3.228      ;
+; 0.689 ; state.NXTtx     ; state.NXTtx     ; state.NXTtx  ; CLK         ; 0.000        ; 2.191      ; 3.266      ;
+; 0.709 ; state.IDLE      ; state.STRTrx    ; CLK          ; CLK         ; 0.000        ; -0.152     ; 0.714      ;
+; 0.715 ; state.NXTrx     ; state.IDLE      ; state.NXTrx  ; CLK         ; 0.000        ; 2.193      ; 3.284      ;
+; 0.736 ; state.STRTrx    ; state.WAITINGrx ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.955      ;
+; 0.799 ; state.NXTrx     ; addNo[15]       ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[14]       ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[13]       ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[12]       ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[11]       ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[10]       ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[9]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[8]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[7]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[6]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[5]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[4]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[1]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.799 ; state.NXTrx     ; addNo[0]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.194      ; 3.369      ;
+; 0.803 ; state.NXTrx     ; addNo[3]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.195      ; 3.374      ;
+; 0.803 ; state.NXTrx     ; addNo[2]        ; state.NXTrx  ; CLK         ; 0.000        ; 2.195      ; 3.374      ;
+; 0.811 ; state.NXTrx     ; state.NXTrx     ; state.NXTrx  ; CLK         ; 0.000        ; 2.193      ; 3.380      ;
+; 0.821 ; state.NXTtx     ; nextTx[15]      ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[14]      ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[13]      ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[12]      ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[11]      ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[10]      ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[9]       ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[8]       ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[7]       ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[6]       ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[5]       ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[4]       ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
+; 0.821 ; state.NXTtx     ; nextTx[2]       ; state.NXTtx  ; CLK         ; 0.000        ; 2.192      ; 3.399      ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
 
 
 -----------------------------------------------
@@ -150,22 +474,37 @@ No paths to report.
 No synchronizer chains to report.
 
 
--------------------------------------
-; Slow 1200mV 0C Model Fmax Summary ;
--------------------------------------
-No paths to report.
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                          ;
++------------+-----------------+-------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note                                                          ;
++------------+-----------------+-------------+---------------------------------------------------------------+
+; 273.97 MHz ; 250.0 MHz       ; CLK         ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 344.59 MHz ; 344.59 MHz      ; state.NXTtx ;                                                               ;
++------------+-----------------+-------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
---------------------------------------
-; Slow 1200mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++--------------------------------------+
+; Slow 1200mV 0C Model Setup Summary   ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; CLK         ; -2.650 ; -87.301       ;
+; state.NXTrx ; -1.703 ; -1.703        ;
+; state.NXTtx ; -1.366 ; -3.831        ;
++-------------+--------+---------------+
 
 
--------------------------------------
-; Slow 1200mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++-------------------------------------+
+; Slow 1200mV 0C Model Hold Summary   ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; state.NXTrx ; 0.244 ; 0.000         ;
+; state.NXTtx ; 0.264 ; 0.000         ;
+; CLK         ; 0.333 ; 0.000         ;
++-------------+-------+---------------+
 
 
 -----------------------------------------
@@ -180,10 +519,287 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------------
++--------------------------------------------------+
 ; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++-------------+--------+---------------------------+
+; Clock       ; Slack  ; End Point TNS             ;
++-------------+--------+---------------------------+
+; CLK         ; -3.000 ; -74.000                   ;
+; state.NXTtx ; 0.415  ; 0.000                     ;
+; state.NXTrx ; 0.421  ; 0.000                     ;
++-------------+--------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLK'                                                                             ;
++--------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
+; -2.650 ; addNo[23]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.589      ;
+; -2.646 ; addNo[6]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.586      ;
+; -2.524 ; addNo[0]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.464      ;
+; -2.493 ; addNo[15]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.433      ;
+; -2.492 ; addNo[22]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.431      ;
+; -2.489 ; addNo[4]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.429      ;
+; -2.484 ; addNo[12]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.424      ;
+; -2.479 ; addNo[13]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.419      ;
+; -2.474 ; state.WAITINGtx ; state.NXTtx  ; CLK          ; CLK         ; 1.000        ; 0.036      ; 3.505      ;
+; -2.449 ; addNo[2]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.388      ;
+; -2.429 ; addNo[16]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.368      ;
+; -2.418 ; addNo[21]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.357      ;
+; -2.418 ; addNo[8]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.358      ;
+; -2.414 ; addNo[5]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.354      ;
+; -2.401 ; addNo[9]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.341      ;
+; -2.397 ; addNo[31]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.336      ;
+; -2.394 ; state.WAITINGtx ; state.NXTrx  ; CLK          ; CLK         ; 1.000        ; 0.036      ; 3.425      ;
+; -2.382 ; addNo[29]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.321      ;
+; -2.370 ; addNo[10]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.310      ;
+; -2.367 ; addNo[30]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.306      ;
+; -2.361 ; addNo[20]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.300      ;
+; -2.350 ; addNo[25]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.289      ;
+; -2.347 ; addNo[27]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.286      ;
+; -2.333 ; addNo[26]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.272      ;
+; -2.332 ; addNo[7]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.272      ;
+; -2.326 ; addNo[1]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.266      ;
+; -2.318 ; addNo[3]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.257      ;
+; -2.316 ; addNo[17]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.255      ;
+; -2.225 ; addNo[18]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.164      ;
+; -2.207 ; addNo[14]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.147      ;
+; -2.158 ; addNo[28]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.097      ;
+; -2.153 ; state.IDLE      ; state.NXTtx  ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.093      ;
+; -2.143 ; addNo[11]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.083      ;
+; -2.099 ; addNo[24]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 3.038      ;
+; -2.073 ; state.IDLE      ; state.NXTrx  ; CLK          ; CLK         ; 1.000        ; -0.055     ; 3.013      ;
+; -2.040 ; nextTx[31]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.982      ;
+; -2.036 ; addNo[19]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.975      ;
+; -2.011 ; nextTx[31]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.953      ;
+; -2.007 ; state.WAITINGrx ; state.NXTtx  ; CLK          ; CLK         ; 1.000        ; 0.122      ; 3.124      ;
+; -1.927 ; state.WAITINGrx ; state.NXTrx  ; CLK          ; CLK         ; 1.000        ; 0.122      ; 3.044      ;
+; -1.924 ; nextTx[22]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.866      ;
+; -1.895 ; nextTx[22]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.837      ;
+; -1.875 ; nextTx[30]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.817      ;
+; -1.846 ; nextTx[30]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.788      ;
+; -1.845 ; addNo[2]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.786      ;
+; -1.841 ; addNo[3]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.782      ;
+; -1.829 ; addNo[6]        ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.771      ;
+; -1.827 ; addNo[6]        ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.769      ;
+; -1.823 ; addNo[3]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.764      ;
+; -1.817 ; nextTx[16]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.759      ;
+; -1.815 ; nextTx[29]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.757      ;
+; -1.814 ; addNo[23]       ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.755      ;
+; -1.813 ; addNo[23]       ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.754      ;
+; -1.812 ; nextTx[28]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.754      ;
+; -1.807 ; nextTx[0]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.746      ;
+; -1.807 ; nextTx[1]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.746      ;
+; -1.804 ; addNo[0]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.746      ;
+; -1.804 ; addNo[1]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.746      ;
+; -1.796 ; nextTx[6]       ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.737      ;
+; -1.790 ; nextTx[19]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.732      ;
+; -1.789 ; nextTx[1]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.728      ;
+; -1.788 ; nextTx[16]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.730      ;
+; -1.786 ; nextTx[29]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.728      ;
+; -1.786 ; addNo[1]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.728      ;
+; -1.783 ; nextTx[28]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.725      ;
+; -1.767 ; nextTx[6]       ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.708      ;
+; -1.761 ; nextTx[19]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.703      ;
+; -1.755 ; addNo[2]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.696      ;
+; -1.746 ; nextTx[1]       ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.687      ;
+; -1.745 ; addNo[2]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.686      ;
+; -1.745 ; nextTx[6]       ; state.STRTtx ; CLK          ; CLK         ; 1.000        ; -0.181     ; 2.559      ;
+; -1.741 ; addNo[3]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.682      ;
+; -1.741 ; nextTx[21]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.683      ;
+; -1.736 ; nextTx[0]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.675      ;
+; -1.733 ; addNo[0]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.675      ;
+; -1.723 ; addNo[3]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.664      ;
+; -1.718 ; nextTx[31]      ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.659      ;
+; -1.712 ; nextTx[21]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.654      ;
+; -1.708 ; addNo[6]        ; state.STRTrx ; CLK          ; CLK         ; 1.000        ; -0.256     ; 2.447      ;
+; -1.708 ; nextTx[2]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.647      ;
+; -1.707 ; nextTx[0]       ; nextTx[29]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.646      ;
+; -1.707 ; nextTx[1]       ; nextTx[28]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.646      ;
+; -1.707 ; nextTx[23]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.649      ;
+; -1.704 ; nextTx[3]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.643      ;
+; -1.704 ; addNo[0]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.646      ;
+; -1.704 ; addNo[1]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.646      ;
+; -1.693 ; nextTx[20]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.635      ;
+; -1.693 ; addNo[0]        ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.635      ;
+; -1.691 ; addNo[0]        ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.633      ;
+; -1.689 ; nextTx[1]       ; nextTx[29]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.628      ;
+; -1.687 ; state.IDLE      ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.055     ; 2.627      ;
+; -1.686 ; nextTx[23]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.628      ;
+; -1.686 ; nextTx[3]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.056     ; 2.625      ;
+; -1.686 ; addNo[1]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.628      ;
+; -1.676 ; addNo[15]       ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.618      ;
+; -1.675 ; nextTx[0]       ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.054     ; 2.616      ;
+; -1.674 ; addNo[15]       ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.616      ;
+; -1.672 ; addNo[4]        ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.614      ;
+; -1.670 ; addNo[4]        ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.612      ;
+; -1.667 ; addNo[12]       ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.053     ; 2.609      ;
++--------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'state.NXTrx'                                                                  ;
++--------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; -1.703 ; state.WAITINGtx ; R2S$latch ; CLK          ; state.NXTrx ; 1.000        ; -0.641     ; 1.507      ;
+; -1.554 ; state.STRTtx    ; R2S$latch ; CLK          ; state.NXTrx ; 1.000        ; -0.641     ; 1.358      ;
+; -0.546 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; 0.500        ; 1.230      ; 1.911      ;
+; 0.006  ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; 1.000        ; 1.230      ; 1.859      ;
++--------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'state.NXTtx'                                                                       ;
++--------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; -1.366 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; 0.500        ; 3.088      ; 4.495      ;
+; -0.951 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; 0.500        ; 3.158      ; 4.092      ;
+; -0.912 ; state.STRTrx    ; EXTRACT$latch  ; CLK          ; state.NXTtx ; 1.000        ; 1.294      ; 2.547      ;
+; -0.870 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; 1.000        ; 3.088      ; 4.499      ;
+; -0.612 ; state.WAITINGtx ; TRANSMIT$latch ; CLK          ; state.NXTtx ; 0.500        ; 1.287      ; 1.692      ;
+; -0.602 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; 0.500        ; 3.160      ; 3.878      ;
+; -0.526 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; 1.000        ; 3.158      ; 4.167      ;
+; -0.149 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; 1.000        ; 3.160      ; 3.925      ;
++--------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'state.NXTrx'                                                                  ;
++-------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; 0.244 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; 0.000        ; 1.300      ; 1.734      ;
+; 0.782 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; -0.500       ; 1.300      ; 1.772      ;
+; 1.701 ; state.STRTtx    ; R2S$latch ; CLK          ; state.NXTrx ; 0.000        ; -0.501     ; 1.220      ;
+; 1.809 ; state.WAITINGtx ; R2S$latch ; CLK          ; state.NXTrx ; 0.000        ; -0.501     ; 1.328      ;
++-------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'state.NXTtx'                                                                       ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; 0.264 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; 0.000        ; 3.307      ; 3.751      ;
+; 0.512 ; state.WAITINGtx ; TRANSMIT$latch ; CLK          ; state.NXTtx ; -0.500       ; 1.504      ; 1.546      ;
+; 0.521 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; 0.000        ; 3.305      ; 4.006      ;
+; 0.709 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; -0.500       ; 3.307      ; 3.716      ;
+; 0.855 ; state.STRTrx    ; EXTRACT$latch  ; CLK          ; state.NXTtx ; 0.000        ; 1.509      ; 2.394      ;
+; 0.902 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; 0.000        ; 3.235      ; 4.327      ;
+; 0.930 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; -0.500       ; 3.305      ; 3.935      ;
+; 1.397 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; -0.500       ; 3.235      ; 4.322      ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLK'                                                                                ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.333 ; state.WAITINGtx ; state.WAITINGtx ; CLK          ; CLK         ; 0.000        ; 0.034      ; 0.511      ;
+; 0.333 ; state.WAITINGrx ; state.WAITINGrx ; CLK          ; CLK         ; 0.000        ; 0.034      ; 0.511      ;
+; 0.505 ; state.STRTtx    ; state.WAITINGtx ; CLK          ; CLK         ; 0.000        ; 0.038      ; 0.687      ;
+; 0.511 ; addNo[15]       ; addNo[15]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.709      ;
+; 0.511 ; addNo[13]       ; addNo[13]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.709      ;
+; 0.511 ; nextTx[29]      ; nextTx[29]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.710      ;
+; 0.511 ; nextTx[19]      ; nextTx[19]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.710      ;
+; 0.511 ; nextTx[15]      ; nextTx[15]      ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.709      ;
+; 0.511 ; nextTx[13]      ; nextTx[13]      ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.709      ;
+; 0.512 ; addNo[29]       ; addNo[29]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.710      ;
+; 0.512 ; addNo[19]       ; addNo[19]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.710      ;
+; 0.512 ; addNo[11]       ; addNo[11]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.710      ;
+; 0.512 ; addNo[5]        ; addNo[5]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.710      ;
+; 0.512 ; nextTx[27]      ; nextTx[27]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.711      ;
+; 0.512 ; nextTx[31]      ; nextTx[31]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.711      ;
+; 0.512 ; nextTx[21]      ; nextTx[21]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.711      ;
+; 0.512 ; nextTx[17]      ; nextTx[17]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.711      ;
+; 0.512 ; nextTx[11]      ; nextTx[11]      ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.710      ;
+; 0.512 ; nextTx[5]       ; nextTx[5]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.710      ;
+; 0.513 ; addNo[21]       ; addNo[21]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; addNo[27]       ; addNo[27]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; addNo[31]       ; addNo[31]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; addNo[17]       ; addNo[17]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; addNo[6]        ; addNo[6]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; addNo[1]        ; addNo[1]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; nextTx[22]      ; nextTx[22]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.712      ;
+; 0.513 ; nextTx[6]       ; nextTx[6]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.711      ;
+; 0.513 ; nextTx[1]       ; nextTx[1]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.711      ;
+; 0.514 ; addNo[22]       ; addNo[22]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.712      ;
+; 0.514 ; nextTx[16]      ; nextTx[16]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.713      ;
+; 0.515 ; addNo[16]       ; addNo[16]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.713      ;
+; 0.515 ; addNo[14]       ; addNo[14]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.713      ;
+; 0.515 ; addNo[9]        ; addNo[9]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.713      ;
+; 0.515 ; addNo[7]        ; addNo[7]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.713      ;
+; 0.515 ; nextTx[25]      ; nextTx[25]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.714      ;
+; 0.515 ; nextTx[23]      ; nextTx[23]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.714      ;
+; 0.515 ; nextTx[18]      ; nextTx[18]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.714      ;
+; 0.515 ; nextTx[14]      ; nextTx[14]      ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.713      ;
+; 0.515 ; nextTx[9]       ; nextTx[9]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.713      ;
+; 0.515 ; nextTx[7]       ; nextTx[7]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.713      ;
+; 0.516 ; addNo[23]       ; addNo[23]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.714      ;
+; 0.516 ; addNo[25]       ; addNo[25]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.714      ;
+; 0.516 ; addNo[18]       ; addNo[18]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.714      ;
+; 0.516 ; addNo[12]       ; addNo[12]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.714      ;
+; 0.516 ; addNo[4]        ; addNo[4]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.714      ;
+; 0.516 ; nextTx[30]      ; nextTx[30]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.715      ;
+; 0.516 ; nextTx[28]      ; nextTx[28]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.715      ;
+; 0.516 ; nextTx[20]      ; nextTx[20]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.715      ;
+; 0.516 ; nextTx[12]      ; nextTx[12]      ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.714      ;
+; 0.516 ; nextTx[4]       ; nextTx[4]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.714      ;
+; 0.517 ; addNo[28]       ; addNo[28]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.715      ;
+; 0.517 ; addNo[30]       ; addNo[30]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.715      ;
+; 0.517 ; addNo[20]       ; addNo[20]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.715      ;
+; 0.517 ; addNo[10]       ; addNo[10]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.715      ;
+; 0.517 ; addNo[8]        ; addNo[8]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.715      ;
+; 0.517 ; nextTx[26]      ; nextTx[26]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.716      ;
+; 0.517 ; nextTx[24]      ; nextTx[24]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.716      ;
+; 0.517 ; nextTx[10]      ; nextTx[10]      ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.715      ;
+; 0.517 ; nextTx[8]       ; nextTx[8]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.715      ;
+; 0.518 ; addNo[24]       ; addNo[24]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.716      ;
+; 0.518 ; addNo[26]       ; addNo[26]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.716      ;
+; 0.530 ; addNo[0]        ; addNo[0]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.728      ;
+; 0.530 ; nextTx[0]       ; nextTx[0]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.728      ;
+; 0.569 ; state.NXTrx     ; state.STRTrx    ; state.NXTrx  ; CLK         ; 0.000        ; 1.793      ; 2.706      ;
+; 0.601 ; state.NXTtx     ; state.STRTtx    ; state.NXTtx  ; CLK         ; 0.000        ; 1.871      ; 2.826      ;
+; 0.609 ; state.IDLE      ; state.STRTrx    ; CLK          ; CLK         ; 0.000        ; -0.114     ; 0.639      ;
+; 0.626 ; state.NXTtx     ; state.IDLE      ; state.NXTtx  ; CLK         ; 0.000        ; 1.982      ; 2.962      ;
+; 0.661 ; state.NXTtx     ; state.NXTtx     ; state.NXTtx  ; CLK         ; 0.000        ; 1.981      ; 2.996      ;
+; 0.672 ; state.STRTrx    ; state.WAITINGrx ; CLK          ; CLK         ; 0.000        ; 0.057      ; 0.873      ;
+; 0.683 ; state.NXTrx     ; state.IDLE      ; state.NXTrx  ; CLK         ; 0.000        ; 1.982      ; 3.009      ;
+; 0.754 ; addNo[15]       ; addNo[16]       ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.953      ;
+; 0.755 ; addNo[13]       ; addNo[14]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.953      ;
+; 0.755 ; nextTx[13]      ; nextTx[14]      ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.953      ;
+; 0.755 ; nextTx[29]      ; nextTx[30]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.954      ;
+; 0.755 ; nextTx[19]      ; nextTx[20]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.954      ;
+; 0.755 ; nextTx[3]       ; nextTx[4]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.953      ;
+; 0.756 ; addNo[5]        ; addNo[6]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.954      ;
+; 0.756 ; nextTx[21]      ; nextTx[22]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.955      ;
+; 0.756 ; nextTx[5]       ; nextTx[6]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.954      ;
+; 0.756 ; nextTx[15]      ; nextTx[16]      ; CLK          ; CLK         ; 0.000        ; 0.053      ; 0.953      ;
+; 0.756 ; addNo[11]       ; addNo[12]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.954      ;
+; 0.756 ; nextTx[27]      ; nextTx[28]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.955      ;
+; 0.756 ; nextTx[11]      ; nextTx[12]      ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.954      ;
+; 0.756 ; addNo[29]       ; addNo[30]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.954      ;
+; 0.756 ; addNo[19]       ; addNo[20]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.954      ;
+; 0.757 ; addNo[21]       ; addNo[22]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.955      ;
+; 0.757 ; nextTx[17]      ; nextTx[18]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.956      ;
+; 0.757 ; addNo[27]       ; addNo[28]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.955      ;
+; 0.758 ; addNo[17]       ; addNo[18]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.956      ;
+; 0.760 ; addNo[9]        ; addNo[10]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.958      ;
+; 0.760 ; addNo[7]        ; addNo[8]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.958      ;
+; 0.760 ; nextTx[25]      ; nextTx[26]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.959      ;
+; 0.760 ; nextTx[23]      ; nextTx[24]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.959      ;
+; 0.760 ; nextTx[9]       ; nextTx[10]      ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.958      ;
+; 0.760 ; nextTx[7]       ; nextTx[8]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.958      ;
+; 0.761 ; addNo[23]       ; addNo[24]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.959      ;
+; 0.761 ; addNo[25]       ; addNo[26]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.959      ;
+; 0.762 ; addNo[6]        ; addNo[7]        ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.960      ;
+; 0.762 ; nextTx[22]      ; nextTx[23]      ; CLK          ; CLK         ; 0.000        ; 0.055      ; 0.961      ;
+; 0.762 ; nextTx[6]       ; nextTx[7]       ; CLK          ; CLK         ; 0.000        ; 0.054      ; 0.960      ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -192,16 +808,26 @@ No paths to report.
 No synchronizer chains to report.
 
 
---------------------------------------
-; Fast 1200mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++--------------------------------------+
+; Fast 1200mV 0C Model Setup Summary   ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; CLK         ; -1.303 ; -38.652       ;
+; state.NXTtx ; -0.949 ; -1.530        ;
+; state.NXTrx ; -0.708 ; -0.708        ;
++-------------+--------+---------------+
 
 
--------------------------------------
-; Fast 1200mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++-------------------------------------+
+; Fast 1200mV 0C Model Hold Summary   ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; state.NXTrx ; 0.115 ; 0.000         ;
+; CLK         ; 0.201 ; 0.000         ;
+; state.NXTtx ; 0.263 ; 0.000         ;
++-------------+-------+---------------+
 
 
 -----------------------------------------
@@ -216,10 +842,287 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------------
++--------------------------------------------------+
 ; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++-------------+--------+---------------------------+
+; Clock       ; Slack  ; End Point TNS             ;
++-------------+--------+---------------------------+
+; CLK         ; -3.000 ; -77.825                   ;
+; state.NXTtx ; 0.317  ; 0.000                     ;
+; state.NXTrx ; 0.392  ; 0.000                     ;
++-------------+--------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLK'                                                                             ;
++--------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
+; -1.303 ; addNo[6]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.253      ;
+; -1.286 ; addNo[0]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.236      ;
+; -1.274 ; addNo[23]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.225      ;
+; -1.220 ; addNo[15]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.170      ;
+; -1.214 ; addNo[12]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.164      ;
+; -1.213 ; addNo[4]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.163      ;
+; -1.209 ; addNo[13]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.159      ;
+; -1.193 ; state.WAITINGtx ; state.NXTtx  ; CLK          ; CLK         ; 1.000        ; 0.025      ; 2.205      ;
+; -1.185 ; addNo[22]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.136      ;
+; -1.174 ; addNo[2]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.124      ;
+; -1.169 ; addNo[5]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.119      ;
+; -1.163 ; addNo[1]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.113      ;
+; -1.157 ; addNo[8]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.107      ;
+; -1.154 ; addNo[31]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.105      ;
+; -1.153 ; addNo[3]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.103      ;
+; -1.150 ; addNo[9]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.100      ;
+; -1.146 ; addNo[29]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.097      ;
+; -1.137 ; addNo[10]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.087      ;
+; -1.136 ; addNo[30]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.087      ;
+; -1.130 ; addNo[21]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.081      ;
+; -1.128 ; addNo[16]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.079      ;
+; -1.123 ; addNo[7]        ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.073      ;
+; -1.114 ; addNo[25]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.065      ;
+; -1.109 ; addNo[27]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.060      ;
+; -1.103 ; state.WAITINGtx ; state.NXTrx  ; CLK          ; CLK         ; 1.000        ; 0.026      ; 2.116      ;
+; -1.098 ; addNo[20]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.049      ;
+; -1.098 ; addNo[26]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.049      ;
+; -1.058 ; addNo[17]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 2.009      ;
+; -1.056 ; addNo[14]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 2.006      ;
+; -1.002 ; addNo[18]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.953      ;
+; -1.001 ; addNo[11]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.951      ;
+; -1.001 ; addNo[28]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.952      ;
+; -0.992 ; state.IDLE      ; state.NXTtx  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.942      ;
+; -0.954 ; addNo[24]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.905      ;
+; -0.902 ; state.IDLE      ; state.NXTrx  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.853      ;
+; -0.894 ; state.WAITINGrx ; state.NXTtx  ; CLK          ; CLK         ; 1.000        ; 0.084      ; 1.965      ;
+; -0.886 ; addNo[19]       ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.837      ;
+; -0.881 ; nextTx[31]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.834      ;
+; -0.866 ; nextTx[31]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.819      ;
+; -0.864 ; addNo[3]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.815      ;
+; -0.860 ; addNo[3]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.811      ;
+; -0.839 ; nextTx[1]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.790      ;
+; -0.839 ; addNo[1]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.790      ;
+; -0.835 ; nextTx[1]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.786      ;
+; -0.835 ; addNo[1]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.786      ;
+; -0.830 ; addNo[2]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.781      ;
+; -0.825 ; nextTx[0]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.776      ;
+; -0.825 ; addNo[0]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.776      ;
+; -0.804 ; state.WAITINGrx ; state.NXTrx  ; CLK          ; CLK         ; 1.000        ; 0.085      ; 1.876      ;
+; -0.800 ; addNo[2]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.751      ;
+; -0.796 ; addNo[3]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.747      ;
+; -0.792 ; addNo[3]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.743      ;
+; -0.787 ; nextTx[0]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.738      ;
+; -0.787 ; addNo[0]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.738      ;
+; -0.771 ; nextTx[1]       ; nextTx[29]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.722      ;
+; -0.771 ; addNo[1]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.722      ;
+; -0.768 ; nextTx[3]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.719      ;
+; -0.767 ; nextTx[1]       ; nextTx[28]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.718      ;
+; -0.767 ; nextTx[30]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.720      ;
+; -0.767 ; addNo[1]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.718      ;
+; -0.764 ; nextTx[3]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.715      ;
+; -0.762 ; addNo[2]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.713      ;
+; -0.761 ; nextTx[22]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.714      ;
+; -0.758 ; nextTx[2]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.709      ;
+; -0.757 ; nextTx[0]       ; nextTx[29]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.708      ;
+; -0.757 ; addNo[0]        ; addNo[29]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.708      ;
+; -0.754 ; nextTx[30]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.707      ;
+; -0.746 ; nextTx[22]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.699      ;
+; -0.742 ; addNo[6]        ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.694      ;
+; -0.742 ; addNo[6]        ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.694      ;
+; -0.732 ; addNo[2]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.683      ;
+; -0.728 ; addNo[3]        ; addNo[27]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.679      ;
+; -0.725 ; addNo[0]        ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.677      ;
+; -0.725 ; addNo[0]        ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.677      ;
+; -0.724 ; addNo[3]        ; addNo[26]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.675      ;
+; -0.720 ; nextTx[1]       ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.672      ;
+; -0.720 ; nextTx[2]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.671      ;
+; -0.719 ; nextTx[6]       ; state.STRTtx ; CLK          ; CLK         ; 1.000        ; -0.122     ; 1.584      ;
+; -0.719 ; nextTx[0]       ; nextTx[28]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.670      ;
+; -0.719 ; addNo[0]        ; addNo[28]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.670      ;
+; -0.715 ; nextTx[29]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.668      ;
+; -0.715 ; nextTx[28]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.668      ;
+; -0.714 ; nextTx[16]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.667      ;
+; -0.713 ; addNo[23]       ; addNo[2]     ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.666      ;
+; -0.713 ; addNo[23]       ; addNo[3]     ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.666      ;
+; -0.703 ; nextTx[1]       ; nextTx[27]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.654      ;
+; -0.703 ; addNo[1]        ; addNo[27]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.654      ;
+; -0.702 ; nextTx[29]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.655      ;
+; -0.702 ; nextTx[28]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.655      ;
+; -0.701 ; nextTx[16]      ; nextTx[3]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.654      ;
+; -0.700 ; addNo[5]        ; addNo[31]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.651      ;
+; -0.700 ; nextTx[5]       ; nextTx[31]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.651      ;
+; -0.700 ; nextTx[3]       ; nextTx[29]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.651      ;
+; -0.700 ; nextTx[19]      ; nextTx[2]    ; CLK          ; CLK         ; 1.000        ; -0.034     ; 1.653      ;
+; -0.699 ; nextTx[1]       ; nextTx[26]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.650      ;
+; -0.699 ; nextTx[31]      ; state.IDLE   ; CLK          ; CLK         ; 1.000        ; -0.033     ; 1.653      ;
+; -0.699 ; addNo[1]        ; addNo[26]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.650      ;
+; -0.696 ; addNo[5]        ; addNo[30]    ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.647      ;
+; -0.696 ; nextTx[5]       ; nextTx[30]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.647      ;
+; -0.696 ; nextTx[3]       ; nextTx[28]   ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.647      ;
++--------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'state.NXTtx'                                                                       ;
++--------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; -0.949 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; 0.500        ; 1.955      ; 3.109      ;
+; -0.301 ; state.STRTrx    ; EXTRACT$latch  ; CLK          ; state.NXTtx ; 1.000        ; 0.846      ; 1.727      ;
+; -0.280 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; 0.500        ; 2.122      ; 2.566      ;
+; -0.105 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; 1.000        ; 1.955      ; 2.765      ;
+; -0.011 ; state.WAITINGtx ; TRANSMIT$latch ; CLK          ; state.NXTtx ; 0.500        ; 0.958      ; 1.018      ;
+; 0.003  ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; 0.500        ; 2.124      ; 2.379      ;
+; 0.037  ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; 1.000        ; 2.122      ; 2.749      ;
+; 0.169  ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; 1.000        ; 2.124      ; 2.713      ;
++--------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'state.NXTrx'                                                                  ;
++--------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; -0.708 ; state.WAITINGtx ; R2S$latch ; CLK          ; state.NXTrx ; 1.000        ; -0.424     ; 0.944      ;
+; -0.618 ; state.STRTtx    ; R2S$latch ; CLK          ; state.NXTrx ; 1.000        ; -0.424     ; 0.854      ;
+; -0.199 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; 0.500        ; 0.740      ; 1.214      ;
+; 0.434  ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; 1.000        ; 0.740      ; 1.081      ;
++--------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'state.NXTrx'                                                                  ;
++-------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+; 0.115 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; 0.000        ; 0.777      ; 1.007      ;
+; 0.734 ; state.NXTtx     ; R2S$latch ; state.NXTtx  ; state.NXTrx ; -0.500       ; 0.777      ; 1.126      ;
+; 1.026 ; state.STRTtx    ; R2S$latch ; CLK          ; state.NXTrx ; 0.000        ; -0.340     ; 0.706      ;
+; 1.097 ; state.WAITINGtx ; R2S$latch ; CLK          ; state.NXTrx ; 0.000        ; -0.340     ; 0.777      ;
++-------+-----------------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLK'                                                                                ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.201 ; state.WAITINGrx ; state.WAITINGrx ; CLK          ; CLK         ; 0.000        ; 0.022      ; 0.307      ;
+; 0.201 ; state.WAITINGtx ; state.WAITINGtx ; CLK          ; CLK         ; 0.000        ; 0.022      ; 0.307      ;
+; 0.287 ; state.STRTtx    ; state.WAITINGtx ; CLK          ; CLK         ; 0.000        ; 0.026      ; 0.397      ;
+; 0.303 ; addNo[15]       ; addNo[15]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.423      ;
+; 0.304 ; addNo[13]       ; addNo[13]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; addNo[5]        ; addNo[5]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; nextTx[15]      ; nextTx[15]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.423      ;
+; 0.305 ; addNo[31]       ; addNo[31]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.424      ;
+; 0.305 ; addNo[11]       ; addNo[11]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; addNo[7]        ; addNo[7]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; addNo[6]        ; addNo[6]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; addNo[1]        ; addNo[1]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; nextTx[31]      ; nextTx[31]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.424      ;
+; 0.305 ; nextTx[13]      ; nextTx[13]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.424      ;
+; 0.305 ; nextTx[5]       ; nextTx[5]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.424      ;
+; 0.306 ; addNo[21]       ; addNo[21]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; addNo[27]       ; addNo[27]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; addNo[29]       ; addNo[29]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; addNo[19]       ; addNo[19]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; addNo[17]       ; addNo[17]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; addNo[14]       ; addNo[14]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; addNo[9]        ; addNo[9]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; addNo[8]        ; addNo[8]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; nextTx[27]      ; nextTx[27]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; nextTx[29]      ; nextTx[29]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; nextTx[21]      ; nextTx[21]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; nextTx[19]      ; nextTx[19]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; nextTx[17]      ; nextTx[17]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; nextTx[11]      ; nextTx[11]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; nextTx[7]       ; nextTx[7]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; nextTx[6]       ; nextTx[6]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.306 ; nextTx[1]       ; nextTx[1]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.425      ;
+; 0.307 ; addNo[22]       ; addNo[22]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; addNo[23]       ; addNo[23]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; addNo[25]       ; addNo[25]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; addNo[16]       ; addNo[16]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; addNo[12]       ; addNo[12]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; addNo[10]       ; addNo[10]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; addNo[4]        ; addNo[4]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; nextTx[25]      ; nextTx[25]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; nextTx[23]      ; nextTx[23]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; nextTx[22]      ; nextTx[22]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; nextTx[16]      ; nextTx[16]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; nextTx[14]      ; nextTx[14]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; nextTx[9]       ; nextTx[9]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.307 ; nextTx[8]       ; nextTx[8]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.426      ;
+; 0.308 ; addNo[24]       ; addNo[24]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; addNo[30]       ; addNo[30]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; addNo[20]       ; addNo[20]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; addNo[18]       ; addNo[18]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; nextTx[30]      ; nextTx[30]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; nextTx[24]      ; nextTx[24]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; nextTx[20]      ; nextTx[20]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; nextTx[18]      ; nextTx[18]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; nextTx[12]      ; nextTx[12]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; nextTx[10]      ; nextTx[10]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.308 ; nextTx[4]       ; nextTx[4]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.427      ;
+; 0.309 ; addNo[28]       ; addNo[28]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.428      ;
+; 0.309 ; addNo[26]       ; addNo[26]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.428      ;
+; 0.309 ; nextTx[26]      ; nextTx[26]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.428      ;
+; 0.309 ; nextTx[28]      ; nextTx[28]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.428      ;
+; 0.316 ; addNo[0]        ; addNo[0]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.436      ;
+; 0.317 ; nextTx[0]       ; nextTx[0]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.436      ;
+; 0.342 ; state.NXTtx     ; state.STRTtx    ; state.NXTtx  ; CLK         ; 0.000        ; 1.164      ; 1.725      ;
+; 0.365 ; state.NXTrx     ; state.STRTrx    ; state.NXTrx  ; CLK         ; 0.000        ; 1.109      ; 1.683      ;
+; 0.369 ; state.NXTtx     ; state.NXTtx     ; state.NXTtx  ; CLK         ; 0.000        ; 1.239      ; 1.827      ;
+; 0.372 ; state.NXTtx     ; state.IDLE      ; state.NXTtx  ; CLK         ; 0.000        ; 1.241      ; 1.832      ;
+; 0.378 ; state.NXTrx     ; state.IDLE      ; state.NXTrx  ; CLK         ; 0.000        ; 1.241      ; 1.828      ;
+; 0.382 ; state.STRTrx    ; state.WAITINGrx ; CLK          ; CLK         ; 0.000        ; 0.041      ; 0.507      ;
+; 0.383 ; state.IDLE      ; state.STRTrx    ; CLK          ; CLK         ; 0.000        ; -0.081     ; 0.386      ;
+; 0.389 ; state.NXTrx     ; state.NXTrx     ; state.NXTrx  ; CLK         ; 0.000        ; 1.240      ; 1.838      ;
+; 0.453 ; addNo[5]        ; addNo[6]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; addNo[13]       ; addNo[14]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; addNo[15]       ; addNo[16]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.572      ;
+; 0.454 ; addNo[7]        ; addNo[8]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; nextTx[5]       ; nextTx[6]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.573      ;
+; 0.454 ; addNo[11]       ; addNo[12]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; nextTx[15]      ; nextTx[16]      ; CLK          ; CLK         ; 0.000        ; 0.034      ; 0.572      ;
+; 0.454 ; nextTx[13]      ; nextTx[14]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.573      ;
+; 0.454 ; nextTx[3]       ; nextTx[4]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.573      ;
+; 0.455 ; addNo[21]       ; addNo[22]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; addNo[9]        ; addNo[10]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.455 ; nextTx[21]      ; nextTx[22]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; nextTx[7]       ; nextTx[8]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; addNo[29]       ; addNo[30]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; addNo[19]       ; addNo[20]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; addNo[17]       ; addNo[18]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; nextTx[29]      ; nextTx[30]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; nextTx[19]      ; nextTx[20]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; nextTx[17]      ; nextTx[18]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; nextTx[11]      ; nextTx[12]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; addNo[27]       ; addNo[28]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; nextTx[27]      ; nextTx[28]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.456 ; addNo[23]       ; addNo[24]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.456 ; nextTx[23]      ; nextTx[24]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.456 ; nextTx[9]       ; nextTx[10]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.456 ; addNo[25]       ; addNo[26]       ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.456 ; nextTx[25]      ; nextTx[26]      ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.463 ; addNo[6]        ; addNo[7]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.583      ;
+; 0.463 ; addNo[0]        ; addNo[1]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.583      ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'state.NXTtx'                                                                       ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; 0.263 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; 0.000        ; 2.222      ; 2.590      ;
+; 0.318 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; 0.000        ; 2.220      ; 2.643      ;
+; 0.320 ; state.WAITINGtx ; TRANSMIT$latch ; CLK          ; state.NXTtx ; -0.500       ; 1.103      ; 0.953      ;
+; 0.435 ; state.NXTtx     ; NEXT_DAT$latch ; state.NXTtx  ; state.NXTtx ; -0.500       ; 2.222      ; 2.282      ;
+; 0.466 ; state.STRTrx    ; EXTRACT$latch  ; CLK          ; state.NXTtx ; 0.000        ; 0.979      ; 1.475      ;
+; 0.502 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; 0.000        ; 2.042      ; 2.659      ;
+; 0.624 ; state.NXTtx     ; TRANSMIT$latch ; state.NXTtx  ; state.NXTtx ; -0.500       ; 2.220      ; 2.469      ;
+; 1.332 ; state.NXTrx     ; NEXT_ADD$latch ; state.NXTrx  ; state.NXTtx ; -0.500       ; 2.042      ; 2.989      ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -228,14 +1131,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.070   ; 0.115 ; N/A      ; N/A     ; -3.000              ;
+;  CLK             ; -3.070   ; 0.201 ; N/A      ; N/A     ; -3.000              ;
+;  state.NXTrx     ; -2.001   ; 0.115 ; N/A      ; N/A     ; 0.389               ;
+;  state.NXTtx     ; -1.601   ; 0.263 ; N/A      ; N/A     ; 0.317               ;
+; Design-wide TNS  ; -113.955 ; 0.0   ; 0.0      ; 0.0     ; -77.825             ;
+;  CLK             ; -107.743 ; 0.000 ; N/A      ; N/A     ; -77.825             ;
+;  state.NXTrx     ; -2.001   ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  state.NXTtx     ; -4.211   ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+----------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -243,6 +1152,12 @@ No synchronizer chains to report.
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; EXTRACT       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; NEXT_ADD      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; STORE         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; R2S           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; NEXT_DAT      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; TRANSMIT      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
@@ -253,7 +1168,11 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
-; pin_name1               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; bufferEmpty             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLK                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sTx                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DONEtx                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DONErx                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -265,6 +1184,12 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; EXTRACT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; NEXT_ADD      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.38 V              ; -0.0145 V           ; 0.169 V                              ; 0.026 V                              ; 4.83e-10 s                  ; 4.71e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.38 V             ; -0.0145 V          ; 0.169 V                             ; 0.026 V                             ; 4.83e-10 s                 ; 4.71e-10 s                 ; Yes                       ; Yes                       ;
+; STORE         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.38 V              ; -0.0145 V           ; 0.169 V                              ; 0.026 V                              ; 4.83e-10 s                  ; 4.71e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.38 V             ; -0.0145 V          ; 0.169 V                             ; 0.026 V                             ; 4.83e-10 s                 ; 4.71e-10 s                 ; Yes                       ; Yes                       ;
+; R2S           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; NEXT_DAT      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; TRANSMIT      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.45e-09 V                   ; 2.38 V              ; -0.0609 V           ; 0.148 V                              ; 0.095 V                              ; 2.82e-10 s                  ; 2.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.45e-09 V                  ; 2.38 V             ; -0.0609 V          ; 0.148 V                             ; 0.095 V                             ; 2.82e-10 s                 ; 2.59e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -275,6 +1200,12 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; EXTRACT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; NEXT_ADD      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.00832 V          ; 0.101 V                              ; 0.024 V                              ; 6.39e-10 s                  ; 6e-10 s                     ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.00832 V         ; 0.101 V                             ; 0.024 V                             ; 6.39e-10 s                 ; 6e-10 s                    ; Yes                       ; Yes                       ;
+; STORE         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.00832 V          ; 0.101 V                              ; 0.024 V                              ; 6.39e-10 s                  ; 6e-10 s                     ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.00832 V         ; 0.101 V                             ; 0.024 V                             ; 6.39e-10 s                 ; 6e-10 s                    ; Yes                       ; Yes                       ;
+; R2S           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; NEXT_DAT      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; TRANSMIT      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0201 V           ; 0.072 V                              ; 0.033 V                              ; 4.04e-10 s                  ; 3.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0201 V          ; 0.072 V                             ; 0.033 V                             ; 4.04e-10 s                 ; 3.29e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -285,15 +1216,49 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; EXTRACT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; NEXT_ADD      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; STORE         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; R2S           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; NEXT_DAT      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; TRANSMIT      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; CLK         ; CLK         ; 1334     ; 0        ; 0        ; 0        ;
+; state.NXTrx ; CLK         ; 35       ; 35       ; 0        ; 0        ;
+; state.NXTtx ; CLK         ; 35       ; 35       ; 0        ; 0        ;
+; CLK         ; state.NXTrx ; 2        ; 0        ; 0        ; 0        ;
+; state.NXTtx ; state.NXTrx ; 1        ; 1        ; 0        ; 0        ;
+; CLK         ; state.NXTtx ; 1        ; 0        ; 1        ; 0        ;
+; state.NXTrx ; state.NXTtx ; 1        ; 1        ; 0        ; 0        ;
+; state.NXTtx ; state.NXTtx ; 0        ; 0        ; 2        ; 2        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; CLK         ; CLK         ; 1334     ; 0        ; 0        ; 0        ;
+; state.NXTrx ; CLK         ; 35       ; 35       ; 0        ; 0        ;
+; state.NXTtx ; CLK         ; 35       ; 35       ; 0        ; 0        ;
+; CLK         ; state.NXTrx ; 2        ; 0        ; 0        ; 0        ;
+; state.NXTtx ; state.NXTrx ; 1        ; 1        ; 0        ; 0        ;
+; CLK         ; state.NXTtx ; 1        ; 0        ; 1        ; 0        ;
+; state.NXTrx ; state.NXTtx ; 1        ; 1        ; 0        ; 0        ;
+; state.NXTtx ; state.NXTtx ; 0        ; 0        ; 2        ; 2        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -315,11 +1280,74 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 16    ; 16   ;
+; Unconstrained Output Ports      ; 6     ; 6    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
 +---------------------------------+-------+------+
+
+
++------------------------------------------------+
+; Clock Status Summary                           ;
++-------------+-------------+------+-------------+
+; Target      ; Clock       ; Type ; Status      ;
++-------------+-------------+------+-------------+
+; CLK         ; CLK         ; Base ; Constrained ;
+; state.NXTrx ; state.NXTrx ; Base ; Constrained ;
+; state.NXTtx ; state.NXTtx ; Base ; Constrained ;
++-------------+-------------+------+-------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                          ;
++-------------+--------------------------------------------------------------------------------------+
+; Input Port  ; Comment                                                                              ;
++-------------+--------------------------------------------------------------------------------------+
+; DONErx      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DONEtx      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; bufferEmpty ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sTx         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; EXTRACT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; NEXT_ADD    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; NEXT_DAT    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; R2S         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; STORE       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TRANSMIT    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                          ;
++-------------+--------------------------------------------------------------------------------------+
+; Input Port  ; Comment                                                                              ;
++-------------+--------------------------------------------------------------------------------------+
+; DONErx      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DONEtx      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; bufferEmpty ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sTx         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; EXTRACT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; NEXT_ADD    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; NEXT_DAT    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; R2S         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; STORE       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TRANSMIT    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------+
@@ -328,57 +1356,102 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Feb 07 01:19:16 2019
+    Info: Processing started: Thu Feb 07 20:09:43 2019
 Info: Command: quartus_sta Data_Extraction_System -c Data_Extraction_System
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 5 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Data_Extraction_System.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+    Info (332105): create_clock -period 1.000 -name state.NXTtx state.NXTtx
+    Info (332105): create_clock -period 1.000 -name state.NXTrx state.NXTrx
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow 1200mV 85C Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.070
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.070            -107.743 CLK 
+    Info (332119):    -2.001              -2.001 state.NXTrx 
+    Info (332119):    -1.601              -4.211 state.NXTtx 
+Info (332146): Worst-case hold slack is 0.263
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.263               0.000 state.NXTrx 
+    Info (332119):     0.292               0.000 state.NXTtx 
+    Info (332119):     0.382               0.000 CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -74.000 CLK 
+    Info (332119):     0.346               0.000 state.NXTtx 
+    Info (332119):     0.389               0.000 state.NXTrx 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.650
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.650             -87.301 CLK 
+    Info (332119):    -1.703              -1.703 state.NXTrx 
+    Info (332119):    -1.366              -3.831 state.NXTtx 
+Info (332146): Worst-case hold slack is 0.244
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.244               0.000 state.NXTrx 
+    Info (332119):     0.264               0.000 state.NXTtx 
+    Info (332119):     0.333               0.000 CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -74.000 CLK 
+    Info (332119):     0.415               0.000 state.NXTtx 
+    Info (332119):     0.421               0.000 state.NXTrx 
 Info: Analyzing Fast 1200mV 0C Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.303
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.303             -38.652 CLK 
+    Info (332119):    -0.949              -1.530 state.NXTtx 
+    Info (332119):    -0.708              -0.708 state.NXTrx 
+Info (332146): Worst-case hold slack is 0.115
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.115               0.000 state.NXTrx 
+    Info (332119):     0.201               0.000 CLK 
+    Info (332119):     0.263               0.000 state.NXTtx 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
-Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4871 megabytes
-    Info: Processing ended: Thu Feb 07 01:19:18 2019
-    Info: Elapsed time: 00:00:02
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -77.825 CLK 
+    Info (332119):     0.317               0.000 state.NXTtx 
+    Info (332119):     0.392               0.000 state.NXTrx 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4893 megabytes
+    Info: Processing ended: Thu Feb 07 20:09:46 2019
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

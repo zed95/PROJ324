@@ -19,20 +19,20 @@ entity genPulse is
 end entity;
 
 
-architecture genPulse of genPulse is	
-	signal cstate :  std_logic := '1';
-	signal pstate :  std_logic := '1';			
+architecture genPulse of genPulse is				
 begin	
 	process(CLK)
+	variable cstate :  std_logic := '1';
+	variable pstate :  std_logic := '1';
 	BEGIN
 		if(rising_edge(CLK)) then
-			cstate <= input;
+			cstate := input;
 			if(pstate = '0' and cstate = '1') then
 				output <= '1';
 			else
 				output <= '0';
 			end if;
-			pstate <= cstate;
+			pstate := cstate;
 		end if;
 	END PROCESS;
 	

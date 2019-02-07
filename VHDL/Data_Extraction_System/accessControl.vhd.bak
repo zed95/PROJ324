@@ -1,0 +1,162 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+
+entity accessControl is
+	  GENERIC(
+		Array_Size : INTEGER := 12;     
+		dw : INTEGER := 16;
+		noIMU : std_logic_vector(2 downto 0) := "000"
+	 );
+	port 
+	(
+		--Inputs
+		CLK			: in std_logic;
+		r2sIMU0			: in std_logic;
+		r2sIMU1			: in std_logic;
+		r2sIMU2			: in std_logic;
+		r2sIMU3			: in std_logic;
+		r2sIMU4			: in std_logic;
+		r2sIMU5			: in std_logic;
+		txsIMU0			: in std_logic;
+		txsIMU1			: in std_logic;
+		txsIMU2			: in std_logic;
+		txsIMU3			: in std_logic;
+		txsIMU4			: in std_logic;
+		txsIMU5			: in std_logic;
+		dataIMU0			: in std_logic_vector(dw - 1 downto 0);
+		dataIMU1			: in std_logic_vector(dw - 1 downto 0);
+		dataIMU2			: in std_logic_vector(dw - 1 downto 0);
+		dataIMU3			: in std_logic_vector(dw - 1 downto 0);
+		dataIMU4			: in std_logic_vector(dw - 1 downto 0);
+		dataIMU5			: in std_logic_vector(dw - 1 downto 0);
+		storeData	: in std_logic;	
+		sendData		: in std_logic;
+		dataIn		: in std_logic_vector(dw - 1 downto 0);
+		--Outputs
+		dataOut 		: OUT std_logic_vector(dw - 1 downto 0);
+		empty			: OUT std_logic
+	);
+end entity;
+
+
+architecture accessControl of accessControl is		
+type accessCntrl is (SEARCH, STRT, WAITING);	
+signal state   : accessCntrl;		
+	TYPE storage_array IS ARRAY (0 TO Array_Size - 1) OF STD_LOGIC_VECTOR(dw - 1 DOWNTO 0); -- array of size Array_size which stores ADC data
+	SIGNAL datArray: storage_array;	
+	signal NS : integer range 0 to (Array_Size - 1) := 0; 		-- NS - Newest Sample. Points to the location of the newest sample in the array
+	signal FS : integer range 0 to (Array_Size - 1) := 0; 		-- FS - Free Space. Points to the next free space in the Array
+	signal OS : integer range 0 to (Array_Size - 1) := 0; 		-- Oldest_Sample pointer variable
+begin	
+	process(CLK)
+	variable idx : integer := 0;
+	BEGIN
+		if(rising_edge(CLK)) then
+			case state is
+			when SEARCH =>
+				case idx is
+				when 0 =>
+					if(r2sIMU0 = '1') then
+						state <= STRT;
+					else
+						idx := idx + 1;
+					end if;
+				when 1 =>
+					if(r2sIMU1 = '1') then
+						state <= STRT;
+					else
+						idx := idx + 1;
+					end if;
+				when 2 =>
+					if(r2sIMU2 = '1') then
+						state <= STRT;
+					else
+						idx := idx + 1;
+					end if;
+				when 3 =>
+					if(r2sIMU3 = '1') then
+						state <= STRT;
+					else
+						idx := idx + 1;
+					end if;
+				when 4 =>
+					if(r2sIMU4 = '1') then
+						state <= STRT;
+					else
+						idx := idx + 1;
+					end if;
+				when 5 =>
+					if(r2sIMU5 = '1') then
+						state <= STRT;
+					else
+						idx := 0;
+					end if;
+				when others =>
+				end case;
+				
+				if(idx = 5) then
+					idx := 0;
+				else
+					
+				end if;
+			when STRT =>
+				case FS is
+				when 0 =>
+				when 1 =>
+				when 2 =>
+				when 3 =>
+				when 4 =>
+				when 5 =>
+				when 6 =>
+				when others =>
+				end case;
+				if(NS = 0 AND FS = 0 AND OS = 0) then
+					FS <= FS + 1;
+					NS <= 0;
+					OS <= 0;
+				else
+					if(FS = 11) then
+						FS <= 11;
+						NS <= 11;
+					else
+						FS <= FS + 1;
+						NS <= NS + 1;
+					end if;
+				end if;
+				state <= WAITING;
+			when WAITING =>
+			
+			when others =>
+			end case;
+		end if;
+	END PROCESS;
+	
+		process(state)
+	begin
+		case state is
+			when IDLE =>
+				if(OS = 11) then
+					empty <= '1';
+				elsif(FS = 11) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
+					empty <= '0';
+				end if;
+			when STORE =>
+				if(OS = 11) then
+					empty <= '1';
+				elsif(FS = 11) then
+					empty <= '0';
+				end if;
+			when SEND =>
+				if(OS = 11) then
+					empty <= '1';
+				elsif(FS = 11) then
+					empty <= '0';
+				end if;
+			when others =>
+		end case;
+	end process;
+end accessControl;

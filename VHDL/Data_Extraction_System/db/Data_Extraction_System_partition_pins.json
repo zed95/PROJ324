@@ -2,7 +2,52 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "EXTRACT",
+					"strict" : false
+				},
+				{
+					"name" : "NEXT_ADD",
+					"strict" : false
+				},
+				{
+					"name" : "STORE",
+					"strict" : false
+				},
+				{
+					"name" : "R2S",
+					"strict" : false
+				},
+				{
+					"name" : "NEXT_DAT",
+					"strict" : false
+				},
+				{
+					"name" : "TRANSMIT",
+					"strict" : false
+				},
+				{
+					"name" : "bufferEmpty",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "sTx",
+					"strict" : false
+				},
+				{
+					"name" : "DONEtx",
+					"strict" : false
+				},
+				{
+					"name" : "DONErx",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
