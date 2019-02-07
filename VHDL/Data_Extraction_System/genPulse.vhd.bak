@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+
+entity genPulse is
+	generic (Count : integer := 25);
+	port 
+	(
+		--Inputs
+		input	   : in std_logic;	
+		
+		--Outputs
+		output 	: OUT std_logic
+	);
+end entity;
+
+
+architecture genPulse of genPulse is	
+	signal cstate :  std_logic := '1';
+	signal pstate :  std_logic := '1';			
+begin	
+	process(CLK)
+	BEGIN
+		if(rising_edge(CLK)) then
+			cstate <= input;
+			if(pstate = '0' and cstate = '1') then
+				output <= '1';
+			else
+				output <= '0';
+			end if;
+			pstate <= cstate;
+		end if;
+	END PROCESS;
+	
+end genPulse;

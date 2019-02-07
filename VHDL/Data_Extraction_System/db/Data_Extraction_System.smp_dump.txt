@@ -1,0 +1,7 @@
+
+State Machine - |Data_Extraction_System|Data_Extraction_Controller:inst|state
+Name state.NXT state.WAITING state.STRT state.IDLE 
+state.IDLE 0 0 0 0 
+state.STRT 0 0 1 1 
+state.WAITING 0 1 0 1 
+state.NXT 1 0 0 1 

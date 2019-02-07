@@ -1,0 +1,59 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+--The counter counts to half the period.
+--If core F is 50MHz and I set the counter to count to 10 I will have a frequency of 2.5MHz and not 5MHz
+--I will use a frequency of 2.5MHz
+--I will use 50MHz clock as input to CS_EDGE_CHNG
+--I will use falling edge for this clock and rising 
+
+--The actual frequency of the output is equal to: 50MHz/2*Count
+entity Data_Extraction_Controller is
+	generic (Count : integer := 25);
+	port 
+	(
+		--Inputs
+		CLK	   : in std_logic;	
+		START		: in std_logic;	--This should just be a one clock cycle pulse from the buffer controller to notify this controller that buffer is free and should be filled.
+		DONE		: in std_logic;	--This signal comes from the SPI to notify the controller that data piece has been extracted
+		
+		--Outputs
+		EXTRACT 		: OUT std_logic; --Sends a signal to the SPI to begin extracting data piece until it extracts data from all the required registers
+		NEXT_ADD		: OUT std_logic; --Sends a signal to the address register to send out new data to the SPI from which data is to be extracted
+		STORE			: OUT std_logic  --Sends a signal to the Storage buffer controller to notify it to store newly extracted data.
+	);
+end entity;
+
+
+architecture Data_Extraction_Controller of Data_Extraction_Controller is	
+type state_extraction  is (IDLE, START, WAITING, NEXT_ADD);	
+signal state   : state_extraction;				
+begin	
+	process(CLK)
+
+	BEGIN
+		if(rising_edge(CLK)) then
+			case state is
+				when IDLE =>
+					if(START = '1') then
+					
+					end if;
+				when START =>
+				when WAITING =>
+				when others =>
+			end case;
+		end if;
+	END PROCESS;
+	
+	process(state)
+		case state is
+			when IDLE =>
+			when START =>
+			when WAITING =>
+			when others =>
+		end case;
+	end process;
+end Data_Extraction_Controller;

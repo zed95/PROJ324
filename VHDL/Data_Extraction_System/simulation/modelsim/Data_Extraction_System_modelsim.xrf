@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Zed/Desktop/Data_Extraction_System/Data_Extraction_System.bdf
+source_file = 1, C:/Users/Zed/Desktop/Data_Extraction_System/Data_Extraction_Controller.vhd
+source_file = 1, C:/Users/Zed/Desktop/Data_Extraction_System/addressBlock.vhd
+source_file = 1, C:/Users/Zed/Desktop/Data_Extraction_System/genPulse.vhd
+source_file = 1, C:/Users/Zed/Desktop/Data_Extraction_System/spi_master1.vhd
+source_file = 1, c:/intelfpga_lite/16.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/16.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/16.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/16.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/Zed/Desktop/Data_Extraction_System/db/Data_Extraction_System.cbx.xml
+design_name = hard_block
+design_name = Data_Extraction_System
+instance = comp, \pin_name1~input\, pin_name1~input, Data_Extraction_System, 1
