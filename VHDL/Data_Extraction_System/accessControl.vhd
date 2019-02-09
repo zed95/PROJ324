@@ -24,19 +24,14 @@ entity accessControl is
 		--Outputs
 		dataOut 		: OUT std_logic_vector(dw - 1 downto 0);
 		TRANSMIT		: OUT std_logic;
-		strtTx		: OUT std_logic
+		strtTx		: OUT std_logic_vector(5 downto 0)
 	);
 end entity;
 
 
 architecture accessControl of accessControl is		
 type accessCntrl is (SEARCH, STRT, WAITING);	
-signal state   : accessCntrl;		
-	TYPE storage_array IS ARRAY (0 TO Array_Size - 1) OF STD_LOGIC_VECTOR(dw - 1 DOWNTO 0); -- array of size Array_size which stores ADC data
-	SIGNAL datArray: storage_array;	
-	signal NS : integer range 0 to (Array_Size - 1) := 0; 		-- NS - Newest Sample. Points to the location of the newest sample in the array
-	signal FS : integer range 0 to (Array_Size - 1) := 0; 		-- FS - Free Space. Points to the next free space in the Array
-	signal OS : integer range 0 to (Array_Size - 1) := 0; 		-- Oldest_Sample pointer variable
+signal state   : accessCntrl;			
 	signal idx : integer := 0;
 begin	
 	process(CLK)
@@ -49,15 +44,66 @@ begin
 					state <= STRT;
 				else
 					if(idx = 5) then
-						idx := 0;
+						idx <= 0;
 					else
-						dx := idx + 1;
+						idx <= idx + 1;
 					end if;	
 				end if;
+				
+				
+				TRANSMIT <= '0';
+				case idx is
+				when 0 =>
+				dataOut <= (others => '0');
+				when 1 =>
+				dataOut <= (others => '0');
+				when 2 =>
+				dataOut <= (others => '0');
+				when 3 =>
+				dataOut <= (others => '0');
+				when 4 =>
+				dataOut <= (others => '0');
+				when 5 =>
+				dataOut <= (others => '0');
+				when others =>
+				end case;				
 			when STRT =>
 				state <= WAITING;
+				TRANSMIT <= txIMU(idx);
+				case idx is
+				when 0 =>
+				dataOut <= dataIMU0;
+				when 1 =>
+				dataOut <= dataIMU1;
+				when 2 =>
+				dataOut <= dataIMU2;
+				when 3 =>
+				dataOut <= dataIMU3;
+				when 4 =>
+				dataOut <= dataIMU4;
+				when 5 =>
+				dataOut <= dataIMU5;
+				when others =>
+				end case;				
 			when WAITING =>
-				if(r2sIMU(idx) = '0';) then
+				TRANSMIT <= txIMU(idx);
+				case idx is
+				when 0 =>
+				dataOut <= dataIMU0;
+				when 1 =>
+				dataOut <= dataIMU1;
+				when 2 =>
+				dataOut <= dataIMU2;
+				when 3 =>
+				dataOut <= dataIMU3;
+				when 4 =>
+				dataOut <= dataIMU4;
+				when 5 =>
+				dataOut <= dataIMU5;
+				when others =>
+				end case;
+				
+				if(r2sIMU(idx) = '0') then
 					state <= SEARCH;
 				end if;
 			when others =>
@@ -69,58 +115,11 @@ begin
 	begin
 		case state is
 			when SEARCH =>
-				strtTx <= '0';
-				TRANSMIT <= '0';
-				when 0 =>
-				dataOut <= (others => '0');
-				when 1 =>
-				dataOut <= (others => '0');
-				when 2 =>
-				dataOut <= (others => '0');
-				when 3 =>
-				dataOut <= (others => '0');
-				when 4 =>
-				dataOut <= (others => '0');
-				when 5 =>
-				dataOut <= (others => '0');
-				when others =>
-				end case;
+				strtTx(idx) <= '0';
 			when STRT =>
-				strtTx <= '1';
-				TRANSMIT <= txIMU(idx);
-				case idx is
-				when 0 =>
-				dataOut <= dataIMU0;
-				when 1 =>
-				dataOut <= dataIMU1;
-				when 2 =>
-				dataOut <= dataIMU2;
-				when 3 =>
-				dataOut <= dataIMU3;
-				when 4 =>
-				dataOut <= dataIMU4;
-				when 5 =>
-				dataOut <= dataIMU5;
-				when others =>
-				end case;
+				strtTx(idx) <= '1';
 			when WAITING =>
-				strtTx <= '0';
-				TRANSMIT <= txIMU(idx);
-				case idx is
-				when 0 =>
-				dataOut <= dataIMU0;
-				when 1 =>
-				dataOut <= dataIMU1;
-				when 2 =>
-				dataOut <= dataIMU2;
-				when 3 =>
-				dataOut <= dataIMU3;
-				when 4 =>
-				dataOut <= dataIMU4;
-				when 5 =>
-				dataOut <= dataIMU5;
-				when others =>
-				end case;
+				strtTx(idx) <= '0';
 			when others =>
 		end case;
 	end process;

@@ -102,25 +102,25 @@ begin
 	END PROCESS;
 	
 		process(state)
-	begin
+	begin 
 		case state is
 			when IDLE =>
-				if(OS = 11) then
-					empty <= '1';
-				elsif(FS = 11) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
+				if(NS = 11) then
 					empty <= '0';
+				elsif(OS = 0) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
+					empty <= '1';
 				end if;
 			when STORE =>
-				if(OS = 11) then
-					empty <= '1';
-				elsif(FS = 11) then
+				if(NS = 11) then
 					empty <= '0';
+				elsif(OS = 0) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
+					empty <= '1';
 				end if;
 			when SEND =>
-				if(OS = 11) then
-					empty <= '1';
-				elsif(FS = 11) then
+				if(NS = 11) then
 					empty <= '0';
+				elsif(OS = 0) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
+					empty <= '1';
 				end if;
 			when others =>
 		end case;

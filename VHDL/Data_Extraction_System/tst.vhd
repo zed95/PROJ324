@@ -1,0 +1,45 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+
+entity tst is
+	generic (Count : integer := 25);
+	port 
+	(
+		--Inputs
+		CLK		: in std_logic;
+		input	   : in std_logic;	
+		txn		: in std_logic;
+		--Outputs
+		output 	: OUT std_logic
+	);
+end entity;
+
+
+architecture tst of tst is	
+type statetxr  is (inactive, activee);
+signal statetx		 : statetxr;			
+begin	
+	process(clk)
+	BEGIN
+		if(rising_edge(clk)) then
+			case statetx is
+				when inactive =>
+					if(txn = '1' and input = '0') then		--if transmit = 1 and wait = 0 
+						statetx <= activee;
+					end if;
+					output <= '1';
+				when activee =>
+					output <= '0';
+					if(input = '1') then
+						statetx <= inactive;
+					end if;
+				when others =>
+			end case;
+		end if;
+	END PROCESS;
+	
+end tst;

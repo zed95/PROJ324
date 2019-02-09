@@ -28,7 +28,7 @@ end entity;
 
 
 architecture Data_Extraction_Controller of Data_Extraction_Controller is	
-type state_extraction  is (IDLE, STRTrx,STRTtx, WAITINGrx, WAITINGtx, NXTrx, NXTtx);	
+type state_extraction  is (IDLE, STRTrx,STRTtx, WAITINGrx, WAITINGtx, NXTrx, NXTtx, W4BFFRrx, W4BFFRtx);	
 signal state   : state_extraction;				
 begin	
 	process(CLK)
@@ -43,36 +43,53 @@ begin
 					elsif(sTx = '1') then
 						state <= STRTtx;
 					end if;
+-----------------------------------------------------------------------START RX				
 				when STRTrx =>
 					state <= WAITINGrx;
 				when WAITINGrx =>
 					if(DONErx = '1') then
 						state <= NXTrx;
 					end if; 
+-----------------------------------------------------------------------NEXT RX				
 				when NXTrx =>
 					if(addNo = 11) then
-						state <= IDLE;
+						state <= W4BFFRrx;
 						addNo := 0;
 					else
 						state <= STRTrx;
 						addNo := AddNo + 1;
 					end if;
-					
------------------------------------------------------------------------
+-----------------------------------------------------------------------WAIT FOR BUFFER RECEIVE ALL					
+				when W4BFFRrx =>
+					if(bufferEmpty = '0') then
+						state <= IDLE;
+					else
+						state <= W4BFFRrx;
+					end if;
+-----------------------------------------------------------------------START TX
 				when STRTtx =>
 					state <= WAITINGtx;
 				when WAITINGtx =>
 					if(DONEtx = '1') then
 						state <= NXTtx;
-					end if; 
+					end if;
+-----------------------------------------------------------------------	NEXT TX				
 				when NXTtx =>
 					if(nextTx = 11) then
-						state <= IDLE;
+						state <= W4BFFRtx;
 						nextTx := 0;
 					else
 						state <= STRTtx;
 						nextTx := nextTx + 1;
 					end if;
+-----------------------------------------------------------------------WAIT FOR BUFFER TRANSMIT ALL					
+				when W4BFFRtx =>
+					if(bufferEmpty = '1') then
+						state <= IDLE;
+					else
+						state <= W4BFFRtx;
+					end if;
+-----------------------------------------------------------------------					
 				when others =>
 					state <= IDLE;
 			end case;
@@ -91,32 +108,75 @@ begin
 				else
 					R2S <= '0';
 				end if;
+				NEXT_DAT <= '0';
+				TRANSMIT <= '0';
 -------------------------------------
 			when STRTrx =>
 				EXTRACT <= '1';
 				STORE <= '0';
 				NEXT_ADD <= '0';
+				
+				R2S <= '0';
+				NEXT_DAT <= '0';
+				TRANSMIT <= '0';
 			when WAITINGrx =>
 				EXTRACT <= '0';
 				STORE <= '0';
 				NEXT_ADD <= '0';
+				
+				R2S <= '0';
+				NEXT_DAT <= '0';
+				TRANSMIT <= '0';
 			when NXTrx =>
 				EXTRACT <= '0';
 				STORE <= '1';
 				NEXT_ADD <= '1';
+				
+				R2S <= '0';
+				NEXT_DAT <= '0';
+				TRANSMIT <= '0';
+			when W4BFFRrx =>
+				EXTRACT <= '0';
+				STORE <= '0';
+				NEXT_ADD <= '0';
+				
+				R2S <= '0';
+				NEXT_DAT <= '0';
+				TRANSMIT <= '0';
 -------------------------------------				
 			when STRTtx =>
+				EXTRACT <= '0';
+				STORE <= '0';
+				NEXT_ADD <= '0';
+			
 				R2S <= '1';
 				NEXT_DAT <= '0';
 				TRANSMIT <= '1';
 			when WAITINGtx =>
+				EXTRACT <= '0';
+				STORE <= '0';
+				NEXT_ADD <= '0';
+				
+				
 				R2S <= '1';
 				NEXT_DAT <= '0';
 				TRANSMIT <= '0';
 			when NXTtx =>
+				EXTRACT <= '0';
+				STORE <= '0';
+				NEXT_ADD <= '0';
+				
 				R2S <= '1';
 				NEXT_DAT <= '1';
 				TRANSMIT <= '0';
+			when W4BFFRtx =>
+				EXTRACT <= '0';
+				STORE <= '0';
+				NEXT_ADD <= '0';
+				
+				R2S <= '0';
+				NEXT_DAT <= '0';
+				TRANSMIT <= '0';				
 			when others =>
 				
 		end case;

@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 240 128)
+	(rect 16 16 240 160)
 	(text "spi_master1" (rect 5 0 53 12)(font "Arial" ))
-	(text "inst" (rect 8 96 20 108)(font "Arial" ))
+	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -80,6 +80,13 @@ agreement for further details.
 		(text "MOSI" (rect 180 75 203 87)(font "Arial" ))
 		(line (pt 224 80)(pt 208 80)(line_width 1))
 	)
+	(port
+		(pt 224 96)
+		(output)
+		(text "fPulse" (rect 0 0 24 12)(font "Arial" ))
+		(text "fPulse" (rect 179 91 203 103)(font "Arial" ))
+		(line (pt 224 96)(pt 208 96)(line_width 1))
+	)
 	(parameter
 		"dw"
 		"16"
@@ -101,7 +108,7 @@ agreement for further details.
 		""
 		(type "PARAMETER_ENUM")	)
 	(drawing
-		(rectangle (rect 16 16 208 96)(line_width 1))
+		(rectangle (rect 16 16 208 128)(line_width 1))
 	)
 	(annotation_block (parameter)(rect 240 -64 340 16))
 )

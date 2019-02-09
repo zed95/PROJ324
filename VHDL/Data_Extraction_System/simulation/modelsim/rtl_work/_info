@@ -8,41 +8,41 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim
-Edata_extraction_controller
-Z1 w1549570160
+Eaddressblock
+Z1 w1549672982
 Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z7 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/Data_Extraction_Controller.vhd
-Z8 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/Data_Extraction_Controller.vhd
+Z7 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/addressBlock.vhd
+Z8 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/addressBlock.vhd
 l0
 L8
-V;gnjfS<=o7>We;S@X7NF>1
-!s100 mPEl2_@Xj_2`f:igA8f;A1
+V8SKeL?ZZ960QmJRVXcTM_1
+!s100 g_MkU_ZYKbSYE3aHZ5bkP0
 Z9 OV;C;10.5b;63
 31
-Z10 !s110 1549571334
+Z10 !s110 1549675464
 !i10b 1
-Z11 !s108 1549571334.000000
-Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/Data_Extraction_Controller.vhd|
-Z13 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/Data_Extraction_Controller.vhd|
+Z11 !s108 1549675464.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/addressBlock.vhd|
+Z13 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/addressBlock.vhd|
 !i113 1
 Z14 o-93 -work work
 Z15 tExplicit 1 CvgOpt 0
-Adata_extraction_controller
+Aaddressblock
 R2
 R3
 R4
 R5
 R6
-DEx4 work 26 data_extraction_controller 0 22 ;gnjfS<=o7>We;S@X7NF>1
-l33
-L30
-VGSITeYbKYO8Df42hMSg5V3
-!s100 4TfZAkMi7kAMVL0m3?`Yk0
+DEx4 work 12 addressblock 0 22 8SKeL?ZZ960QmJRVXcTM_1
+l25
+L22
+VMULR@B9NgYblWfgN_e=d`1
+!s100 ZTXSA6PIj]>7gz8RSGi`c2
 R9
 31
 R10
@@ -53,35 +53,41 @@ R13
 !i113 1
 R14
 R15
-Edata_extraction_controller_vhd_tst
-Z16 w1549571323
+Eclk_divider
+Z16 w1549618905
+R2
+R3
+R4
 R5
 R6
 R0
-Z17 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/Data_Extraction_Controller.vht
-Z18 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/Data_Extraction_Controller.vht
+Z17 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/CLK_DIVIDER.vhd
+Z18 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/CLK_DIVIDER.vhd
 l0
-L31
-VlNDo706=Y;lH7aPl^VzS;1
-!s100 k`f4gOW1;lH[G0>2]Q`RP3
+L14
+VZTGRS<gTaPMPjSWlY`LB22
+!s100 jZCE]FYhH69=^`BP^0:>?2
 R9
 31
 R10
 !i10b 1
 R11
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/Data_Extraction_Controller.vht|
-Z20 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/Data_Extraction_Controller.vht|
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/CLK_DIVIDER.vhd|
+Z20 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/CLK_DIVIDER.vhd|
 !i113 1
 R14
 R15
-Adata_extraction_controller_arch
+Aclk_divider_v1
+R2
+R3
+R4
 R5
 R6
-DEx4 work 34 data_extraction_controller_vhd_tst 0 22 lNDo706=Y;lH7aPl^VzS;1
-l65
-L33
-VI:QoeT`;1AkDkjX`5ZHmO3
-!s100 EFKh7H5aQh<7bS>EDM9B22
+DEx4 work 11 clk_divider 0 22 ZTGRS<gTaPMPjSWlY`LB22
+l28
+L26
+V2oikE=khffAHf=D@M`k^b3
+!s100 =mSXoG=Re[oInYGaojSNF1
 R9
 31
 R10
@@ -89,6 +95,264 @@ R10
 R11
 R19
 R20
+!i113 1
+R14
+R15
+Edesrx
+Z21 w1549672562
+R2
+R3
+R4
+R5
+R6
+R0
+Z22 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd
+Z23 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd
+l0
+L8
+VQkfNX44FmhkA8S?JLFQ560
+!s100 TWNQChcZfF@4dVW]lJCeN2
+R9
+31
+R10
+!i10b 1
+R11
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd|
+Z25 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd|
+!i113 1
+R14
+R15
+Adesrx
+R2
+R3
+R4
+R5
+R6
+DEx4 work 5 desrx 0 22 QkfNX44FmhkA8S?JLFQ560
+l28
+L25
+V31ZV9z3IH_CSO0^feIC_:3
+!s100 MaUSOQLL7Ol^;nzUU2BNS2
+R9
+31
+R10
+!i10b 1
+R11
+R24
+R25
+!i113 1
+R14
+R15
+Edestx
+Z26 w1549648437
+R2
+R3
+R4
+R5
+R6
+R0
+Z27 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd
+Z28 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd
+l0
+L8
+V@5]7YZ:DF1h7b8H5E>2[M2
+!s100 j>HlLP5VC9o`mjNL6Ti:i2
+R9
+31
+R10
+!i10b 1
+R11
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd|
+Z30 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd|
+!i113 1
+R14
+R15
+Adestx
+R2
+R3
+R4
+R5
+R6
+DEx4 work 5 destx 0 22 @5]7YZ:DF1h7b8H5E>2[M2
+l28
+L25
+V5^RihmDK8Xl7Kk@9AZNER3
+!s100 PWm?iHPoc3L43jm2KP=cm0
+R9
+31
+R10
+!i10b 1
+R11
+R29
+R30
+!i113 1
+R14
+R15
+Efifobuffer
+Z31 w1549650509
+R2
+R3
+R4
+R5
+R6
+R0
+Z32 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd
+Z33 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd
+l0
+L8
+V5eZIg93BWDBa=AR804hl>1
+!s100 zdKSCi65G3a_W]G6@3:;?0
+R9
+31
+R10
+!i10b 1
+R11
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd|
+Z35 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd|
+!i113 1
+R14
+R15
+Afifobuffer
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 fifobuffer 0 22 5eZIg93BWDBa=AR804hl>1
+l36
+L28
+Vzj;mM<lf69a[:MUECh5?n0
+!s100 eO>W73dYGge>X8^;lS=VU2
+R9
+31
+R10
+!i10b 1
+R11
+R34
+R35
+!i113 1
+R14
+R15
+Epulser
+Z36 w1549670955
+R2
+R3
+R4
+R5
+R6
+R0
+Z37 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/pulser.vhd
+Z38 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/pulser.vhd
+l0
+L8
+VNjzU5V;J2HH=R_B6Wl0SP3
+!s100 nSEHdciQzBKze50Q@6I4W3
+R9
+31
+Z39 !s110 1549675465
+!i10b 1
+Z40 !s108 1549675465.000000
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/pulser.vhd|
+Z42 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/pulser.vhd|
+!i113 1
+R14
+R15
+Apulser
+R2
+R3
+R4
+R5
+R6
+DEx4 work 6 pulser 0 22 NjzU5V;J2HH=R_B6Wl0SP3
+l22
+L21
+V_l=8Hggz_R3AFNUMR]Rh]1
+!s100 4Pn`Yk^h>fXIez44FCMD;1
+R9
+31
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R14
+R15
+Esenddata1
+Z43 w1549675105
+R5
+R6
+R0
+Z44 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/SendData1.vhd
+Z45 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/SendData1.vhd
+l0
+L25
+V9c0momYTU36_9[Yh5SDH^0
+!s100 h8VhNb>MUO=BPTH4Dd0C00
+R9
+31
+R39
+!i10b 1
+R40
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/SendData1.vhd|
+Z47 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/SendData1.vhd|
+!i113 1
+R14
+R15
+Abdf_type
+R5
+R6
+DEx4 work 9 senddata1 0 22 9c0momYTU36_9[Yh5SDH^0
+l109
+L32
+VQiYU7?>DX<EC4UWK];h6Y1
+!s100 :XDlz<a:Db>Z=G_EX=XD02
+R9
+31
+R39
+!i10b 1
+R40
+R46
+R47
+!i113 1
+R14
+R15
+Esenddata1_vhd_tst
+Z48 w1549675456
+R5
+R6
+R0
+Z49 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/SendData1.vht
+Z50 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/SendData1.vht
+l0
+L31
+VC^`hX6PV11;lj]PgV1??n3
+!s100 fbCzHk;``:3D@G]30g<T22
+R9
+31
+R39
+!i10b 1
+R40
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/SendData1.vht|
+Z52 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/SendData1.vht|
+!i113 1
+R14
+R15
+Asenddata1_arch
+R5
+R6
+DEx4 work 17 senddata1_vhd_tst 0 22 C^`hX6PV11;lj]PgV1??n3
+l45
+L33
+V;>]N@haV@=WkAiQa03D[R0
+!s100 Po::0<n9@nTXOgAI9=0DI2
+R9
+31
+R39
+!i10b 1
+R40
+R51
+R52
 !i113 1
 R14
 R15

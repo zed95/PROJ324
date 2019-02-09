@@ -27,7 +27,7 @@ begin
 	BEGIN
 		if(rising_edge(CLK)) then
 			cstate := input;
-			if(pstate = '0' and cstate = '1') then
+			if(pstate = '1' and cstate = '0') then
 				output <= '1';
 			else
 				output <= '0';

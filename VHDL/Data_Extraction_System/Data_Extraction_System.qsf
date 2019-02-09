@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY Data_Extraction_Controller
+set_global_assignment -name TOP_LEVEL_ENTITY SendData1
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:00:41  FEBRUARY 06, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
@@ -57,7 +57,7 @@ set_global_assignment -name VHDL_FILE addressBlock.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH Data_Extraction_Controller_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH SendData1_vhd_tst -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME Data_Extraction_Controller_vhd_tst -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Data_Extraction_Controller_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Data_Extraction_Controller_vhd_tst -section_id Data_Extraction_Controller_vhd_tst
@@ -74,6 +74,56 @@ set_global_assignment -name VHDL_FILE FIFObuffer.vhd
 set_global_assignment -name EDA_TEST_BENCH_NAME FIFObuffer_vhd_tst -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id FIFObuffer_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME FIFObuffer_vhd_tst -section_id FIFObuffer_vhd_tst
+set_global_assignment -name VHDL_FILE accessControl.vhd
+set_global_assignment -name VHDL_FILE CLK_DIVIDER.vhd
+set_location_assignment PIN_A15 -to LED0
+set_location_assignment PIN_A13 -to LED1
+set_location_assignment PIN_B13 -to LED2
+set_location_assignment PIN_A11 -to LED3
+set_location_assignment PIN_D1 -to LED4
+set_location_assignment PIN_F3 -to LED5
+set_location_assignment PIN_B1 -to LED6
+set_location_assignment PIN_L3 -to LED7
+set_location_assignment PIN_A2 -to CS
+set_location_assignment PIN_A6 -to MISO
+set_location_assignment PIN_D6 -to MOSI
+set_location_assignment PIN_D5 -to MSTR_CLK
+set_location_assignment PIN_T13 -to MISO_MPU
+set_location_assignment PIN_F13 -to MPU_CS
+set_location_assignment PIN_T12 -to MPU_MOSI
+set_location_assignment PIN_T15 -to MPU_MSTR_CLK
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name CDF_FILE output_files/Chain2.cdf
+set_global_assignment -name EDA_TEST_BENCH_NAME Data_Extraction_System_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Data_Extraction_System_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Data_Extraction_System_vhd_tst -section_id Data_Extraction_System_vhd_tst
+set_global_assignment -name BDF_FILE DES_TEST.bdf
+set_global_assignment -name EDA_TEST_BENCH_NAME DES_TEST_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id DES_TEST_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME DES_TEST_vhd_tst -section_id DES_TEST_vhd_tst
+set_location_assignment PIN_J15 -to BTN
+set_location_assignment PIN_R8 -to CLK_50MHz
+set_global_assignment -name VHDL_FILE tst.vhd
+set_global_assignment -name VHDL_FILE DESrx.vhd
+set_global_assignment -name VHDL_FILE DEStx.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME accessControl_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id accessControl_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME accessControl_vhd_tst -section_id accessControl_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_NAME tst_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tst_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tst_vhd_tst -section_id tst_vhd_tst
+set_global_assignment -name BDF_FILE ReadMPU.bdf
+set_global_assignment -name VHDL_FILE ReadMPU1.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME ReadMPU1_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ReadMPU1_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ReadMPU1_vhd_tst -section_id ReadMPU1_vhd_tst
+set_global_assignment -name VHDL_FILE pulser.vhd
+set_global_assignment -name VHDL_FILE ReadMPU2.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME ReadMPU2_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ReadMPU2_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ReadMPU2_vhd_tst -section_id ReadMPU2_vhd_tst
+set_global_assignment -name BDF_FILE SendData.bdf
+set_global_assignment -name VHDL_FILE SendData1.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -82,4 +132,13 @@ set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/Data_Extract
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/genPulse.vht -section_id genPulse_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/xDomain_s2f.vht -section_id xDomain_s2f_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/FIFObuffer.vht -section_id FIFObuffer_vhd_tst
-set_global_assignment -name VHDL_FILE accessControl.vhd
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/Data_Extraction_System.vht -section_id Data_Extraction_System_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/DES_TEST.vht -section_id DES_TEST_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/accessControl.vht -section_id accessControl_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/tst.vht -section_id tst_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/ReadMPU1.vht -section_id ReadMPU1_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/ReadMPU2.vht -section_id ReadMPU2_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_NAME SendData1_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SendData1_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SendData1_vhd_tst -section_id SendData1_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/SendData1.vht -section_id SendData1_vhd_tst

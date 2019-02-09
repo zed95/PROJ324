@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+
+entity tst is
+	generic (Count : integer := 25);
+	port 
+	(
+		--Inputs
+		CLK		: in std_logic;
+		input	   : in std_logic;	
+		
+		--Outputs
+		output 	: OUT std_logic
+	);
+end entity;
+
+
+architecture tst of tst is				
+begin	
+	process(CLK)
+	variable idx :  integer := 0;
+
+	BEGIN
+		if(rising_edge(CLK)) then
+			
+			if(input = '1') then
+				idx := idx + 1;
+			end if;
+			
+			if(idx > 10) then
+				output <= '1';
+			end if;
+		end if;
+	END PROCESS;
+	
+end tst;

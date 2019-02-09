@@ -18,8 +18,9 @@ entity spi_master1 is
 		transmit : in std_logic;		--SPI is activated when there is data to transmit
 		CS			: out std_logic;		--Chip Select 
 		CLKO		: out std_logic;		--Clock Output. Master clock to the slave is output here.
-		rx_data : out std_logic_vector((dw - 1) downto 0); --received data is output here.
-		MOSI     : out std_logic		--Master Out Slave In.
+		rx_data  : out std_logic_vector((dw - 1) downto 0); --received data is output here.
+		MOSI     : out std_logic;		--Master Out Slave In.
+		fPulse	: out std_logic
 	);
 
 end entity;
@@ -292,7 +293,7 @@ begin
 	end process;
 ----------------------------------------------DELAY-PROCEDURE---------------------------------------
 
-process(wt, transmit) is
+process(clky) is
 begin
 	if(transmit = '1') then
 		done <= '0';
@@ -302,5 +303,20 @@ begin
 		done <= '1';
 	end if;
 end process; 
+
+	process(clky)
+	variable cstate :  std_logic := '1';
+	variable pstate :  std_logic := '1';
+	BEGIN
+		if(rising_edge(clky)) then
+			cstate := wt;
+			if(pstate = '1' and cstate = '0') then
+				fPulse <= '1';
+			else
+				fPulse <= '0';
+			end if;
+			pstate := cstate;
+		end if;
+	END PROCESS;
 
 end spi_master1;
