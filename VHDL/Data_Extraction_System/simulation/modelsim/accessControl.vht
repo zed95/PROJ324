@@ -92,14 +92,22 @@ always : PROCESS
 -- (        )                                                 
 -- variable declarations                                      
 BEGIN                                                         
-       for k in 0 to 500 loop 
+       for k in 0 to 2000 loop 
 			wait until rising_edge(clk);
-			r2sIMU <= "000001";
-			if(strtTx = "000001") then
-				if(k >= 60) then
-					txIMU <= "000001";
-				end if;
+			if(k < 200) then
+				r2sIMU <= "000001";
+			else
+				r2sIMU <= "000000";
 			end if;
+			dataIMU0 <= "0011000000001100";
+			dataIMU1 <= "0111000000001110";
+			dataIMU2 <= "1111000000001111";
+			dataIMU3 <= "0111100000011110";
+			dataIMU4 <= "0111110000111110";
+			dataIMU5 <= "0111111001111110";
+			
+			txIMU <= "000001";
+			
 		 end loop;
 WAIT;                                                        
 END PROCESS always;   
@@ -107,7 +115,7 @@ END PROCESS always;
 clk_process : process
 
 begin
-	for k in 0 to 500 loop
+	for k in 0 to 2000 loop
 		  
 		CLK <= '0'; 
 		  wait for half_clk_period;

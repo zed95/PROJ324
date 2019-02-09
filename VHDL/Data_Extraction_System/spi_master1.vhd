@@ -50,7 +50,7 @@ architecture spi_master1 of spi_master1 is
 	signal SPImode	  : std_logic;	  	 --used to control the polarity of clkz with respect to clkx.
 	signal dwReg : std_logic_vector((dw - 1) downto 0);	--Recieve register. Data from slave is saved here.
 	signal rtl   : std_logic;   		 --rtl - ready to load. This signal goes high when data has been received from the slave.
-	signal done	 : std_logic;
+	signal StartTx	 : std_logic;
 
 begin
 
@@ -73,7 +73,7 @@ begin
 	process (clky)
 		variable EC : integer := 0;	--EC - Edge Counter
 	begin
-		if (rising_edge(clky) and wt = '0' and done = '0') then
+		if (rising_edge(clky) and wt = '0' and StartTx = '1') then
 			case state_csh is
 				when CSLOW =>
 					CSU <= '0';						--Send signal to set CS pin LOW.
@@ -96,7 +96,7 @@ begin
 	process (clky)
 		variable EC : integer := 0;	--EC - Edge Counter
 	begin
-		if (falling_edge(clky) and wt = '0' and done = '0') then
+		if (falling_edge(clky) and wt = '0' and StartTx = '1') then
 			case state_csl is
 				when CSLOW =>						
 					CSD <= '0';						--Send signal to set CS pin LOW
@@ -136,7 +136,7 @@ begin
 	process (clkx)
 		variable CC	: integer := 0;	--CC - Clock Counter
 	begin
-		if (rising_edge(clkx) and wt = '0' and done = '0') then
+		if (rising_edge(clkx) and wt = '0' and StartTx = '1') then
 			case state_clk is
 				when CLKH =>						--CLKH - refers to the enabled state of the clock
 					rtc <= '1';						--send signal to enable the master clock
@@ -185,7 +185,7 @@ begin
 	process (clkx)
 		variable CC	: integer := 0;	--CC - Clock Counter
 	begin
-		if (rising_edge(clkx) and wt = '0' and done = '0') then
+		if (rising_edge(clkx) and wt = '0' and StartTx = '1') then
 			case state_tr is
 				when trSTRT =>
 					rxd <= '1';						--Send signal to begin clocking in the data from the slave
@@ -229,7 +229,7 @@ begin
 	variable	DTS	: std_logic_vector((dw - 1) downto 0);	--DTS - Data To Send
 	variable BP	: integer := 16;	--bp - bit pointer
 	begin
-		if (rising_edge(clkz) and wt = '0' and done = '0') then
+		if (rising_edge(clkz) and wt = '0' and StartTx = '1') then
 			if ((txNCPHA = '1' and CPHA = '0') or (txCPHA = '1' and CPHA = '1')) then
 				BP := BP - 1;						--point to the next lower bit to be transmitted
 				MOSI <= DTS(BP);					--Transmit the bit
@@ -249,7 +249,7 @@ begin
 	process (clkz)
 		variable PP	: integer := dw;	--PP - Position Pointer
 	begin
-		if (falling_edge(clkz) and wt = '0' and done = '0') then
+		if (falling_edge(clkz) and wt = '0' and StartTx = '1') then
 			if (rxd = '1') then			--Once rxd signal is set to '1', start clockig in data from the master.
 				PP := PP - 1;				--Decrement position pointer to point to the next position where the bit will be placed
 				dwReg(PP) <= MISO;		--Place the incoming bit into the shift register. The position is indicated by position pointer.
@@ -277,7 +277,7 @@ begin
 		variable delay_counter : integer := 0;
 	begin
 		if(falling_edge(clky)) then
-			if((CSD and CSU) = '1') then	--Once the CS pin goes high send a signal to initiate the delay procedure
+			if((CSD and CSU) = '1' and StartTx = '1') then	--Once the CS pin goes high send a signal to initiate the delay procedure
 				wt <= '1';						--Set wt to '1' to start counting
 			end if; -- ((CSD and CSU) = '1')
 			
@@ -288,21 +288,17 @@ begin
 			if(delay_counter = delay) then 	--Once the delacy counter reaches the desired delay time, send signal to stop to delay procedure
 				wt <= '0';						   --Set wt to 0 to stop counting.
 				delay_counter := 0;	--Reset delay_counter
+				StartTx <= '0';
 			end if; -- (delay_counter = delay)
+			
+			if(transmit = '1') then 
+				StartTx <= '1';
+			end if;
+			
 		end if; --(reset = '0')
+		
 	end process;
-----------------------------------------------DELAY-PROCEDURE---------------------------------------
-
-process(clky) is
-begin
-	if(transmit = '1') then
-		done <= '0';
-	end if;
-	
-	if(wt = '1' and transmit = '0') then
-		done <= '1';
-	end if;
-end process; 
+----------------------------------------------DELAY-PROCEDURE--------------------------------------- 
 
 	process(clky)
 	variable cstate :  std_logic := '1';

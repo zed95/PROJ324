@@ -87,7 +87,6 @@ begin
 				end if;
 				state <= IDLE;
 			when SEND =>
-				dataOut <= datArray(OS);
 				if(OS = 11) then
 					OS <= 0;
 					FS <= 0;
@@ -110,18 +109,21 @@ begin
 				elsif(OS = 0) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
 					empty <= '1';
 				end if;
+				dataOut <= datArray(OS);
 			when STORE =>
 				if(NS = 11) then
 					empty <= '0';
 				elsif(OS = 0) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
 					empty <= '1';
 				end if;
+				dataOut <= datArray(OS);
 			when SEND =>
 				if(NS = 11) then
 					empty <= '0';
 				elsif(OS = 0) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
 					empty <= '1';
 				end if;
+				dataOut <= datArray(OS);
 			when others =>
 		end case;
 	end process;

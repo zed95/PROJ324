@@ -24,7 +24,7 @@ agreement for further details.
 	(input)
 	(rect 312 -368 480 -352)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "MISO" (rect 5 0 31 17)(font "Intel Clear" ))
+	(text "MISO" (rect 5 0 30 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ agreement for further details.
 	(input)
 	(rect 272 80 440 96)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "MISO_MPU" (rect 5 0 61 17)(font "Intel Clear" ))
+	(text "MISO_MPU" (rect 5 0 60 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -56,23 +56,7 @@ agreement for further details.
 	(input)
 	(rect -656 -144 -488 -128)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK_50MHz" (rect 5 0 66 12)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
-	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(input)
-	(rect 312 -336 480 -320)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BTN" (rect 5 0 26 17)(font "Intel Clear" ))
+	(text "CLK_50MHz" (rect 5 0 65 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -442,21 +426,21 @@ agreement for further details.
 		(pt 232 32)
 		(output)
 		(text "dataOut[dw-1..0]" (rect 0 0 81 12)(font "Arial" ))
-		(text "dataOut[dw-1..0]" (rect 143 27 211 39)(font "Arial" ))
+		(text "dataOut[dw-1..0]" (rect 143 27 224 39)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32)(line_width 3))
 	)
 	(port
 		(pt 232 48)
 		(output)
 		(text "TRANSMIT" (rect 0 0 54 12)(font "Arial" ))
-		(text "TRANSMIT" (rect 166 43 211 55)(font "Arial" ))
+		(text "TRANSMIT" (rect 166 43 220 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48))
 	)
 	(port
 		(pt 232 64)
 		(output)
 		(text "strtTx[5..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "strtTx[5..0]" (rect 166 59 211 71)(font "Arial" ))
+		(text "strtTx[5..0]" (rect 166 59 220 71)(font "Arial" ))
 		(line (pt 232 64)(pt 216 64)(line_width 3))
 	)
 	(parameter
@@ -711,7 +695,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"50000"
+		"20000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -803,7 +787,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"50000"
+		"20000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -1115,18 +1099,9 @@ agreement for further details.
 	(pt 1424 -416)
 )
 (connector
-	(text "txx" (rect 146 128 158 145)(font "Intel Clear" ))
-	(pt 136 144)
-	(pt 240 144)
-)
-(connector
 	(text "rx[0]" (rect 1434 -448 1455 -431)(font "Intel Clear" ))
 	(pt 1480 -432)
 	(pt 1424 -432)
-)
-(connector
-	(pt 648 -328)
-	(pt 480 -328)
 )
 (connector
 	(text "BFR0[15..0]" (rect -158 -384 -103 -367)(font "Intel Clear" ))
@@ -1157,4 +1132,14 @@ agreement for further details.
 	(pt -8 -304)
 	(pt -160 -304)
 	(bus)
+)
+(connector
+	(text "TRANSMIT" (rect 490 -344 540 -327)(font "Intel Clear" ))
+	(pt 648 -328)
+	(pt 480 -328)
+)
+(connector
+	(text "txIMU[0]" (rect 146 128 186 145)(font "Intel Clear" ))
+	(pt 136 144)
+	(pt 240 144)
 )
