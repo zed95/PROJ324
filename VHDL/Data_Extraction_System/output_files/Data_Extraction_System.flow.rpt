@@ -1,5 +1,5 @@
 Flow report for Data_Extraction_System
-Sat Feb 09 18:40:23 2019
+Mon Feb 11 23:13:45 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Feb 09 18:40:23 2019       ;
+; Flow Status                        ; Successful - Mon Feb 11 23:13:45 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; Data_Extraction_System                      ;
 ; Top-level Entity Name              ; Data_Extraction_System                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 990 / 22,320 ( 4 % )                        ;
-;     Total combinational functions  ; 946 / 22,320 ( 4 % )                        ;
-;     Dedicated logic registers      ; 633 / 22,320 ( 3 % )                        ;
-; Total registers                    ; 633                                         ;
+; Total logic elements               ; 993 / 22,320 ( 4 % )                        ;
+;     Total combinational functions  ; 944 / 22,320 ( 4 % )                        ;
+;     Dedicated logic registers      ; 636 / 22,320 ( 3 % )                        ;
+; Total registers                    ; 636                                         ;
 ; Total pins                         ; 17 / 154 ( 11 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 144 / 608,256 ( < 1 % )                     ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 02/09/2019 18:39:45    ;
+; Start date & time ; 02/11/2019 23:13:11    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; Data_Extraction_System ;
 +-------------------+------------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+----------------------------------------------------+---------------+-------------+------------------------------------+
 ; Assignment Name                      ; Value                                              ; Default Value ; Entity Name ; Section Id                         ;
 +--------------------------------------+----------------------------------------------------+---------------+-------------+------------------------------------+
-; COMPILER_SIGNATURE_ID                ; 247207024423183.154973758418124                    ; --            ; --          ; --                                 ;
+; COMPILER_SIGNATURE_ID                ; 247207024423183.154992679116668                    ; --            ; --          ; --                                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; SendData1_vhd_tst                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; tst_vhd_tst                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; SPIpulse1_vhd_tst                  ;
@@ -89,7 +89,7 @@ agreement for further details.
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; Data_Extraction_System_vhd_tst     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                                 ; --            ; --          ; xDomain_s2f_vhd_tst                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; ReadMPU2_vhd_tst                   ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; accessControl_vhd_tst                              ; --            ; --          ; eda_simulation                     ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; genPulse_vhd_tst                                   ; --            ; --          ; eda_simulation                     ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                               ; --            ; --          ; eda_simulation                     ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                             ; <None>        ; --          ; --                                 ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                    ; --            ; --          ; eda_simulation                     ;
@@ -147,12 +147,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 4871 MB             ; 00:00:25                           ;
-; Fitter                    ; 00:00:14     ; 1.2                     ; 6164 MB             ; 00:00:28                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4693 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.4                     ; 4908 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4670 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:34     ; --                      ; --                  ; 00:00:59                           ;
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 4865 MB             ; 00:00:24                           ;
+; Fitter                    ; 00:00:12     ; 1.2                     ; 6160 MB             ; 00:00:26                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4700 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.4                     ; 4905 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4667 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:56                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
