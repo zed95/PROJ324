@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+entity delayOnce is
+	port 
+	(
+		--Inputs
+		CLK	   : in std_logic;	
+		Empty		: in std_logic;
+		
+		--Outputs
+		Output 	: OUT std_logic
+	);
+end entity;
+
+
+architecture delayOnce of delayOnce is	
+begin	
+	process(CLK)
+	variable addNo :  integer := 0;		--Start from 0 to jump onto first address when signal from controller comes in. 0   10
+	BEGIN
+		if(rising_edge(CLK)) then
+			if(addNo = 20) then
+				Output <= Empty
+				
+			else
+				Output <= '0';
+				addNo := addNo + 1;
+			end if;
+
+		end if;
+	END PROCESS;
+	
+end delayOnce;

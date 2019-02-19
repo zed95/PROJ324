@@ -561,7 +561,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 1248 88 1464 200)
+	(rect 1248 112 1464 224)
 	(text "FIFObuffer" (rect 5 0 61 12)(font "Arial" ))
 	(text "inst16" (rect 8 96 36 113)(font "Intel Clear" ))
 	(port
@@ -619,99 +619,36 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 200 96))
 	)
-	(annotation_block (parameter)(rect 1464 24 1640 88))
+	(annotation_block (parameter)(rect 1464 48 1640 112))
 )
 (symbol
-	(rect 584 40 808 184)
-	(text "spi_master1" (rect 5 0 65 12)(font "Arial" ))
-	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
+	(rect 1120 -200 1296 -120)
+	(text "genVal" (rect 5 0 38 12)(font "Arial" ))
+	(text "inst1" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "MISO" (rect 0 0 27 12)(font "Arial" ))
-		(text "MISO" (rect 21 43 48 55)(font "Arial" ))
+		(text "NXTV" (rect 0 0 28 12)(font "Arial" ))
+		(text "NXTV" (rect 21 43 49 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "tx_data[dw-1..0]" (rect 0 0 79 12)(font "Arial" ))
-		(text "tx_data[dw-1..0]" (rect 21 59 100 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "transmit" (rect 0 0 40 12)(font "Arial" ))
-		(text "transmit" (rect 21 75 61 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 224 32)
+		(pt 176 32)
 		(output)
-		(text "CS" (rect 0 0 15 12)(font "Arial" ))
-		(text "CS" (rect 191 27 206 39)(font "Arial" ))
-		(line (pt 224 32)(pt 208 32))
+		(text "vOut[15..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "vOut[15..0]" (rect 108 27 164 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
-	(port
-		(pt 224 48)
-		(output)
-		(text "CLKO" (rect 0 0 29 12)(font "Arial" ))
-		(text "CLKO" (rect 179 43 208 55)(font "Arial" ))
-		(line (pt 224 48)(pt 208 48))
-	)
-	(port
-		(pt 224 64)
-		(output)
-		(text "rx_data[dw-1..0]" (rect 0 0 79 12)(font "Arial" ))
-		(text "rx_data[dw-1..0]" (rect 137 59 216 71)(font "Arial" ))
-		(line (pt 224 64)(pt 208 64)(line_width 3))
-	)
-	(port
-		(pt 224 80)
-		(output)
-		(text "MOSI" (rect 0 0 27 12)(font "Arial" ))
-		(text "MOSI" (rect 181 75 208 87)(font "Arial" ))
-		(line (pt 224 80)(pt 208 80))
-	)
-	(port
-		(pt 224 96)
-		(output)
-		(text "fPulse" (rect 0 0 31 12)(font "Arial" ))
-		(text "fPulse" (rect 177 91 208 103)(font "Arial" ))
-		(line (pt 224 96)(pt 208 96))
-	)
-	(parameter
-		"dw"
-		"16"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"delay"
-		"1000"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"CPHA"
-		"'1'"
-		""
-		(type "PARAMETER_ENUM")	)
-	(parameter
-		"CPOL"
-		"'1'"
-		""
-		(type "PARAMETER_ENUM")	)
 	(drawing
-		(rectangle (rect 16 16 208 128))
+		(rectangle (rect 16 16 160 64))
 	)
-	(annotation_block (parameter)(rect 584 -64 753 31))
 )
 (symbol
 	(rect 648 -408 872 -264)
@@ -787,7 +724,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"1000"
+		"10000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -803,7 +740,99 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 128))
 	)
-	(annotation_block (parameter)(rect 648 -512 817 -417))
+	(annotation_block (parameter)(rect 648 -512 823 -417))
+)
+(symbol
+	(rect 584 40 808 184)
+	(text "spi_master1" (rect 5 0 65 12)(font "Arial" ))
+	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "MISO" (rect 0 0 27 12)(font "Arial" ))
+		(text "MISO" (rect 21 43 48 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "tx_data[dw-1..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "tx_data[dw-1..0]" (rect 21 59 100 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "transmit" (rect 0 0 40 12)(font "Arial" ))
+		(text "transmit" (rect 21 75 61 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "CS" (rect 0 0 15 12)(font "Arial" ))
+		(text "CS" (rect 191 27 206 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "CLKO" (rect 0 0 29 12)(font "Arial" ))
+		(text "CLKO" (rect 179 43 208 55)(font "Arial" ))
+		(line (pt 224 48)(pt 208 48))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "rx_data[dw-1..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "rx_data[dw-1..0]" (rect 137 59 216 71)(font "Arial" ))
+		(line (pt 224 64)(pt 208 64)(line_width 3))
+	)
+	(port
+		(pt 224 80)
+		(output)
+		(text "MOSI" (rect 0 0 27 12)(font "Arial" ))
+		(text "MOSI" (rect 181 75 208 87)(font "Arial" ))
+		(line (pt 224 80)(pt 208 80))
+	)
+	(port
+		(pt 224 96)
+		(output)
+		(text "fPulse" (rect 0 0 31 12)(font "Arial" ))
+		(text "fPulse" (rect 177 91 208 103)(font "Arial" ))
+		(line (pt 224 96)(pt 208 96))
+	)
+	(parameter
+		"dw"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"delay"
+		"10000"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"CPHA"
+		"'1'"
+		""
+		(type "PARAMETER_ENUM")	)
+	(parameter
+		"CPOL"
+		"'1'"
+		""
+		(type "PARAMETER_ENUM")	)
+	(drawing
+		(rectangle (rect 16 16 208 128))
+	)
+	(annotation_block (parameter)(rect 584 -64 759 31))
 )
 (connector
 	(text "ADD[15..0]" (rect 866 -136 916 -119)(font "Intel Clear" ))
@@ -822,41 +851,12 @@ agreement for further details.
 	(pt 640 -104)
 )
 (connector
-	(text "CLK_1MHz" (rect 1130 104 1183 121)(font "Intel Clear" ))
-	(pt 1248 120)
-	(pt 1120 120)
-)
-(connector
-	(text "bfrStore" (rect 1130 120 1167 137)(font "Intel Clear" ))
-	(pt 1248 136)
-	(pt 1120 136)
-)
-(connector
-	(text "bfrSend" (rect 1130 136 1166 153)(font "Intel Clear" ))
-	(pt 1248 152)
-	(pt 1120 152)
-)
-(connector
-	(text "bfrEmpty" (rect 1474 120 1517 137)(font "Intel Clear" ))
-	(pt 1616 136)
-	(pt 1464 136)
-)
-(connector
-	(pt 1616 136)
-	(pt 1616 224)
-)
-(connector
 	(pt 1616 224)
 	(pt 1528 224)
 )
 (connector
 	(pt 968 -120)
 	(pt 968 -56)
-	(bus)
-)
-(connector
-	(pt 968 -56)
-	(pt 912 -56)
 	(bus)
 )
 (connector
@@ -987,20 +987,8 @@ agreement for further details.
 	(pt 648 -360)
 )
 (connector
-	(text "IMU0[15..0]" (rect 1130 152 1184 169)(font "Intel Clear" ))
-	(pt 1248 168)
-	(pt 1120 168)
-	(bus)
-)
-(connector
 	(pt 584 88)
 	(pt 440 88)
-)
-(connector
-	(text "BFR0[15..0]" (rect 1474 104 1529 121)(font "Intel Clear" ))
-	(pt 1464 120)
-	(pt 1600 120)
-	(bus)
 )
 (connector
 	(text "BFR0[15..0]" (rect -158 -400 -103 -383)(font "Intel Clear" ))
@@ -1142,4 +1130,61 @@ agreement for further details.
 	(text "txIMU[0]" (rect 146 128 186 145)(font "Intel Clear" ))
 	(pt 136 144)
 	(pt 240 144)
+)
+(connector
+	(text "Value[15..0]" (rect 1306 -184 1363 -167)(font "Intel Clear" ))
+	(pt 1296 -168)
+	(pt 1424 -168)
+	(bus)
+)
+(connector
+	(text "CLK_1MHz" (rect 1026 -184 1079 -167)(font "Intel Clear" ))
+	(pt 1016 -168)
+	(pt 1120 -168)
+)
+(connector
+	(text "NXT_ADD" (rect 1026 -168 1073 -151)(font "Intel Clear" ))
+	(pt 1016 -152)
+	(pt 1120 -152)
+)
+(connector
+	(pt 968 -56)
+	(pt 976 -56)
+	(bus)
+)
+(connector
+	(text "CLK_1MHz" (rect 1130 128 1183 145)(font "Intel Clear" ))
+	(pt 1248 144)
+	(pt 1120 144)
+)
+(connector
+	(text "bfrStore" (rect 1130 144 1167 161)(font "Intel Clear" ))
+	(pt 1248 160)
+	(pt 1120 160)
+)
+(connector
+	(text "bfrSend" (rect 1130 160 1166 177)(font "Intel Clear" ))
+	(pt 1248 176)
+	(pt 1120 176)
+)
+(connector
+	(text "bfrEmpty" (rect 1474 144 1517 161)(font "Intel Clear" ))
+	(pt 1616 160)
+	(pt 1464 160)
+)
+(connector
+	(pt 1616 224)
+	(pt 1616 160)
+)
+(connector
+	(text "BFR0[15..0]" (rect 1474 128 1529 145)(font "Intel Clear" ))
+	(pt 1464 144)
+	(pt 1600 144)
+	(bus)
+)
+(connector
+	(text "IMU0[15..0]" (rect 1130 176 1184 193)(font "Intel Clear" ))
+	(pt 1248 192)
+	(pt 1120 192)
+	(bus)
 )

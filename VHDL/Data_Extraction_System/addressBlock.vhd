@@ -24,7 +24,7 @@ type state_extraction  is (IDLE, START, WAITING, NXT);
 signal state   : state_extraction;				
 begin	
 	process(CLK)
-	variable addNo :  integer := 0;		--Start from 0 to jump onto first address when signal from controller comes in. 0   10
+	variable addNo :  integer := 1;		--Start from 0 to jump onto first address when signal from controller comes in. 0   10
 	BEGIN
 		if(rising_edge(CLK)) then
 		

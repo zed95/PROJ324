@@ -29,6 +29,7 @@ begin
 	process(CLK)
 	variable addNo :  integer := 0;
 	variable nextTx :  integer := 0;
+	variable wtCnt : integer := 0;
 	BEGIN
 		if(rising_edge(CLK)) then
 			case state is
@@ -37,8 +38,8 @@ begin
 						state <= NXTADDR;
 					end if;
 -----------------------------------------------------------------------Load Next Address						
-				when NXTADDR =>	
-					state <= STRTrx;
+				when NXTADDR =>
+						state <= STRTrx;
 -----------------------------------------------------------------------START RX				
 				when STRTrx =>
 					state <= WAITINGrx;

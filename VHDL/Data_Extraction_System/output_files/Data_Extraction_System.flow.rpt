@@ -1,5 +1,5 @@
 Flow report for Data_Extraction_System
-Mon Feb 11 23:13:45 2019
+Tue Feb 19 01:14:18 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Feb 11 23:13:45 2019       ;
+; Flow Status                        ; Successful - Tue Feb 19 01:14:18 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; Data_Extraction_System                      ;
 ; Top-level Entity Name              ; Data_Extraction_System                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 993 / 22,320 ( 4 % )                        ;
-;     Total combinational functions  ; 944 / 22,320 ( 4 % )                        ;
-;     Dedicated logic registers      ; 636 / 22,320 ( 3 % )                        ;
-; Total registers                    ; 636                                         ;
+; Total logic elements               ; 995 / 22,320 ( 4 % )                        ;
+;     Total combinational functions  ; 946 / 22,320 ( 4 % )                        ;
+;     Dedicated logic registers      ; 633 / 22,320 ( 3 % )                        ;
+; Total registers                    ; 633                                         ;
 ; Total pins                         ; 17 / 154 ( 11 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
+; Total memory bits                  ; 144 / 608,256 ( < 1 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 02/11/2019 23:13:11    ;
+; Start date & time ; 02/19/2019 01:13:44    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; Data_Extraction_System ;
 +-------------------+------------------------+
@@ -76,20 +76,23 @@ agreement for further details.
 +--------------------------------------+----------------------------------------------------+---------------+-------------+------------------------------------+
 ; Assignment Name                      ; Value                                              ; Default Value ; Entity Name ; Section Id                         ;
 +--------------------------------------+----------------------------------------------------+---------------+-------------+------------------------------------+
-; COMPILER_SIGNATURE_ID                ; 247207024423183.154992679116668                    ; --            ; --          ; --                                 ;
+; COMPILER_SIGNATURE_ID                ; 247207024423183.155053882402908                    ; --            ; --          ; --                                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; SendData1_vhd_tst                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; tst_vhd_tst                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; SPIpulse1_vhd_tst                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; DES_TEST_vhd_tst                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; Data_Extraction_System4_vhd_tst    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; Data_Extraction_Controller_vhd_tst ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; accessControl_vhd_tst              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; genPulse_vhd_tst                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; Data_Extraction_System3_vhd_tst    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; FIFObuffer_vhd_tst                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; SystemTestx_vhd_tst                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; ReadMPU1_vhd_tst                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; Data_Extraction_System_vhd_tst     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                                 ; --            ; --          ; xDomain_s2f_vhd_tst                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; ReadMPU2_vhd_tst                   ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; genPulse_vhd_tst                                   ; --            ; --          ; eda_simulation                     ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; SystemTestx_vhd_tst                                ; --            ; --          ; eda_simulation                     ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                               ; --            ; --          ; eda_simulation                     ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                             ; <None>        ; --          ; --                                 ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                    ; --            ; --          ; eda_simulation                     ;
@@ -97,10 +100,13 @@ agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/tst.vht                        ; --            ; --          ; tst_vhd_tst                        ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/SPIpulse1.vht                  ; --            ; --          ; SPIpulse1_vhd_tst                  ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/DES_TEST.vht                   ; --            ; --          ; DES_TEST_vhd_tst                   ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/Data_Extraction_System4.vht    ; --            ; --          ; Data_Extraction_System4_vhd_tst    ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/Data_Extraction_Controller.vht ; --            ; --          ; Data_Extraction_Controller_vhd_tst ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/accessControl.vht              ; --            ; --          ; accessControl_vhd_tst              ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/genPulse.vht                   ; --            ; --          ; genPulse_vhd_tst                   ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/Data_Extraction_System3.vht    ; --            ; --          ; Data_Extraction_System3_vhd_tst    ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/FIFObuffer.vht                 ; --            ; --          ; FIFObuffer_vhd_tst                 ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/SystemTestx.vht                ; --            ; --          ; SystemTestx_vhd_tst                ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/ReadMPU1.vht                   ; --            ; --          ; ReadMPU1_vhd_tst                   ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/Data_Extraction_System.vht     ; --            ; --          ; Data_Extraction_System_vhd_tst     ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/xDomain_s2f.vht                ; --            ; --          ; xDomain_s2f_vhd_tst                ;
@@ -109,10 +115,13 @@ agreement for further details.
 ; EDA_TEST_BENCH_MODULE_NAME           ; tst_vhd_tst                                        ; --            ; --          ; tst_vhd_tst                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; SPIpulse1_vhd_tst                                  ; --            ; --          ; SPIpulse1_vhd_tst                  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; DES_TEST_vhd_tst                                   ; --            ; --          ; DES_TEST_vhd_tst                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Data_Extraction_System4_vhd_tst                    ; --            ; --          ; Data_Extraction_System4_vhd_tst    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Data_Extraction_Controller_vhd_tst                 ; --            ; --          ; Data_Extraction_Controller_vhd_tst ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; accessControl_vhd_tst                              ; --            ; --          ; accessControl_vhd_tst              ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; genPulse_vhd_tst                                   ; --            ; --          ; genPulse_vhd_tst                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Data_Extraction_System3_vhd_tst                    ; --            ; --          ; Data_Extraction_System3_vhd_tst    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; FIFObuffer_vhd_tst                                 ; --            ; --          ; FIFObuffer_vhd_tst                 ;
+; EDA_TEST_BENCH_MODULE_NAME           ; SystemTestx_vhd_tst                                ; --            ; --          ; SystemTestx_vhd_tst                ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; ReadMPU1_vhd_tst                                   ; --            ; --          ; ReadMPU1_vhd_tst                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Data_Extraction_System_vhd_tst                     ; --            ; --          ; Data_Extraction_System_vhd_tst     ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; xDomain_s2f_vhd_tst                                ; --            ; --          ; xDomain_s2f_vhd_tst                ;
@@ -129,6 +138,9 @@ agreement for further details.
 ; EDA_TEST_BENCH_NAME                  ; ReadMPU2_vhd_tst                                   ; --            ; --          ; eda_simulation                     ;
 ; EDA_TEST_BENCH_NAME                  ; SendData1_vhd_tst                                  ; --            ; --          ; eda_simulation                     ;
 ; EDA_TEST_BENCH_NAME                  ; SPIpulse1_vhd_tst                                  ; --            ; --          ; eda_simulation                     ;
+; EDA_TEST_BENCH_NAME                  ; Data_Extraction_System3_vhd_tst                    ; --            ; --          ; eda_simulation                     ;
+; EDA_TEST_BENCH_NAME                  ; Data_Extraction_System4_vhd_tst                    ; --            ; --          ; eda_simulation                     ;
+; EDA_TEST_BENCH_NAME                  ; SystemTestx_vhd_tst                                ; --            ; --          ; eda_simulation                     ;
 ; EDA_TIME_SCALE                       ; 1 ps                                               ; --            ; --          ; eda_simulation                     ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                                 ; --            ; --          ; --                                 ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                                  ; --            ; --          ; --                                 ;
@@ -147,12 +159,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 4865 MB             ; 00:00:24                           ;
-; Fitter                    ; 00:00:12     ; 1.2                     ; 6160 MB             ; 00:00:26                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4700 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.4                     ; 4905 MB             ; 00:00:03                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 4868 MB             ; 00:00:24                           ;
+; Fitter                    ; 00:00:13     ; 1.2                     ; 6161 MB             ; 00:00:27                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4698 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.4                     ; 4908 MB             ; 00:00:03                           ;
 ; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4667 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:56                           ;
+; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:57                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

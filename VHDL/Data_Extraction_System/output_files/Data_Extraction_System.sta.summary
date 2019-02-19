@@ -3,35 +3,35 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK_DIVIDER:inst20|CLK_OUT'
-Slack : -5.360
-TNS   : -1424.715
-
-Type  : Slow 1200mV 85C Model Setup 'accessControl:inst5|idx[0]'
-Slack : -2.641
-TNS   : -2.641
+Slack : -5.418
+TNS   : -1338.786
 
 Type  : Slow 1200mV 85C Model Setup 'FIFObuffer:inst16|NS[0]'
-Slack : -2.085
-TNS   : -2.085
+Slack : -1.911
+TNS   : -1.911
+
+Type  : Slow 1200mV 85C Model Setup 'accessControl:inst5|idx[0]'
+Slack : -1.802
+TNS   : -1.802
 
 Type  : Slow 1200mV 85C Model Setup 'CLK_50MHz'
-Slack : -1.097
-TNS   : -3.422
+Slack : -0.903
+TNS   : -3.829
 
 Type  : Slow 1200mV 85C Model Hold 'FIFObuffer:inst16|NS[0]'
-Slack : -0.211
-TNS   : -0.211
-
-Type  : Slow 1200mV 85C Model Hold 'CLK_DIVIDER:inst20|CLK_OUT'
-Slack : 0.317
+Slack : 0.065
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'CLK_50MHz'
+Type  : Slow 1200mV 85C Model Hold 'CLK_DIVIDER:inst20|CLK_OUT'
 Slack : 0.341
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'CLK_50MHz'
+Slack : 0.357
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Hold 'accessControl:inst5|idx[0]'
-Slack : 2.504
+Slack : 1.654
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_50MHz'
@@ -39,47 +39,47 @@ Slack : -3.000
 TNS   : -10.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_DIVIDER:inst20|CLK_OUT'
-Slack : -1.000
-TNS   : -629.000
+Slack : -2.174
+TNS   : -634.696
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FIFObuffer:inst16|NS[0]'
-Slack : 0.365
+Slack : 0.350
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'accessControl:inst5|idx[0]'
-Slack : 0.385
+Slack : 0.370
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLK_DIVIDER:inst20|CLK_OUT'
-Slack : -4.653
-TNS   : -1202.801
-
-Type  : Slow 1200mV 0C Model Setup 'accessControl:inst5|idx[0]'
-Slack : -2.278
-TNS   : -2.278
+Slack : -4.737
+TNS   : -1130.924
 
 Type  : Slow 1200mV 0C Model Setup 'FIFObuffer:inst16|NS[0]'
-Slack : -1.854
-TNS   : -1.854
+Slack : -1.672
+TNS   : -1.672
+
+Type  : Slow 1200mV 0C Model Setup 'accessControl:inst5|idx[0]'
+Slack : -1.487
+TNS   : -1.487
 
 Type  : Slow 1200mV 0C Model Setup 'CLK_50MHz'
-Slack : -0.870
-TNS   : -2.298
+Slack : -0.701
+TNS   : -2.665
 
 Type  : Slow 1200mV 0C Model Hold 'FIFObuffer:inst16|NS[0]'
-Slack : -0.196
-TNS   : -0.196
+Slack : 0.052
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK_DIVIDER:inst20|CLK_OUT'
-Slack : 0.297
+Slack : 0.276
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK_50MHz'
-Slack : 0.299
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'accessControl:inst5|idx[0]'
-Slack : 2.259
+Slack : 1.462
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_50MHz'
@@ -87,63 +87,63 @@ Slack : -3.000
 TNS   : -10.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_DIVIDER:inst20|CLK_OUT'
-Slack : -1.000
-TNS   : -629.000
+Slack : -2.174
+TNS   : -634.696
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FIFObuffer:inst16|NS[0]'
-Slack : 0.396
+Slack : 0.379
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'accessControl:inst5|idx[0]'
-Slack : 0.424
+Slack : 0.429
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLK_DIVIDER:inst20|CLK_OUT'
-Slack : -2.531
-TNS   : -582.451
-
-Type  : Fast 1200mV 0C Model Setup 'accessControl:inst5|idx[0]'
-Slack : -1.128
-TNS   : -1.128
+Slack : -2.620
+TNS   : -538.804
 
 Type  : Fast 1200mV 0C Model Setup 'FIFObuffer:inst16|NS[0]'
-Slack : -0.945
-TNS   : -0.945
+Slack : -0.864
+TNS   : -0.864
+
+Type  : Fast 1200mV 0C Model Setup 'accessControl:inst5|idx[0]'
+Slack : -0.645
+TNS   : -0.645
 
 Type  : Fast 1200mV 0C Model Setup 'CLK_50MHz'
-Slack : -0.172
-TNS   : -0.172
+Slack : -0.069
+TNS   : -0.069
 
 Type  : Fast 1200mV 0C Model Hold 'FIFObuffer:inst16|NS[0]'
-Slack : -0.106
-TNS   : -0.106
+Slack : 0.058
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLK_DIVIDER:inst20|CLK_OUT'
-Slack : 0.068
+Slack : 0.124
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLK_50MHz'
-Slack : 0.156
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'accessControl:inst5|idx[0]'
-Slack : 1.478
+Slack : 0.994
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_50MHz'
 Slack : -3.000
-TNS   : -10.732
+TNS   : -10.672
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_DIVIDER:inst20|CLK_OUT'
 Slack : -1.000
-TNS   : -629.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FIFObuffer:inst16|NS[0]'
-Slack : 0.402
-TNS   : 0.000
+TNS   : -630.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'accessControl:inst5|idx[0]'
-Slack : 0.419
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FIFObuffer:inst16|NS[0]'
+Slack : 0.400
 TNS   : 0.000
 
 ------------------------------------------------------------
