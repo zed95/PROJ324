@@ -16,18 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "MPU_CS",
-					"strict" : false
-				},
-				{
-					"name" : "MPU_MSTR_CLK",
-					"strict" : false
-				},
-				{
-					"name" : "MPU_MOSI",
-					"strict" : false
-				},
-				{
 					"name" : "LED0",
 					"strict" : false
 				},
@@ -57,6 +45,18 @@
 				},
 				{
 					"name" : "LED7",
+					"strict" : false
+				},
+				{
+					"name" : "MPU_CS",
+					"strict" : false
+				},
+				{
+					"name" : "MPU_MSTR_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "MPU_MOSI",
 					"strict" : false
 				},
 				{

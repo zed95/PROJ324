@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Feb 19 01:13:56 2019
+Analysis & Synthesis Status : Successful - Wed Feb 20 10:46:24 2019
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : Data_Extraction_System
 Top-level Entity Name : Data_Extraction_System
 Family : Cyclone IV E
-Total logic elements : 1,004
-    Total combinational functions : 946
+Total logic elements : 996
+    Total combinational functions : 938
     Dedicated logic registers : 633
 Total registers : 633
 Total pins : 17

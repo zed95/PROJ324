@@ -195,3 +195,5 @@ vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive
 # Loading work.accesscontrol(accesscontrol)
 add wave -position end sim:/systemtestx_vhd_tst/i1/*
 run -all
+# End time: 02:03:05 on Feb 19,2019, Elapsed time: 7:54:32
+# Errors: 0, Warnings: 0

@@ -46,10 +46,65 @@ agreement for further details.
 		(line (pt 216 32)(pt 200 32)(line_width 3))
 	)
 	(parameter
-		"Count"
-		"25"
+		"AccelxH"
+		"1011101100000000"
 		""
-		(type "PARAMETER_SIGNED_DEC")	)
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelxL"
+		"1011110000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelyH"
+		"1011110100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelyL"
+		"1011111000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelzH"
+		"1011111100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelzL"
+		"1100000000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroxH"
+		"1100001100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroxL"
+		"1100010000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroyH"
+		"1100010100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroyL"
+		"1100011000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyrozH"
+		"1100011100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyrozL"
+		"1100100000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
 	(drawing
 		(rectangle (rect 16 16 200 64)(line_width 1))
 	)

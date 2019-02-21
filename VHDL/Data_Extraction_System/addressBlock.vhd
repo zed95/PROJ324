@@ -6,7 +6,18 @@ use IEEE.std_logic_unsigned.all;
 
 
 entity addressBlock is
-	generic (Count : integer := 25);
+	generic (AccelxH : std_logic_Vector(15 downto 0) := "1011101100000000";
+				AccelxL : std_logic_Vector(15 downto 0) := "1011110000000000";
+				AccelyH : std_logic_Vector(15 downto 0) := "1011110100000000";
+				AccelyL : std_logic_Vector(15 downto 0) := "1011111000000000";
+				AccelzH : std_logic_Vector(15 downto 0) := "1011111100000000";
+				AccelzL : std_logic_Vector(15 downto 0) := "1100000000000000";
+				GyroxH : std_logic_Vector(15 downto 0) := "1100001100000000";
+				GyroxL : std_logic_Vector(15 downto 0) := "1100010000000000";
+				GyroyH : std_logic_Vector(15 downto 0) := "1100010100000000";
+				GyroyL : std_logic_Vector(15 downto 0) := "1100011000000000";
+				GyrozH : std_logic_Vector(15 downto 0) := "1100011100000000";
+				GyrozL : std_logic_Vector(15 downto 0) := "1100100000000000");
 	port 
 	(
 		--Inputs
@@ -40,29 +51,29 @@ begin
 				when 0 =>
 					ADDRESS <= "0000000000000000";
 				when 1 =>
-					ADDRESS <= "1011101100000000";							      --‭00111011‬ accel xH		  --The MSB in the address (1) signifies a read operation MSB (0) signifies write operation
+					ADDRESS <= AccelxH;							      --‭00111011‬ accel xH		  --The MSB in the address (1) signifies a read operation MSB (0) signifies write operation
 				when 2 =>
-					ADDRESS <= "1011110000000000";									--00111100 accel xL
+					ADDRESS <= AccelxL;									--00111100 accel xL
 				when 3 =>					
-					ADDRESS <= "1011110100000000";									--00111101 accel yH
+					ADDRESS <= AccelyH;									--00111101 accel yH
 				when 4 =>							
-					ADDRESS <= "1011111000000000";									--00111110 accel yL
+					ADDRESS <= AccelyL;									--00111110 accel yL
 				when 5 =>
-					ADDRESS <= "1011111100000000";									--00111111 accel zH
+					ADDRESS <= AccelzH;									--00111111 accel zH
 				when 6 =>
-					ADDRESS <= "1100000000000000";									--01000000 accel zL
+					ADDRESS <= AccelzL;									--01000000 accel zL
 				when 7 =>
-					ADDRESS <= "1100001100000000";									--01000011 gyro  xH
+					ADDRESS <= GyroxH;									--01000011 gyro  xH
 				when 8 =>
-					ADDRESS <= "1100010000000000";									--01000100 gyro  xL
+					ADDRESS <= GyroxL;									--01000100 gyro  xL
 				when 9 =>
-					ADDRESS <= "1100010100000000";									--01000101 gyro  yH
+					ADDRESS <= GyroyH;									--01000101 gyro  yH
 				when 10 =>
-					ADDRESS <= "1100011000000000";									--01000110 gyro  yL
+					ADDRESS <= GyroyL;									--01000110 gyro  yL
 				when 11 =>
-					ADDRESS <= "1100011100000000";									--01000111 gyro  zH
+					ADDRESS <= GyrozH;									--01000111 gyro  zH
 				when 12 =>
-					ADDRESS <= "1100100000000000";									--01001000 gyro  zL
+					ADDRESS <= GyrozL;									--01001000 gyro  zL
 				when others =>
 					ADDRESS <= "0000000000000000";
 			end case;

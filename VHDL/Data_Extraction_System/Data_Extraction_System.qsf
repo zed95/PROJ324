@@ -162,6 +162,9 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SystemTestx_
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SystemTestx_vhd_tst -section_id SystemTestx_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/SystemTestx.vht -section_id SystemTestx_vhd_tst
 set_global_assignment -name VHDL_FILE delayOnce.vhd
+set_global_assignment -name BDF_FILE IMU_Extraction_Block.bdf
+set_global_assignment -name VHDL_FILE IMU_Config_Block.vhd
+set_global_assignment -name BDF_FILE CONFIG_IMU.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
