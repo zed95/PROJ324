@@ -6,6 +6,8 @@ use IEEE.std_logic_unsigned.all;
 
 
 entity DESrx is
+	generic (lastAddress : integer := 12
+				);
 	port 
 	(
 		--Inputs
@@ -50,7 +52,7 @@ begin
 					end if; 
 -----------------------------------------------------------------------NEXT RX				
 				when STOREstate =>
-					if(addNo = 11) then
+					if(addNo = (lastAddress - 1)) then -- The max is last address - 1 because at the start of process next address gets incremented in the address block by sending a signal to it.
 						state <= W4BFFRrx;
 						addNo := 0;
 					else

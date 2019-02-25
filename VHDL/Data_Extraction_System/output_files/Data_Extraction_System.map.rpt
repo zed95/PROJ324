@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Data_Extraction_System
-Wed Feb 20 10:46:24 2019
+Mon Feb 25 02:25:20 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -30,13 +30,14 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
  22. Parameter Settings for User Entity Instance: CLK_DIVIDER:inst20
  23. Parameter Settings for User Entity Instance: accessControl:inst5
  24. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|spi_master1:inst4
- 25. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst16
- 26. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst2
- 27. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst16|altsyncram:datArray_rtl_0
- 28. altsyncram Parameter Settings by Entity Instance
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+ 25. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DESrx:inst
+ 26. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst16
+ 27. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst2
+ 28. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst16|altsyncram:datArray_rtl_0
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -63,7 +64,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 20 10:46:24 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 25 02:25:19 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; Data_Extraction_System                      ;
 ; Top-level Entity Name              ; Data_Extraction_System                      ;
@@ -186,7 +187,7 @@ agreement for further details.
 ;     Processor 6            ;   0.1%      ;
 ;     Processor 7            ;   0.1%      ;
 ;     Processor 8            ;   0.1%      ;
-;     Processors 9-12        ;   0.1%      ;
+;     Processors 9-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -625,6 +626,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DESrx:inst ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; lastaddress    ; 12    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst16 ;
 +----------------+-------+-----------------------------------------------------------------+
@@ -781,7 +792,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Feb 20 10:46:11 2019
+    Info: Processing started: Mon Feb 25 02:25:07 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Data_Extraction_System -c Data_Extraction_System
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -820,7 +831,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file tst.vhd
     Info (12022): Found design unit 1: tst-tst File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/tst.vhd Line: 22
     Info (12023): Found entity 1: tst File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/tst.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file desrx.vhd
-    Info (12022): Found design unit 1: DESrx-DESrx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd Line: 25
+    Info (12022): Found design unit 1: DESrx-DESrx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd Line: 27
     Info (12023): Found entity 1: DESrx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file destx.vhd
     Info (12022): Found design unit 1: DEStx-DEStx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd Line: 25
@@ -863,7 +874,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file delayon
 Info (12021): Found 1 design units, including 1 entities, in source file imu_extraction_block.bdf
     Info (12023): Found entity 1: IMU_Extraction_Block
 Info (12021): Found 2 design units, including 1 entities, in source file imu_config_block.vhd
-    Info (12022): Found design unit 1: IMU_Config_Block-IMU_Config_Block File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/IMU_Config_Block.vhd Line: 33
+    Info (12022): Found design unit 1: IMU_Config_Block-IMU_Config_Block File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/IMU_Config_Block.vhd Line: 40
     Info (12023): Found entity 1: IMU_Config_Block File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/IMU_Config_Block.vhd Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file config_imu.bdf
     Info (12023): Found entity 1: CONFIG_IMU
@@ -962,8 +973,8 @@ Info (21057): Implemented 1388 device resources after synthesis - the final reso
     Info (21064): Implemented 12 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
     Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Wed Feb 20 10:46:24 2019
+    Info: Processing ended: Mon Feb 25 02:25:20 2019
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:24
 
 

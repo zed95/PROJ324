@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Data_Extraction_System
-Wed Feb 20 10:46:45 2019
+Mon Feb 25 02:25:40 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -117,15 +117,15 @@ agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.41        ;
+; Average used               ; 1.45        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  13.7%      ;
-;     Processor 3            ;   9.0%      ;
-;     Processor 4            ;   6.5%      ;
-;     Processors 5-12        ;   1.5%      ;
+;     Processor 2            ;  14.1%      ;
+;     Processor 3            ;   8.0%      ;
+;     Processor 4            ;   6.4%      ;
+;     Processors 5-12        ;   2.0%      ;
 +----------------------------+-------------+
 
 
@@ -444,8 +444,8 @@ No paths to report.
 ; 0.374 ; IMU_Extraction_Block:inst|spi_master1:inst4|dwReg[4]                  ; IMU_Extraction_Block:inst|spi_master1:inst4|rx_data[4]                                                                              ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.062      ; 0.593      ;
 ; 0.374 ; IMU_Extraction_Block:inst|spi_master1:inst4|dwReg[5]                  ; IMU_Extraction_Block:inst|spi_master1:inst4|rx_data[5]                                                                              ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.062      ; 0.593      ;
 ; 0.375 ; IMU_Extraction_Block:inst|spi_master1:inst4|dwReg[0]                  ; IMU_Extraction_Block:inst|spi_master1:inst4|rx_data[0]                                                                              ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.062      ; 0.594      ;
-; 0.382 ; accessControl:inst5|idx[2]                                            ; accessControl:inst5|idx[2]                                                                                                          ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.038      ; 0.577      ;
 ; 0.382 ; accessControl:inst5|idx[1]                                            ; accessControl:inst5|idx[1]                                                                                                          ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.038      ; 0.577      ;
+; 0.382 ; accessControl:inst5|idx[2]                                            ; accessControl:inst5|idx[2]                                                                                                          ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.038      ; 0.577      ;
 ; 0.394 ; accessControl:inst5|idx[1]                                            ; accessControl:inst5|idx[4]                                                                                                          ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 1.481      ; 2.032      ;
 ; 0.397 ; IMU_Extraction_Block:inst|FIFObuffer:inst16|state.SEND                ; IMU_Extraction_Block:inst|FIFObuffer:inst16|FS[3]                                                                                   ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.061      ; 0.615      ;
 ; 0.404 ; IMU_Extraction_Block:inst|DEStx:inst15|state.W4BFFRtx                 ; IMU_Extraction_Block:inst|DEStx:inst15|state.RDY2SND                                                                                ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.062      ; 0.623      ;
@@ -1235,8 +1235,8 @@ No paths to report.
 ; 0.195 ; IMU_Extraction_Block:inst|spi_master1:inst4|dwReg[2]                  ; IMU_Extraction_Block:inst|spi_master1:inst4|rx_data[2]                                                                              ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.036      ; 0.315      ;
 ; 0.196 ; IMU_Extraction_Block:inst|spi_master1:inst4|dwReg[0]                  ; IMU_Extraction_Block:inst|spi_master1:inst4|rx_data[0]                                                                              ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.036      ; 0.316      ;
 ; 0.200 ; accessControl:inst5|idx[2]                                            ; accessControl:inst5|idx[4]                                                                                                          ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.903      ; 1.187      ;
-; 0.201 ; accessControl:inst5|idx[2]                                            ; accessControl:inst5|idx[2]                                                                                                          ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.022      ; 0.307      ;
 ; 0.201 ; accessControl:inst5|idx[1]                                            ; accessControl:inst5|idx[1]                                                                                                          ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.022      ; 0.307      ;
+; 0.201 ; accessControl:inst5|idx[2]                                            ; accessControl:inst5|idx[2]                                                                                                          ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.022      ; 0.307      ;
 ; 0.204 ; spi_master1:inst6|BP[7]                                               ; spi_master1:inst6|BP[8]                                                                                                             ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.274      ; 0.562      ;
 ; 0.208 ; IMU_Extraction_Block:inst|FIFObuffer:inst16|NS[0]                     ; IMU_Extraction_Block:inst|FIFObuffer:inst16|NS[1]                                                                                   ; IMU_Extraction_Block:inst|FIFObuffer:inst16|NS[0] ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.648      ; 1.055      ;
 ; 0.212 ; IMU_Extraction_Block:inst|FIFObuffer:inst16|state.SEND                ; IMU_Extraction_Block:inst|FIFObuffer:inst16|FS[3]                                                                                   ; CLK_DIVIDER:inst20|CLK_OUT                        ; CLK_DIVIDER:inst20|CLK_OUT ; 0.000        ; 0.036      ; 0.332      ;
@@ -1621,7 +1621,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Feb 20 10:46:42 2019
+    Info: Processing started: Mon Feb 25 02:25:37 2019
 Info: Command: quartus_sta Data_Extraction_System -c Data_Extraction_System
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1724,8 +1724,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4905 megabytes
-    Info: Processing ended: Wed Feb 20 10:46:45 2019
+    Info: Peak virtual memory: 4909 megabytes
+    Info: Processing ended: Mon Feb 25 02:25:40 2019
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
