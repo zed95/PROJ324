@@ -1,16 +1,16 @@
-Fitter Status : Successful - Mon Feb 25 02:25:34 2019
+Fitter Status : Successful - Thu Mar 07 01:21:37 2019
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : Data_Extraction_System
-Top-level Entity Name : Data_Extraction_System
+Top-level Entity Name : DESrx
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 981 / 22,320 ( 4 % )
-    Total combinational functions : 938 / 22,320 ( 4 % )
-    Dedicated logic registers : 633 / 22,320 ( 3 % )
-Total registers : 633
-Total pins : 17 / 154 ( 11 % )
+Total logic elements : 51 / 22,320 ( < 1 % )
+    Total combinational functions : 50 / 22,320 ( < 1 % )
+    Dedicated logic registers : 38 / 22,320 ( < 1 % )
+Total registers : 38
+Total pins : 6 / 154 ( 4 % )
 Total virtual pins : 0
-Total memory bits : 144 / 608,256 ( < 1 % )
+Total memory bits : 0 / 608,256 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

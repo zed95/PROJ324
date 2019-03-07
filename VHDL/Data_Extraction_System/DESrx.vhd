@@ -50,7 +50,17 @@ begin
 					if(DONErx = '1') then
 						state <= STOREstate;
 					end if; 
------------------------------------------------------------------------NEXT RX				
+-----------------------------------------------------------------------NEXT RX
+				--The previous problem with the samples sending being out of line that has been fixed by moving the intialised position of the addNo variables
+				--in the address block component from zero to 1 might have been caused by the if statement here. when the 11th sample is read in, the if statement
+				--checks whether the addNo is equal to 11 before the addNo is incremented. This causes the controller to assume that 12 samples havent been read in
+				--yet whereas they have and this causes the controller to instruct the SPI to extract one more sample to be placed into the buffer causing the overall
+				--number of samples read to be 13 (suppose to read 0 to 11 which equals 12 samples but reads in 0 to 12 which is 13 samples). The address block can only
+			   --cycle through 12 addresses before it gets reset to address 0. This is what happens when the 13th sample is read in. This causes misalignement of 
+			   --sample pieces in the Fifo buffer (for example lower byte of gyro x will be mixed with higher byte of gyro y) which are then sent to the nucleo and when
+				--they are concatenated they will yeild incorrect results due to this.
+				--Make the storestate increment the addNo before it checks whether 12 samples have been read in and that should fix the problem. Test it to see if the
+				--hypothesis is correct. Remember to change the initial address block addNo variable back to 0 when performing the testing. 
 				when STOREstate =>
 					if(addNo = (lastAddress - 1)) then -- The max is last address - 1 because at the start of process next address gets incremented in the address block by sending a signal to it.
 						state <= W4BFFRrx;

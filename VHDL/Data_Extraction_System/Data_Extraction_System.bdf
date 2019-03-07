@@ -599,7 +599,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"1000"
+		"2000000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -615,7 +615,7 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 128))
 	)
-	(annotation_block (parameter)(rect 648 -512 817 -417))
+	(annotation_block (parameter)(rect 648 -512 837 -417))
 )
 (connector
 	(text "R2S[5..0]" (rect -158 -432 -116 -415)(font "Intel Clear" ))

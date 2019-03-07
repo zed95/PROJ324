@@ -52,7 +52,7 @@ agreement for further details.
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
 		"SSF_Gyro"
-		"0001101100010000"
+		"0001101100000000"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
