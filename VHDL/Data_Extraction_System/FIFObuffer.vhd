@@ -99,6 +99,10 @@ begin
 				end if;
 				state <= IDLE;
 			when SEND =>
+			--The problem with the shifted data at the beginning which forced me to change the beginning address of the address block might be in the
+			--way I output the data from the buffer.
+			--On the waveforms it can be seen that the when the pulse to send data is sent, the data switches to output data from position 1 and not zero
+			--like it was intended. The first data is shifted last and the second data is shifted first.
 				if(OS = 11) then
 					OS <= 0;
 					FS <= 0;

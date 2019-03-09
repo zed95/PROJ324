@@ -599,7 +599,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"2000000"
+		"1000000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
