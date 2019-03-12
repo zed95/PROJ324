@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+
+entity Initialise is
+	port 
+	(
+		--Inputs
+		CLK	   : in std_logic;	
+		Input	: in std_logic;
+		DoneTx	in std_logic;
+		--Outputs
+		Output 	: OUT std_logic
+	);
+end entity;
+
+
+architecture Initialise of Initialise is		
+begin	
+	process(CLK)
+	variable initComplete : std_logic := '0';
+	variable state : integer := 0;
+	BEGIN
+		if(rising_edge(CLK)) then
+		
+		case state is
+			when 0 =>
+				Output <= '1';
+				state <= 1;
+			when 1 =>
+				Output <= '0';
+				if(DoneTx = '1') then
+					state := 2;
+				end if
+			when 2 =>
+				Output <= Input;
+			when others =>
+		end case;
+			
+		end if;
+	END PROCESS;
+	
+end Initialise;

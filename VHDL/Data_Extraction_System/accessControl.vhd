@@ -22,9 +22,9 @@ entity accessControl is
 		dataIMU4			: in std_logic_vector(dw - 1 downto 0);
 		dataIMU5			: in std_logic_vector(dw - 1 downto 0);
 		--Outputs
-		dataOut 		: OUT std_logic_vector(dw - 1 downto 0);
-		TRANSMIT		: OUT std_logic;
-		strtTx		: OUT std_logic_vector(5 downto 0)
+		dataOut 		: OUT std_logic_vector(dw - 1 downto 0) := "0000000000000000";
+		TRANSMIT		: OUT std_logic := '0';
+		strtTx		: OUT std_logic_vector(5 downto 0) := "000000"
 	);
 end entity;
 
@@ -54,17 +54,17 @@ begin
 				TRANSMIT <= '0';
 				case idx is
 				when 0 =>
-				dataOut <= (others => '0');
+				dataOut <= dataIMU0;
 				when 1 =>
-				dataOut <= (others => '0');
+				dataOut <= dataIMU1;
 				when 2 =>
-				dataOut <= (others => '0');
+				dataOut <= dataIMU2;
 				when 3 =>
-				dataOut <= (others => '0');
+				dataOut <= dataIMU3;
 				when 4 =>
-				dataOut <= (others => '0');
+				dataOut <= dataIMU4;
 				when 5 =>
-				dataOut <= (others => '0');
+				dataOut <= dataIMU5;
 				when others =>
 				end case;				
 			when STRT =>

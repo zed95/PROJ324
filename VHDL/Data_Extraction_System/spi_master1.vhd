@@ -12,15 +12,15 @@ entity spi_master1 is
 	
 	port 
 	(
-		clk	   : in std_logic;		--input clock
-		MISO		: in std_logic;		--Master In Slave Out.
-		tx_data	: in std_logic_vector((dw - 1) downto 0); --Data to be transmitted input
-		transmit : in std_logic;		--SPI is activated when there is data to transmit
-		CS			: out std_logic;		--Chip Select 
-		CLKO		: out std_logic;		--Clock Output. Master clock to the slave is output here.
+		clk	   : in std_logic	:= '0';		--input clock
+		MISO		: in std_logic	:= '0';		--Master In Slave Out.
+		tx_data	: in std_logic_vector((dw - 1) downto 0) := "0000000000000000"; --Data to be transmitted input
+		transmit : in std_logic	 := '0';		--SPI is activated when there is data to transmit
+		CS			: out std_logic := '1';		--Chip Select 
+		CLKO		: out std_logic := '0';		--Clock Output. Master clock to the slave is output here.
 		rx_data  : out std_logic_vector((dw - 1) downto 0); --received data is output here.
-		MOSI     : out std_logic;		--Master Out Slave In.
-		fPulse	: out std_logic
+		MOSI     : out std_logic := '0';		--Master Out Slave In.
+		fPulse	: out std_logic := '0'
 	);
 
 end entity;
@@ -36,8 +36,8 @@ architecture spi_master1 of spi_master1 is
 	signal state_clk	 : state_clock;
 	signal state_tr	 : state_transaction;
 	signal state 		 : state_spi;
-	signal CSD : std_logic;		       --Signal related to the CS pin. Set H/L on falling edges. D stands for Down indicating changes on falling edges.
-	signal CSU : std_logic;		 		 --Signal related to the CS pin. Set H/L on rising edges. U stands for Up indicating changes on rising edges.
+	signal CSD : std_logic := '1';		       --Signal related to the CS pin. Set H/L on falling edges. D stands for Down indicating changes on falling edges.
+	signal CSU : std_logic := '1';		 		 --Signal related to the CS pin. Set H/L on rising edges. U stands for Up indicating changes on rising edges.
 	signal wt : std_logic := '0';		 --wt - wait. This signal is high when the delay between transactions is ongoing.
 	signal rtc : std_logic;				 --rtc - run the clock. Signal used to enable/disable the clock output to the slave.
 	signal rxd   : std_logic;  		 --rxd- recieve data. Signal used to start/stop receiving from the slave.
@@ -50,7 +50,7 @@ architecture spi_master1 of spi_master1 is
 	signal SPImode	  : std_logic;	  	 --used to control the polarity of clkz with respect to clkx.
 	signal dwReg : std_logic_vector((dw - 1) downto 0);	--Recieve register. Data from slave is saved here.
 	signal rtl   : std_logic;   		 --rtl - ready to load. This signal goes high when data has been received from the slave.
-	signal StartTx	 : std_logic;
+	signal StartTx	 : std_logic := '0';
 
 begin
 
@@ -231,11 +231,11 @@ begin
 	begin
 		if (rising_edge(clkz) and wt = '0' and StartTx = '1') then
 			if ((txNCPHA = '1' and CPHA = '0') or (txCPHA = '1' and CPHA = '1')) then
+				DTS := tx_data;				--New data is loaded into the shift register to be transmitted during next transaction.
 				BP := BP - 1;						--point to the next lower bit to be transmitted
 				MOSI <= DTS(BP);					--Transmit the bit
 				if(BP = 0) then					--Once all the bits have been transmitted the bit pointer is reset and new data is loaded.
 					BP := dw;						--bit pointer is reset to match the frame size setting
-					DTS := tx_data;				--New data is loaded into the shift register to be transmitted during next transaction.
 				end if; -- (BP = 0)
 			end if; -- ((tx = '1' and CPHA = '0') or (rtc = '1' and CPHA = '1'))
 		end if; -- (rising_edge(clkz) and wt = '0')

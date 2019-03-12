@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY FIFObuffer
+set_global_assignment -name TOP_LEVEL_ENTITY Data_Extraction_System
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:00:41  FEBRUARY 06, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
@@ -157,13 +157,21 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME DESrx_vhd_tst -section_id
 set_global_assignment -name EDA_TEST_BENCH_NAME DEStx_vhd_tst -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id DEStx_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME DEStx_vhd_tst -section_id DEStx_vhd_tst
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_NAME addressBlock_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id addressBlock_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME addressBlock_vhd_tst -section_id addressBlock_vhd_tst
+set_global_assignment -name CDF_FILE output_files/Chain3.cdf
+set_global_assignment -name VHDL_FILE NumberGenerator.vhd
+set_global_assignment -name BDF_FILE TestAddressOutput.bdf
+set_global_assignment -name VHDL_FILE FIFObufferV2.vhd
+set_location_assignment PIN_M1 -to Sw
+set_global_assignment -name VHDL_FILE NumberGeneratorV2.vhd
+set_global_assignment -name VHDL_FILE Initialise.vhd
+set_global_assignment -name VHDL_FILE Multiplexer2x1.vhd
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/Data_Extraction_Controller.vht -section_id Data_Extraction_Controller_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/genPulse.vht -section_id genPulse_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/xDomain_s2f.vht -section_id xDomain_s2f_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/FIFObuffer.vht -section_id FIFObuffer_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/Data_Extraction_System.vht -section_id Data_Extraction_System_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/DES_TEST.vht -section_id DES_TEST_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/accessControl.vht -section_id accessControl_vhd_tst
@@ -177,4 +185,8 @@ set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/Data_Extract
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/SystemTestx.vht -section_id SystemTestx_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/DESrx.vht -section_id DESrx_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/DEStx.vht -section_id DEStx_vhd_tst
-set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/FIFObuffer.vht -section_id FIFObuffer_vhd_tst
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/addressBlock.vht -section_id addressBlock_vhd_tst
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

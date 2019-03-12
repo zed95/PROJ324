@@ -18,7 +18,7 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "02/08/2019 19:41:19"
+-- Generated on "03/10/2019 10:51:14"
                                                             
 -- Vhdl Test Bench template for design  :  accessControl
 -- 
@@ -27,6 +27,7 @@
 
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
+use ieee.numeric_std.all;
 
 ENTITY accessControl_vhd_tst IS
 END accessControl_vhd_tst;
@@ -34,17 +35,17 @@ ARCHITECTURE accessControl_arch OF accessControl_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLK : STD_LOGIC;
-SIGNAL dataIMU0 : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL dataIMU1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL dataIMU2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL dataIMU3 : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL dataIMU4 : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL dataIMU5 : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL dataOut : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL r2sIMU : STD_LOGIC_VECTOR(5 DOWNTO 0);
-SIGNAL strtTx : STD_LOGIC_VECTOR(5 DOWNTO 0);
-SIGNAL TRANSMIT : STD_LOGIC;
-SIGNAL txIMU : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL dataIMU0 : STD_LOGIC_VECTOR(15 DOWNTO 0)	:= "0000000000000000";
+SIGNAL dataIMU1 : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+SIGNAL dataIMU2 : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+SIGNAL dataIMU3 : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+SIGNAL dataIMU4 : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+SIGNAL dataIMU5 : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+SIGNAL dataOut : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+SIGNAL r2sIMU : STD_LOGIC_VECTOR(5 DOWNTO 0) := "000000";
+SIGNAL strtTx : STD_LOGIC_VECTOR(5 DOWNTO 0) := "000000";
+SIGNAL TRANSMIT : STD_LOGIC := '0';
+SIGNAL txIMU : STD_LOGIC_VECTOR(5 DOWNTO 0) := "000000";
 COMPONENT accessControl
 	PORT (
 	CLK : IN STD_LOGIC;
@@ -88,34 +89,95 @@ BEGIN
 WAIT;                                                       
 END PROCESS init;                                           
 always : PROCESS                                              
--- optional sensitivity list                                  
--- (        )                                                 
--- variable declarations                                      
+variable state : integer := 0; 
+variable inactiveTime : integer := 100;
+variable state_R2S : std_logic_vector(5 downto 0) :=  "000000";
+variable txIMU_state : std_logic_vector(5 downto 0) := "000000";
+variable waitingCounter : integer := 0;
+variable samplesSent : integer := 0; 
+variable dataIMU0_state : std_logic_vector(15 downto 0) := "0000000000000000";
+                                    
 BEGIN                                                         
-       for k in 0 to 2000 loop 
-			wait until rising_edge(clk);
-			if(k < 200) then
-				r2sIMU <= "000001";
-			else
-				r2sIMU <= "000000";
-			end if;
-			dataIMU0 <= "0011000000001100";
-			dataIMU1 <= "0111000000001110";
-			dataIMU2 <= "1111000000001111";
-			dataIMU3 <= "0111100000011110";
-			dataIMU4 <= "0111110000111110";
-			dataIMU5 <= "0111111001111110";
-			
-			txIMU <= "000001";
-			
-		 end loop;
+    for k in 0 to 5000 loop
+		wait until rising_edge(clk);
+			case state is
+				when 0 =>
+					if(k = inactiveTime) then
+						state_R2S := (0 => '1',others => '0');
+						state := 1;
+					end if;
+					--Output Signals
+					r2sIMU <= state_R2S;
+					txIMU <= txIMU_state;
+					dataIMU0 <= dataIMU0_state;
+					dataIMU1 <= (0 => '0',others => '0');
+					dataIMU2 <= (0 => '0',others => '0');
+					dataIMU3 <= (0 => '0',others => '0');
+					dataIMU4 <= (0 => '0',others => '0');
+					dataIMU5 <= (0 => '0',others => '0');
+					
+				when 1 =>
+					state := 2;
+					txIMU_state := (0 => '1',others => '0');
+					--Output Signals
+					r2sIMU <= state_R2S;
+					txIMU <= txIMU_state;
+					dataIMU0 <= dataIMU0_state;
+					dataIMU1 <= (0 => '0',others => '0');
+					dataIMU2 <= (0 => '0',others => '0');
+					dataIMU3 <= (0 => '0',others => '0');
+					dataIMU4 <= (0 => '0',others => '0');
+					dataIMU5 <= (0 => '0',others => '0');
+					
+				when 2 =>
+					txIMU_state := (0 => '0',others => '0');
+					if(waitingCounter = 20) then
+						waitingCounter := 0;
+						state := 3;
+					else
+						waitingCounter := waitingCounter + 1;
+					end if;
+					--Output Signals
+					r2sIMU <= state_R2S;
+					txIMU <= txIMU_state;
+					dataIMU0 <= dataIMU0_state;
+					dataIMU1 <= (0 => '0',others => '0');
+					dataIMU2 <= (0 => '0',others => '0');
+					dataIMU3 <= (0 => '0',others => '0');
+					dataIMU4 <= (0 => '0',others => '0');
+					dataIMU5 <= (0 => '0',others => '0');
+					
+				when 3 =>
+					if(samplesSent = 11) then
+						state := 0;
+						state_R2S := (0 => '0',others => '0');
+						inactiveTime := k + 300;
+						samplesSent := 0;
+					else
+						samplesSent := samplesSent + 1;
+						dataIMU0_state := std_logic_vector(to_unsigned(samplesSent, dataIMU0_state'length));
+						state := 1;
+					end if;
+					--Output Signals
+					r2sIMU <= state_R2S;	
+					txIMU <= txIMU_state;					
+					dataIMU0 <= dataIMU0_state;
+					dataIMU1 <= (0 => '0',others => '0');
+					dataIMU2 <= (0 => '0',others => '0');
+					dataIMU3 <= (0 => '0',others => '0');
+					dataIMU4 <= (0 => '0',others => '0');
+					dataIMU5 <= (0 => '0',others => '0');
+				when others =>
+			end case;
+		
+	end loop;	
 WAIT;                                                        
-END PROCESS always;   
+END PROCESS always;
 
 clk_process : process
 
 begin
-	for k in 0 to 2000 loop
+	for k in 0 to 5000 loop
 		  
 		CLK <= '0'; 
 		  wait for half_clk_period;
@@ -125,6 +187,5 @@ begin
   end loop;
 wait;
 end process clk_process; 
-
-                                       
+                                          
 END accessControl_arch;
