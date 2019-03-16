@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Data_Extraction_System
-Mon Mar 11 16:39:51 2019
+Sat Mar 16 23:20:41 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -13,27 +13,12 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|state
-  9. State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|state
- 10. State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DESrx:inst|state
- 11. State Machine - |Data_Extraction_System|accessControl:inst5|state
- 12. User-Specified and Inferred Latches
- 13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Inverted Register Statistics
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Parameter Settings for User Entity Instance: spi_master1:inst11
- 19. Parameter Settings for User Entity Instance: CLK_DIVIDER:inst20
- 20. Parameter Settings for User Entity Instance: accessControl:inst5
- 21. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|spi_master1:inst4
- 22. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DESrx:inst
- 23. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3
- 24. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|NumberGenerator:inst1
- 25. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst2
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+  8. State Machine - |DESrx|state
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |DESrx
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -60,16 +45,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 11 16:39:51 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 16 23:20:41 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; Data_Extraction_System                      ;
-; Top-level Entity Name              ; Data_Extraction_System                      ;
+; Top-level Entity Name              ; DESrx                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 904                                         ;
-;     Total combinational functions  ; 846                                         ;
-;     Dedicated logic registers      ; 561                                         ;
-; Total registers                    ; 561                                         ;
-; Total pins                         ; 17                                          ;
+; Total logic elements               ; 51                                          ;
+;     Total combinational functions  ; 50                                          ;
+;     Dedicated logic registers      ; 38                                          ;
+; Total registers                    ; 38                                          ;
+; Total pins                         ; 6                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -77,90 +62,90 @@ agreement for further details.
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                                ;
-+----------------------------------------------------------------------------+------------------------+------------------------+
-; Option                                                                     ; Setting                ; Default Value          ;
-+----------------------------------------------------------------------------+------------------------+------------------------+
-; Device                                                                     ; EP4CE22F17C6           ;                        ;
-; Top-level entity name                                                      ; Data_Extraction_System ; Data_Extraction_System ;
-; Family name                                                                ; Cyclone IV E           ; Cyclone V              ;
-; Use smart compilation                                                      ; Off                    ; Off                    ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                     ; On                     ;
-; Enable compact report table                                                ; Off                    ; Off                    ;
-; Restructure Multiplexers                                                   ; Auto                   ; Auto                   ;
-; Create Debugging Nodes for IP Cores                                        ; Off                    ; Off                    ;
-; Preserve fewer node names                                                  ; On                     ; On                     ;
-; OpenCore Plus hardware evaluation                                          ; Enable                 ; Enable                 ;
-; Verilog Version                                                            ; Verilog_2001           ; Verilog_2001           ;
-; VHDL Version                                                               ; VHDL_1993              ; VHDL_1993              ;
-; State Machine Processing                                                   ; Auto                   ; Auto                   ;
-; Safe State Machine                                                         ; Off                    ; Off                    ;
-; Extract Verilog State Machines                                             ; On                     ; On                     ;
-; Extract VHDL State Machines                                                ; On                     ; On                     ;
-; Ignore Verilog initial constructs                                          ; Off                    ; Off                    ;
-; Iteration limit for constant Verilog loops                                 ; 5000                   ; 5000                   ;
-; Iteration limit for non-constant Verilog loops                             ; 250                    ; 250                    ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                     ; On                     ;
-; Infer RAMs from Raw Logic                                                  ; On                     ; On                     ;
-; Parallel Synthesis                                                         ; On                     ; On                     ;
-; DSP Block Balancing                                                        ; Auto                   ; Auto                   ;
-; NOT Gate Push-Back                                                         ; On                     ; On                     ;
-; Power-Up Don't Care                                                        ; On                     ; On                     ;
-; Remove Redundant Logic Cells                                               ; Off                    ; Off                    ;
-; Remove Duplicate Registers                                                 ; On                     ; On                     ;
-; Ignore CARRY Buffers                                                       ; Off                    ; Off                    ;
-; Ignore CASCADE Buffers                                                     ; Off                    ; Off                    ;
-; Ignore GLOBAL Buffers                                                      ; Off                    ; Off                    ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                    ; Off                    ;
-; Ignore LCELL Buffers                                                       ; Off                    ; Off                    ;
-; Ignore SOFT Buffers                                                        ; On                     ; On                     ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                    ; Off                    ;
-; Optimization Technique                                                     ; Balanced               ; Balanced               ;
-; Carry Chain Length                                                         ; 70                     ; 70                     ;
-; Auto Carry Chains                                                          ; On                     ; On                     ;
-; Auto Open-Drain Pins                                                       ; On                     ; On                     ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                    ; Off                    ;
-; Auto ROM Replacement                                                       ; On                     ; On                     ;
-; Auto RAM Replacement                                                       ; On                     ; On                     ;
-; Auto DSP Block Replacement                                                 ; On                     ; On                     ;
-; Auto Shift Register Replacement                                            ; Auto                   ; Auto                   ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto                   ; Auto                   ;
-; Auto Clock Enable Replacement                                              ; On                     ; On                     ;
-; Strict RAM Replacement                                                     ; Off                    ; Off                    ;
-; Allow Synchronous Control Signals                                          ; On                     ; On                     ;
-; Force Use of Synchronous Clear Signals                                     ; Off                    ; Off                    ;
-; Auto RAM Block Balancing                                                   ; On                     ; On                     ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                    ; Off                    ;
-; Auto Resource Sharing                                                      ; Off                    ; Off                    ;
-; Allow Any RAM Size For Recognition                                         ; Off                    ; Off                    ;
-; Allow Any ROM Size For Recognition                                         ; Off                    ; Off                    ;
-; Allow Any Shift Register Size For Recognition                              ; Off                    ; Off                    ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                     ; On                     ;
-; Ignore translate_off and synthesis_off directives                          ; Off                    ; Off                    ;
-; Timing-Driven Synthesis                                                    ; On                     ; On                     ;
-; Report Parameter Settings                                                  ; On                     ; On                     ;
-; Report Source Assignments                                                  ; On                     ; On                     ;
-; Report Connectivity Checks                                                 ; On                     ; On                     ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                    ; Off                    ;
-; Synchronization Register Chain Length                                      ; 2                      ; 2                      ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation     ; Normal compilation     ;
-; HDL message level                                                          ; Level2                 ; Level2                 ;
-; Suppress Register Optimization Related Messages                            ; Off                    ; Off                    ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000                   ; 5000                   ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                   ; 5000                   ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                    ; 100                    ;
-; Clock MUX Protection                                                       ; On                     ; On                     ;
-; Auto Gated Clock Conversion                                                ; Off                    ; Off                    ;
-; Block Design Naming                                                        ; Auto                   ; Auto                   ;
-; SDC constraint protection                                                  ; Off                    ; Off                    ;
-; Synthesis Effort                                                           ; Auto                   ; Auto                   ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                     ; On                     ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                    ; Off                    ;
-; Analysis & Synthesis Message Level                                         ; Medium                 ; Medium                 ;
-; Disable Register Merging Across Hierarchies                                ; Auto                   ; Auto                   ;
-; Resource Aware Inference For Block RAM                                     ; On                     ; On                     ;
-+----------------------------------------------------------------------------+------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++----------------------------------------------------------------------------+--------------------+------------------------+
+; Option                                                                     ; Setting            ; Default Value          ;
++----------------------------------------------------------------------------+--------------------+------------------------+
+; Device                                                                     ; EP4CE22F17C6       ;                        ;
+; Top-level entity name                                                      ; DESrx              ; Data_Extraction_System ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V              ;
+; Use smart compilation                                                      ; Off                ; Off                    ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                     ;
+; Enable compact report table                                                ; Off                ; Off                    ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto                   ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                    ;
+; Preserve fewer node names                                                  ; On                 ; On                     ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable                 ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001           ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993              ;
+; State Machine Processing                                                   ; Auto               ; Auto                   ;
+; Safe State Machine                                                         ; Off                ; Off                    ;
+; Extract Verilog State Machines                                             ; On                 ; On                     ;
+; Extract VHDL State Machines                                                ; On                 ; On                     ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                    ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                   ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                    ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                     ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                     ;
+; Parallel Synthesis                                                         ; On                 ; On                     ;
+; DSP Block Balancing                                                        ; Auto               ; Auto                   ;
+; NOT Gate Push-Back                                                         ; On                 ; On                     ;
+; Power-Up Don't Care                                                        ; On                 ; On                     ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                    ;
+; Remove Duplicate Registers                                                 ; On                 ; On                     ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                    ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                    ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                    ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                    ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                    ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                     ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                    ;
+; Optimization Technique                                                     ; Balanced           ; Balanced               ;
+; Carry Chain Length                                                         ; 70                 ; 70                     ;
+; Auto Carry Chains                                                          ; On                 ; On                     ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                     ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                    ;
+; Auto ROM Replacement                                                       ; On                 ; On                     ;
+; Auto RAM Replacement                                                       ; On                 ; On                     ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                     ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto                   ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                   ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                     ;
+; Strict RAM Replacement                                                     ; Off                ; Off                    ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                     ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                    ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                     ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                    ;
+; Auto Resource Sharing                                                      ; Off                ; Off                    ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                    ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                    ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                    ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                     ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                    ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                     ;
+; Report Parameter Settings                                                  ; On                 ; On                     ;
+; Report Source Assignments                                                  ; On                 ; On                     ;
+; Report Connectivity Checks                                                 ; On                 ; On                     ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                    ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                      ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation     ;
+; HDL message level                                                          ; Level2             ; Level2                 ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                    ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                   ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                   ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                    ;
+; Clock MUX Protection                                                       ; On                 ; On                     ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                    ;
+; Block Design Naming                                                        ; Auto               ; Auto                   ;
+; SDC constraint protection                                                  ; Off                ; Off                    ;
+; Synthesis Effort                                                           ; Auto               ; Auto                   ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                     ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                    ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium                 ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                   ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                     ;
++----------------------------------------------------------------------------+--------------------+------------------------+
 
 
 +------------------------------------------+
@@ -176,117 +161,64 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; Data_Extraction_System.bdf       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/Data_Extraction_System.bdf ;         ;
-; addressBlock.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/addressBlock.vhd           ;         ;
-; spi_master1.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd            ;         ;
-; FIFObuffer.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd             ;         ;
-; accessControl.vhd                ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd          ;         ;
-; CLK_DIVIDER.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/CLK_DIVIDER.vhd            ;         ;
-; DESrx.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd                  ;         ;
-; DEStx.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd                  ;         ;
-; IMU_Extraction_Block.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/IMU_Extraction_Block.bdf   ;         ;
-; NumberGenerator.vhd              ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/NumberGenerator.vhd        ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; DESrx.vhd                        ; yes             ; User VHDL File  ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                              ;
-+---------------------------------------------+----------------------------+
-; Resource                                    ; Usage                      ;
-+---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 904                        ;
-;                                             ;                            ;
-; Total combinational functions               ; 846                        ;
-; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 261                        ;
-;     -- 3 input functions                    ; 78                         ;
-;     -- <=2 input functions                  ; 507                        ;
-;                                             ;                            ;
-; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 437                        ;
-;     -- arithmetic mode                      ; 409                        ;
-;                                             ;                            ;
-; Total registers                             ; 561                        ;
-;     -- Dedicated logic registers            ; 561                        ;
-;     -- I/O registers                        ; 0                          ;
-;                                             ;                            ;
-; I/O pins                                    ; 17                         ;
-;                                             ;                            ;
-; Embedded Multiplier 9-bit elements          ; 0                          ;
-;                                             ;                            ;
-; Maximum fan-out node                        ; CLK_DIVIDER:inst20|CLK_OUT ;
-; Maximum fan-out                             ; 556                        ;
-; Total fan-out                               ; 3825                       ;
-; Average fan-out                             ; 2.65                       ;
-+---------------------------------------------+----------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 51        ;
+;                                             ;           ;
+; Total combinational functions               ; 50        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 12        ;
+;     -- 3 input functions                    ; 2         ;
+;     -- <=2 input functions                  ; 36        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 19        ;
+;     -- arithmetic mode                      ; 31        ;
+;                                             ;           ;
+; Total registers                             ; 38        ;
+;     -- Dedicated logic registers            ; 38        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 6         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 38        ;
+; Total fan-out                               ; 242       ;
+; Average fan-out                             ; 2.42      ;
++---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                         ;
-+--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+------------------------+--------------+
-; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name            ; Library Name ;
-+--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+------------------------+--------------+
-; |Data_Extraction_System        ; 846 (0)             ; 561 (0)                   ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |Data_Extraction_System                                                 ; Data_Extraction_System ; work         ;
-;    |CLK_DIVIDER:inst20|        ; 10 (10)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|CLK_DIVIDER:inst20                              ; CLK_DIVIDER            ; work         ;
-;    |IMU_Extraction_Block:inst| ; 514 (0)             ; 322 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst                       ; IMU_Extraction_Block   ; work         ;
-;       |DESrx:inst|             ; 50 (50)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|DESrx:inst            ; DESrx                  ; work         ;
-;       |DEStx:inst15|           ; 56 (56)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15          ; DEStx                  ; work         ;
-;       |FIFObuffer:inst3|       ; 88 (88)             ; 63 (63)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3      ; FIFObuffer             ; work         ;
-;       |NumberGenerator:inst1|  ; 4 (4)               ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|NumberGenerator:inst1 ; NumberGenerator        ; work         ;
-;       |addressBlock:inst2|     ; 106 (106)           ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2    ; addressBlock           ; work         ;
-;       |spi_master1:inst4|      ; 210 (210)           ; 141 (141)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|spi_master1:inst4     ; spi_master1            ; work         ;
-;    |accessControl:inst5|       ; 55 (55)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|accessControl:inst5                             ; accessControl          ; work         ;
-;    |spi_master1:inst11|        ; 267 (267)           ; 192 (192)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|spi_master1:inst11                              ; spi_master1            ; work         ;
-+--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |DESrx                     ; 50 (50)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |DESrx              ; DESrx       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------+
-; State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|state                         ;
-+-----------------+----------------+-------------+-----------------+--------------+---------------+------------+
-; Name            ; state.W4BFFRtx ; state.NXTtx ; state.WAITINGtx ; state.STRTtx ; state.RDY2SND ; state.IDLE ;
-+-----------------+----------------+-------------+-----------------+--------------+---------------+------------+
-; state.IDLE      ; 0              ; 0           ; 0               ; 0            ; 0             ; 0          ;
-; state.RDY2SND   ; 0              ; 0           ; 0               ; 0            ; 1             ; 1          ;
-; state.STRTtx    ; 0              ; 0           ; 0               ; 1            ; 0             ; 1          ;
-; state.WAITINGtx ; 0              ; 0           ; 1               ; 0            ; 0             ; 1          ;
-; state.NXTtx     ; 0              ; 1           ; 0               ; 0            ; 0             ; 1          ;
-; state.W4BFFRtx  ; 1              ; 0           ; 0               ; 0            ; 0             ; 1          ;
-+-----------------+----------------+-------------+-----------------+--------------+---------------+------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------+
-; State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|state ;
-+-------------+------------+-------------+-------------------------------------------------+
-; Name        ; state.SEND ; state.STORE ; state.IDLE                                      ;
-+-------------+------------+-------------+-------------------------------------------------+
-; state.IDLE  ; 0          ; 0           ; 0                                               ;
-; state.STORE ; 0          ; 1           ; 1                                               ;
-; state.SEND  ; 1          ; 0           ; 1                                               ;
-+-------------+------------+-------------+-------------------------------------------------+
-
-
-Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------+
-; State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DESrx:inst|state                                 ;
+; State Machine - |DESrx|state                                                                                       ;
 +------------------+----------------+------------------+-----------------+--------------+---------------+------------+
 ; Name             ; state.W4BFFRrx ; state.STOREstate ; state.WAITINGrx ; state.STRTrx ; state.NXTADDR ; state.IDLE ;
 +------------------+----------------+------------------+-----------------+--------------+---------------+------------+
@@ -299,317 +231,28 @@ Encoding Type:  One-Hot
 +------------------+----------------+------------------+-----------------+--------------+---------------+------------+
 
 
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------+
-; State Machine - |Data_Extraction_System|accessControl:inst5|state ;
-+---------------+---------------+------------+----------------------+
-; Name          ; state.WAITING ; state.STRT ; state.SEARCH         ;
-+---------------+---------------+------------+----------------------+
-; state.SEARCH  ; 0             ; 0          ; 0                    ;
-; state.STRT    ; 0             ; 1          ; 1                    ;
-; state.WAITING ; 1             ; 0          ; 1                    ;
-+---------------+---------------+------------+----------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                            ;
-+----------------------------------------------------+--------------------------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal                              ; Free of Timing Hazards ;
-+----------------------------------------------------+--------------------------------------------------+------------------------+
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|empty   ; IMU_Extraction_Block:inst|FIFObuffer:inst3|empty ; yes                    ;
-; accessControl:inst5|strtTx[0]                      ; accessControl:inst5|Decoder0                     ; yes                    ;
-; Number of user-specified and inferred latches = 2  ;                                                  ;                        ;
-+----------------------------------------------------+--------------------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                    ;
-+---------------------------------------------------------------+-----------------------------------------------------------------------+
-; Register name                                                 ; Reason for Removal                                                    ;
-+---------------------------------------------------------------+-----------------------------------------------------------------------+
-; IMU_Extraction_Block:inst|addressBlock:inst2|ADDRESS[0..7]    ; Stuck at GND due to stuck port data_in                                ;
-; IMU_Extraction_Block:inst|NumberGenerator:inst1|Data[4..15]   ; Stuck at GND due to stuck port data_in                                ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|ADDRESS[12]      ; Merged with IMU_Extraction_Block:inst|addressBlock:inst2|ADDRESS[13]  ;
-; spi_master1:inst11|rxd                                        ; Merged with spi_master1:inst11|txCPHA                                 ;
-; spi_master1:inst11|txCPHA                                     ; Merged with spi_master1:inst11|rtc                                    ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|txCPHA            ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|rtc           ;
-; spi_master1:inst11|state_tr                                   ; Merged with spi_master1:inst11|state_clk                              ;
-; accessControl:inst5|dataOut[4..9,11..15]                      ; Merged with accessControl:inst5|dataOut[10]                           ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|state_tr          ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|state_clk     ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|ADDRESS[8]       ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|Data[0]   ;
-; spi_master1:inst11|\process_5:CC[31]                          ; Merged with spi_master1:inst11|CC[31]                                 ;
-; spi_master1:inst11|\process_5:CC[30]                          ; Merged with spi_master1:inst11|CC[30]                                 ;
-; spi_master1:inst11|\process_5:CC[29]                          ; Merged with spi_master1:inst11|CC[29]                                 ;
-; spi_master1:inst11|\process_5:CC[28]                          ; Merged with spi_master1:inst11|CC[28]                                 ;
-; spi_master1:inst11|\process_5:CC[27]                          ; Merged with spi_master1:inst11|CC[27]                                 ;
-; spi_master1:inst11|\process_5:CC[26]                          ; Merged with spi_master1:inst11|CC[26]                                 ;
-; spi_master1:inst11|\process_5:CC[25]                          ; Merged with spi_master1:inst11|CC[25]                                 ;
-; spi_master1:inst11|\process_5:CC[24]                          ; Merged with spi_master1:inst11|CC[24]                                 ;
-; spi_master1:inst11|\process_5:CC[23]                          ; Merged with spi_master1:inst11|CC[23]                                 ;
-; spi_master1:inst11|\process_5:CC[22]                          ; Merged with spi_master1:inst11|CC[22]                                 ;
-; spi_master1:inst11|\process_5:CC[21]                          ; Merged with spi_master1:inst11|CC[21]                                 ;
-; spi_master1:inst11|\process_5:CC[20]                          ; Merged with spi_master1:inst11|CC[20]                                 ;
-; spi_master1:inst11|\process_5:CC[19]                          ; Merged with spi_master1:inst11|CC[19]                                 ;
-; spi_master1:inst11|\process_5:CC[18]                          ; Merged with spi_master1:inst11|CC[18]                                 ;
-; spi_master1:inst11|\process_5:CC[17]                          ; Merged with spi_master1:inst11|CC[17]                                 ;
-; spi_master1:inst11|\process_5:CC[16]                          ; Merged with spi_master1:inst11|CC[16]                                 ;
-; spi_master1:inst11|\process_5:CC[15]                          ; Merged with spi_master1:inst11|CC[15]                                 ;
-; spi_master1:inst11|\process_5:CC[14]                          ; Merged with spi_master1:inst11|CC[14]                                 ;
-; spi_master1:inst11|\process_5:CC[13]                          ; Merged with spi_master1:inst11|CC[13]                                 ;
-; spi_master1:inst11|\process_5:CC[12]                          ; Merged with spi_master1:inst11|CC[12]                                 ;
-; spi_master1:inst11|\process_5:CC[11]                          ; Merged with spi_master1:inst11|CC[11]                                 ;
-; spi_master1:inst11|\process_5:CC[10]                          ; Merged with spi_master1:inst11|CC[10]                                 ;
-; spi_master1:inst11|\process_5:CC[9]                           ; Merged with spi_master1:inst11|CC[9]                                  ;
-; spi_master1:inst11|\process_5:CC[8]                           ; Merged with spi_master1:inst11|CC[8]                                  ;
-; spi_master1:inst11|\process_5:CC[7]                           ; Merged with spi_master1:inst11|CC[7]                                  ;
-; spi_master1:inst11|\process_5:CC[6]                           ; Merged with spi_master1:inst11|CC[6]                                  ;
-; spi_master1:inst11|\process_5:CC[5]                           ; Merged with spi_master1:inst11|CC[5]                                  ;
-; spi_master1:inst11|\process_5:CC[4]                           ; Merged with spi_master1:inst11|CC[4]                                  ;
-; spi_master1:inst11|\process_5:CC[3]                           ; Merged with spi_master1:inst11|CC[3]                                  ;
-; spi_master1:inst11|\process_5:CC[2]                           ; Merged with spi_master1:inst11|CC[2]                                  ;
-; spi_master1:inst11|\process_5:CC[1]                           ; Merged with spi_master1:inst11|CC[1]                                  ;
-; spi_master1:inst11|\process_5:CC[0]                           ; Merged with spi_master1:inst11|CC[0]                                  ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[31] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[31]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[30] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[30]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[29] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[29]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[28] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[28]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[27] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[27]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[26] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[26]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[25] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[25]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[24] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[24]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[23] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[23]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[22] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[22]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[21] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[21]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[20] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[20]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[19] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[19]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[18] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[18]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[17] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[17]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[16] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[16]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[15] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[15]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[14] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[14]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[13] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[13]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[12] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[12]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[11] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[11]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[10] ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[10]        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[9]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[9]         ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[8]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[8]         ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[7]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[7]         ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[6]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[6]         ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[5]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[5]         ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[4]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[4]         ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[3]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[3]         ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[2]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[2]         ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[1]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[1]         ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[0]  ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[0]         ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[31]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[31] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[30]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[30] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[29]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[29] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[28]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[28] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[27]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[27] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[26]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[26] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[25]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[25] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[24]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[24] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[23]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[23] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[22]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[22] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[21]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[21] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[20]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[20] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[19]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[19] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[18]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[18] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[17]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[17] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[16]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[16] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[15]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[15] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[14]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[14] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[13]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[13] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[12]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[12] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[11]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[11] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[10]        ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[10] ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[9]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[9]  ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[8]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[8]  ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[7]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[7]  ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[6]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[6]  ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[5]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[5]  ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[4]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[4]  ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[3]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[3]  ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[2]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[2]  ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[1]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[1]  ;
-; IMU_Extraction_Block:inst|addressBlock:inst2|addNo[0]         ; Merged with IMU_Extraction_Block:inst|NumberGenerator:inst1|addNo[0]  ;
-; accessControl:inst5|dataOut[10]                               ; Stuck at GND due to stuck port data_in                                ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|delay_counter[0]  ; Merged with spi_master1:inst11|delay_counter[0]                       ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|delay_counter[1]  ; Merged with spi_master1:inst11|delay_counter[1]                       ;
-; spi_master1:inst11|BP[4..31]                                  ; Lost fanout                                                           ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|BP[4..31]         ; Lost fanout                                                           ;
-; Total Number of Removed Registers = 193                       ;                                                                       ;
-+---------------------------------------------------------------+-----------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                           ;
-+---------------------------------------------------+--------------------+------------------------------------------------------------------------------+
-; Register name                                     ; Reason for Removal ; Registers Removed due to This Register                                       ;
-+---------------------------------------------------+--------------------+------------------------------------------------------------------------------+
-; spi_master1:inst11|BP[4]                          ; Lost Fanouts       ; spi_master1:inst11|BP[5], spi_master1:inst11|BP[6], spi_master1:inst11|BP[7] ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|BP[4] ; Lost Fanouts       ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[5],                           ;
-;                                                   ;                    ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[6],                           ;
-;                                                   ;                    ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[7]                            ;
-+---------------------------------------------------+--------------------+------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 561   ;
+; Total registers                              ; 38    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 403   ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------+
-; Inverted Register Statistics                                 ;
-+----------------------------------------------------+---------+
-; Inverted Register                                  ; Fan out ;
-+----------------------------------------------------+---------+
-; spi_master1:inst11|CSD                             ; 1       ;
-; spi_master1:inst11|CSU                             ; 1       ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|CSD    ; 1       ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|CSU    ; 1       ;
-; spi_master1:inst11|PP[4]                           ; 1       ;
-; spi_master1:inst11|pstate                          ; 1       ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|pstate ; 1       ;
-; Total number of inverted registers = 7             ;         ;
-+----------------------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Data_Extraction_System|accessControl:inst5|idx[0]                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[2]   ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[3]   ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[3]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2|addNo ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|state   ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|accessControl:inst5|Mux0                           ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|Selector4   ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|Selector2   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi_master1:inst11 ;
-+----------------+---------+--------------------------------------+
-; Parameter Name ; Value   ; Type                                 ;
-+----------------+---------+--------------------------------------+
-; dw             ; 16      ; Signed Integer                       ;
-; delay          ; 1000000 ; Signed Integer                       ;
-; cpha           ; '1'     ; Enumerated                           ;
-; cpol           ; '1'     ; Enumerated                           ;
-+----------------+---------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CLK_DIVIDER:inst20 ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; count          ; 25    ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: accessControl:inst5 ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; dw             ; 16    ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|spi_master1:inst4 ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; dw             ; 16    ; Signed Integer                                                  ;
-; delay          ; 2000  ; Signed Integer                                                  ;
-; cpha           ; '1'   ; Enumerated                                                      ;
-; cpol           ; '1'   ; Enumerated                                                      ;
-+----------------+-------+-----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DESrx:inst ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; lastaddress    ; 12    ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3 ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; array_size     ; 12    ; Signed Integer                                                 ;
-; dw             ; 16    ; Signed Integer                                                 ;
-; noimu          ; 000   ; Unsigned Binary                                                ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|NumberGenerator:inst1 ;
-+----------------+------------------+----------------------------------------------------------+
-; Parameter Name ; Value            ; Type                                                     ;
-+----------------+------------------+----------------------------------------------------------+
-; accelxh        ; 1011101100000000 ; Unsigned Binary                                          ;
-; accelxl        ; 1011110000000000 ; Unsigned Binary                                          ;
-; accelyh        ; 1011110100000000 ; Unsigned Binary                                          ;
-; accelyl        ; 1011111000000000 ; Unsigned Binary                                          ;
-; accelzh        ; 1011111100000000 ; Unsigned Binary                                          ;
-; accelzl        ; 1100000000000000 ; Unsigned Binary                                          ;
-; gyroxh         ; 1100001100000000 ; Unsigned Binary                                          ;
-; gyroxl         ; 1100010000000000 ; Unsigned Binary                                          ;
-; gyroyh         ; 1100010100000000 ; Unsigned Binary                                          ;
-; gyroyl         ; 1100011000000000 ; Unsigned Binary                                          ;
-; gyrozh         ; 1100011100000000 ; Unsigned Binary                                          ;
-; gyrozl         ; 1100100000000000 ; Unsigned Binary                                          ;
-+----------------+------------------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst2 ;
-+----------------+------------------+-------------------------------------------------------+
-; Parameter Name ; Value            ; Type                                                  ;
-+----------------+------------------+-------------------------------------------------------+
-; accelxh        ; 1011101100000000 ; Unsigned Binary                                       ;
-; accelxl        ; 1011110000000000 ; Unsigned Binary                                       ;
-; accelyh        ; 1011110100000000 ; Unsigned Binary                                       ;
-; accelyl        ; 1011111000000000 ; Unsigned Binary                                       ;
-; accelzh        ; 1011111100000000 ; Unsigned Binary                                       ;
-; accelzl        ; 1100000000000000 ; Unsigned Binary                                       ;
-; gyroxh         ; 1100001100000000 ; Unsigned Binary                                       ;
-; gyroxl         ; 1100010000000000 ; Unsigned Binary                                       ;
-; gyroyh         ; 1100010100000000 ; Unsigned Binary                                       ;
-; gyroyl         ; 1100011000000000 ; Unsigned Binary                                       ;
-; gyrozh         ; 1100011100000000 ; Unsigned Binary                                       ;
-; gyrozl         ; 1100100000000000 ; Unsigned Binary                                       ;
-+----------------+------------------+-------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |DESrx ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; lastAddress    ; 12    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -618,21 +261,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 561                         ;
-;     ENA               ; 403                         ;
-;     plain             ; 158                         ;
-; cycloneiii_lcell_comb ; 846                         ;
-;     arith             ; 409                         ;
-;         2 data inputs ; 409                         ;
-;     normal            ; 437                         ;
-;         1 data inputs ; 23                          ;
-;         2 data inputs ; 75                          ;
-;         3 data inputs ; 78                          ;
-;         4 data inputs ; 261                         ;
+; boundary_port         ; 6                           ;
+; cycloneiii_ff         ; 38                          ;
+;     ENA               ; 32                          ;
+;     plain             ; 6                           ;
+; cycloneiii_lcell_comb ; 50                          ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 31                          ;
+;     normal            ; 19                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 12                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.50                       ;
-; Average LUT depth     ; 5.70                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 3.25                        ;
 +-----------------------+-----------------------------+
 
 
@@ -641,7 +284,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -651,7 +294,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Mar 11 16:39:39 2019
+    Info: Processing started: Sat Mar 16 23:20:31 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Data_Extraction_System -c Data_Extraction_System
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -693,7 +336,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file desrx.v
     Info (12022): Found design unit 1: DESrx-DESrx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd Line: 27
     Info (12023): Found entity 1: DESrx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file destx.vhd
-    Info (12022): Found design unit 1: DEStx-DEStx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd Line: 25
+    Info (12022): Found design unit 1: DEStx-DEStx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd Line: 27
     Info (12023): Found entity 1: DEStx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file readmpu.bdf
     Info (12023): Found entity 1: ReadMPU
@@ -757,87 +400,26 @@ Info (12021): Found 2 design units, including 1 entities, in source file initial
 Info (12021): Found 2 design units, including 1 entities, in source file multiplexer2x1.vhd
     Info (12022): Found design unit 1: Multiplexer2x1-Multiplexer2x1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/Multiplexer2x1.vhd Line: 21
     Info (12023): Found entity 1: Multiplexer2x1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/Multiplexer2x1.vhd Line: 8
-Info (12127): Elaborating entity "Data_Extraction_System" for the top level hierarchy
-Info (12128): Elaborating entity "spi_master1" for hierarchy "spi_master1:inst11"
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(76): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(76): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(99): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(99): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(139): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(139): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(161): signal "rtc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 161
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(188): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 188
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(188): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 188
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(232): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 232
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(232): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 232
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(252): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 252
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(252): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 252
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(268): signal "rtl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 268
-Info (12128): Elaborating entity "CLK_DIVIDER" for hierarchy "CLK_DIVIDER:inst20"
-Info (12128): Elaborating entity "accessControl" for hierarchy "accessControl:inst5"
-Warning (10492): VHDL Process Statement warning at accessControl.vhd(118): signal "idx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 118
-Warning (10492): VHDL Process Statement warning at accessControl.vhd(120): signal "idx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 120
-Warning (10492): VHDL Process Statement warning at accessControl.vhd(122): signal "idx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 122
-Warning (10631): VHDL Process Statement warning at accessControl.vhd(114): inferring latch(es) for signal or variable "strtTx", which holds its previous value in one or more paths through the process File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 114
-Info (10041): Inferred latch for "strtTx[0]" at accessControl.vhd(114) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 114
-Info (10041): Inferred latch for "strtTx[1]" at accessControl.vhd(114) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 114
-Info (10041): Inferred latch for "strtTx[2]" at accessControl.vhd(114) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 114
-Info (10041): Inferred latch for "strtTx[3]" at accessControl.vhd(114) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 114
-Info (10041): Inferred latch for "strtTx[4]" at accessControl.vhd(114) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 114
-Info (10041): Inferred latch for "strtTx[5]" at accessControl.vhd(114) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 114
-Info (12128): Elaborating entity "IMU_Extraction_Block" for hierarchy "IMU_Extraction_Block:inst"
-Info (12128): Elaborating entity "spi_master1" for hierarchy "IMU_Extraction_Block:inst|spi_master1:inst4"
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(76): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(76): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(99): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(99): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 99
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(139): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(139): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(161): signal "rtc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 161
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(188): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 188
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(188): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 188
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(232): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 232
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(232): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 232
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(252): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 252
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(252): signal "StartTx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 252
-Warning (10492): VHDL Process Statement warning at spi_master1.vhd(268): signal "rtl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 268
-Info (12128): Elaborating entity "DESrx" for hierarchy "IMU_Extraction_Block:inst|DESrx:inst"
-Info (12128): Elaborating entity "FIFObuffer" for hierarchy "IMU_Extraction_Block:inst|FIFObuffer:inst3"
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(123): signal "NS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 123
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(125): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(128): signal "datArray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(128): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(130): signal "NS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 130
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(132): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(135): signal "datArray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(135): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(137): signal "NS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 137
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(139): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 139
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(142): signal "datArray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 142
-Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(142): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 142
-Warning (10631): VHDL Process Statement warning at FIFObuffer.vhd(119): inferring latch(es) for signal or variable "empty", which holds its previous value in one or more paths through the process File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 119
-Info (10041): Inferred latch for "empty" at FIFObuffer.vhd(119) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 119
-Info (12128): Elaborating entity "DEStx" for hierarchy "IMU_Extraction_Block:inst|DEStx:inst15"
-Info (12128): Elaborating entity "NumberGenerator" for hierarchy "IMU_Extraction_Block:inst|NumberGenerator:inst1"
-Info (12128): Elaborating entity "addressBlock" for hierarchy "IMU_Extraction_Block:inst|addressBlock:inst2"
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray" is uninferred due to inappropriate RAM size File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 32
-Warning (13012): Latch IMU_Extraction_Block:inst|FIFObuffer:inst3|empty has unsafe behavior File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
+Info (12021): Found 2 design units, including 1 entities, in source file uart_transmitter.vhd
+    Info (12022): Found design unit 1: UART_Transmitter-UART_Transmitter File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Transmitter.vhd Line: 27
+    Info (12023): Found entity 1: UART_Transmitter File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Transmitter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file uart_receiver.vhd
+    Info (12022): Found design unit 1: UART_Receiver-UART_Receiver File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 26
+    Info (12023): Found entity 1: UART_Receiver File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file imu_extraction_block1.bdf
+    Info (12023): Found entity 1: IMU_Extraction_Block1
+Info (12127): Elaborating entity "DESrx" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 56 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "MISO_MPU"
-Info (21057): Implemented 1215 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 57 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 1198 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Mon Mar 11 16:39:51 2019
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:25
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 51 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Sat Mar 16 23:20:41 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 

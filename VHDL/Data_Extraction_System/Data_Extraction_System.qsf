@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY Data_Extraction_System
+set_global_assignment -name TOP_LEVEL_ENTITY DESrx
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:00:41  FEBRUARY 06, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
@@ -54,7 +54,7 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulati
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH FIFObuffer_vhd_tst -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH DESrx_vhd_tst -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME Data_Extraction_Controller_vhd_tst -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Data_Extraction_Controller_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Data_Extraction_Controller_vhd_tst -section_id Data_Extraction_Controller_vhd_tst
@@ -168,6 +168,18 @@ set_location_assignment PIN_M1 -to Sw
 set_global_assignment -name VHDL_FILE NumberGeneratorV2.vhd
 set_global_assignment -name VHDL_FILE Initialise.vhd
 set_global_assignment -name VHDL_FILE Multiplexer2x1.vhd
+set_global_assignment -name VHDL_FILE UART_Transmitter.vhd
+set_global_assignment -name VHDL_FILE UART_Receiver.vhd
+set_location_assignment PIN_J14 -to TxO
+set_location_assignment PIN_K15 -to RxI
+set_global_assignment -name BDF_FILE IMU_Extraction_Block1.bdf
+set_location_assignment PIN_K16 -to MPU1_CS
+set_location_assignment PIN_N11 -to MISO1_MPU
+set_location_assignment PIN_P9 -to MPU1_MOSI
+set_location_assignment PIN_R10 -to MPU1_MSTR_CLK
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/Data_Extraction_Controller.vht -section_id Data_Extraction_Controller_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/genPulse.vht -section_id genPulse_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/xDomain_s2f.vht -section_id xDomain_s2f_vhd_tst
@@ -186,7 +198,4 @@ set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/SystemTestx.
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/DESrx.vht -section_id DESrx_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/DEStx.vht -section_id DEStx_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/addressBlock.vht -section_id addressBlock_vhd_tst
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

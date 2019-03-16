@@ -6,6 +6,8 @@ use IEEE.std_logic_unsigned.all;
 
 
 entity DEStx is
+	generic (lastAddress : integer := 12
+				);
 	port 
 	(
 		--Inputs
@@ -49,7 +51,7 @@ begin
 					end if;
 -----------------------------------------------------------------------	NEXT TX				
 				when NXTtx =>
-					if(nextTx = 11) then
+					if(nextTx = (lastAddress - 1)) then
 						state <= W4BFFRtx;
 						nextTx := 0;
 					else
