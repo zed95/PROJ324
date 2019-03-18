@@ -389,6 +389,72 @@ agreement for further details.
 	)
 )
 (symbol
+	(rect 2536 416 2752 528)
+	(text "FIFObuffer" (rect 5 0 61 12)(font "Arial" ))
+	(text "inst3" (rect 8 96 30 113)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "storeData" (rect 0 0 48 12)(font "Arial" ))
+		(text "storeData" (rect 21 43 69 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "sendData" (rect 0 0 47 12)(font "Arial" ))
+		(text "sendData" (rect 21 59 68 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "dataIn[dw-1..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "dataIn[dw-1..0]" (rect 21 75 94 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "dataOut[dw-1..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "dataOut[dw-1..0]" (rect 127 27 208 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "empty" (rect 0 0 31 12)(font "Arial" ))
+		(text "empty" (rect 169 43 200 55)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48))
+	)
+	(parameter
+		"Array_Size"
+		"12"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"dw"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"noIMU"
+		"001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 200 96))
+	)
+	(annotation_block (parameter)(rect 2544 328 2725 404))
+)
+(symbol
 	(rect 1936 432 2160 576)
 	(text "spi_master1" (rect 5 0 65 12)(font "Arial" ))
 	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
@@ -462,7 +528,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"2000"
+		"200"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -479,72 +545,6 @@ agreement for further details.
 		(rectangle (rect 16 16 208 128))
 	)
 	(annotation_block (parameter)(rect 1928 328 2097 423))
-)
-(symbol
-	(rect 2536 416 2752 528)
-	(text "FIFObuffer" (rect 5 0 61 12)(font "Arial" ))
-	(text "inst3" (rect 8 96 30 113)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "storeData" (rect 0 0 48 12)(font "Arial" ))
-		(text "storeData" (rect 21 43 69 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "sendData" (rect 0 0 47 12)(font "Arial" ))
-		(text "sendData" (rect 21 59 68 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "dataIn[dw-1..0]" (rect 0 0 73 12)(font "Arial" ))
-		(text "dataIn[dw-1..0]" (rect 21 75 94 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 216 32)
-		(output)
-		(text "dataOut[dw-1..0]" (rect 0 0 81 12)(font "Arial" ))
-		(text "dataOut[dw-1..0]" (rect 127 27 208 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 3))
-	)
-	(port
-		(pt 216 48)
-		(output)
-		(text "empty" (rect 0 0 31 12)(font "Arial" ))
-		(text "empty" (rect 169 43 200 55)(font "Arial" ))
-		(line (pt 216 48)(pt 200 48))
-	)
-	(parameter
-		"Array_Size"
-		"12"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"dw"
-		"16"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"noIMU"
-		"001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 200 96))
-	)
-	(annotation_block (parameter)(rect 2752 336 2933 412))
 )
 (connector
 	(text "bfrSend" (rect 1578 280 1614 297)(font "Intel Clear" ))
@@ -669,7 +669,7 @@ agreement for further details.
 	(pt 2848 464)
 )
 (connector
-	(text "bfrEmpty" (rect 2762 448 2805 465)(font "Intel Clear" ))
+	(text "bfrEmpty" (rect 2794 448 2837 465)(font "Intel Clear" ))
 	(pt 2752 464)
 	(pt 2848 464)
 )

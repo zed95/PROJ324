@@ -118,7 +118,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1304 464 1480 480)
+	(rect 1480 536 1656 552)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU_MOSI" (rect 90 0 145 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -169,6 +169,38 @@ agreement for further details.
 	(rect 816 232 992 248)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Ready_to_Send" (rect 90 0 165 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1328 352 1504 368)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "MPU1_CS" (rect 90 0 138 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1480 592 1656 608)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "MPU1_MOSI" (rect 90 0 151 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -651,10 +683,6 @@ agreement for further details.
 	(pt 592 472)
 )
 (connector
-	(pt 1272 424)
-	(pt 1304 424)
-)
-(connector
 	(text "CLK_1MHz" (rect 1530 392 1583 409)(font "Intel Clear" ))
 	(pt 1648 408)
 	(pt 1520 408)
@@ -712,10 +740,6 @@ agreement for further details.
 	(pt 1048 472)
 )
 (connector
-	(pt 1272 472)
-	(pt 1304 472)
-)
-(connector
 	(pt 1272 440)
 	(pt 1304 440)
 )
@@ -728,3 +752,45 @@ agreement for further details.
 	(pt -80 424)
 	(pt -128 424)
 )
+(connector
+	(pt 1472 472)
+	(pt 1472 544)
+)
+(connector
+	(pt 1472 544)
+	(pt 1480 544)
+)
+(connector
+	(pt 1416 600)
+	(pt 1480 600)
+)
+(connector
+	(pt 1416 600)
+	(pt 1416 472)
+)
+(connector
+	(pt 1272 472)
+	(pt 1416 472)
+)
+(connector
+	(pt 1416 472)
+	(pt 1472 472)
+)
+(connector
+	(pt 1288 360)
+	(pt 1328 360)
+)
+(connector
+	(pt 1288 360)
+	(pt 1288 424)
+)
+(connector
+	(pt 1272 424)
+	(pt 1288 424)
+)
+(connector
+	(pt 1288 424)
+	(pt 1304 424)
+)
+(junction (pt 1416 472))
+(junction (pt 1288 424))

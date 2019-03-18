@@ -8,41 +8,41 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim
-Edesrx
-Z1 w1552238902
+Efifobuffer
+Z1 w1552866527
 Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z7 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd
-Z8 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd
+Z7 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd
+Z8 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd
 l0
 L8
-Vb34=mID@2n@6^Zf3=JCZA1
-!s100 >@hdc]9Jl<DnY:l8eFNi^3
+V5eZIg93BWDBa=AR804hl>1
+!s100 zdKSCi65G3a_W]G6@3:;?0
 Z9 OV;C;10.5b;63
 31
-Z10 !s110 1552778498
+Z10 !s110 1552904686
 !i10b 1
-Z11 !s108 1552778498.000000
-Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd|
-Z13 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DESrx.vhd|
+Z11 !s108 1552904685.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd|
+Z13 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd|
 !i113 1
 Z14 o-93 -work work
 Z15 tExplicit 1 CvgOpt 0
-Adesrx
+Afifobuffer
 R2
 R3
 R4
 R5
 R6
-DEx4 work 5 desrx 0 22 b34=mID@2n@6^Zf3=JCZA1
-l30
-L27
-Vm3?fPMBNRm7;bg]252bP?0
-!s100 [dWZ?_nIj9md:T_?Y4o@f1
+DEx4 work 10 fifobuffer 0 22 5eZIg93BWDBa=AR804hl>1
+l36
+L28
+Vg;nARo4oBW<0ff>^b52:^3
+!s100 CW@6C3dL3mZGnXQAJaT@<3
 R9
 31
 R10
@@ -53,42 +53,44 @@ R13
 !i113 1
 R14
 R15
-Edesrx_vhd_tst
-Z16 w1551924262
-R5
+Efifobuffer_vhd_tst
+Z16 w1552095479
 R6
+R5
+R4
 R0
-Z17 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/DESrx.vht
-Z18 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/DESrx.vht
+Z17 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/FIFObuffer.vht
+Z18 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/FIFObuffer.vht
 l0
-L31
-V9BG6nX_8lYdKUm3i@;a`[2
-!s100 _9]zgSElU;4[OAcK2Ad7K0
+L32
+V64hfYI2dMT7D<Q?dibJF@0
+!s100 _E]iA1ADn7?>9IS96YC=62
 R9
 31
 R10
 !i10b 1
-R11
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/DESrx.vht|
-Z20 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/DESrx.vht|
+Z19 !s108 1552904686.000000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/FIFObuffer.vht|
+Z21 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/FIFObuffer.vht|
 !i113 1
 R14
 R15
-Adesrx_arch
-R5
+Afifobuffer_arch
 R6
-DEx4 work 13 desrx_vhd_tst 0 22 9BG6nX_8lYdKUm3i@;a`[2
-l55
-L33
-VTb^IAQXUJcn4R>eDWamoe0
-!s100 ;J905I8RNmd<HJghA:0Y32
+R5
+R4
+DEx4 work 18 fifobuffer_vhd_tst 0 22 64hfYI2dMT7D<Q?dibJF@0
+l56
+L34
+Vc8cojY8XlZa[4l;X^gX?C2
+!s100 QX6jG[dHi<;ndLdo^h>YJ1
 R9
 31
 R10
 !i10b 1
-R11
 R19
 R20
+R21
 !i113 1
 R14
 R15

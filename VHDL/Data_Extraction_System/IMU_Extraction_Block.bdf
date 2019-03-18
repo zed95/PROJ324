@@ -398,6 +398,69 @@ agreement for further details.
 	(annotation_block (parameter)(rect 1640 448 1821 524))
 )
 (symbol
+	(rect 248 360 456 472)
+	(text "DEStx" (rect 5 0 36 12)(font "Arial" ))
+	(text "inst15" (rect 8 96 37 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "bufferEmpty" (rect 0 0 63 12)(font "Arial" ))
+		(text "bufferEmpty" (rect 21 43 84 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "DONEtx" (rect 0 0 41 12)(font "Arial" ))
+		(text "DONEtx" (rect 21 59 62 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "sTx" (rect 0 0 17 12)(font "Arial" ))
+		(text "sTx" (rect 21 75 38 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "R2S" (rect 0 0 21 12)(font "Arial" ))
+		(text "R2S" (rect 170 27 191 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "NEXT_DAT" (rect 0 0 54 12)(font "Arial" ))
+		(text "NEXT_DAT" (rect 142 43 196 55)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "TRANSMIT" (rect 0 0 54 12)(font "Arial" ))
+		(text "TRANSMIT" (rect 142 59 196 71)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64))
+	)
+	(parameter
+		"lastAddress"
+		"12"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
+	(annotation_block (parameter)(rect 256 304 432 344))
+)
+(symbol
 	(rect 824 544 1048 688)
 	(text "spi_master1" (rect 5 0 65 12)(font "Arial" ))
 	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
@@ -471,7 +534,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"2000"
+		"200"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -488,69 +551,6 @@ agreement for further details.
 		(rectangle (rect 16 16 208 128))
 	)
 	(annotation_block (parameter)(rect 816 440 985 535))
-)
-(symbol
-	(rect 248 360 456 472)
-	(text "DEStx" (rect 5 0 36 12)(font "Arial" ))
-	(text "inst15" (rect 8 96 37 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "bufferEmpty" (rect 0 0 63 12)(font "Arial" ))
-		(text "bufferEmpty" (rect 21 43 84 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "DONEtx" (rect 0 0 41 12)(font "Arial" ))
-		(text "DONEtx" (rect 21 59 62 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "sTx" (rect 0 0 17 12)(font "Arial" ))
-		(text "sTx" (rect 21 75 38 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 208 32)
-		(output)
-		(text "R2S" (rect 0 0 21 12)(font "Arial" ))
-		(text "R2S" (rect 170 27 187 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32))
-	)
-	(port
-		(pt 208 48)
-		(output)
-		(text "NEXT_DAT" (rect 0 0 54 12)(font "Arial" ))
-		(text "NEXT_DAT" (rect 142 43 187 55)(font "Arial" ))
-		(line (pt 208 48)(pt 192 48))
-	)
-	(port
-		(pt 208 64)
-		(output)
-		(text "TRANSMIT" (rect 0 0 54 12)(font "Arial" ))
-		(text "TRANSMIT" (rect 142 59 187 71)(font "Arial" ))
-		(line (pt 208 64)(pt 192 64))
-	)
-	(parameter
-		"lastAddress"
-		"12"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 192 96))
-	)
-	(annotation_block (parameter)(rect 256 304 432 344))
 )
 (connector
 	(text "bfrSend" (rect 506 392 542 409)(font "Intel Clear" ))
