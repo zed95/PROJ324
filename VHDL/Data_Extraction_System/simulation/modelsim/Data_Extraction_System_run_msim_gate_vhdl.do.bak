@@ -1,0 +1,17 @@
+transcript on
+if {[file exists gate_work]} {
+	vdel -lib gate_work -all
+}
+vlib gate_work
+vmap work gate_work
+
+vcom -93 -work work {Data_Extraction_System_6_1200mv_85c_slow.vho}
+
+vcom -93 -work work {C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/xDomain_s2f.vht}
+
+vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /i1=Data_Extraction_System_6_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs="+acc"  xDomain_s2f_vhd_tst
+
+add wave *
+view structure
+view signals
+run -all

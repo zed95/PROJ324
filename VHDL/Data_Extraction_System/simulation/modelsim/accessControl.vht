@@ -94,8 +94,10 @@ variable inactiveTime : integer := 100;
 variable state_R2S : std_logic_vector(5 downto 0) :=  "000000";
 variable txIMU_state : std_logic_vector(5 downto 0) := "000000";
 variable waitingCounter : integer := 0;
-variable samplesSent : integer := 0; 
+variable samplesSent : integer := 1; 
 variable dataIMU0_state : std_logic_vector(15 downto 0) := "0000000000000000";
+variable flag	: std_logic := '0';
+variable waitCount : integer := 0;
                                     
 BEGIN                                                         
     for k in 0 to 5000 loop
@@ -103,70 +105,163 @@ BEGIN
 			case state is
 				when 0 =>
 					if(k = inactiveTime) then
-						state_R2S := (0 => '1',others => '0');
 						state := 1;
+												if(flag = '0') then
+							state_R2S := (0 => '1',others => '0');
+						else
+							state_R2S := (1 => '1',others => '0');
+						end if;
+					end if;
+					
+					--Output Signals
+					r2sIMU <= state_R2S;
+					if(flag = '0') then
+						txIMU <= txIMU_state;
+						dataIMU0 <= dataIMU0_state;
+						dataIMU1 <= (0 => '0',others => '0');
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					else
+						txIMU <= txIMU_state;
+						dataIMU0 <= (0 => '0',others => '0');
+						dataIMU1 <= dataIMU0_state;
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					end if;
+					
+				when 1 =>
+					if(waitCount = 5) then
+						state := 2;
+						waitCount := 0;
+					else
+						state := 1;
+						waitCount := waitCount + 1;
 					end if;
 					--Output Signals
 					r2sIMU <= state_R2S;
 					txIMU <= txIMU_state;
-					dataIMU0 <= dataIMU0_state;
-					dataIMU1 <= (0 => '0',others => '0');
-					dataIMU2 <= (0 => '0',others => '0');
-					dataIMU3 <= (0 => '0',others => '0');
-					dataIMU4 <= (0 => '0',others => '0');
-					dataIMU5 <= (0 => '0',others => '0');
 					
-				when 1 =>
-					state := 2;
-					txIMU_state := (0 => '1',others => '0');
+					if(flag = '0') then
+						txIMU <= txIMU_state;
+						dataIMU0 <= dataIMU0_state;
+						dataIMU1 <= (0 => '0',others => '0');
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					else
+						txIMU <= txIMU_state;
+						dataIMU0 <= (0 => '0',others => '0');
+						dataIMU1 <= dataIMU0_state;
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					end if;
+				when 2 =>
+					state := 3;
+					if(flag = '0') then
+						txIMU_state := (0 => '1',others => '0');
+					else
+						txIMU_state := (1 => '1',others => '0');
+					end if;
 					--Output Signals
 					r2sIMU <= state_R2S;
 					txIMU <= txIMU_state;
-					dataIMU0 <= dataIMU0_state;
-					dataIMU1 <= (0 => '0',others => '0');
-					dataIMU2 <= (0 => '0',others => '0');
-					dataIMU3 <= (0 => '0',others => '0');
-					dataIMU4 <= (0 => '0',others => '0');
-					dataIMU5 <= (0 => '0',others => '0');
+					if(flag = '0') then
+						txIMU <= txIMU_state;
+						dataIMU0 <= dataIMU0_state;
+						dataIMU1 <= (0 => '0',others => '0');
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					else
+						txIMU <= txIMU_state;
+						dataIMU0 <= (0 => '0',others => '0');
+						dataIMU1 <= dataIMU0_state;
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					end if;
 					
-				when 2 =>
-					txIMU_state := (0 => '0',others => '0');
+				when 3 =>
+					if(flag = '0') then
+						txIMU_state := (0 => '0',others => '0');
+					else
+						txIMU_state := (1 => '0',others => '0');
+					end if;
+					
 					if(waitingCounter = 20) then
 						waitingCounter := 0;
-						state := 3;
+						state := 4;
 					else
 						waitingCounter := waitingCounter + 1;
 					end if;
 					--Output Signals
 					r2sIMU <= state_R2S;
 					txIMU <= txIMU_state;
-					dataIMU0 <= dataIMU0_state;
-					dataIMU1 <= (0 => '0',others => '0');
-					dataIMU2 <= (0 => '0',others => '0');
-					dataIMU3 <= (0 => '0',others => '0');
-					dataIMU4 <= (0 => '0',others => '0');
-					dataIMU5 <= (0 => '0',others => '0');
+					if(flag = '0') then
+						txIMU <= txIMU_state;
+						dataIMU0 <= dataIMU0_state;
+						dataIMU1 <= (0 => '0',others => '0');
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					else
+						txIMU <= txIMU_state;
+						dataIMU0 <= (0 => '0',others => '0');
+						dataIMU1 <= dataIMU0_state;
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					end if;
 					
-				when 3 =>
-					if(samplesSent = 11) then
+				when 4 =>
+					if(samplesSent = 12) then
 						state := 0;
 						state_R2S := (0 => '0',others => '0');
 						inactiveTime := k + 300;
-						samplesSent := 0;
+						samplesSent := 1;
+						if(flag = '0') then
+							state_R2S := (0 => '0',others => '0');
+							flag := '1';
+						else
+							state_R2S := (1 => '0',others => '0');
+							flag := '0';
+						end if;
 					else
 						samplesSent := samplesSent + 1;
-						dataIMU0_state := std_logic_vector(to_unsigned(samplesSent, dataIMU0_state'length));
-						state := 1;
+						state := 2;
 					end if;
+					dataIMU0_state := std_logic_vector(to_unsigned(samplesSent, dataIMU0_state'length));
 					--Output Signals
 					r2sIMU <= state_R2S;	
 					txIMU <= txIMU_state;					
-					dataIMU0 <= dataIMU0_state;
-					dataIMU1 <= (0 => '0',others => '0');
-					dataIMU2 <= (0 => '0',others => '0');
-					dataIMU3 <= (0 => '0',others => '0');
-					dataIMU4 <= (0 => '0',others => '0');
-					dataIMU5 <= (0 => '0',others => '0');
+					if(flag = '0') then
+						txIMU <= txIMU_state;
+						dataIMU0 <= dataIMU0_state;
+						dataIMU1 <= (0 => '0',others => '0');
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					else
+						txIMU <= txIMU_state;
+						dataIMU0 <= (0 => '0',others => '0');
+						dataIMU1 <= dataIMU0_state;
+						dataIMU2 <= (0 => '0',others => '0');
+						dataIMU3 <= (0 => '0',others => '0');
+						dataIMU4 <= (0 => '0',others => '0');
+						dataIMU5 <= (0 => '0',others => '0');
+					end if;
 				when others =>
 			end case;
 		

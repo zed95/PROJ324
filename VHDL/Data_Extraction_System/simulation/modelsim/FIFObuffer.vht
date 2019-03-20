@@ -35,16 +35,16 @@ ARCHITECTURE FIFObuffer_arch OF FIFObuffer_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLK : STD_LOGIC;
-SIGNAL dataIn : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL dataOut : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL empty : STD_LOGIC;
-SIGNAL sendData : STD_LOGIC;
-SIGNAL storeData : STD_LOGIC;
+SIGNAL dataIn : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+SIGNAL dataOut : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+SIGNAL empty : STD_LOGIC	:= '1';
+SIGNAL sendData : STD_LOGIC := '0';
+SIGNAL storeData : STD_LOGIC := '0';
 COMPONENT FIFObuffer
 	PORT (
 	CLK : IN STD_LOGIC;
 	dataIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-	dataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	dataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
 	empty : OUT STD_LOGIC;
 	sendData : IN STD_LOGIC;
 	storeData : IN STD_LOGIC

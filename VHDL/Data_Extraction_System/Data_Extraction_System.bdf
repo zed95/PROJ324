@@ -88,7 +88,7 @@ agreement for further details.
 	(input)
 	(rect 240 112 408 128)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "MISO1_MPU" (rect 5 0 67 17)(font "Intel Clear" ))
+	(text "MISO1_MPU" (rect 5 0 66 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -417,7 +417,7 @@ agreement for further details.
 	(annotation_block (parameter)(rect -504 -200 -328 -160))
 )
 (symbol
-	(rect 56 -496 288 -288)
+	(rect -104 -496 128 -288)
 	(text "accessControl" (rect 5 0 75 12)(font "Arial" ))
 	(text "inst5" (rect 8 192 31 204)(font "Arial" ))
 	(port
@@ -512,7 +512,7 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 216 192))
 	)
-	(annotation_block (parameter)(rect 288 -536 464 -496))
+	(annotation_block (parameter)(rect -88 -560 88 -520))
 )
 (symbol
 	(rect 432 -168 728 -8)
@@ -849,7 +849,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"200"
+		"2000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -956,70 +956,6 @@ agreement for further details.
 	(text "doneTx" (rect 834 -328 868 -311)(font "Intel Clear" ))
 	(pt 824 -312)
 	(pt 968 -312)
-)
-(connector
-	(text "txDat[15..0]" (rect 298 -480 352 -463)(font "Intel Clear" ))
-	(pt 288 -464)
-	(pt 424 -464)
-	(bus)
-)
-(connector
-	(text "TRANSMIT" (rect 298 -464 348 -447)(font "Intel Clear" ))
-	(pt 424 -448)
-	(pt 288 -448)
-)
-(connector
-	(text "StrtTransmission[5..0]" (rect 298 -448 399 -431)(font "Intel Clear" ))
-	(pt 424 -432)
-	(pt 288 -432)
-	(bus)
-)
-(connector
-	(text "BFR0[15..0]" (rect -94 -352 -39 -335)(font "Intel Clear" ))
-	(pt -96 -336)
-	(pt 56 -336)
-	(bus)
-)
-(connector
-	(text "CLK_1MHz" (rect -94 -480 -41 -463)(font "Intel Clear" ))
-	(pt -96 -464)
-	(pt 56 -464)
-)
-(connector
-	(text "R2S[5..0]" (rect -94 -464 -52 -447)(font "Intel Clear" ))
-	(pt -96 -448)
-	(pt 56 -448)
-	(bus)
-)
-(connector
-	(text "txIMU[5..0]" (rect -94 -448 -44 -431)(font "Intel Clear" ))
-	(pt -96 -432)
-	(pt 56 -432)
-	(bus)
-)
-(connector
-	(text "BFR0[15..0]" (rect -94 -432 -39 -415)(font "Intel Clear" ))
-	(pt -96 -416)
-	(pt 56 -416)
-	(bus)
-)
-(connector
-	(text "BFR0[15..0]" (rect -94 -400 -39 -383)(font "Intel Clear" ))
-	(pt -96 -384)
-	(pt 56 -384)
-	(bus)
-)
-(connector
-	(text "BFR0[15..0]" (rect -94 -384 -39 -367)(font "Intel Clear" ))
-	(pt -96 -368)
-	(pt 56 -368)
-	(bus)
-)
-(connector
-	(text "BFR0[15..0]" (rect -94 -368 -39 -351)(font "Intel Clear" ))
-	(pt -96 -352)
-	(pt 56 -352)
-	(bus)
 )
 (connector
 	(text "TRANSMIT" (rect 466 -344 516 -327)(font "Intel Clear" ))
@@ -1153,8 +1089,72 @@ agreement for further details.
 	(pt 408 120)
 )
 (connector
-	(text "BFR1[15..0]" (rect -94 -416 -39 -399)(font "Intel Clear" ))
-	(pt -96 -400)
-	(pt 56 -400)
+	(text "txDat[15..0]" (rect 178 -480 232 -463)(font "Intel Clear" ))
+	(pt 128 -464)
+	(pt 264 -464)
+	(bus)
+)
+(connector
+	(text "TRANSMIT" (rect 178 -464 228 -447)(font "Intel Clear" ))
+	(pt 264 -448)
+	(pt 128 -448)
+)
+(connector
+	(text "BFR0[15..0]" (rect -254 -352 -199 -335)(font "Intel Clear" ))
+	(pt -256 -336)
+	(pt -104 -336)
+	(bus)
+)
+(connector
+	(text "CLK_1MHz" (rect -254 -480 -201 -463)(font "Intel Clear" ))
+	(pt -256 -464)
+	(pt -104 -464)
+)
+(connector
+	(text "R2S[5..0]" (rect -254 -464 -212 -447)(font "Intel Clear" ))
+	(pt -256 -448)
+	(pt -104 -448)
+	(bus)
+)
+(connector
+	(text "txIMU[5..0]" (rect -254 -448 -204 -431)(font "Intel Clear" ))
+	(pt -256 -432)
+	(pt -104 -432)
+	(bus)
+)
+(connector
+	(text "BFR0[15..0]" (rect -254 -432 -199 -415)(font "Intel Clear" ))
+	(pt -256 -416)
+	(pt -104 -416)
+	(bus)
+)
+(connector
+	(text "BFR0[15..0]" (rect -254 -400 -199 -383)(font "Intel Clear" ))
+	(pt -256 -384)
+	(pt -104 -384)
+	(bus)
+)
+(connector
+	(text "BFR0[15..0]" (rect -254 -384 -199 -367)(font "Intel Clear" ))
+	(pt -256 -368)
+	(pt -104 -368)
+	(bus)
+)
+(connector
+	(text "BFR0[15..0]" (rect -254 -368 -199 -351)(font "Intel Clear" ))
+	(pt -256 -352)
+	(pt -104 -352)
+	(bus)
+)
+(connector
+	(text "BFR1[15..0]" (rect -254 -416 -199 -399)(font "Intel Clear" ))
+	(pt -256 -400)
+	(pt -104 -400)
+	(bus)
+)
+(connector
+	(text "StrtTransmission[5..0]" (rect 162 -448 263 -431)(font "Intel Clear" ))
+	(pt 264 -432)
+	(pt 128 -432)
 	(bus)
 )

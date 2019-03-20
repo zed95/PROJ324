@@ -33,12 +33,12 @@ END DESrx_vhd_tst;
 ARCHITECTURE DESrx_arch OF DESrx_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL bufferEmpty : STD_LOGIC;
+SIGNAL bufferEmpty : STD_LOGIC := '0';
 SIGNAL CLK : STD_LOGIC;
-SIGNAL DONErx : STD_LOGIC;
-SIGNAL EXTRACT : STD_LOGIC;
-SIGNAL NEXT_ADD : STD_LOGIC;
-SIGNAL STORE : STD_LOGIC;
+SIGNAL DONErx : STD_LOGIC	:= '0';
+SIGNAL EXTRACT : STD_LOGIC := '0';
+SIGNAL NEXT_ADD : STD_LOGIC := '0';
+SIGNAL STORE : STD_LOGIC := '0';
 COMPONENT DESrx
 	PORT (
 	bufferEmpty : IN STD_LOGIC;

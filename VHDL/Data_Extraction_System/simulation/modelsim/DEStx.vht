@@ -33,13 +33,13 @@ END DEStx_vhd_tst;
 ARCHITECTURE DEStx_arch OF DEStx_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL bufferEmpty : STD_LOGIC;
+SIGNAL bufferEmpty : STD_LOGIC := '1';
 SIGNAL CLK : STD_LOGIC;
-SIGNAL DONEtx : STD_LOGIC;
-SIGNAL NEXT_DAT : STD_LOGIC;
-SIGNAL R2S : STD_LOGIC;
-SIGNAL sTx : STD_LOGIC;
-SIGNAL TRANSMIT : STD_LOGIC;
+SIGNAL DONEtx : STD_LOGIC	:= '0';
+SIGNAL NEXT_DAT : STD_LOGIC := '0';
+SIGNAL R2S : STD_LOGIC	:= '0';
+SIGNAL sTx : STD_LOGIC	:= '0';
+SIGNAL TRANSMIT : STD_LOGIC	:= '0';
 COMPONENT DEStx
 	PORT (
 	bufferEmpty : IN STD_LOGIC;

@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sun Mar 17 23:49:07 2019
+Fitter Status : Successful - Tue Mar 19 23:41:03 2019
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : Data_Extraction_System
-Top-level Entity Name : FIFObuffer
+Top-level Entity Name : Data_Extraction_System
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 52 / 22,320 ( < 1 % )
-    Total combinational functions : 49 / 22,320 ( < 1 % )
-    Dedicated logic registers : 40 / 22,320 ( < 1 % )
-Total registers : 40
-Total pins : 36 / 154 ( 23 % )
+Total logic elements : 1,491 / 22,320 ( 7 % )
+    Total combinational functions : 1,423 / 22,320 ( 6 % )
+    Dedicated logic registers : 910 / 22,320 ( 4 % )
+Total registers : 910
+Total pins : 23 / 154 ( 15 % )
 Total virtual pins : 0
-Total memory bits : 192 / 608,256 ( < 1 % )
+Total memory bits : 300 / 608,256 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

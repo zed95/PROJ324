@@ -1,6 +1,68 @@
 
-State Machine - |FIFObuffer|state
+State Machine - |Data_Extraction_System|UART_Transmitter:inst2|state
+Name state.Txstpb state.Txdb state.Txstrb state.IDLE 
+state.IDLE 0 0 0 0 
+state.Txstrb 0 0 1 1 
+state.Txdb 0 1 0 1 
+state.Txstpb 1 0 0 1 
+
+State Machine - |Data_Extraction_System|UART_Receiver:inst1|state
+Name state.Rxstpb state.Rxdb state.Rxstrb state.IDLE 
+state.IDLE 0 0 0 0 
+state.Rxstrb 0 0 1 1 
+state.Rxdb 0 1 0 1 
+state.Rxstpb 1 0 0 1 
+
+State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|state
+Name state.W4BFFRtx state.NXTtx state.WAITINGtx state.STRTtx state.RDY2SND state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.RDY2SND 0 0 0 0 1 1 
+state.STRTtx 0 0 0 1 0 1 
+state.WAITINGtx 0 0 1 0 0 1 
+state.NXTtx 0 1 0 0 0 1 
+state.W4BFFRtx 1 0 0 0 0 1 
+
+State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|state
 Name state.SEND state.STORE state.IDLE 
 state.IDLE 0 0 0 
 state.STORE 0 1 1 
 state.SEND 1 0 1 
+
+State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|DESrx:inst|state
+Name state.W4BFFRrx state.STOREstate state.WAITINGrx state.STRTrx state.NXTADDR state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.NXTADDR 0 0 0 0 1 1 
+state.STRTrx 0 0 0 1 0 1 
+state.WAITINGrx 0 0 1 0 0 1 
+state.STOREstate 0 1 0 0 0 1 
+state.W4BFFRrx 1 0 0 0 0 1 
+
+State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|state
+Name state.W4BFFRtx state.NXTtx state.WAITINGtx state.STRTtx state.RDY2SND state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.RDY2SND 0 0 0 0 1 1 
+state.STRTtx 0 0 0 1 0 1 
+state.WAITINGtx 0 0 1 0 0 1 
+state.NXTtx 0 1 0 0 0 1 
+state.W4BFFRtx 1 0 0 0 0 1 
+
+State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|state
+Name state.SEND state.STORE state.IDLE 
+state.IDLE 0 0 0 
+state.STORE 0 1 1 
+state.SEND 1 0 1 
+
+State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DESrx:inst|state
+Name state.W4BFFRrx state.STOREstate state.WAITINGrx state.STRTrx state.NXTADDR state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.NXTADDR 0 0 0 0 1 1 
+state.STRTrx 0 0 0 1 0 1 
+state.WAITINGrx 0 0 1 0 0 1 
+state.STOREstate 0 1 0 0 0 1 
+state.W4BFFRrx 1 0 0 0 0 1 
+
+State Machine - |Data_Extraction_System|accessControl:inst5|state
+Name state.WAITING state.STRT state.SEARCH 
+state.SEARCH 0 0 0 
+state.STRT 0 1 1 
+state.WAITING 1 0 1 
