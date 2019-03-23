@@ -4,95 +4,47 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "CS",
+					"name" : "STORE_ID",
 					"strict" : false
 				},
 				{
-					"name" : "MSTR_CLK",
+					"name" : "STORE",
 					"strict" : false
 				},
 				{
-					"name" : "MOSI",
+					"name" : "SEND",
 					"strict" : false
 				},
 				{
-					"name" : "LED0",
+					"name" : "NEXT_DAT",
 					"strict" : false
 				},
 				{
-					"name" : "LED1",
+					"name" : "SEND_REQUEST",
 					"strict" : false
 				},
 				{
-					"name" : "LED2",
+					"name" : "ID_Matched",
 					"strict" : false
 				},
 				{
-					"name" : "LED3",
+					"name" : "CLK",
 					"strict" : false
 				},
 				{
-					"name" : "LED4",
+					"name" : "DONErx",
 					"strict" : false
 				},
 				{
-					"name" : "LED5",
+					"name" : "bufferEmpty",
 					"strict" : false
 				},
 				{
-					"name" : "LED6",
+					"name" : "DONEtx",
 					"strict" : false
 				},
 				{
-					"name" : "LED7",
-					"strict" : false
-				},
-				{
-					"name" : "MPU_CS",
-					"strict" : false
-				},
-				{
-					"name" : "MPU_MSTR_CLK",
-					"strict" : false
-				},
-				{
-					"name" : "MPU_MOSI",
-					"strict" : false
-				},
-				{
-					"name" : "TxO",
-					"strict" : false
-				},
-				{
-					"name" : "MPU1_CS",
-					"strict" : false
-				},
-				{
-					"name" : "MPU1_MSTR_CLK",
-					"strict" : false
-				},
-				{
-					"name" : "MPU1_MOSI",
-					"strict" : false
-				},
-				{
-					"name" : "CLK_50MHz",
-					"strict" : false
-				},
-				{
-					"name" : "RxI",
-					"strict" : false
-				},
-				{
-					"name" : "MISO",
-					"strict" : false
-				},
-				{
-					"name" : "MISO_MPU",
-					"strict" : false
-				},
-				{
-					"name" : "MISO1_MPU",
+					"name" : "ID_Checked",
 					"strict" : false
 				}
 			]

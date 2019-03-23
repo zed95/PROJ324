@@ -18,9 +18,9 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "03/09/2019 13:42:45"
+-- Generated on "03/23/2019 17:07:10"
                                                             
--- Vhdl Test Bench template for design  :  addressBlock
+-- Vhdl Test Bench template for design  :  WC_Controller
 -- 
 -- Simulation tool : ModelSim-Altera (VHDL)
 -- 
@@ -28,31 +28,52 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY addressBlock_vhd_tst IS
-END addressBlock_vhd_tst;
-ARCHITECTURE addressBlock_arch OF addressBlock_vhd_tst IS
+ENTITY WC_Controller_vhd_tst IS
+END WC_Controller_vhd_tst;
+ARCHITECTURE WC_Controller_arch OF WC_Controller_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL ADDRESS : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+SIGNAL bufferEmpty : STD_LOGIC;
 SIGNAL CLK : STD_LOGIC;
-SIGNAL NXTADD : STD_LOGIC	:= '0';
-COMPONENT addressBlock
+SIGNAL DONErx : STD_LOGIC;
+SIGNAL DONEtx : STD_LOGIC;
+SIGNAL ID_Checked : STD_LOGIC;
+SIGNAL ID_Matched : STD_LOGIC;
+SIGNAL NEXT_DAT : STD_LOGIC;
+SIGNAL SEND : STD_LOGIC;
+SIGNAL SEND_REQUEST : STD_LOGIC;
+SIGNAL STORE : STD_LOGIC;
+SIGNAL STORE_ID : STD_LOGIC;
+COMPONENT WC_Controller
 	PORT (
-	ADDRESS : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	bufferEmpty : IN STD_LOGIC;
 	CLK : IN STD_LOGIC;
-	NXTADD : IN STD_LOGIC
+	DONErx : IN STD_LOGIC;
+	DONEtx : IN STD_LOGIC;
+	ID_Checked : IN STD_LOGIC;
+	ID_Matched : IN STD_LOGIC;
+	NEXT_DAT : OUT STD_LOGIC;
+	SEND : OUT STD_LOGIC;
+	SEND_REQUEST : OUT STD_LOGIC;
+	STORE : OUT STD_LOGIC;
+	STORE_ID : OUT STD_LOGIC
 	);
 END COMPONENT;
-
-constant half_clk_period : time := 500 ns;
-
 BEGIN
-	i1 : addressBlock
+	i1 : WC_Controller
 	PORT MAP (
 -- list connections between master ports and signals
-	ADDRESS => ADDRESS,
+	bufferEmpty => bufferEmpty,
 	CLK => CLK,
-	NXTADD => NXTADD
+	DONErx => DONErx,
+	DONEtx => DONEtx,
+	ID_Checked => ID_Checked,
+	ID_Matched => ID_Matched,
+	NEXT_DAT => NEXT_DAT,
+	SEND => SEND,
+	SEND_REQUEST => SEND_REQUEST,
+	STORE => STORE,
+	STORE_ID => STORE_ID
 	);
 init : PROCESS                                               
 -- variable declarations                                     
@@ -61,69 +82,11 @@ BEGIN
 WAIT;                                                       
 END PROCESS init;                                           
 always : PROCESS                                              
-variable state 			: integer := 0;  
-variable inactiveTime 	: integer := 100;
-variable waitingCounter : integer := 0;
-variable NXTADD_state 	: std_logic := '0'; 
-variable addressNumber 	: integer := 0;                                 
+-- optional sensitivity list                                  
+-- (        )                                                 
+-- variable declarations                                      
 BEGIN                                                         
-   for k in 0 to 5000 loop
-		wait until rising_edge(clk);
-			case state is 
-				when 0 =>
-					if(k = inactiveTime) then
-						state := 1;
-					end if;
-					--Output Signals
-						
-				when 1 =>
-					NXTADD_state := '1';
-					state := 2;
-					--Output Signals
-					NXTADD <= NXTADD_state;
-					
-				when 2 =>
-					NXTADD_state := '0';
-					if(waitingCounter = 20) then
-						waitingCounter := 0;
-						state := 3;
-					else
-						waitingCounter := waitingCounter + 1;
-					end if;
-					--Output Signals
-					NXTADD <= NXTADD_state;
-					
-				when 3 =>
-					if(addressNumber = 11) then
-						addressNumber := 0;
-						state := 0;
-						inactiveTime := k + 300;					--Make the buffer empty signal zero for 300 cycles
-					else
-						addressNumber := addressNumber + 1;
-						state := 1;
-					end if;
-					--Output Signals
-					NXTADD <= NXTADD_state;
-				
-				when others =>
-			end case;
-	
-	end loop;
+        -- code executes for every event on sensitivity list  
 WAIT;                                                        
-END PROCESS always;  
-
-clk_process : process
-
-begin
-	for k in 0 to 5000 loop
-		  
-		CLK <= '0'; 
-		  wait for half_clk_period;
-		CLK <= '1'; 
-		  wait for half_clk_period;
-		  
-  end loop;
-wait;
-end process clk_process; 
-                                        
-END addressBlock_arch;
+END PROCESS always;                                          
+END WC_Controller_arch;

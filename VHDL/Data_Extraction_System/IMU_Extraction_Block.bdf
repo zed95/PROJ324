@@ -461,6 +461,101 @@ agreement for further details.
 	(annotation_block (parameter)(rect 256 304 432 344))
 )
 (symbol
+	(rect 1200 304 1416 384)
+	(text "addressBlock" (rect 5 0 71 12)(font "Arial" ))
+	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "NXTADD" (rect 0 0 43 12)(font "Arial" ))
+		(text "NXTADD" (rect 21 43 64 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "ADDRESS[15..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "ADDRESS[15..0]" (rect 124 27 208 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(parameter
+		"AccelxH"
+		"1011101100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelxL"
+		"1011110000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelyH"
+		"1011110100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelyL"
+		"1011111000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelzH"
+		"1011111100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelzL"
+		"1100000000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroxH"
+		"1100001100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroxL"
+		"1100010000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroyH"
+		"1100010100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroyL"
+		"1100011000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyrozH"
+		"1100011100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyrozL"
+		"1100100000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Count"
+		"25"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 200 64))
+	)
+	(annotation_block (parameter)(rect 1232 8 1408 288))
+)
+(symbol
 	(rect 824 544 1048 688)
 	(text "spi_master1" (rect 5 0 65 12)(font "Arial" ))
 	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
@@ -534,7 +629,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"2000"
+		"100000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -550,7 +645,7 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 128))
 	)
-	(annotation_block (parameter)(rect 816 440 985 535))
+	(annotation_block (parameter)(rect 816 440 998 535))
 )
 (connector
 	(text "bfrSend" (rect 506 392 542 409)(font "Intel Clear" ))

@@ -1,0 +1,59 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+
+entity WC_Controller is
+	generic (lastAddress : integer := 12
+				);
+	port 
+	(
+		--Inputs
+		CLK	    		 : in std_logic;	
+		bufferEmpty		 : in std_logic;	--This should just be a one clock cycle pulse from the buffer controller to notify this controller that buffer is free and should be filled.
+		ID_Checked		 : in std_logic;
+		ID_Matched		 : in std_logic;	--Start Transmission
+		DONErx			 : in std_logic;
+		DONEtx			 : in std_logic;
+		
+		
+		--Outputs
+		R2S			: OUT std_logic; --Ready to Send;
+		NEXT_DAT		: OUT std_logic;
+		TRANSMIT    : OUT std_logic
+	);
+end entity;
+
+
+architecture WC_Controller of WC_Controller is	
+type WirelessState  is (IDLE, RequestData, WAIT_ID, RESULT, STOREID, WAITINGrx, STORE_DATA, W4BFFR_full, SEND_DATA, WAITINGtx, W4BFFR_empty);	
+signal state   : WirelessState;				
+begin	
+	process(CLK)
+
+	BEGIN
+		if(rising_edge(CLK)) then
+			case state is
+				when IDLE =>
+
+			
+				when others =>
+					state <= IDLE;
+			end case;
+		end if;
+	END PROCESS;
+	
+	process(state)
+	begin
+		case state is
+			when IDLE =>
+
+-------------------------------------
+				
+			when others =>
+				
+		end case;
+	end process;
+end WC_Controller;

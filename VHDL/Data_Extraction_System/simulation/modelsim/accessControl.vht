@@ -106,7 +106,7 @@ BEGIN
 				when 0 =>
 					if(k = inactiveTime) then
 						state := 1;
-												if(flag = '0') then
+						if(flag = '0') then
 							state_R2S := (0 => '1',others => '0');
 						else
 							state_R2S := (1 => '1',others => '0');

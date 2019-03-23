@@ -8,8 +8,8 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim
-Efifobuffer
-Z1 w1552993855
+Eaccesscontrol
+Z1 w1553079072
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 K`kJb<]?z4U5EbkG_:lMO3
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 HFZ8mBI5?[8TM9e2YGWCa2
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8Data_Extraction_System_6_1200mv_85c_slow.vho
 Z11 FData_Extraction_System_6_1200mv_85c_slow.vho
 l0
 L80
-Vb3]SORj;8`Lm7AzbK]SDf0
-!s100 i46@_AhV5_3nQ42_K^3T:1
+VSmk>DMiilib]^5UnnRLa63
+!s100 P;F4^Tj1lIBEeCi6dmSco0
 Z12 OV;C;10.5b;63
 31
-Z13 !s110 1552994584
+Z13 !s110 1553087621
 !i10b 1
-Z14 !s108 1552994583.000000
+Z14 !s108 1553087621.000000
 Z15 !s90 -reportprogress|300|-93|-work|work|Data_Extraction_System_6_1200mv_85c_slow.vho|
 Z16 !s107 Data_Extraction_System_6_1200mv_85c_slow.vho|
 !i113 1
@@ -44,11 +44,11 @@ R6
 R7
 R8
 R9
-DEx4 work 10 fifobuffer 0 22 b3]SORj;8`Lm7AzbK]SDf0
-l270
-L130
-Vi;^4QDDOWj3Qhzknl@bkT3
-!s100 eP>4hfPBIYcMUKhJ4M]@R1
+DEx4 work 13 accesscontrol 0 22 Smk>DMiilib]^5UnnRLa63
+l589
+L232
+VIcUKig1AXE2?dbAA`jLc_0
+!s100 ;lmUh?Mi;XknKLOP^U?AG1
 R12
 31
 R13
@@ -59,44 +59,44 @@ R16
 !i113 1
 R17
 R18
-Efifobuffer_vhd_tst
-Z19 w1552994560
-R8
-R7
+Eaccesscontrol_vhd_tst
+Z19 w1553082816
 Z20 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R7
+R8
 R0
-Z21 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/FIFObuffer.vht
-Z22 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/FIFObuffer.vht
+Z21 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/accessControl.vht
+Z22 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/accessControl.vht
 l0
 L32
-V64hfYI2dMT7D<Q?dibJF@0
-!s100 _E]iA1ADn7?>9IS96YC=62
+VD6zOkfkbW=;90W2PS^KA]1
+!s100 Sme`c:a3n[IIV3:OR9RR<1
 R12
 31
 R13
 !i10b 1
-Z23 !s108 1552994584.000000
-Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/FIFObuffer.vht|
-Z25 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/FIFObuffer.vht|
+R14
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/accessControl.vht|
+Z24 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/accessControl.vht|
 !i113 1
 R17
 R18
-Afifobuffer_arch
-R8
-R7
+Aaccesscontrol_arch
 R20
-DEx4 work 18 fifobuffer_vhd_tst 0 22 64hfYI2dMT7D<Q?dibJF@0
-l56
+R7
+R8
+DEx4 work 21 accesscontrol_vhd_tst 0 22 D6zOkfkbW=;90W2PS^KA]1
+l68
 L34
-VALlOD=>oHlB^H9f[o^VEM1
-!s100 H6m8173ZbiYkU0EL^]59M2
+V]Ii>N80_Pf52h`?LOmzdo3
+!s100 ]U=gS0YO8hDgc1bBPTWYd1
 R12
 31
 R13
 !i10b 1
+R14
 R23
 R24
-R25
 !i113 1
 R17
 R18

@@ -7,9 +7,9 @@ vmap work gate_work
 
 vcom -93 -work work {Data_Extraction_System_6_1200mv_85c_slow.vho}
 
-vcom -93 -work work {C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/FIFObuffer.vht}
+vcom -93 -work work {C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/accessControl.vht}
 
-vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /i1=Data_Extraction_System_6_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs="+acc"  FIFObuffer_vhd_tst
+vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /i1=Data_Extraction_System_6_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs="+acc"  accessControl_vhd_tst
 
 add wave *
 view structure

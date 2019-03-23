@@ -528,7 +528,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"2000"
+		"100000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -544,7 +544,7 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 128))
 	)
-	(annotation_block (parameter)(rect 1928 328 2097 423))
+	(annotation_block (parameter)(rect 1928 328 2110 423))
 )
 (connector
 	(text "bfrSend" (rect 1578 280 1614 297)(font "Intel Clear" ))
