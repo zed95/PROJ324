@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
 
--- DATE "03/23/2019 17:06:00"
+-- DATE "03/24/2019 12:19:58"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -85,11 +85,11 @@ ENTITY 	WC_Controller IS
 	ID_Matched : IN std_logic;
 	DONErx : IN std_logic;
 	DONEtx : IN std_logic;
-	STORE_ID : OUT std_logic;
-	STORE : OUT std_logic;
-	SEND : OUT std_logic;
-	NEXT_DAT : OUT std_logic;
-	SEND_REQUEST : OUT std_logic
+	STORE_ID : BUFFER std_logic;
+	STORE : BUFFER std_logic;
+	SEND : BUFFER std_logic;
+	NEXT_DAT : BUFFER std_logic;
+	SEND_REQUEST : BUFFER std_logic
 	);
 END WC_Controller;
 
