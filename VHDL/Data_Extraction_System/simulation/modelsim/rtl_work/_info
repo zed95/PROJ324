@@ -8,87 +8,85 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim
-Ewc_controller
-Z1 w1553360336
-Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Eid_decoder
+Z1 w1553600175
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z7 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/WC_Controller.vhd
-Z8 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/WC_Controller.vhd
+Z5 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/ID_Decoder.vhd
+Z6 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/ID_Decoder.vhd
 l0
-L8
-VW<Y[o85ggkHGiifgfgeGI0
-!s100 3IZ>jFffe]Qi@lfUB[?5<3
-Z9 OV;C;10.5b;63
+L5
+VLiaki7;Kb8Q1ZmkoibkgL3
+!s100 j=6mSgTQJB=oea[GSCQIC2
+Z7 OV;C;10.5b;63
 31
-Z10 !s110 1553431223
+Z8 !s110 1553607547
 !i10b 1
-Z11 !s108 1553431223.000000
-Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/WC_Controller.vhd|
-Z13 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/WC_Controller.vhd|
+Z9 !s108 1553607547.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/ID_Decoder.vhd|
+Z11 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/ID_Decoder.vhd|
 !i113 1
-Z14 o-93 -work work
-Z15 tExplicit 1 CvgOpt 0
-Awc_controller
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aid_decoder
 R2
 R3
 R4
-R5
-R6
-DEx4 work 13 wc_controller 0 22 W<Y[o85ggkHGiifgfgeGI0
-l33
-L30
-VP=M]`nb]j>ZG7E2KGWBoa2
-!s100 `cm8_;e:;RzA7ZGh@4M060
-R9
+DEx4 work 10 id_decoder 0 22 Liaki7;Kb8Q1ZmkoibkgL3
+l23
+L20
+Vj5ic9RU?lE0jf;iDQ31Cz0
+!s100 W?J>ElQALOeh>G2;`4IPO0
+R7
 31
-R10
+R8
 !i10b 1
+R9
+R10
 R11
+!i113 1
 R12
 R13
-!i113 1
-R14
-R15
-Ewc_controller_vhd_tst
-Z16 w1553431215
-R5
-R6
+Eid_decoder_vhd_tst
+Z14 w1553607540
+R2
+R3
+R4
 R0
-Z17 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/WC_Controller.vht
-Z18 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/WC_Controller.vht
+Z15 8C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/ID_Decoder.vht
+Z16 FC:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/ID_Decoder.vht
 l0
-L31
-V_aF5F13OMKM^dV0X<0>Sa2
-!s100 ahPCB6[aSEO?eU>^L@_eN0
-R9
+L32
+V>>iIF?:O3zdOec9>IjXjH3
+!s100 ZJz=VY94cg^1g<K4]e[LJ0
+R7
 31
-R10
+R8
 !i10b 1
-R11
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/WC_Controller.vht|
-Z20 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/WC_Controller.vht|
-!i113 1
-R14
-R15
-Awc_controller_arch
-R5
-R6
-DEx4 work 21 wc_controller_vhd_tst 0 22 _aF5F13OMKM^dV0X<0>Sa2
-l65
-L33
-Vf2Fn]>o;z;LEEAlJK4c`20
-!s100 ;DTaW:PgGCNCK2KK16Q5?2
 R9
-31
-R10
-!i10b 1
-R11
-R19
-R20
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/ID_Decoder.vht|
+Z18 !s107 C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/simulation/modelsim/ID_Decoder.vht|
 !i113 1
-R14
-R15
+R12
+R13
+Aid_decoder_arch
+R2
+R3
+R4
+DEx4 work 18 id_decoder_vhd_tst 0 22 >>iIF?:O3zdOec9>IjXjH3
+l54
+L34
+V=iz6TE?4d;HZ3ggHLmQBf2
+!s100 bIg]6IGZM[R@zzVcC]QBC1
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
