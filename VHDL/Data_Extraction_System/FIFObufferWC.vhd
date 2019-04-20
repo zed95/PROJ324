@@ -36,6 +36,7 @@ signal state   : stateBUFFER;
 begin	
 	process(CLK)
 	variable Counter : integer := 0;
+	variable Counter1 : integer := 0;
 	BEGIN
 		if(rising_edge(CLK)) then
 			case state is
@@ -48,7 +49,7 @@ begin
 					state <= SEND;
 				end if;
 			when STOREID =>
-				datArray(FS) <= dataIn(15 downto 8);
+				datArray(FS) <= dataIn(7 downto 0);
 					if(NS = 0 AND FS = 0 AND OS = 0) then
 						FS <= FS + 1;
 						NS <= 0;
@@ -56,18 +57,33 @@ begin
 					end if;
 				state <= IDLE;
 			when STORE =>
-				if(FS = 12) then
-					--Do nothing as buffer is full
-				else
-					datArray(FS) <= dataIn(15 downto 8);
-						FS <= FS + 1;
-						NS <= NS + 1;
-					datArray(FS) <= dataIn(7 downto 0);
-						FS <= FS + 1;
-						NS <= NS + 1;
-				end if;
+
 				
-				state <= IDLE;
+						if(Counter1 = 0) then
+							datArray(FS) <= dataIn(15 downto 8);
+							if(FS = 12) then
+								FS <= 12;
+								NS <= 12;
+							else
+								FS <= FS + 1;
+								NS <= NS + 1;
+							end if;
+							
+							Counter1 := Counter1 + 1;
+						elsif(Counter1 = 1) then
+							datArray(FS) <= dataIn(7 downto 0);
+							if(FS = 12) then
+								FS <= 12;
+								NS <= 12;
+							else
+								FS <= FS + 1;
+								NS <= NS + 1;
+							end if;
+							
+							Counter1 := 0;
+							state <= IDLE;
+						end if;
+	
 			when SEND =>
 
 				if(OS = 12) then

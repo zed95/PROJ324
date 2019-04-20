@@ -16,7 +16,7 @@ entity UART_Transmitter is
 		clk	   	: in std_logic;		--input clock
 		strtTx		: in std_logic;
 		iTx			: in std_logic_vector(7 downto 0);
-		Busy			: out std_logic;
+		DoneTx		: out std_logic;
 		oTx			: out std_logic;
 		clkCnt		: out std_logic_vector(7 downto 0)
 		
@@ -25,7 +25,7 @@ entity UART_Transmitter is
 end entity;
 
 architecture UART_Transmitter of UART_Transmitter is
-type state_type is (IDLE, Txstrb, Txdb, Txstpb);
+type state_type is (IDLE, Txstrb, Txdb, Txstpb, txDone);
 	signal state : state_type := IDLE;
 	signal Txd : std_logic_vector(7 downto 0);
 begin
@@ -78,9 +78,11 @@ begin
 					
 					if(clkcount = clocks_per_bit) then
 						clkcount := 0;
-						state <= IDLE;
+						state <= txDone;
 					end if;
 					
+				when txDone =>
+					state <= IDLE;
 				when others =>
 					state <= IDLE;
 			end case;
@@ -91,15 +93,17 @@ begin
 	begin
 			case state is
 			when IDLE =>
-				Busy <= '0';
+				DoneTx <= '0';
 			when Txstrb =>
-				Busy <= '1';
+				DoneTx <= '0';
 			when Txdb =>
-				Busy <= '1';
+				DoneTx <= '0';
 			when Txstpb =>
-				Busy <= '1';
+				DoneTx <= '0';
+			when txDone =>
+				DoneTx <= '1';
 			when others =>
-				Busy <= '0';
+				DoneTx <= '0';
 			end case;
 	end process;
 

@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 176 32)
 		(output)
-		(text "Busy" (rect 0 0 21 12)(font "Arial" ))
-		(text "Busy" (rect 134 27 155 39)(font "Arial" ))
+		(text "DoneTx" (rect 0 0 31 12)(font "Arial" ))
+		(text "DoneTx" (rect 124 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 1))
 	)
 	(port

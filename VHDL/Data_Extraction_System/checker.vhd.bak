@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity checker is
+			
+	port 
+	(
+		CLK	   	: in std_logic;		--input clock
+		input		: in std_logic;
+		output	: out std_logic
+		
+	);
+
+end entity;
+
+architecture checker of checker is
+type state_type is (IDLE, CHECK1, CHECK2, COUNT);
+	signal state : state_type := IDLE;
+begin
+	process (clk)
+	variable Counter : integer := 0;
+
+	begin
+		if (rising_edge(clk)) then
+			if(input = '1') then
+				if(counter = 0) then
+					Counter := 1;
+					output <= '1';
+				else
+					Counter := 0;
+					output <= '0';
+				end if;
+			end if;
+		end if; --(rising_edge(clky))
+	end process;
+end checker;

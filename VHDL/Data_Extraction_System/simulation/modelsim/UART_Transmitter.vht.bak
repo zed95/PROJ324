@@ -1,0 +1,77 @@
+-- Copyright (C) 2016  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel MegaCore Function License Agreement, or other 
+-- applicable license agreement, including, without limitation, 
+-- that your use is for the sole purpose of programming logic 
+-- devices manufactured by Intel and sold by Intel or its 
+-- authorized distributors.  Please refer to the applicable 
+-- agreement for further details.
+
+-- ***************************************************************************
+-- This file contains a Vhdl test bench template that is freely editable to   
+-- suit user's needs .Comments are provided in each section to help the user  
+-- fill out necessary details.                                                
+-- ***************************************************************************
+-- Generated on "04/02/2019 19:58:51"
+                                                            
+-- Vhdl Test Bench template for design  :  UART_Transmitter
+-- 
+-- Simulation tool : ModelSim-Altera (VHDL)
+-- 
+
+LIBRARY ieee;                                               
+USE ieee.std_logic_1164.all;                                
+
+ENTITY UART_Transmitter_vhd_tst IS
+END UART_Transmitter_vhd_tst;
+ARCHITECTURE UART_Transmitter_arch OF UART_Transmitter_vhd_tst IS
+-- constants                                                 
+-- signals                                                   
+SIGNAL clk : STD_LOGIC;
+SIGNAL clkCnt : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL DoneTx : STD_LOGIC;
+SIGNAL iTx : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL oTx : STD_LOGIC;
+SIGNAL strtTx : STD_LOGIC;
+COMPONENT UART_Transmitter
+	PORT (
+	clk : IN STD_LOGIC;
+	clkCnt : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	DoneTx : OUT STD_LOGIC;
+	iTx : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+	oTx : OUT STD_LOGIC;
+	strtTx : IN STD_LOGIC
+	);
+END COMPONENT;
+BEGIN
+	i1 : UART_Transmitter
+	PORT MAP (
+-- list connections between master ports and signals
+	clk => clk,
+	clkCnt => clkCnt,
+	DoneTx => DoneTx,
+	iTx => iTx,
+	oTx => oTx,
+	strtTx => strtTx
+	);
+init : PROCESS                                               
+-- variable declarations                                     
+BEGIN                                                        
+        -- code that executes only once                      
+WAIT;                                                       
+END PROCESS init;                                           
+always : PROCESS                                              
+-- optional sensitivity list                                  
+-- (        )                                                 
+-- variable declarations                                      
+BEGIN                                                         
+        -- code executes for every event on sensitivity list  
+WAIT;                                                        
+END PROCESS always;                                          
+END UART_Transmitter_arch;

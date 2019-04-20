@@ -4,119 +4,95 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "dataOut[0]",
+					"name" : "CS",
 					"strict" : false
 				},
 				{
-					"name" : "dataOut[1]",
+					"name" : "MSTR_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "dataOut[2]",
+					"name" : "MOSI",
 					"strict" : false
 				},
 				{
-					"name" : "dataOut[3]",
+					"name" : "LED0",
 					"strict" : false
 				},
 				{
-					"name" : "dataOut[4]",
+					"name" : "LED1",
 					"strict" : false
 				},
 				{
-					"name" : "dataOut[5]",
+					"name" : "LED2",
 					"strict" : false
 				},
 				{
-					"name" : "dataOut[6]",
+					"name" : "LED3",
 					"strict" : false
 				},
 				{
-					"name" : "dataOut[7]",
+					"name" : "LED4",
 					"strict" : false
 				},
 				{
-					"name" : "empty",
+					"name" : "LED5",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[0]",
+					"name" : "LED6",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[8]",
+					"name" : "LED7",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "MPU_CS",
 					"strict" : false
 				},
 				{
-					"name" : "store_ID",
+					"name" : "MPU_MSTR_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[1]",
+					"name" : "MPU_MOSI",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[9]",
+					"name" : "TxO",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[2]",
+					"name" : "MPU1_CS",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[10]",
+					"name" : "MPU1_MSTR_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[3]",
+					"name" : "MPU1_MOSI",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[11]",
+					"name" : "Data_Request",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[4]",
+					"name" : "CLK_50MHz",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[12]",
+					"name" : "MISO",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[5]",
+					"name" : "MISO_MPU",
 					"strict" : false
 				},
 				{
-					"name" : "dataIn[13]",
-					"strict" : false
-				},
-				{
-					"name" : "dataIn[6]",
-					"strict" : false
-				},
-				{
-					"name" : "dataIn[14]",
-					"strict" : false
-				},
-				{
-					"name" : "dataIn[7]",
-					"strict" : false
-				},
-				{
-					"name" : "dataIn[15]",
-					"strict" : false
-				},
-				{
-					"name" : "storeData",
-					"strict" : false
-				},
-				{
-					"name" : "sendData",
+					"name" : "MISO1_MPU",
 					"strict" : false
 				}
 			]
