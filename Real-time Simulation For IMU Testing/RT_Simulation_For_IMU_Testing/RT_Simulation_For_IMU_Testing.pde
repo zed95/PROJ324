@@ -19,7 +19,7 @@ int dt = 0;
 float xAngle = 0;
 float yAngle = 0;
 float zAngle = 0;
-String Values;
+int Values;
 float[] Gyros;
 
 
@@ -33,38 +33,111 @@ float xx, y, z;
 int flag = 0;
 int counter = 0;
 
+//-------------Byte2Float------------------//
+String[] arrayOfStrings = new String[13];
+Byte[] arrayOfBytes = new Byte[13];
+Byte[] xBytes = new Byte[4];
+Byte[] yBytes = new Byte[4];
+Byte[] zBytes = new Byte[4];
+float xfloat, yfloat, zfloat;
+String hexint;
+int arrPointer;
+int inOrder;
+//-------------Byte2Float------------------//
 
 
-//--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
-void readSerialData()
-{
-                                                //Declare and initalise value that will store the data from the serial port.
-    if(myPort.available() > 0) {                //If something is available then continue
-      Values = myPort.readStringUntil('\n');    //Save the string number into variable x
-      
-      println(Values);                          //Print the strings in serial monitor
-      
-      if(Values == null) {                      //Make the current value equal to the previous value when null is received.
-         Values = "0,0,0"; 
-         Gyros[0] = xAngle;
-         Gyros[1] = yAngle;
-         Gyros[2] = zAngle;
-      }
-      else {
-       /*
-          -Split the string into parts when a comma is encountered
-          -Convert each number string into float
-          -store each number converted into an array.
-      */
-       Gyros = float(split(Values, ','));  
-        
-      }
+
+////--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
+///*
+//  -Find a way to not include the serial data that is a null into the csv file as this messes up the data set.
+//*/
+//void processSerialData() {
+
+//      if(Values == null) {                      //Make the current value equal to the previous value when null is received.
+//         Values = "0,0,0"; 
+//         Gyros[0] = Gyros[0];
+//         Gyros[1] = Gyros[1];
+//         Gyros[2] = Gyros[2];
+//      }
+//      else {
+//       /*
+//          -Split the string into parts when a comma is encountered
+//          -Convert each number string into float
+//          -store each number converted into an array.
+//      */
+//       Gyros = float(split(Values, ','));      
+//      }
+//}
+////--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
+
+void Byte_to_Float() {
   
-    }
-}
-//--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
-
-
+  for(int x = 0; x <= 12; x++) {
+     switch(x) {
+              
+       case 0:
+       break;
+       
+       case 1:
+       xBytes[0] = arrayOfBytes[x]; 
+       break;
+       
+       case 2:
+       xBytes[1] = arrayOfBytes[x]; 
+       break;
+       
+       case 3:
+       xBytes[2] = arrayOfBytes[x]; 
+       break;
+       
+       case 4:
+       xBytes[3] = arrayOfBytes[x]; 
+       hexint=hex(xBytes[0])+hex(xBytes[1])+hex(xBytes[2])+hex(xBytes[3]); 
+       xfloat = Float.intBitsToFloat(unhex(hexint));
+       break;
+       
+       case 5:
+       yBytes[0] = arrayOfBytes[x]; 
+       break;
+       
+       case 6:
+       yBytes[1] = arrayOfBytes[x]; 
+       break;
+       
+       case 7:
+       yBytes[2] = arrayOfBytes[x]; 
+       break;
+       
+       case 8:
+       yBytes[3] = arrayOfBytes[x]; 
+       hexint=hex(yBytes[0])+hex(yBytes[1])+hex(yBytes[2])+hex(yBytes[3]); 
+       yfloat = Float.intBitsToFloat(unhex(hexint));
+       break;
+       
+       case 9:
+       zBytes[0] = arrayOfBytes[x]; 
+       break;
+       
+       case 10:
+       zBytes[1] = arrayOfBytes[x]; 
+       break;
+       
+       case 11:
+       zBytes[2] = arrayOfBytes[x]; 
+       break;
+       
+       case 12:
+       zBytes[3] = arrayOfBytes[x]; 
+       hexint=hex(zBytes[0])+hex(zBytes[1])+hex(zBytes[2])+hex(zBytes[3]); 
+       zfloat = Float.intBitsToFloat(unhex(hexint));
+       break;
+       
+       default:
+       break;
+     }//switch(x) 
+  }//for(int x = 0; x <= 12; x++)
+  println(xfloat);
+}//void Byte_to_Float()
 
 
 
@@ -87,45 +160,20 @@ void DisplayAngle(float val, int xpos, int ypos, String axis )
 
 
 void setup() {
-  initFile();
-  myPort = new Serial(this, "COM6", 115200);                        //Connect to the port which Nucleo is connected to
-  //  for(int x = 0; x <= 50; x++) {
-  //    xx = x;
-  //    y = x + 5;
-  //    z = x + 4;
-  //   write2File(xx, y, z); 
-  //}
-  //   saveFile(); 
+  //Create CSV file to whicht he data will be saved.
+  initFile();                                    
+  myPort = new Serial(this, "COM7", 115200);                        //Connect to the port which Nucleo is connected to
 }
 
 //Place all that in a function
 void draw() {
   if(flag == 1) {
-      if(Values == null) {                      //Make the current value equal to the previous value when null is received.
-       Values = "0,0,0"; 
-       Gyros[0] = Gyros[0];
-       Gyros[1] = Gyros[1];
-       Gyros[2] = Gyros[2];
-   }
-   else {
-       /*
-          -Split the string into parts when a comma is encountered
-          -Convert each number string into float
-          -store each number converted into an array.
-      */
-       Gyros = float(split(Values, ','));   
-   }
-    
-    
-    
-     flag = 0;
-     write2File(Gyros[0], Gyros[1], Gyros[2]); 
-     counter++;
-     
-     if(counter == 500) {
-         saveFile();
-         exit();
-     }
+     //extract the values from a string, convert to a float and place into an array.
+     //processSerialData();
+     //Clear the new data flag
+     flag = 0;        
+     //Write the received data to file
+    // write2File(Gyros[0], Gyros[1], Gyros[2]);      
   }
 }
 
@@ -179,8 +227,32 @@ void draw() {
 //    popMatrix();                               //Return to the original coordinate frame
 //}
 
+//Called when new data arrives from serial port
 void serialEvent(Serial p) { 
   
-  Values = p.readStringUntil('\n');    //Save the string number into variable x
-   flag = 1;
+  //Values = p.readStringUntil('\n');    //Save the string number into variable x
+  Values = p.read();    //Save the string number into variable x
+  if(Values == 1) {
+    inOrder = 1;
+  }
+  
+  //Store data in array
+  if(inOrder == 1) {
+    arrayOfBytes[arrPointer] = byte(Values);      //Convert to int then to char and then store in array
+    arrPointer++;
+  }
+  
+  if(arrPointer == 1) {
+     println("===Start==="); 
+  }
+  
+    println(Values);
+  
+  if(arrPointer == 13) {
+    flag = 1;                           //Raise the new data flag
+    arrPointer = 0;
+    inOrder = 0;
+    println("====END==="); 
+  }
+  
 } 

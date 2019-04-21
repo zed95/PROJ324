@@ -19,3 +19,10 @@ void write2File(float xdat, float ydat, float zdat) {
 void saveFile() {
   saveTable(dataIMU, "data/IMUdata.csv");
 }
+
+
+//Save and exit when mouse is clicked
+void mouseClicked() {
+   saveFile();
+   exit();
+}
