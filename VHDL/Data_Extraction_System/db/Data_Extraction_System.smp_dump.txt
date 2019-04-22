@@ -1,10 +1,12 @@
 
-State Machine - |Data_Extraction_System|UART_Receiver:inst1|state
-Name state.Rxstpb state.Rxdb state.Rxstrb state.IDLE 
-state.IDLE 0 0 0 0 
-state.Rxstrb 0 0 1 1 
-state.Rxdb 0 1 0 1 
-state.Rxstpb 1 0 0 1 
+State Machine - |Data_Extraction_System|UART_Transmitter:inst27|state
+Name state.txDone state.Txstpb state.Txdb state.Txstrb state.readData state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.readData 0 0 0 0 1 1 
+state.Txstrb 0 0 0 1 0 1 
+state.Txdb 0 0 1 0 0 1 
+state.Txstpb 0 1 0 0 0 1 
+state.txDone 1 0 0 0 0 1 
 
 State Machine - |Data_Extraction_System|ID_Decoder:inst2|state
 Name state.COUNT state.CHECK2 state.CHECK1 state.IDLE 
@@ -13,14 +15,7 @@ state.CHECK1 0 0 1 1
 state.CHECK2 0 1 0 1 
 state.COUNT 1 0 0 1 
 
-State Machine - |Data_Extraction_System|FIFObufferWC:inst8|state
-Name state.SEND state.STORE state.STOREID state.IDLE 
-state.IDLE 0 0 0 0 
-state.STOREID 0 0 1 1 
-state.STORE 0 1 0 1 
-state.SEND 1 0 0 1 
-
-State Machine - |Data_Extraction_System|WC_Controller:inst4|state
+State Machine - |Data_Extraction_System|WC_Controller1:inst7|state
 Name state.W4BFFR_empty state.NXTtx state.WAITINGtx state.SEND_DATA state.W4BFFR_full state.STORE_DATA state.WAITINGrx state.STOREID state.RESULT state.WAIT_ID state.RequestData state.IDLE 
 state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
 state.RequestData 0 0 0 0 0 0 0 0 0 0 1 1 
@@ -35,13 +30,12 @@ state.WAITINGtx 0 0 1 0 0 0 0 0 0 0 0 1
 state.NXTtx 0 1 0 0 0 0 0 0 0 0 0 1 
 state.W4BFFR_empty 1 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |Data_Extraction_System|UART_Transmitter:inst27|state
-Name state.txDone state.Txstpb state.Txdb state.Txstrb state.IDLE 
-state.IDLE 0 0 0 0 0 
-state.Txstrb 0 0 0 1 1 
-state.Txdb 0 0 1 0 1 
-state.Txstpb 0 1 0 0 1 
-state.txDone 1 0 0 0 1 
+State Machine - |Data_Extraction_System|FIFObufferWC:inst8|state
+Name state.SEND state.STORE state.STOREID state.IDLE 
+state.IDLE 0 0 0 0 
+state.STOREID 0 0 1 1 
+state.STORE 0 1 0 1 
+state.SEND 1 0 0 1 
 
 State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|state
 Name state.W4BFFRtx state.NXTtx state.WAITINGtx state.STRTtx state.RDY2SND state.IDLE 

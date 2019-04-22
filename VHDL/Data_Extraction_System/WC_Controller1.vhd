@@ -5,7 +5,7 @@ USE ieee.std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
 
 
-entity WC_Controller is
+entity WC_Controller1 is
 	port 
 	(
 		--Inputs
@@ -27,7 +27,7 @@ entity WC_Controller is
 end entity;
 
 
-architecture WC_Controller of WC_Controller is	
+architecture WC_Controller1 of WC_Controller1 is	
 type WirelessState  is (IDLE, RequestData, WAIT_ID, RESULT, STOREID, WAITINGrx, STORE_DATA, W4BFFR_full, SEND_DATA, WAITINGtx, NXTtx, W4BFFR_empty);	
 signal state   : WirelessState;				
 begin	
@@ -210,6 +210,6 @@ begin
 				
 		end case;
 	end process;
-end WC_Controller;
+end WC_Controller1;
 
 --(IDLE, RequestData, WAIT_ID, RESULT, STOREID, WAITINGrx, STORE_DATA, W4BFFR_full, SEND_DATA, WAITINGtx, NXTtx, W4BFFR_empty)

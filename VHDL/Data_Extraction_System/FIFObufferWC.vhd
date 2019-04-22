@@ -37,6 +37,7 @@ begin
 	process(CLK)
 	variable Counter : integer := 0;
 	variable Counter1 : integer := 0;
+	variable idx : integer := 0;
 	BEGIN
 		if(rising_edge(CLK)) then
 			case state is
@@ -57,39 +58,78 @@ begin
 					end if;
 				state <= IDLE;
 			when STORE =>
-
-				
-						if(Counter1 = 0) then
-							datArray(FS) <= dataIn(15 downto 8);
-							if(FS = 12) then
-								FS <= 12;
-								NS <= 12;
+						case idx is
+							when 0 =>
+								datArray(1) <= dataIn(7 downto 0);
+								datArray(2) <= dataIn(15 downto 8);
+								idx := 1;
+							when 1 =>
+								datArray(3) <= dataIn(7 downto 0);
+								datArray(4) <= dataIn(15 downto 8);
+								idx := 2;
+							when 2 =>
+								datArray(5) <= dataIn(7 downto 0);
+								datArray(6) <= dataIn(15 downto 8);
+								idx := 3;
+							when 3 =>
+								datArray(7) <= dataIn(7 downto 0);
+								datArray(8) <= dataIn(15 downto 8);
+								idx := 4;
+							when 4 =>
+								datArray(9) <= dataIn(7 downto 0);
+								datArray(10) <= dataIn(15 downto 8);
+								idx := 5;
+							when 5 =>
+								datArray(11) <= dataIn(7 downto 0);
+								datArray(12) <= dataIn(15 downto 8);
+								
+						when others =>
+						end case;
+						
+						
+							if(FS = (Array_Size - 1)) then
+								FS <= (Array_Size - 1);
+								NS <= (Array_Size - 1);
 							else
-								FS <= FS + 1;
-								NS <= NS + 1;
+								FS <= FS + 2;
+								NS <= NS + 2;
 							end if;
 							
-							Counter1 := Counter1 + 1;
-						elsif(Counter1 = 1) then
-							datArray(FS) <= dataIn(7 downto 0);
-							if(FS = 12) then
-								FS <= 12;
-								NS <= 12;
-							else
-								FS <= FS + 1;
-								NS <= NS + 1;
-							end if;
-							
-							Counter1 := 0;
 							state <= IDLE;
-						end if;
+						
+					
+--						if(Counter1 = 0) then
+--							datArray(FS) <= dataIn(7 downto 0);
+--							if(FS = (Array_Size - 1)) then
+--								FS <= (Array_Size - 1);
+--								NS <= (Array_Size - 1);
+--							else
+--								FS <= FS + 1;
+--								NS <= NS + 1;
+--							end if;
+--							
+--							Counter1 := Counter1 + 1;
+--						elsif(Counter1 = 1) then
+--							datArray(FS) <= dataIn(15 downto 8);
+--							if(FS = (Array_Size - 1)) then
+--								FS <= (Array_Size - 1);
+--								NS <= (Array_Size - 1);
+--							else
+--								FS <= FS + 1;
+--								NS <= NS + 1;
+--							end if;
+--							
+--							Counter1 := 0;
+--							state <= IDLE;
+--						end if;
 	
 			when SEND =>
 
-				if(OS = 12) then
+				if(OS = (Array_Size - 1)) then
 					OS <= 0;
 					FS <= 0;
 					NS <= 0;
+					idx := 0;
 				else
 					OS <= OS + 1;
 				end if;
@@ -103,21 +143,21 @@ begin
 	begin 
 		case state is
 			when IDLE =>
-				if(NS = 12) then
+				if(NS = (Array_Size - 1)) then
 					empty <= '0';
 				elsif(OS = 0) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
 					empty <= '1';
 				end if;
 				dataOut <= datArray(OS);
 			when STORE =>
-				if(NS = 12) then
+				if(NS = (Array_Size - 1)) then
 					empty <= '0';
 				elsif(OS = 0) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
 					empty <= '1';
 				end if;
 				dataOut <= datArray(OS);
 			when SEND =>
-				if(NS = 12) then
+				if(NS = (Array_Size - 1)) then
 					empty <= '0';
 				elsif(OS = 0) then					--This is going to send the not empty signal one clock cycle early but thats good because then the controller wont start the extraction process again. Remember that there is delay between signals.
 					empty <= '1';
