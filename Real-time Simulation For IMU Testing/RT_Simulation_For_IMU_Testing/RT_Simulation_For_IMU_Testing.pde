@@ -92,7 +92,7 @@ void Byte_to_Float() {
        
        case 4:
        xBytes[3] = arrayOfBytes[x]; 
-       hexint=hex(xBytes[0])+hex(xBytes[1])+hex(xBytes[2])+hex(xBytes[3]); 
+       hexint=hex(xBytes[3])+hex(xBytes[2])+hex(xBytes[1])+hex(xBytes[0]); 
        xfloat = Float.intBitsToFloat(unhex(hexint));
        break;
        
@@ -110,7 +110,7 @@ void Byte_to_Float() {
        
        case 8:
        yBytes[3] = arrayOfBytes[x]; 
-       hexint=hex(yBytes[0])+hex(yBytes[1])+hex(yBytes[2])+hex(yBytes[3]); 
+       hexint=hex(yBytes[3])+hex(yBytes[2])+hex(yBytes[1])+hex(yBytes[0]); 
        yfloat = Float.intBitsToFloat(unhex(hexint));
        break;
        
@@ -128,7 +128,7 @@ void Byte_to_Float() {
        
        case 12:
        zBytes[3] = arrayOfBytes[x]; 
-       hexint=hex(zBytes[0])+hex(zBytes[1])+hex(zBytes[2])+hex(zBytes[3]); 
+       hexint=hex(zBytes[3])+hex(zBytes[2])+hex(zBytes[1])+hex(zBytes[0]); 
        zfloat = Float.intBitsToFloat(unhex(hexint));
        break;
        
@@ -171,6 +171,7 @@ void draw() {
      //extract the values from a string, convert to a float and place into an array.
      //processSerialData();
      //Clear the new data flag
+     Byte_to_Float();
      flag = 0;        
      //Write the received data to file
     // write2File(Gyros[0], Gyros[1], Gyros[2]);      
@@ -243,16 +244,16 @@ void serialEvent(Serial p) {
   }
   
   if(arrPointer == 1) {
-     println("===Start==="); 
+   //  println("===Start==="); 
   }
   
-    println(Values);
+  //  println(Values);
   
   if(arrPointer == 13) {
     flag = 1;                           //Raise the new data flag
     arrPointer = 0;
     inOrder = 0;
-    println("====END==="); 
+   // println("====END==="); 
   }
   
 } 
