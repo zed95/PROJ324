@@ -19,7 +19,7 @@ end entity;
 
 architecture ID_Decoder of ID_Decoder is
 type state_type is (IDLE, CHECK1, CHECK2, COUNT);
-	signal state : state_type := IDLE;
+signal state : state_type := IDLE;
 begin
 	process (clk)
 	variable Counter : integer := 0;

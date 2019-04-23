@@ -16,7 +16,8 @@ entity UART_Receiver is
 		clk	   	: in std_logic;		--input clock
 		strtRx		: in std_logic;
 		iRx			: in std_logic;
-		Busy			: out std_logic;
+		Reset			: in std_logic;
+		sendRequest	: out std_logic;
 		oRx			: out std_logic_vector(7 downto 0)
 		
 	);
@@ -24,7 +25,7 @@ entity UART_Receiver is
 end entity;
 
 architecture UART_Receiver of UART_Receiver is
-type state_type is (IDLE, Rxstrb, Rxdb, Rxstpb);
+type state_type is (IDLE, Rxstrb, Rxdb, Rxstpb, sndRequest);
 	signal state : state_type := IDLE;
 	signal Rxd : std_logic_vector(7 downto 0);
 begin
@@ -33,6 +34,7 @@ begin
 		variable clkcount : integer range 0 to (Clocks_per_bit) := 0; 
 		variable bPointer	: integer range 0 to 7 := 0; --Data is sent LSB first
 	begin
+	if(Reset = '0') then
 		if (rising_edge(clk)) then
 			case state is
 				when IDLE =>
@@ -71,12 +73,20 @@ begin
 
 					if(clkcount = Clocks_per_bit) then
 						clkcount := 0;
-						state <= IDLE;
+						state <= sndRequest;
 					end if;
+				when sndRequest =>
+					state <= IDLE;
 				when others =>
 					state <= IDLE;
 			end case;
 		end if; --(rising_edge(clky))
+	else
+		clkcount := 0;
+		bPointer := 0;
+		Rxd <= "00000000";
+		state <= IDLE;
+	end if;
 	end process;
 		
 	process (state)
@@ -84,15 +94,17 @@ begin
 			case state is
 			when IDLE =>
 				oRx <= Rxd;
-				Busy <= '0';
+				sendRequest <= '0';
 			when Rxstrb =>
-				Busy <= '1';
+				sendRequest <= '0';
 			when Rxdb =>
-				Busy <= '1';
+				sendRequest <= '0';
 			when Rxstpb =>
-				Busy <= '1';
+				sendRequest <= '0';
+			when sndRequest =>
+				sendRequest <= '1';
 			when others =>
-				Busy <= '0';
+				sendRequest <= '0';
 			end case;
 	end process;	
 end UART_Receiver;

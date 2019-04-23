@@ -153,7 +153,7 @@ begin
 			when STOREID =>
 				SEND_REQUEST <= '0';
 				STORE_ID <= '1';
-				STORE <= '0';
+				STORE <= '1';
 				NEXT_DAT <= '0';
 				SEND <= '0';
 -------------------------------------------------------------------------------STOREID

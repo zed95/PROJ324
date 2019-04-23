@@ -1,12 +1,13 @@
 
 State Machine - |Data_Extraction_System|UART_Transmitter:inst27|state
-Name state.txDone state.Txstpb state.Txdb state.Txstrb state.readData state.IDLE 
-state.IDLE 0 0 0 0 0 0 
-state.readData 0 0 0 0 1 1 
-state.Txstrb 0 0 0 1 0 1 
-state.Txdb 0 0 1 0 0 1 
-state.Txstpb 0 1 0 0 0 1 
-state.txDone 1 0 0 0 0 1 
+Name state.Delay state.txDone state.Txstpb state.Txdb state.Txstrb state.readData state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 
+state.readData 0 0 0 0 0 1 1 
+state.Txstrb 0 0 0 0 1 0 1 
+state.Txdb 0 0 0 1 0 0 1 
+state.Txstpb 0 0 1 0 0 0 1 
+state.txDone 0 1 0 0 0 0 1 
+state.Delay 1 0 0 0 0 0 1 
 
 State Machine - |Data_Extraction_System|ID_Decoder:inst2|state
 Name state.COUNT state.CHECK2 state.CHECK1 state.IDLE 
@@ -30,12 +31,31 @@ state.WAITINGtx 0 0 1 0 0 0 0 0 0 0 0 1
 state.NXTtx 0 1 0 0 0 0 0 0 0 0 0 1 
 state.W4BFFR_empty 1 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |Data_Extraction_System|FIFObufferWC:inst8|state
-Name state.SEND state.STORE state.STOREID state.IDLE 
-state.IDLE 0 0 0 0 
-state.STOREID 0 0 1 1 
-state.STORE 0 1 0 1 
-state.SEND 1 0 0 1 
+State Machine - |Data_Extraction_System|FIFObufferWC1:inst13|state
+Name state.SEND state.STORE state.IDLE 
+state.IDLE 0 0 0 
+state.STORE 0 1 1 
+state.SEND 1 0 1 
+
+State Machine - |Data_Extraction_System|UART_TransmitterX:inst14|state
+Name state.txDone state.Txstpb state.Txdb state.Txstrb state.prepareTx state.readData state.waitData state.requestData state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 
+state.requestData 0 0 0 0 0 0 0 1 1 
+state.waitData 0 0 0 0 0 0 1 0 1 
+state.readData 0 0 0 0 0 1 0 0 1 
+state.prepareTx 0 0 0 0 1 0 0 0 1 
+state.Txstrb 0 0 0 1 0 0 0 0 1 
+state.Txdb 0 0 1 0 0 0 0 0 1 
+state.Txstpb 0 1 0 0 0 0 0 0 1 
+state.txDone 1 0 0 0 0 0 0 0 1 
+
+State Machine - |Data_Extraction_System|UART_Receiver:inst15|state
+Name state.sndRequest state.Rxstpb state.Rxdb state.Rxstrb state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.Rxstrb 0 0 0 1 1 
+state.Rxdb 0 0 1 0 1 
+state.Rxstpb 0 1 0 0 1 
+state.sndRequest 1 0 0 0 1 
 
 State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|state
 Name state.W4BFFRtx state.NXTtx state.WAITINGtx state.STRTtx state.RDY2SND state.IDLE 

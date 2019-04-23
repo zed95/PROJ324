@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Data_Extraction_System
-Tue Apr 23 00:45:54 2019
+Wed Apr 24 00:27:14 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -17,45 +17,49 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   9. State Machine - |Data_Extraction_System|UART_Transmitter:inst27|state
  10. State Machine - |Data_Extraction_System|ID_Decoder:inst2|state
  11. State Machine - |Data_Extraction_System|WC_Controller1:inst7|state
- 12. State Machine - |Data_Extraction_System|FIFObufferWC:inst8|state
- 13. State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|state
- 14. State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|state
- 15. State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|DESrx:inst|state
- 16. State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|state
- 17. State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|state
- 18. State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DESrx:inst|state
- 19. State Machine - |Data_Extraction_System|accessControl:inst5|state
- 20. User-Specified and Inferred Latches
- 21. Registers Removed During Synthesis
- 22. Removed Registers Triggering Further Register Optimizations
- 23. General Register Statistics
- 24. Inverted Register Statistics
- 25. Registers Added for RAM Pass-Through Logic
- 26. Multiplexer Restructuring Statistics (Restructuring Performed)
- 27. Source assignments for IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated
- 28. Source assignments for IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated
- 29. Parameter Settings for User Entity Instance: spi_master1:inst11
- 30. Parameter Settings for User Entity Instance: CLK_DIVIDER:inst20
- 31. Parameter Settings for User Entity Instance: accessControl:inst5
- 32. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|spi_master1:inst4
- 33. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DESrx:inst
- 34. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3
- 35. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DEStx:inst15
- 36. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst2
- 37. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst5
- 38. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|spi_master1:inst4
- 39. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|DESrx:inst
- 40. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|FIFObuffer:inst3
- 41. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|DEStx:inst15
- 42. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|addressBlock:inst2
- 43. Parameter Settings for User Entity Instance: FIFObufferWC:inst8
- 44. Parameter Settings for User Entity Instance: UART_Transmitter:inst27
- 45. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0
- 46. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0
- 47. altsyncram Parameter Settings by Entity Instance
- 48. Post-Synthesis Netlist Statistics for Top Partition
- 49. Elapsed Time Per Partition
- 50. Analysis & Synthesis Messages
+ 12. State Machine - |Data_Extraction_System|FIFObufferWC1:inst13|state
+ 13. State Machine - |Data_Extraction_System|UART_TransmitterX:inst14|state
+ 14. State Machine - |Data_Extraction_System|UART_Receiver:inst15|state
+ 15. State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|state
+ 16. State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|state
+ 17. State Machine - |Data_Extraction_System|IMU_Extraction_Block1:inst3|DESrx:inst|state
+ 18. State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|state
+ 19. State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|state
+ 20. State Machine - |Data_Extraction_System|IMU_Extraction_Block:inst|DESrx:inst|state
+ 21. State Machine - |Data_Extraction_System|accessControl:inst5|state
+ 22. User-Specified and Inferred Latches
+ 23. Registers Removed During Synthesis
+ 24. Removed Registers Triggering Further Register Optimizations
+ 25. General Register Statistics
+ 26. Inverted Register Statistics
+ 27. Registers Added for RAM Pass-Through Logic
+ 28. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 29. Source assignments for IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated
+ 30. Source assignments for IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated
+ 31. Parameter Settings for User Entity Instance: spi_master1:inst11
+ 32. Parameter Settings for User Entity Instance: CLK_DIVIDER:inst20
+ 33. Parameter Settings for User Entity Instance: accessControl:inst5
+ 34. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|spi_master1:inst4
+ 35. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DESrx:inst
+ 36. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3
+ 37. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DEStx:inst15
+ 38. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst2
+ 39. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst5
+ 40. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|spi_master1:inst4
+ 41. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|DESrx:inst
+ 42. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|FIFObuffer:inst3
+ 43. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|DEStx:inst15
+ 44. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|addressBlock:inst2
+ 45. Parameter Settings for User Entity Instance: UART_Receiver:inst15
+ 46. Parameter Settings for User Entity Instance: UART_TransmitterX:inst14
+ 47. Parameter Settings for User Entity Instance: FIFObufferWC1:inst13
+ 48. Parameter Settings for User Entity Instance: UART_Transmitter:inst27
+ 49. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0
+ 50. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0
+ 51. altsyncram Parameter Settings by Entity Instance
+ 52. Post-Synthesis Netlist Statistics for Top Partition
+ 53. Elapsed Time Per Partition
+ 54. Analysis & Synthesis Messages
 
 
 
@@ -82,16 +86,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 23 00:45:54 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 24 00:27:14 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; Data_Extraction_System                      ;
 ; Top-level Entity Name              ; Data_Extraction_System                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,873                                       ;
-;     Total combinational functions  ; 1,707                                       ;
-;     Dedicated logic registers      ; 1,145                                       ;
-; Total registers                    ; 1145                                        ;
-; Total pins                         ; 23                                          ;
+; Total logic elements               ; 1,823                                       ;
+;     Total combinational functions  ; 1,641                                       ;
+;     Dedicated logic registers      ; 1,076                                       ;
+; Total registers                    ; 1076                                        ;
+; Total pins                         ; 25                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 300                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -224,10 +228,12 @@ agreement for further details.
 ; DEStx.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/DEStx.vhd                  ;         ;
 ; IMU_Extraction_Block.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/IMU_Extraction_Block.bdf   ;         ;
 ; UART_Transmitter.vhd             ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Transmitter.vhd       ;         ;
+; UART_Receiver.vhd                ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd          ;         ;
 ; IMU_Extraction_Block1.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/IMU_Extraction_Block1.bdf  ;         ;
 ; ID_Decoder.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/ID_Decoder.vhd             ;         ;
-; FIFObufferWC.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd           ;         ;
 ; WC_Controller1.vhd               ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/WC_Controller1.vhd         ;         ;
+; FIFObufferWC1.vhd                ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd          ;         ;
+; UART_TransmitterX.vhd            ; yes             ; User VHDL File                     ; C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_TransmitterX.vhd      ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf                                        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                 ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc                                           ;         ;
@@ -247,31 +253,31 @@ agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 1,873                      ;
+; Estimated Total logic elements              ; 1,823                      ;
 ;                                             ;                            ;
-; Total combinational functions               ; 1707                       ;
+; Total combinational functions               ; 1641                       ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 608                        ;
-;     -- 3 input functions                    ; 182                        ;
-;     -- <=2 input functions                  ; 917                        ;
+;     -- 4 input functions                    ; 609                        ;
+;     -- 3 input functions                    ; 195                        ;
+;     -- <=2 input functions                  ; 837                        ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 955                        ;
-;     -- arithmetic mode                      ; 752                        ;
+;     -- normal mode                          ; 951                        ;
+;     -- arithmetic mode                      ; 690                        ;
 ;                                             ;                            ;
-; Total registers                             ; 1145                       ;
-;     -- Dedicated logic registers            ; 1145                       ;
+; Total registers                             ; 1076                       ;
+;     -- Dedicated logic registers            ; 1076                       ;
 ;     -- I/O registers                        ; 0                          ;
 ;                                             ;                            ;
-; I/O pins                                    ; 23                         ;
+; I/O pins                                    ; 25                         ;
 ; Total memory bits                           ; 300                        ;
 ;                                             ;                            ;
 ; Embedded Multiplier 9-bit elements          ; 0                          ;
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; CLK_DIVIDER:inst20|CLK_OUT ;
-; Maximum fan-out                             ; 1166                       ;
-; Total fan-out                               ; 8225                       ;
-; Average fan-out                             ; 2.81                       ;
+; Maximum fan-out                             ; 1097                       ;
+; Total fan-out                               ; 7916                       ;
+; Average fan-out                             ; 2.84                       ;
 +---------------------------------------------+----------------------------+
 
 
@@ -280,29 +286,28 @@ agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name            ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |Data_Extraction_System                      ; 1707 (0)            ; 1145 (0)                  ; 300         ; 0            ; 0       ; 0         ; 23   ; 0            ; |Data_Extraction_System                                                                                                       ; Data_Extraction_System ; work         ;
+; |Data_Extraction_System                      ; 1641 (0)            ; 1076 (0)                  ; 300         ; 0            ; 0       ; 0         ; 25   ; 0            ; |Data_Extraction_System                                                                                                       ; Data_Extraction_System ; work         ;
 ;    |CLK_DIVIDER:inst20|                      ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|CLK_DIVIDER:inst20                                                                                    ; CLK_DIVIDER            ; work         ;
-;    |FIFObufferWC:inst8|                      ; 152 (152)           ; 122 (122)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|FIFObufferWC:inst8                                                                                    ; FIFObufferWC           ; work         ;
-;    |ID_Decoder:inst2|                        ; 59 (59)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|ID_Decoder:inst2                                                                                      ; ID_Decoder             ; work         ;
-;    |IMU_Extraction_Block1:inst3|             ; 518 (0)             ; 344 (0)                   ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3                                                                           ; IMU_Extraction_Block1  ; work         ;
+;    |ID_Decoder:inst2|                        ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|ID_Decoder:inst2                                                                                      ; ID_Decoder             ; work         ;
+;    |IMU_Extraction_Block1:inst3|             ; 525 (0)             ; 344 (0)                   ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3                                                                           ; IMU_Extraction_Block1  ; work         ;
 ;       |DESrx:inst|                           ; 50 (50)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DESrx:inst                                                                ; DESrx                  ; work         ;
 ;       |DEStx:inst15|                         ; 56 (56)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15                                                              ; DEStx                  ; work         ;
 ;       |FIFObuffer:inst3|                     ; 39 (39)             ; 37 (37)                   ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3                                                          ; FIFObuffer             ; work         ;
 ;          |altsyncram:datArray_rtl_0|         ; 0 (0)               ; 0 (0)                     ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0                                ; altsyncram             ; work         ;
 ;             |altsyncram_ecc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated ; altsyncram_ecc1        ; work         ;
-;       |addressBlock:inst2|                   ; 109 (109)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|addressBlock:inst2                                                        ; addressBlock           ; work         ;
+;       |addressBlock:inst2|                   ; 116 (116)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|addressBlock:inst2                                                        ; addressBlock           ; work         ;
 ;       |spi_master1:inst4|                    ; 264 (264)           ; 192 (192)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|spi_master1:inst4                                                         ; spi_master1            ; work         ;
-;    |IMU_Extraction_Block:inst|               ; 468 (0)             ; 311 (0)                   ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst                                                                             ; IMU_Extraction_Block   ; work         ;
+;    |IMU_Extraction_Block:inst|               ; 470 (0)             ; 311 (0)                   ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst                                                                             ; IMU_Extraction_Block   ; work         ;
 ;       |DESrx:inst|                           ; 50 (50)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|DESrx:inst                                                                  ; DESrx                  ; work         ;
 ;       |DEStx:inst15|                         ; 56 (56)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15                                                                ; DEStx                  ; work         ;
-;       |FIFObuffer:inst3|                     ; 37 (37)             ; 36 (36)                   ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3                                                            ; FIFObuffer             ; work         ;
+;       |FIFObuffer:inst3|                     ; 36 (36)             ; 36 (36)                   ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3                                                            ; FIFObuffer             ; work         ;
 ;          |altsyncram:datArray_rtl_0|         ; 0 (0)               ; 0 (0)                     ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0                                  ; altsyncram             ; work         ;
 ;             |altsyncram_ccc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated   ; altsyncram_ccc1        ; work         ;
-;       |addressBlock:inst2|                   ; 106 (106)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2                                                          ; addressBlock           ; work         ;
+;       |addressBlock:inst2|                   ; 109 (109)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2                                                          ; addressBlock           ; work         ;
 ;       |spi_master1:inst4|                    ; 219 (219)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|spi_master1:inst4                                                           ; spi_master1            ; work         ;
-;    |UART_Transmitter:inst27|                 ; 31 (31)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|UART_Transmitter:inst27                                                                               ; UART_Transmitter       ; work         ;
-;    |WC_Controller1:inst7|                    ; 104 (104)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|WC_Controller1:inst7                                                                                  ; WC_Controller1         ; work         ;
-;    |accessControl:inst5|                     ; 90 (90)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|accessControl:inst5                                                                                   ; accessControl          ; work         ;
+;    |UART_Receiver:inst15|                    ; 51 (51)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|UART_Receiver:inst15                                                                                  ; UART_Receiver          ; work         ;
+;    |UART_TransmitterX:inst14|                ; 214 (214)           ; 169 (169)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|UART_TransmitterX:inst14                                                                              ; UART_TransmitterX      ; work         ;
+;    |accessControl:inst5|                     ; 91 (91)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|accessControl:inst5                                                                                   ; accessControl          ; work         ;
 ;    |spi_master1:inst11|                      ; 276 (276)           ; 176 (176)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|spi_master1:inst11                                                                                    ; spi_master1            ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -319,18 +324,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------+
-; State Machine - |Data_Extraction_System|UART_Transmitter:inst27|state                                  ;
-+----------------+--------------+--------------+------------+--------------+----------------+------------+
-; Name           ; state.txDone ; state.Txstpb ; state.Txdb ; state.Txstrb ; state.readData ; state.IDLE ;
-+----------------+--------------+--------------+------------+--------------+----------------+------------+
-; state.IDLE     ; 0            ; 0            ; 0          ; 0            ; 0              ; 0          ;
-; state.readData ; 0            ; 0            ; 0          ; 0            ; 1              ; 1          ;
-; state.Txstrb   ; 0            ; 0            ; 0          ; 1            ; 0              ; 1          ;
-; state.Txdb     ; 0            ; 0            ; 1          ; 0            ; 0              ; 1          ;
-; state.Txstpb   ; 0            ; 1            ; 0          ; 0            ; 0              ; 1          ;
-; state.txDone   ; 1            ; 0            ; 0          ; 0            ; 0              ; 1          ;
-+----------------+--------------+--------------+------------+--------------+----------------+------------+
++----------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Data_Extraction_System|UART_Transmitter:inst27|state                                                ;
++----------------+-------------+--------------+--------------+------------+--------------+----------------+------------+
+; Name           ; state.Delay ; state.txDone ; state.Txstpb ; state.Txdb ; state.Txstrb ; state.readData ; state.IDLE ;
++----------------+-------------+--------------+--------------+------------+--------------+----------------+------------+
+; state.IDLE     ; 0           ; 0            ; 0            ; 0          ; 0            ; 0              ; 0          ;
+; state.readData ; 0           ; 0            ; 0            ; 0          ; 0            ; 1              ; 1          ;
+; state.Txstrb   ; 0           ; 0            ; 0            ; 0          ; 1            ; 0              ; 1          ;
+; state.Txdb     ; 0           ; 0            ; 0            ; 1          ; 0            ; 0              ; 1          ;
+; state.Txstpb   ; 0           ; 0            ; 1            ; 0          ; 0            ; 0              ; 1          ;
+; state.txDone   ; 0           ; 1            ; 0            ; 0          ; 0            ; 0              ; 1          ;
+; state.Delay    ; 1           ; 0            ; 0            ; 0          ; 0            ; 0              ; 1          ;
++----------------+-------------+--------------+--------------+------------+--------------+----------------+------------+
 
 
 Encoding Type:  One-Hot
@@ -368,16 +374,47 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------+
-; State Machine - |Data_Extraction_System|FIFObufferWC:inst8|state      ;
-+---------------+------------+-------------+---------------+------------+
-; Name          ; state.SEND ; state.STORE ; state.STOREID ; state.IDLE ;
-+---------------+------------+-------------+---------------+------------+
-; state.IDLE    ; 0          ; 0           ; 0             ; 0          ;
-; state.STOREID ; 0          ; 0           ; 1             ; 1          ;
-; state.STORE   ; 0          ; 1           ; 0             ; 1          ;
-; state.SEND    ; 1          ; 0           ; 0             ; 1          ;
-+---------------+------------+-------------+---------------+------------+
++--------------------------------------------------------------------+
+; State Machine - |Data_Extraction_System|FIFObufferWC1:inst13|state ;
++-------------+------------+-------------+---------------------------+
+; Name        ; state.SEND ; state.STORE ; state.IDLE                ;
++-------------+------------+-------------+---------------------------+
+; state.IDLE  ; 0          ; 0           ; 0                         ;
+; state.STORE ; 0          ; 1           ; 1                         ;
+; state.SEND  ; 1          ; 0           ; 1                         ;
++-------------+------------+-------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Data_Extraction_System|UART_TransmitterX:inst14|state                                                                                           ;
++-------------------+--------------+--------------+------------+--------------+-----------------+----------------+----------------+-------------------+------------+
+; Name              ; state.txDone ; state.Txstpb ; state.Txdb ; state.Txstrb ; state.prepareTx ; state.readData ; state.waitData ; state.requestData ; state.IDLE ;
++-------------------+--------------+--------------+------------+--------------+-----------------+----------------+----------------+-------------------+------------+
+; state.IDLE        ; 0            ; 0            ; 0          ; 0            ; 0               ; 0              ; 0              ; 0                 ; 0          ;
+; state.requestData ; 0            ; 0            ; 0          ; 0            ; 0               ; 0              ; 0              ; 1                 ; 1          ;
+; state.waitData    ; 0            ; 0            ; 0          ; 0            ; 0               ; 0              ; 1              ; 0                 ; 1          ;
+; state.readData    ; 0            ; 0            ; 0          ; 0            ; 0               ; 1              ; 0              ; 0                 ; 1          ;
+; state.prepareTx   ; 0            ; 0            ; 0          ; 0            ; 1               ; 0              ; 0              ; 0                 ; 1          ;
+; state.Txstrb      ; 0            ; 0            ; 0          ; 1            ; 0               ; 0              ; 0              ; 0                 ; 1          ;
+; state.Txdb        ; 0            ; 0            ; 1          ; 0            ; 0               ; 0              ; 0              ; 0                 ; 1          ;
+; state.Txstpb      ; 0            ; 1            ; 0          ; 0            ; 0               ; 0              ; 0              ; 0                 ; 1          ;
+; state.txDone      ; 1            ; 0            ; 0          ; 0            ; 0               ; 0              ; 0              ; 0                 ; 1          ;
++-------------------+--------------+--------------+------------+--------------+-----------------+----------------+----------------+-------------------+------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------+
+; State Machine - |Data_Extraction_System|UART_Receiver:inst15|state                          ;
++------------------+------------------+--------------+------------+--------------+------------+
+; Name             ; state.sndRequest ; state.Rxstpb ; state.Rxdb ; state.Rxstrb ; state.IDLE ;
++------------------+------------------+--------------+------------+--------------+------------+
+; state.IDLE       ; 0                ; 0            ; 0          ; 0            ; 0          ;
+; state.Rxstrb     ; 0                ; 0            ; 0          ; 1            ; 1          ;
+; state.Rxdb       ; 0                ; 0            ; 1          ; 0            ; 1          ;
+; state.Rxstpb     ; 0                ; 1            ; 0          ; 0            ; 1          ;
+; state.sndRequest ; 1                ; 0            ; 0          ; 0            ; 1          ;
++------------------+------------------+--------------+------------+--------------+------------+
 
 
 Encoding Type:  One-Hot
@@ -481,20 +518,19 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+----------------------------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal                                ; Free of Timing Hazards ;
 +-----------------------------------------------------+----------------------------------------------------+------------------------+
-; FIFObufferWC:inst8|dataOut[0]                       ; FIFObufferWC:inst8|state.STOREID                   ; yes                    ;
-; FIFObufferWC:inst8|dataOut[1]                       ; FIFObufferWC:inst8|state.STOREID                   ; yes                    ;
-; FIFObufferWC:inst8|dataOut[2]                       ; FIFObufferWC:inst8|state.STOREID                   ; yes                    ;
-; FIFObufferWC:inst8|dataOut[3]                       ; FIFObufferWC:inst8|state.STOREID                   ; yes                    ;
-; FIFObufferWC:inst8|dataOut[4]                       ; FIFObufferWC:inst8|state.STOREID                   ; yes                    ;
-; FIFObufferWC:inst8|dataOut[5]                       ; FIFObufferWC:inst8|state.STOREID                   ; yes                    ;
-; FIFObufferWC:inst8|dataOut[6]                       ; FIFObufferWC:inst8|state.STOREID                   ; yes                    ;
-; FIFObufferWC:inst8|dataOut[7]                       ; FIFObufferWC:inst8|state.STOREID                   ; yes                    ;
-; FIFObufferWC:inst8|empty                            ; FIFObufferWC:inst8|Selector0                       ; yes                    ;
+; UART_Receiver:inst15|oRx[0]                         ; UART_Receiver:inst15|state.IDLE                    ; yes                    ;
+; UART_Receiver:inst15|oRx[1]                         ; UART_Receiver:inst15|state.IDLE                    ; yes                    ;
+; UART_Receiver:inst15|oRx[2]                         ; UART_Receiver:inst15|state.IDLE                    ; yes                    ;
+; UART_Receiver:inst15|oRx[3]                         ; UART_Receiver:inst15|state.IDLE                    ; yes                    ;
+; UART_Receiver:inst15|oRx[4]                         ; UART_Receiver:inst15|state.IDLE                    ; yes                    ;
+; UART_Receiver:inst15|oRx[5]                         ; UART_Receiver:inst15|state.IDLE                    ; yes                    ;
+; UART_Receiver:inst15|oRx[6]                         ; UART_Receiver:inst15|state.IDLE                    ; yes                    ;
+; UART_Receiver:inst15|oRx[7]                         ; UART_Receiver:inst15|state.IDLE                    ; yes                    ;
 ; IMU_Extraction_Block:inst|FIFObuffer:inst3|empty    ; IMU_Extraction_Block:inst|FIFObuffer:inst3|empty   ; yes                    ;
 ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|empty  ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|empty ; yes                    ;
 ; accessControl:inst5|strtTx[0]                       ; accessControl:inst5|Decoder0                       ; yes                    ;
 ; accessControl:inst5|strtTx[1]                       ; accessControl:inst5|Decoder0                       ; yes                    ;
-; Number of user-specified and inferred latches = 13  ;                                                    ;                        ;
+; Number of user-specified and inferred latches = 12  ;                                                    ;                        ;
 +-----------------------------------------------------+----------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -614,7 +650,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; spi_master1:inst11|\process_5:CC[2]                             ; Merged with spi_master1:inst11|CC[2]                                        ;
 ; spi_master1:inst11|\process_5:CC[1]                             ; Merged with spi_master1:inst11|CC[1]                                        ;
 ; spi_master1:inst11|\process_5:CC[0]                             ; Merged with spi_master1:inst11|CC[0]                                        ;
-; FIFObufferWC:inst8|idx[3..9,11..31]                             ; Merged with FIFObufferWC:inst8|idx[10]                                      ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[31]   ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[31]              ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[30]   ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[30]              ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|\process_5:CC[29]   ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|CC[29]              ;
@@ -682,28 +717,108 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|\process_5:CC[1]  ; Merged with IMU_Extraction_Block1:inst3|spi_master1:inst4|CC[1]             ;
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|\process_5:CC[0]  ; Merged with IMU_Extraction_Block1:inst3|spi_master1:inst4|CC[0]             ;
 ; accessControl:inst5|dataOut[10]                                 ; Stuck at GND due to stuck port data_in                                      ;
-; FIFObufferWC:inst8|NS[0]                                        ; Stuck at GND due to stuck port data_in                                      ;
-; FIFObufferWC:inst8|idx[10]                                      ; Stuck at GND due to stuck port data_in                                      ;
+; UART_TransmitterX:inst14|state.requestData                      ; Stuck at GND due to stuck port data_in                                      ;
+; UART_Transmitter:inst27|cnt[0..31]                              ; Lost fanout                                                                 ;
+; UART_Transmitter:inst27|clkcount[0..3]                          ; Lost fanout                                                                 ;
+; UART_Transmitter:inst27|bPointer[0..2]                          ; Lost fanout                                                                 ;
+; ID_Decoder:inst2|Counter[0..31]                                 ; Lost fanout                                                                 ;
+; ID_Decoder:inst2|ID_MATCHED                                     ; Lost fanout                                                                 ;
+; ID_Decoder:inst2|ID_CHECKED                                     ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|TransactionNo[0..31]                       ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|NextTx[0..31]                              ; Lost fanout                                                                 ;
+; FIFObufferWC1:inst13|FS[0]                                      ; Lost fanout                                                                 ;
+; FIFObufferWC1:inst13|NS[0..3]                                   ; Lost fanout                                                                 ;
+; FIFObufferWC1:inst13|OS[0..3]                                   ; Lost fanout                                                                 ;
+; FIFObufferWC1:inst13|FS[1..3]                                   ; Lost fanout                                                                 ;
+; UART_Transmitter:inst27|state.IDLE                              ; Lost fanout                                                                 ;
+; UART_Transmitter:inst27|state.readData                          ; Lost fanout                                                                 ;
+; UART_Transmitter:inst27|state.Txstrb                            ; Lost fanout                                                                 ;
+; UART_Transmitter:inst27|state.Txdb                              ; Lost fanout                                                                 ;
+; UART_Transmitter:inst27|state.Txstpb                            ; Lost fanout                                                                 ;
+; UART_Transmitter:inst27|state.txDone                            ; Lost fanout                                                                 ;
+; UART_Transmitter:inst27|state.Delay                             ; Lost fanout                                                                 ;
+; ID_Decoder:inst2|state.IDLE                                     ; Lost fanout                                                                 ;
+; ID_Decoder:inst2|state.CHECK1                                   ; Lost fanout                                                                 ;
+; ID_Decoder:inst2|state.CHECK2                                   ; Lost fanout                                                                 ;
+; ID_Decoder:inst2|state.COUNT                                    ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.IDLE                                 ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.RequestData                          ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.WAIT_ID                              ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.RESULT                               ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.STOREID                              ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.WAITINGrx                            ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.STORE_DATA                           ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.W4BFFR_full                          ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.SEND_DATA                            ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.WAITINGtx                            ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.NXTtx                                ; Lost fanout                                                                 ;
+; WC_Controller1:inst7|state.W4BFFR_empty                         ; Lost fanout                                                                 ;
+; FIFObufferWC1:inst13|state.IDLE                                 ; Lost fanout                                                                 ;
+; FIFObufferWC1:inst13|state.STORE                                ; Lost fanout                                                                 ;
+; FIFObufferWC1:inst13|state.SEND                                 ; Lost fanout                                                                 ;
 ; spi_master1:inst11|BP[4..31]                                    ; Lost fanout                                                                 ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[4..31]           ; Lost fanout                                                                 ;
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|BP[4..31]         ; Lost fanout                                                                 ;
-; Total Number of Removed Registers = 306                         ;                                                                             ;
+; Total Number of Removed Registers = 452                         ;                                                                             ;
 +-----------------------------------------------------------------+-----------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                             ;
-+-----------------------------------------------------+--------------------+------------------------------------------------------------------------------+
-; Register name                                       ; Reason for Removal ; Registers Removed due to This Register                                       ;
-+-----------------------------------------------------+--------------------+------------------------------------------------------------------------------+
-; spi_master1:inst11|BP[4]                            ; Lost Fanouts       ; spi_master1:inst11|BP[5], spi_master1:inst11|BP[6], spi_master1:inst11|BP[7] ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|BP[4]   ; Lost Fanouts       ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[5],                           ;
-;                                                     ;                    ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[6],                           ;
-;                                                     ;                    ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[7]                            ;
-; IMU_Extraction_Block1:inst3|spi_master1:inst4|BP[4] ; Lost Fanouts       ; IMU_Extraction_Block1:inst3|spi_master1:inst4|BP[5],                         ;
-;                                                     ;                    ; IMU_Extraction_Block1:inst3|spi_master1:inst4|BP[6],                         ;
-;                                                     ;                    ; IMU_Extraction_Block1:inst3|spi_master1:inst4|BP[7]                          ;
-+-----------------------------------------------------+--------------------+------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                    ;
++-----------------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
+; Register name                                       ; Reason for Removal ; Registers Removed due to This Register                                              ;
++-----------------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
+; UART_Transmitter:inst27|cnt[0]                      ; Lost Fanouts       ; UART_Transmitter:inst27|cnt[1], UART_Transmitter:inst27|cnt[2],                     ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[3], UART_Transmitter:inst27|cnt[4],                     ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[5], UART_Transmitter:inst27|cnt[6],                     ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[7], UART_Transmitter:inst27|cnt[8],                     ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[9], UART_Transmitter:inst27|cnt[10],                    ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[11], UART_Transmitter:inst27|cnt[12],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[13], UART_Transmitter:inst27|cnt[14],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[15], UART_Transmitter:inst27|cnt[16],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[17], UART_Transmitter:inst27|cnt[18],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[19], UART_Transmitter:inst27|cnt[20],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[21], UART_Transmitter:inst27|cnt[22],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[23], UART_Transmitter:inst27|cnt[24],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[25], UART_Transmitter:inst27|cnt[26],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[27], UART_Transmitter:inst27|cnt[28],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[29], UART_Transmitter:inst27|cnt[30],                   ;
+;                                                     ;                    ; UART_Transmitter:inst27|cnt[31], UART_Transmitter:inst27|state.readData,            ;
+;                                                     ;                    ; UART_Transmitter:inst27|state.Delay                                                 ;
+; FIFObufferWC1:inst13|FS[0]                          ; Lost Fanouts       ; FIFObufferWC1:inst13|OS[1], FIFObufferWC1:inst13|OS[0], FIFObufferWC1:inst13|OS[2], ;
+;                                                     ;                    ; FIFObufferWC1:inst13|OS[3], FIFObufferWC1:inst13|FS[1], FIFObufferWC1:inst13|FS[2], ;
+;                                                     ;                    ; FIFObufferWC1:inst13|FS[3], FIFObufferWC1:inst13|state.IDLE,                        ;
+;                                                     ;                    ; FIFObufferWC1:inst13|state.STORE, FIFObufferWC1:inst13|state.SEND                   ;
+; WC_Controller1:inst7|NextTx[3]                      ; Lost Fanouts       ; WC_Controller1:inst7|NextTx[2], WC_Controller1:inst7|NextTx[1],                     ;
+;                                                     ;                    ; WC_Controller1:inst7|NextTx[0], WC_Controller1:inst7|NextTx[23],                    ;
+;                                                     ;                    ; WC_Controller1:inst7|NextTx[24], WC_Controller1:inst7|NextTx[25],                   ;
+;                                                     ;                    ; WC_Controller1:inst7|NextTx[26], WC_Controller1:inst7|NextTx[27]                    ;
+; ID_Decoder:inst2|Counter[2]                         ; Lost Fanouts       ; ID_Decoder:inst2|Counter[1], ID_Decoder:inst2|Counter[0],                           ;
+;                                                     ;                    ; ID_Decoder:inst2|Counter[24], ID_Decoder:inst2|Counter[25],                         ;
+;                                                     ;                    ; ID_Decoder:inst2|Counter[26], ID_Decoder:inst2|Counter[27],                         ;
+;                                                     ;                    ; ID_Decoder:inst2|Counter[28]                                                        ;
+; WC_Controller1:inst7|TransactionNo[1]               ; Lost Fanouts       ; WC_Controller1:inst7|TransactionNo[2], WC_Controller1:inst7|TransactionNo[3],       ;
+;                                                     ;                    ; WC_Controller1:inst7|TransactionNo[4], WC_Controller1:inst7|TransactionNo[5],       ;
+;                                                     ;                    ; WC_Controller1:inst7|TransactionNo[6], WC_Controller1:inst7|TransactionNo[7],       ;
+;                                                     ;                    ; WC_Controller1:inst7|TransactionNo[8]                                               ;
+; UART_Transmitter:inst27|clkcount[0]                 ; Lost Fanouts       ; UART_Transmitter:inst27|clkcount[1], UART_Transmitter:inst27|clkcount[2],           ;
+;                                                     ;                    ; UART_Transmitter:inst27|clkcount[3], UART_Transmitter:inst27|state.Txstrb,          ;
+;                                                     ;                    ; UART_Transmitter:inst27|state.Txdb, UART_Transmitter:inst27|state.Txstpb            ;
+; FIFObufferWC1:inst13|NS[0]                          ; Lost Fanouts       ; FIFObufferWC1:inst13|NS[1], FIFObufferWC1:inst13|NS[2], FIFObufferWC1:inst13|NS[3]  ;
+; spi_master1:inst11|BP[4]                            ; Lost Fanouts       ; spi_master1:inst11|BP[5], spi_master1:inst11|BP[6], spi_master1:inst11|BP[7]        ;
+; IMU_Extraction_Block:inst|spi_master1:inst4|BP[4]   ; Lost Fanouts       ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[5],                                  ;
+;                                                     ;                    ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[6],                                  ;
+;                                                     ;                    ; IMU_Extraction_Block:inst|spi_master1:inst4|BP[7]                                   ;
+; IMU_Extraction_Block1:inst3|spi_master1:inst4|BP[4] ; Lost Fanouts       ; IMU_Extraction_Block1:inst3|spi_master1:inst4|BP[5],                                ;
+;                                                     ;                    ; IMU_Extraction_Block1:inst3|spi_master1:inst4|BP[6],                                ;
+;                                                     ;                    ; IMU_Extraction_Block1:inst3|spi_master1:inst4|BP[7]                                 ;
+; UART_Transmitter:inst27|bPointer[2]                 ; Lost Fanouts       ; UART_Transmitter:inst27|bPointer[0], UART_Transmitter:inst27|bPointer[1]            ;
+; ID_Decoder:inst2|ID_CHECKED                         ; Lost Fanouts       ; ID_Decoder:inst2|state.IDLE, ID_Decoder:inst2|state.CHECK1                          ;
+; ID_Decoder:inst2|Counter[23]                        ; Lost Fanouts       ; ID_Decoder:inst2|state.COUNT                                                        ;
+; ID_Decoder:inst2|ID_MATCHED                         ; Lost Fanouts       ; ID_Decoder:inst2|state.CHECK2                                                       ;
+; WC_Controller1:inst7|TransactionNo[0]               ; Lost Fanouts       ; WC_Controller1:inst7|state.STORE_DATA                                               ;
+; WC_Controller1:inst7|NextTx[22]                     ; Lost Fanouts       ; WC_Controller1:inst7|state.NXTtx                                                    ;
++-----------------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -711,12 +826,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1145  ;
-; Number of registers using Synchronous Clear  ; 3     ;
-; Number of registers using Synchronous Load   ; 2     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 1076  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 844   ;
+; Number of registers using Clock Enable       ; 757   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -732,13 +847,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; IMU_Extraction_Block:inst|spi_master1:inst4|CSU      ; 1       ;
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|CSD    ; 1       ;
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|CSU    ; 1       ;
-; spi_master1:inst11|PP[4]                             ; 1       ;
+; UART_TransmitterX:inst14|idx[0]                      ; 68      ;
 ; spi_master1:inst11|pstate                            ; 1       ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|PP[4]    ; 1       ;
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|PP[4]  ; 1       ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|pstate   ; 1       ;
+; spi_master1:inst11|PP[4]                             ; 1       ;
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|pstate ; 1       ;
-; Total number of inverted registers = 12              ;         ;
+; Total number of inverted registers = 13              ;         ;
 +------------------------------------------------------+---------+
 
 
@@ -799,44 +915,37 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|UART_Transmitter:inst27|clkcount[2]                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|UART_TransmitterX:inst14|clkcount[2]                    ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Data_Extraction_System|accessControl:inst5|idx[2]                              ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|idx[0]                               ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[2][7]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[1][6]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[4][0]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[3][0]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[6][5]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[5][0]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[8][1]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[7][0]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[10][0]                      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[9][5]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[12][0]                      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|datArray[11][6]                      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|OS[2]                                ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[3]      ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |Data_Extraction_System|UART_Transmitter:inst27|cnt[5]                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|FIFObufferWC1:inst13|OS[2]                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|FIFObufferWC1:inst13|FS[1]                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[0]      ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[2]        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|UART_Receiver:inst15|clkcount[0]                        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|FIFObufferWC1:inst13|NS[1]                              ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]      ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[1]        ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|NS[1]                                ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Data_Extraction_System|FIFObufferWC:inst8|FS[1]                                ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |Data_Extraction_System|accessControl:inst5|dataOut[9]                          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]        ;
+; 9:1                ; 31 bits   ; 186 LEs       ; 31 LEs               ; 155 LEs                ; Yes        ; |Data_Extraction_System|UART_TransmitterX:inst14|idx[2]                         ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |Data_Extraction_System|accessControl:inst5|dataOut[7]                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Data_Extraction_System|FIFObufferWC1:inst13|state                              ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2|addNo      ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|addressBlock:inst2|addNo    ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|state      ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|state        ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|accessControl:inst5|Mux0                                ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Data_Extraction_System|FIFObufferWC:inst8|state                                ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Data_Extraction_System|FIFObufferWC:inst8|Mux4                                 ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|Selector28 ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|Selector27   ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Data_Extraction_System|UART_Transmitter:inst27|Selector2                       ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|UART_Transmitter:inst27|Selector1                       ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|UART_Transmitter:inst27|Selector4                       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|accessControl:inst5|Mux1                                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|Selector29 ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|Selector25   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |Data_Extraction_System|UART_TransmitterX:inst14|Selector8                      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Data_Extraction_System|UART_TransmitterX:inst14|Selector7                      ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|UART_Receiver:inst15|Selector1                          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |Data_Extraction_System|UART_Receiver:inst15|Selector0                          ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|Selector1      ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|Selector1        ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|Selector2      ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|Selector0        ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|Selector5      ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|Selector2        ;
+; 11:1               ; 5 bits    ; 35 LEs        ; 20 LEs               ; 15 LEs                 ; No         ; |Data_Extraction_System|UART_Transmitter:inst27|Selector1                       ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Data_Extraction_System|UART_Transmitter:inst27|Selector4                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 
 
@@ -1044,14 +1153,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: FIFObufferWC:inst8 ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; array_size     ; 13    ; Signed Integer                         ;
-; dw             ; 8     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Receiver:inst15 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; clocks_per_bit ; 9     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_TransmitterX:inst14 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; clocks_per_bit ; 9     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FIFObufferWC1:inst13 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; array_size     ; 13    ; Signed Integer                           ;
+; dw             ; 8     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1223,25 +1352,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 23                          ;
-; cycloneiii_ff         ; 1145                        ;
-;     ENA               ; 841                         ;
-;     ENA SCLR          ; 3                           ;
-;     SLD               ; 2                           ;
-;     plain             ; 299                         ;
-; cycloneiii_lcell_comb ; 1707                        ;
-;     arith             ; 752                         ;
-;         2 data inputs ; 751                         ;
+; boundary_port         ; 25                          ;
+; cycloneiii_ff         ; 1076                        ;
+;     CLR               ; 16                          ;
+;     ENA               ; 745                         ;
+;     ENA CLR           ; 4                           ;
+;     ENA SLD           ; 8                           ;
+;     plain             ; 303                         ;
+; cycloneiii_lcell_comb ; 1641                        ;
+;     arith             ; 690                         ;
+;         2 data inputs ; 689                         ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 955                         ;
-;         1 data inputs ; 43                          ;
-;         2 data inputs ; 123                         ;
-;         3 data inputs ; 181                         ;
-;         4 data inputs ; 608                         ;
+;     normal            ; 951                         ;
+;         1 data inputs ; 41                          ;
+;         2 data inputs ; 107                         ;
+;         3 data inputs ; 194                         ;
+;         4 data inputs ; 609                         ;
 ; cycloneiii_ram_block  ; 25                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.20                       ;
-; Average LUT depth     ; 5.31                        ;
+; Max LUT depth         ; 11.90                       ;
+; Average LUT depth     ; 5.56                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1260,7 +1390,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Apr 23 00:45:41 2019
+    Info: Processing started: Wed Apr 24 00:27:01 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Data_Extraction_System -c Data_Extraction_System
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1370,7 +1500,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file uart_tr
     Info (12022): Found design unit 1: UART_Transmitter-UART_Transmitter File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Transmitter.vhd Line: 27
     Info (12023): Found entity 1: UART_Transmitter File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Transmitter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file uart_receiver.vhd
-    Info (12022): Found design unit 1: UART_Receiver-UART_Receiver File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 26
+    Info (12022): Found design unit 1: UART_Receiver-UART_Receiver File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 27
     Info (12023): Found entity 1: UART_Receiver File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file imu_extraction_block1.bdf
     Info (12023): Found entity 1: IMU_Extraction_Block1
@@ -1389,6 +1519,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file checker
 Info (12021): Found 2 design units, including 1 entities, in source file wc_controller1.vhd
     Info (12022): Found design unit 1: WC_Controller1-WC_Controller1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/WC_Controller1.vhd Line: 30
     Info (12023): Found entity 1: WC_Controller1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/WC_Controller1.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file fifobufferwc1.vhd
+    Info (12022): Found design unit 1: FIFObufferWC1-FIFObufferWC1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 27
+    Info (12023): Found entity 1: FIFObufferWC1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file wc_controllerrx.vhd
+    Info (12022): Found design unit 1: WC_ControllerRx-WC_ControllerRx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/WC_ControllerRx.vhd Line: 30
+    Info (12023): Found entity 1: WC_ControllerRx File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/WC_ControllerRx.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file uart_transmitterx.vhd
+    Info (12022): Found design unit 1: UART_TransmitterX-UART_TransmitterX File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_TransmitterX.vhd Line: 27
+    Info (12023): Found entity 1: UART_TransmitterX File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_TransmitterX.vhd Line: 5
 Info (12127): Elaborating entity "Data_Extraction_System" for the top level hierarchy
 Info (12128): Elaborating entity "spi_master1" for hierarchy "spi_master1:inst11"
 Warning (10492): VHDL Process Statement warning at spi_master1.vhd(76): signal "wt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 76
@@ -1454,35 +1593,41 @@ Warning (10492): VHDL Process Statement warning at FIFObuffer.vhd(142): signal "
 Warning (10631): VHDL Process Statement warning at FIFObuffer.vhd(119): inferring latch(es) for signal or variable "empty", which holds its previous value in one or more paths through the process File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 119
 Info (10041): Inferred latch for "empty" at FIFObuffer.vhd(119) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 119
 Info (12128): Elaborating entity "DEStx" for hierarchy "IMU_Extraction_Block1:inst3|DEStx:inst15"
-Info (12128): Elaborating entity "FIFObufferWC" for hierarchy "FIFObufferWC:inst8"
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(146): signal "NS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 146
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(148): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 148
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(151): signal "datArray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(151): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(153): signal "NS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(155): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(158): signal "datArray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 158
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(158): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 158
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(160): signal "NS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 160
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(162): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 162
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(165): signal "datArray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 165
-Warning (10492): VHDL Process Statement warning at FIFObufferWC.vhd(165): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 165
-Warning (10631): VHDL Process Statement warning at FIFObufferWC.vhd(142): inferring latch(es) for signal or variable "empty", which holds its previous value in one or more paths through the process File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Warning (10631): VHDL Process Statement warning at FIFObufferWC.vhd(142): inferring latch(es) for signal or variable "dataOut", which holds its previous value in one or more paths through the process File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Info (10041): Inferred latch for "dataOut[0]" at FIFObufferWC.vhd(142) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Info (10041): Inferred latch for "dataOut[1]" at FIFObufferWC.vhd(142) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Info (10041): Inferred latch for "dataOut[2]" at FIFObufferWC.vhd(142) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Info (10041): Inferred latch for "dataOut[3]" at FIFObufferWC.vhd(142) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Info (10041): Inferred latch for "dataOut[4]" at FIFObufferWC.vhd(142) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Info (10041): Inferred latch for "dataOut[5]" at FIFObufferWC.vhd(142) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Info (10041): Inferred latch for "dataOut[6]" at FIFObufferWC.vhd(142) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Info (10041): Inferred latch for "dataOut[7]" at FIFObufferWC.vhd(142) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
-Info (10041): Inferred latch for "empty" at FIFObufferWC.vhd(142) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 142
+Info (12128): Elaborating entity "UART_Receiver" for hierarchy "UART_Receiver:inst15"
+Warning (10492): VHDL Process Statement warning at UART_Receiver.vhd(37): signal "Reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at UART_Receiver.vhd(96): signal "Rxd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 96
+Warning (10631): VHDL Process Statement warning at UART_Receiver.vhd(92): inferring latch(es) for signal or variable "oRx", which holds its previous value in one or more paths through the process File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 92
+Info (10041): Inferred latch for "oRx[0]" at UART_Receiver.vhd(92) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 92
+Info (10041): Inferred latch for "oRx[1]" at UART_Receiver.vhd(92) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 92
+Info (10041): Inferred latch for "oRx[2]" at UART_Receiver.vhd(92) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 92
+Info (10041): Inferred latch for "oRx[3]" at UART_Receiver.vhd(92) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 92
+Info (10041): Inferred latch for "oRx[4]" at UART_Receiver.vhd(92) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 92
+Info (10041): Inferred latch for "oRx[5]" at UART_Receiver.vhd(92) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 92
+Info (10041): Inferred latch for "oRx[6]" at UART_Receiver.vhd(92) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 92
+Info (10041): Inferred latch for "oRx[7]" at UART_Receiver.vhd(92) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 92
+Info (12128): Elaborating entity "UART_TransmitterX" for hierarchy "UART_TransmitterX:inst14"
+Info (12128): Elaborating entity "FIFObufferWC1" for hierarchy "FIFObufferWC1:inst13"
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(118): signal "NS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(120): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(123): signal "datArray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(123): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(125): signal "NS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(127): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 127
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(130): signal "datArray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 130
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(130): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 130
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(132): signal "NS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(134): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(137): signal "datArray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at FIFObufferWC1.vhd(137): signal "OS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 137
+Warning (10631): VHDL Process Statement warning at FIFObufferWC1.vhd(114): inferring latch(es) for signal or variable "empty", which holds its previous value in one or more paths through the process File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 114
+Info (10041): Inferred latch for "empty" at FIFObufferWC1.vhd(114) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC1.vhd Line: 114
 Info (12128): Elaborating entity "WC_Controller1" for hierarchy "WC_Controller1:inst7"
 Info (12128): Elaborating entity "ID_Decoder" for hierarchy "ID_Decoder:inst2"
 Info (12128): Elaborating entity "UART_Transmitter" for hierarchy "UART_Transmitter:inst27"
 Warning (276020): Inferred RAM node "IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "UART_TransmitterX:inst14|datArray" is uninferred due to inappropriate RAM size File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_TransmitterX.vhd Line: 29
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1550,25 +1695,23 @@ Info (12133): Instantiated megafunction "IMU_Extraction_Block:inst|FIFObuffer:in
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ccc1.tdf
     Info (12023): Found entity 1: altsyncram_ccc1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/db/altsyncram_ccc1.tdf Line: 28
-Warning (13012): Latch FIFObufferWC:inst8|empty has unsafe behavior File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FIFObufferWC:inst8|NS[1] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObufferWC.vhd Line: 42
 Warning (13012): Latch IMU_Extraction_Block:inst|FIFObuffer:inst3|empty has unsafe behavior File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 23
     Warning (13013): Ports D and ENA on the latch are fed by the same signal IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
 Warning (13012): Latch IMU_Extraction_Block1:inst3|FIFObuffer:inst3|empty has unsafe behavior File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 23
     Warning (13013): Ports D and ENA on the latch are fed by the same signal IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 84 registers lost all their fanouts during netlist optimizations.
+Info (17049): 259 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2409 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
+Info (21057): Implemented 2346 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 2361 logic cells
+    Info (21061): Implemented 2296 logic cells
     Info (21064): Implemented 25 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
     Info: Peak virtual memory: 4885 megabytes
-    Info: Processing ended: Tue Apr 23 00:45:54 2019
+    Info: Processing ended: Wed Apr 24 00:27:14 2019
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:25
 
 

@@ -25,7 +25,7 @@ entity UART_Transmitter is
 end entity;
 
 architecture UART_Transmitter of UART_Transmitter is
-type state_type is (IDLE, readData, Txstrb, Txdb, Txstpb, txDone);
+type state_type is (IDLE, readData, Txstrb, Txdb, Txstpb, txDone, Delay);
 	signal state : state_type := IDLE;
 	signal Txd : std_logic_vector(7 downto 0);
 begin
@@ -47,8 +47,13 @@ begin
 							state <= readData;
 					end if; 
 				when readData =>
+					if(cnt = 100) then
 						Txd <= iTx;
 						state <= Txstrb;
+						cnt := 0;
+					else
+						cnt := cnt + 1;
+					end if;
 				when Txstrb =>
 					oTx <= '0';		--Send start bit
 					clkcount := clkcount + 1;
@@ -81,9 +86,15 @@ begin
 					
 					if(clkcount = clocks_per_bit) then
 						clkcount := 0;
-						state <= txDone;
+						state <= Delay;
 					end if;
-				
+				when Delay =>
+					if(cnt = 1) then
+						state <= txDone;
+						cnt := 0;
+					else
+						cnt := cnt + 1;
+					end if;
 				when txDone =>
 					state <= IDLE;
 				when others =>
@@ -104,6 +115,8 @@ begin
 			when Txdb =>
 				DoneTx <= '0';
 			when Txstpb =>
+				DoneTx <= '0';
+			when Delay =>
 				DoneTx <= '0';
 			when txDone =>
 				DoneTx <= '1';

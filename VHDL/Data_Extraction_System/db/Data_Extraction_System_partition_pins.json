@@ -84,7 +84,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "MISO",
+					"name" : "RxI",
+					"strict" : false
+				},
+				{
+					"name" : "Sw",
 					"strict" : false
 				},
 				{
@@ -93,6 +97,10 @@
 				},
 				{
 					"name" : "MISO1_MPU",
+					"strict" : false
+				},
+				{
+					"name" : "MISO",
 					"strict" : false
 				}
 			]
