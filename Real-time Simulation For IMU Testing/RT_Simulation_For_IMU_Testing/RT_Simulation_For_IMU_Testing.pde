@@ -43,6 +43,10 @@ float xfloat, yfloat, zfloat;
 String hexint;
 int arrPointer;
 int inOrder;
+
+int cnt = 0;
+int timeStart;
+int Duration;
 //-------------Byte2Float------------------//
 
 
@@ -72,71 +76,24 @@ int inOrder;
 
 void Byte_to_Float() {
   
-  for(int x = 0; x <= 12; x++) {
-     switch(x) {
-              
-       case 0:
-       break;
-       
-       case 1:
-       xBytes[0] = arrayOfBytes[x]; 
-       break;
-       
-       case 2:
-       xBytes[1] = arrayOfBytes[x]; 
-       break;
-       
-       case 3:
-       xBytes[2] = arrayOfBytes[x]; 
-       break;
-       
-       case 4:
-       xBytes[3] = arrayOfBytes[x]; 
-       hexint=hex(xBytes[3])+hex(xBytes[2])+hex(xBytes[1])+hex(xBytes[0]); 
-       xfloat = Float.intBitsToFloat(unhex(hexint));
-       break;
-       
-       case 5:
-       yBytes[0] = arrayOfBytes[x]; 
-       break;
-       
-       case 6:
-       yBytes[1] = arrayOfBytes[x]; 
-       break;
-       
-       case 7:
-       yBytes[2] = arrayOfBytes[x]; 
-       break;
-       
-       case 8:
-       yBytes[3] = arrayOfBytes[x]; 
-       hexint=hex(yBytes[3])+hex(yBytes[2])+hex(yBytes[1])+hex(yBytes[0]); 
-       yfloat = Float.intBitsToFloat(unhex(hexint));
-       break;
-       
-       case 9:
-       zBytes[0] = arrayOfBytes[x]; 
-       break;
-       
-       case 10:
-       zBytes[1] = arrayOfBytes[x]; 
-       break;
-       
-       case 11:
-       zBytes[2] = arrayOfBytes[x]; 
-       break;
-       
-       case 12:
-       zBytes[3] = arrayOfBytes[x]; 
-       hexint=hex(zBytes[3])+hex(zBytes[2])+hex(zBytes[1])+hex(zBytes[0]); 
-       zfloat = Float.intBitsToFloat(unhex(hexint));
-       break;
-       
-       default:
-       break;
-     }//switch(x) 
-  }//for(int x = 0; x <= 12; x++)
-  println(xfloat);
+  hexint=hex(arrayOfBytes[4])+hex(arrayOfBytes[3])+hex(arrayOfBytes[2])+hex(arrayOfBytes[1]);
+  xfloat = Float.intBitsToFloat(unhex(hexint));
+  hexint=hex(arrayOfBytes[8])+hex(arrayOfBytes[7])+hex(arrayOfBytes[6])+hex(arrayOfBytes[5]);
+  yfloat = Float.intBitsToFloat(unhex(hexint));
+  hexint=hex(arrayOfBytes[12])+hex(arrayOfBytes[11])+hex(arrayOfBytes[10])+hex(arrayOfBytes[9]);
+  zfloat = Float.intBitsToFloat(unhex(hexint));
+  //if(xfloat != yfloat || xfloat != zfloat || zfloat != yfloat) {
+  //  println("Mismatch"); 
+  //}
+  //println(xfloat, yfloat, zfloat);
+  
+  //if (cnt == 2) {
+  //  println("===END===");
+  //  cnt = 0;
+  //}
+  //else {
+  //  cnt++;
+  //}
 }//void Byte_to_Float()
 
 
@@ -157,12 +114,24 @@ void DisplayAngle(float val, int xpos, int ypos, String axis )
 //------------------------------------Display-The-Angle-Data-Received------------------------------------------
 
 
+void checkTime() {
+  Duration = millis() - timeStart;
+  if(Duration > 1000) {
+      myPort.write(7);
+      println("Here");
+      timeStart = millis();
+  }
+  
+}
+
 
 
 void setup() {
   //Create CSV file to whicht he data will be saved.
   initFile();                                    
   myPort = new Serial(this, "COM7", 115200);                        //Connect to the port which Nucleo is connected to
+  myPort.write(65);
+  timeStart = millis();
 }
 
 //Place all that in a function
@@ -173,9 +142,14 @@ void draw() {
      //Clear the new data flag
      Byte_to_Float();
      flag = 0;        
+     myPort.write(65);
+     timeStart = millis();
+     
      //Write the received data to file
     // write2File(Gyros[0], Gyros[1], Gyros[2]);      
   }
+  
+  checkTime();
 }
 
 
@@ -247,13 +221,13 @@ void serialEvent(Serial p) {
    //  println("===Start==="); 
   }
   
-  //  println(Values);
+    //println(Values);
   
   if(arrPointer == 13) {
     flag = 1;                           //Raise the new data flag
     arrPointer = 0;
     inOrder = 0;
-   // println("====END==="); 
+  //  println("====END==="); 
   }
   
 } 
