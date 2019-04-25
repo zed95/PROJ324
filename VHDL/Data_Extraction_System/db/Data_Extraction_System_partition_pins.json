@@ -88,10 +88,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "Sw",
-					"strict" : false
-				},
-				{
 					"name" : "MISO_MPU",
 					"strict" : false
 				},

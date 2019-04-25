@@ -1,5 +1,5 @@
 Fitter report for Data_Extraction_System
-Wed Apr 24 00:27:31 2019
+Wed Apr 24 19:54:03 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -70,18 +70,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 24 00:27:31 2019       ;
+; Fitter Status                      ; Successful - Wed Apr 24 19:54:03 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; Data_Extraction_System                      ;
 ; Top-level Entity Name              ; Data_Extraction_System                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,748 / 22,320 ( 8 % )                      ;
-;     Total combinational functions  ; 1,642 / 22,320 ( 7 % )                      ;
-;     Dedicated logic registers      ; 1,076 / 22,320 ( 5 % )                      ;
-; Total registers                    ; 1076                                        ;
-; Total pins                         ; 25 / 154 ( 16 % )                           ;
+; Total logic elements               ; 1,791 / 22,320 ( 8 % )                      ;
+;     Total combinational functions  ; 1,672 / 22,320 ( 7 % )                      ;
+;     Dedicated logic registers      ; 1,108 / 22,320 ( 5 % )                      ;
+; Total registers                    ; 1108                                        ;
+; Total pins                         ; 24 / 154 ( 16 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 300 / 608,256 ( < 1 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
@@ -157,18 +157,18 @@ agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.24        ;
+; Average used               ; 1.23        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   3.3%      ;
 ;     Processor 3            ;   2.6%      ;
-;     Processor 4            ;   2.4%      ;
-;     Processor 5            ;   2.3%      ;
-;     Processor 6            ;   2.2%      ;
-;     Processor 7            ;   2.1%      ;
-;     Processor 8            ;   2.0%      ;
+;     Processor 4            ;   2.3%      ;
+;     Processor 5            ;   2.2%      ;
+;     Processor 6            ;   2.1%      ;
+;     Processor 7            ;   2.0%      ;
+;     Processor 8            ;   1.9%      ;
 ;     Processors 9-12        ;   1.7%      ;
 +----------------------------+-------------+
 
@@ -180,6 +180,7 @@ agreement for further details.
 +----------+----------------+--------------+------------+---------------+----------------+
 ; Location ;                ;              ; BTN        ; PIN_J15       ; QSF Assignment ;
 ; Location ;                ;              ; DoneTx     ; PIN_J13       ; QSF Assignment ;
+; Location ;                ;              ; Sw         ; PIN_M1        ; QSF Assignment ;
 +----------+----------------+--------------+------------+---------------+----------------+
 
 
@@ -189,8 +190,8 @@ agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 2807 ) ; 0.00 % ( 0 / 2807 )        ; 0.00 % ( 0 / 2807 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 2807 ) ; 0.00 % ( 0 / 2807 )        ; 0.00 % ( 0 / 2807 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 2866 ) ; 0.00 % ( 0 / 2866 )        ; 0.00 % ( 0 / 2866 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 2866 ) ; 0.00 % ( 0 / 2866 )        ; 0.00 % ( 0 / 2866 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -213,7 +214,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 2797 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 2856 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -229,29 +230,29 @@ The pin-out file can be found in C:/Users/Zed/Desktop/PROJ324 - Project Folder/P
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Total logic elements                        ; 1,748 / 22,320 ( 8 % )   ;
-;     -- Combinational with no register       ; 672                      ;
-;     -- Register only                        ; 106                      ;
-;     -- Combinational with a register        ; 970                      ;
+; Total logic elements                        ; 1,791 / 22,320 ( 8 % )   ;
+;     -- Combinational with no register       ; 683                      ;
+;     -- Register only                        ; 119                      ;
+;     -- Combinational with a register        ; 989                      ;
 ;                                             ;                          ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 609                      ;
-;     -- 3 input functions                    ; 195                      ;
-;     -- <=2 input functions                  ; 838                      ;
-;     -- Register only                        ; 106                      ;
+;     -- 4 input functions                    ; 607                      ;
+;     -- 3 input functions                    ; 196                      ;
+;     -- <=2 input functions                  ; 869                      ;
+;     -- Register only                        ; 119                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 952                      ;
-;     -- arithmetic mode                      ; 690                      ;
+;     -- normal mode                          ; 951                      ;
+;     -- arithmetic mode                      ; 721                      ;
 ;                                             ;                          ;
-; Total registers*                            ; 1,076 / 23,018 ( 5 % )   ;
-;     -- Dedicated logic registers            ; 1,076 / 22,320 ( 5 % )   ;
+; Total registers*                            ; 1,108 / 23,018 ( 5 % )   ;
+;     -- Dedicated logic registers            ; 1,108 / 22,320 ( 5 % )   ;
 ;     -- I/O registers                        ; 0 / 698 ( 0 % )          ;
 ;                                             ;                          ;
-; Total LABs:  partially or completely used   ; 138 / 1,395 ( 10 % )     ;
+; Total LABs:  partially or completely used   ; 148 / 1,395 ( 11 % )     ;
 ; Virtual pins                                ; 0                        ;
-; I/O pins                                    ; 25 / 154 ( 16 % )        ;
-;     -- Clock pins                           ; 2 / 7 ( 29 % )           ;
+; I/O pins                                    ; 24 / 154 ( 16 % )        ;
+;     -- Clock pins                           ; 1 / 7 ( 14 % )           ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )            ;
 ;                                             ;                          ;
 ; M9Ks                                        ; 2 / 66 ( 3 % )           ;
@@ -259,19 +260,19 @@ The pin-out file can be found in C:/Users/Zed/Desktop/PROJ324 - Project Folder/P
 ; Total block memory implementation bits      ; 18,432 / 608,256 ( 3 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )          ;
 ; PLLs                                        ; 0 / 4 ( 0 % )            ;
-; Global signals                              ; 4                        ;
-;     -- Global clocks                        ; 4 / 20 ( 20 % )          ;
+; Global signals                              ; 3                        ;
+;     -- Global clocks                        ; 3 / 20 ( 15 % )          ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )            ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )            ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )            ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )            ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )            ;
-; Average interconnect usage (total/H/V)      ; 1.5% / 1.6% / 1.5%       ;
-; Peak interconnect usage (total/H/V)         ; 8.1% / 8.0% / 8.2%       ;
-; Maximum fan-out                             ; 1055                     ;
+; Average interconnect usage (total/H/V)      ; 1.6% / 1.5% / 1.6%       ;
+; Peak interconnect usage (total/H/V)         ; 6.9% / 6.6% / 7.5%       ;
+; Maximum fan-out                             ; 1087                     ;
 ; Highest non-global fan-out                  ; 100                      ;
-; Total fan-out                               ; 7754                     ;
-; Average fan-out                             ; 2.73                     ;
+; Total fan-out                               ; 7952                     ;
+; Average fan-out                             ; 2.70                     ;
 +---------------------------------------------+--------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -284,34 +285,34 @@ The pin-out file can be found in C:/Users/Zed/Desktop/PROJ324 - Project Folder/P
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 1748 / 22320 ( 8 % ) ; 0 / 22320 ( 0 % )              ;
-;     -- Combinational with no register       ; 672                  ; 0                              ;
-;     -- Register only                        ; 106                  ; 0                              ;
-;     -- Combinational with a register        ; 970                  ; 0                              ;
+; Total logic elements                        ; 1791 / 22320 ( 8 % ) ; 0 / 22320 ( 0 % )              ;
+;     -- Combinational with no register       ; 683                  ; 0                              ;
+;     -- Register only                        ; 119                  ; 0                              ;
+;     -- Combinational with a register        ; 989                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 609                  ; 0                              ;
-;     -- 3 input functions                    ; 195                  ; 0                              ;
-;     -- <=2 input functions                  ; 838                  ; 0                              ;
-;     -- Register only                        ; 106                  ; 0                              ;
+;     -- 4 input functions                    ; 607                  ; 0                              ;
+;     -- 3 input functions                    ; 196                  ; 0                              ;
+;     -- <=2 input functions                  ; 869                  ; 0                              ;
+;     -- Register only                        ; 119                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 952                  ; 0                              ;
-;     -- arithmetic mode                      ; 690                  ; 0                              ;
+;     -- normal mode                          ; 951                  ; 0                              ;
+;     -- arithmetic mode                      ; 721                  ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 1076                 ; 0                              ;
-;     -- Dedicated logic registers            ; 1076 / 22320 ( 5 % ) ; 0 / 22320 ( 0 % )              ;
+; Total registers                             ; 1108                 ; 0                              ;
+;     -- Dedicated logic registers            ; 1108 / 22320 ( 5 % ) ; 0 / 22320 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 138 / 1395 ( 10 % )  ; 0 / 1395 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 148 / 1395 ( 11 % )  ; 0 / 1395 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 25                   ; 0                              ;
+; I/O pins                                    ; 24                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )      ; 0 / 132 ( 0 % )                ;
 ; Total memory bits                           ; 300                  ; 0                              ;
 ; Total RAM block bits                        ; 18432                ; 0                              ;
 ; M9K                                         ; 2 / 66 ( 3 % )       ; 0 / 66 ( 0 % )                 ;
-; Clock control block                         ; 4 / 24 ( 16 % )      ; 0 / 24 ( 0 % )                 ;
+; Clock control block                         ; 3 / 24 ( 12 % )      ; 0 / 24 ( 0 % )                 ;
 ;                                             ;                      ;                                ;
 ; Connections                                 ;                      ;                                ;
 ;     -- Input Connections                    ; 0                    ; 0                              ;
@@ -320,15 +321,15 @@ The pin-out file can be found in C:/Users/Zed/Desktop/PROJ324 - Project Folder/P
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 7749                 ; 5                              ;
-;     -- Registered Connections               ; 2523                 ; 0                              ;
+;     -- Total Connections                    ; 7947                 ; 5                              ;
+;     -- Registered Connections               ; 2602                 ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Partition Interface                         ;                      ;                                ;
-;     -- Input Ports                          ; 6                    ; 0                              ;
+;     -- Input Ports                          ; 5                    ; 0                              ;
 ;     -- Output Ports                         ; 19                   ; 0                              ;
 ;     -- Bidir Ports                          ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
@@ -358,7 +359,6 @@ The pin-out file can be found in C:/Users/Zed/Desktop/PROJ324 - Project Folder/P
 ; MISO1_MPU ; N11   ; 4        ; 43           ; 0            ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; MISO_MPU  ; T13   ; 4        ; 40           ; 0            ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; RxI       ; K15   ; 5        ; 53           ; 13           ; 7            ; 14                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; Sw        ; M1    ; 2        ; 0            ; 16           ; 21           ; 20                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -419,7 +419,7 @@ The pin-out file can be found in C:/Users/Zed/Desktop/PROJ324 - Project Folder/P
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
 ; 1        ; 7 / 14 ( 50 % ) ; 2.5V          ; --           ;
-; 2        ; 2 / 16 ( 13 % ) ; 2.5V          ; --           ;
+; 2        ; 1 / 16 ( 6 % )  ; 2.5V          ; --           ;
 ; 3        ; 1 / 25 ( 4 % )  ; 2.5V          ; --           ;
 ; 4        ; 6 / 20 ( 30 % ) ; 2.5V          ; --           ;
 ; 5        ; 3 / 18 ( 17 % ) ; 2.5V          ; --           ;
@@ -611,7 +611,7 @@ The pin-out file can be found in C:/Users/Zed/Desktop/PROJ324 - Project Folder/P
 ; L14      ; 134        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; L15      ; 138        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L16      ; 137        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; M1       ; 28         ; 2        ; Sw                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; M1       ; 28         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; M2       ; 27         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; M3       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; M4       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -721,7 +721,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Data_Request  ; Incomplete set of assignments ;
 ; CLK_50MHz     ; Incomplete set of assignments ;
 ; RxI           ; Incomplete set of assignments ;
-; Sw            ; Incomplete set of assignments ;
 ; MISO_MPU      ; Incomplete set of assignments ;
 ; MISO1_MPU     ; Incomplete set of assignments ;
 ; MISO          ; Incomplete set of assignments ;
@@ -733,29 +732,29 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                           ; Entity Name            ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |Data_Extraction_System                      ; 1748 (0)    ; 1076 (0)                  ; 0 (0)         ; 300         ; 2    ; 0            ; 0       ; 0         ; 25   ; 0            ; 672 (0)      ; 106 (0)           ; 970 (0)          ; |Data_Extraction_System                                                                                                       ; Data_Extraction_System ; work         ;
+; |Data_Extraction_System                      ; 1791 (0)    ; 1108 (0)                  ; 0 (0)         ; 300         ; 2    ; 0            ; 0       ; 0         ; 24   ; 0            ; 683 (0)      ; 119 (0)           ; 989 (0)          ; |Data_Extraction_System                                                                                                       ; Data_Extraction_System ; work         ;
 ;    |CLK_DIVIDER:inst20|                      ; 10 (10)     ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 1 (1)             ; 6 (6)            ; |Data_Extraction_System|CLK_DIVIDER:inst20                                                                                    ; CLK_DIVIDER            ; work         ;
-;    |ID_Decoder:inst2|                        ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; |Data_Extraction_System|ID_Decoder:inst2                                                                                      ; ID_Decoder             ; work         ;
-;    |IMU_Extraction_Block1:inst3|             ; 553 (0)     ; 344 (0)                   ; 0 (0)         ; 156         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 209 (0)      ; 27 (0)            ; 317 (0)          ; |Data_Extraction_System|IMU_Extraction_Block1:inst3                                                                           ; IMU_Extraction_Block1  ; work         ;
+;    |IMU_Extraction_Block1:inst3|             ; 542 (0)     ; 344 (0)                   ; 0 (0)         ; 156         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 198 (0)      ; 30 (0)            ; 314 (0)          ; |Data_Extraction_System|IMU_Extraction_Block1:inst3                                                                           ; IMU_Extraction_Block1  ; work         ;
 ;       |DESrx:inst|                           ; 51 (51)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 1 (1)             ; 37 (37)          ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DESrx:inst                                                                ; DESrx                  ; work         ;
 ;       |DEStx:inst15|                         ; 56 (56)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 38 (38)          ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15                                                              ; DEStx                  ; work         ;
-;       |FIFObuffer:inst3|                     ; 57 (57)     ; 37 (37)                   ; 0 (0)         ; 156         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 17 (17)           ; 20 (20)          ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3                                                          ; FIFObuffer             ; work         ;
+;       |FIFObuffer:inst3|                     ; 56 (56)     ; 37 (37)                   ; 0 (0)         ; 156         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 16 (16)           ; 21 (21)          ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3                                                          ; FIFObuffer             ; work         ;
 ;          |altsyncram:datArray_rtl_0|         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 156         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0                                ; altsyncram             ; work         ;
 ;             |altsyncram_ecc1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 156         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated ; altsyncram_ecc1        ; work         ;
-;       |addressBlock:inst2|                   ; 117 (117)   ; 39 (39)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 78 (78)      ; 1 (1)             ; 38 (38)          ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|addressBlock:inst2                                                        ; addressBlock           ; work         ;
+;       |addressBlock:inst2|                   ; 107 (107)   ; 39 (39)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 68 (68)      ; 5 (5)             ; 34 (34)          ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|addressBlock:inst2                                                        ; addressBlock           ; work         ;
 ;       |spi_master1:inst4|                    ; 272 (272)   ; 192 (192)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (80)      ; 8 (8)             ; 184 (184)        ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|spi_master1:inst4                                                         ; spi_master1            ; work         ;
-;    |IMU_Extraction_Block:inst|               ; 494 (0)     ; 311 (0)                   ; 0 (0)         ; 144         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 183 (0)      ; 17 (0)            ; 294 (0)          ; |Data_Extraction_System|IMU_Extraction_Block:inst                                                                             ; IMU_Extraction_Block   ; work         ;
+;    |IMU_Extraction_Block:inst|               ; 512 (0)     ; 311 (0)                   ; 0 (0)         ; 144         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 201 (0)      ; 27 (0)            ; 284 (0)          ; |Data_Extraction_System|IMU_Extraction_Block:inst                                                                             ; IMU_Extraction_Block   ; work         ;
 ;       |DESrx:inst|                           ; 51 (51)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 1 (1)             ; 37 (37)          ; |Data_Extraction_System|IMU_Extraction_Block:inst|DESrx:inst                                                                  ; DESrx                  ; work         ;
 ;       |DEStx:inst15|                         ; 56 (56)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 38 (38)          ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15                                                                ; DEStx                  ; work         ;
-;       |FIFObuffer:inst3|                     ; 56 (56)     ; 36 (36)                   ; 0 (0)         ; 144         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 12 (12)           ; 24 (24)          ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3                                                            ; FIFObuffer             ; work         ;
+;       |FIFObuffer:inst3|                     ; 57 (57)     ; 36 (36)                   ; 0 (0)         ; 144         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 11 (11)           ; 25 (25)          ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3                                                            ; FIFObuffer             ; work         ;
 ;          |altsyncram:datArray_rtl_0|         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 144         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0                                  ; altsyncram             ; work         ;
 ;             |altsyncram_ccc1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 144         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated   ; altsyncram_ccc1        ; work         ;
-;       |addressBlock:inst2|                   ; 110 (110)   ; 39 (39)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 71 (71)      ; 1 (1)             ; 38 (38)          ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2                                                          ; addressBlock           ; work         ;
-;       |spi_master1:inst4|                    ; 222 (222)   ; 160 (160)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 61 (61)      ; 3 (3)             ; 158 (158)        ; |Data_Extraction_System|IMU_Extraction_Block:inst|spi_master1:inst4                                                           ; spi_master1            ; work         ;
+;       |addressBlock:inst2|                   ; 125 (125)   ; 39 (39)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 86 (86)      ; 10 (10)           ; 29 (29)          ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2                                                          ; addressBlock           ; work         ;
+;       |spi_master1:inst4|                    ; 224 (224)   ; 160 (160)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 63 (63)      ; 5 (5)             ; 156 (156)        ; |Data_Extraction_System|IMU_Extraction_Block:inst|spi_master1:inst4                                                           ; spi_master1            ; work         ;
+;    |Reset_Timer:inst1|                       ; 45 (45)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 33 (33)          ; |Data_Extraction_System|Reset_Timer:inst1                                                                                     ; Reset_Timer            ; work         ;
 ;    |UART_Receiver:inst15|                    ; 52 (52)     ; 20 (20)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (32)      ; 1 (1)             ; 19 (19)          ; |Data_Extraction_System|UART_Receiver:inst15                                                                                  ; UART_Receiver          ; work         ;
-;    |UART_TransmitterX:inst14|                ; 262 (262)   ; 169 (169)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 92 (92)      ; 48 (48)           ; 122 (122)        ; |Data_Extraction_System|UART_TransmitterX:inst14                                                                              ; UART_TransmitterX      ; work         ;
-;    |accessControl:inst5|                     ; 92 (92)     ; 49 (49)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 36 (36)      ; 1 (1)             ; 55 (55)          ; |Data_Extraction_System|accessControl:inst5                                                                                   ; accessControl          ; work         ;
-;    |spi_master1:inst11|                      ; 292 (292)   ; 176 (176)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 116 (116)    ; 11 (11)           ; 165 (165)        ; |Data_Extraction_System|spi_master1:inst11                                                                                    ; spi_master1            ; work         ;
+;    |UART_TransmitterX:inst14|                ; 256 (256)   ; 168 (168)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 84 (84)      ; 46 (46)           ; 126 (126)        ; |Data_Extraction_System|UART_TransmitterX:inst14                                                                              ; UART_TransmitterX      ; work         ;
+;    |accessControl:inst5|                     ; 92 (92)     ; 49 (49)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 37 (37)      ; 2 (2)             ; 53 (53)          ; |Data_Extraction_System|accessControl:inst5                                                                                   ; accessControl          ; work         ;
+;    |spi_master1:inst11|                      ; 292 (292)   ; 176 (176)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 116 (116)    ; 12 (12)           ; 164 (164)        ; |Data_Extraction_System|spi_master1:inst11                                                                                    ; spi_master1            ; work         ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -785,10 +784,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MPU1_MOSI     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Data_Request  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; CLK_50MHz     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; RxI           ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Sw            ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; RxI           ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; MISO_MPU      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; MISO1_MPU     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; MISO1_MPU     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; MISO          ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -800,21 +798,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------+-------------------+---------+
 ; CLK_50MHz                                                       ;                   ;         ;
 ; RxI                                                             ;                   ;         ;
-;      - UART_Receiver:inst15|Selector1~2                         ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Rxd[0]~0                            ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Selector0~2                         ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Selector0~4                         ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Rxd[1]~1                            ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Rxd[2]~2                            ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Rxd[3]~3                            ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Rxd[4]~4                            ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Rxd[5]~5                            ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Rxd[6]~6                            ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Rxd[7]~7                            ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|clkcount[0]~0                       ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Selector2~2                         ; 0                 ; 6       ;
-;      - UART_Receiver:inst15|Selector1~3                         ; 0                 ; 6       ;
-; Sw                                                              ;                   ;         ;
+;      - UART_Receiver:inst15|Selector1~2                         ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Rxd[0]~0                            ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Selector0~0                         ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Selector2~5                         ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Rxd[1]~1                            ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Rxd[2]~2                            ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Rxd[3]~3                            ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Rxd[4]~4                            ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Rxd[5]~5                            ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Rxd[6]~6                            ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Rxd[7]~7                            ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|clkcount[1]~0                       ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Selector2~6                         ; 1                 ; 6       ;
+;      - UART_Receiver:inst15|Selector1~3                         ; 1                 ; 6       ;
 ; MISO_MPU                                                        ;                   ;         ;
 ;      - IMU_Extraction_Block:inst|spi_master1:inst4|dwReg[3]~0   ; 0                 ; 6       ;
 ;      - IMU_Extraction_Block:inst|spi_master1:inst4|dwReg[6]~1   ; 0                 ; 6       ;
@@ -825,24 +822,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - IMU_Extraction_Block:inst|spi_master1:inst4|dwReg[0]~6   ; 0                 ; 6       ;
 ;      - IMU_Extraction_Block:inst|spi_master1:inst4|dwReg[5]~7   ; 0                 ; 6       ;
 ; MISO1_MPU                                                       ;                   ;         ;
-;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[3]~0 ; 0                 ; 6       ;
-;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[6]~1 ; 0                 ; 6       ;
-;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[2]~2 ; 0                 ; 6       ;
-;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[7]~3 ; 0                 ; 6       ;
-;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[4]~4 ; 0                 ; 6       ;
-;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[1]~5 ; 0                 ; 6       ;
-;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[0]~6 ; 0                 ; 6       ;
-;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[5]~7 ; 0                 ; 6       ;
+;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[3]~0 ; 1                 ; 6       ;
+;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[6]~1 ; 1                 ; 6       ;
+;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[2]~2 ; 1                 ; 6       ;
+;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[7]~3 ; 1                 ; 6       ;
+;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[4]~4 ; 1                 ; 6       ;
+;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[1]~5 ; 1                 ; 6       ;
+;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[0]~6 ; 1                 ; 6       ;
+;      - IMU_Extraction_Block1:inst3|spi_master1:inst4|dwReg[5]~7 ; 1                 ; 6       ;
 ; MISO                                                            ;                   ;         ;
 ;      - spi_master1:inst11|dwReg[14]~0                           ; 0                 ; 6       ;
-;      - spi_master1:inst11|dwReg[2]~1                            ; 0                 ; 6       ;
-;      - spi_master1:inst11|dwReg[1]~2                            ; 0                 ; 6       ;
-;      - spi_master1:inst11|dwReg[0]~3                            ; 0                 ; 6       ;
-;      - spi_master1:inst11|dwReg[7]~4                            ; 0                 ; 6       ;
-;      - spi_master1:inst11|dwReg[6]~5                            ; 0                 ; 6       ;
-;      - spi_master1:inst11|dwReg[5]~6                            ; 0                 ; 6       ;
-;      - spi_master1:inst11|dwReg[4]~7                            ; 0                 ; 6       ;
-;      - spi_master1:inst11|dwReg[3]~8                            ; 0                 ; 6       ;
+;      - spi_master1:inst11|dwReg[7]~1                            ; 0                 ; 6       ;
+;      - spi_master1:inst11|dwReg[6]~2                            ; 0                 ; 6       ;
+;      - spi_master1:inst11|dwReg[5]~3                            ; 0                 ; 6       ;
+;      - spi_master1:inst11|dwReg[4]~4                            ; 0                 ; 6       ;
+;      - spi_master1:inst11|dwReg[3]~5                            ; 0                 ; 6       ;
+;      - spi_master1:inst11|dwReg[2]~6                            ; 0                 ; 6       ;
+;      - spi_master1:inst11|dwReg[1]~7                            ; 0                 ; 6       ;
+;      - spi_master1:inst11|dwReg[0]~8                            ; 0                 ; 6       ;
 ;      - spi_master1:inst11|dwReg[8]~9                            ; 0                 ; 6       ;
 ;      - spi_master1:inst11|dwReg[9]~10                           ; 0                 ; 6       ;
 ;      - spi_master1:inst11|dwReg[10]~11                          ; 0                 ; 6       ;
@@ -859,44 +856,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                      ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; CLK_50MHz                                                 ; PIN_R8             ; 7       ; Clock        ; yes    ; Global Clock         ; GCLK18           ; --                        ;
-; CLK_DIVIDER:inst20|CLK_OUT                                ; FF_X30_Y14_N11     ; 20      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; CLK_DIVIDER:inst20|CLK_OUT                                ; FF_X30_Y14_N11     ; 1055    ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; IMU_Extraction_Block1:inst3|DESrx:inst|state.STOREstate   ; FF_X18_Y18_N5      ; 37      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block1:inst3|DEStx:inst15|state.NXTtx      ; FF_X35_Y17_N9      ; 38      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[0]~0      ; LCCOMB_X32_Y14_N22 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|empty~0      ; LCCOMB_X32_Y14_N12 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|state.STORE  ; FF_X34_Y13_N9      ; 2       ; Write enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block1:inst3|spi_master1:inst4|MOSI~0      ; LCCOMB_X27_Y13_N14 ; 39      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block1:inst3|spi_master1:inst4|process_6~0 ; LCCOMB_X27_Y13_N10 ; 100     ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block1:inst3|spi_master1:inst4|rtl         ; FF_X28_Y9_N25      ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block:inst|DESrx:inst|state.STOREstate     ; FF_X25_Y6_N5       ; 37      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block:inst|DEStx:inst15|state.NXTtx        ; FF_X34_Y17_N9      ; 38      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[2]~0        ; LCCOMB_X31_Y11_N18 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|empty~0        ; LCCOMB_X30_Y11_N2  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|state.STORE    ; FF_X31_Y11_N17     ; 2       ; Write enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|MOSI~0        ; LCCOMB_X34_Y14_N4  ; 39      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|process_6~0   ; LCCOMB_X34_Y14_N30 ; 100     ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|rtl           ; FF_X34_Y10_N9      ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Sw                                                        ; PIN_M1             ; 20      ; Async. clear ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; UART_Receiver:inst15|clkcount~1                           ; LCCOMB_X31_Y30_N24 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; UART_Receiver:inst15|state.IDLE                           ; FF_X29_Y30_N7      ; 8       ; Latch enable ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; UART_TransmitterX:inst14|Txd[7]~9                         ; LCCOMB_X29_Y19_N30 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; UART_TransmitterX:inst14|Txd~8                            ; LCCOMB_X28_Y19_N30 ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; UART_TransmitterX:inst14|WideOr6~0                        ; LCCOMB_X30_Y18_N6  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; UART_TransmitterX:inst14|datArray~205                     ; LCCOMB_X27_Y19_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; UART_TransmitterX:inst14|datArray~207                     ; LCCOMB_X27_Y19_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; UART_TransmitterX:inst14|datArray~208                     ; LCCOMB_X27_Y19_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; UART_TransmitterX:inst14|datArray~209                     ; LCCOMB_X27_Y19_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; UART_TransmitterX:inst14|datArray~211                     ; LCCOMB_X27_Y19_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; UART_TransmitterX:inst14|datArray~212                     ; LCCOMB_X27_Y19_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; UART_TransmitterX:inst14|datArray~214                     ; LCCOMB_X27_Y19_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; accessControl:inst5|Decoder0~0                            ; LCCOMB_X31_Y17_N16 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; accessControl:inst5|Decoder0~1                            ; LCCOMB_X31_Y17_N0  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; accessControl:inst5|WideNor0~0                            ; LCCOMB_X31_Y17_N14 ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; accessControl:inst5|idx[1]~0                              ; LCCOMB_X31_Y17_N4  ; 31      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; spi_master1:inst11|MOSI~0                                 ; LCCOMB_X25_Y11_N14 ; 45      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; spi_master1:inst11|process_6~0                            ; LCCOMB_X24_Y7_N16  ; 100     ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; spi_master1:inst11|rtl                                    ; FF_X24_Y12_N15     ; 17      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CLK_DIVIDER:inst20|CLK_OUT                                ; FF_X31_Y16_N21     ; 1087    ; Clock        ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; CLK_DIVIDER:inst20|CLK_OUT                                ; FF_X31_Y16_N21     ; 20      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block1:inst3|DESrx:inst|state.STOREstate   ; FF_X27_Y13_N27     ; 37      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block1:inst3|DEStx:inst15|state.NXTtx      ; FF_X26_Y17_N9      ; 38      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[0]~0      ; LCCOMB_X30_Y14_N8  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|empty~0      ; LCCOMB_X31_Y14_N16 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|state.STORE  ; FF_X30_Y14_N27     ; 2       ; Write enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block1:inst3|spi_master1:inst4|MOSI~0      ; LCCOMB_X28_Y13_N24 ; 39      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block1:inst3|spi_master1:inst4|process_6~0 ; LCCOMB_X28_Y13_N6  ; 100     ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block1:inst3|spi_master1:inst4|rtl         ; FF_X28_Y12_N27     ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block:inst|DESrx:inst|state.STOREstate     ; FF_X35_Y15_N27     ; 37      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block:inst|DEStx:inst15|state.NXTtx        ; FF_X29_Y18_N9      ; 38      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[1]~0        ; LCCOMB_X32_Y15_N0  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|empty~0        ; LCCOMB_X31_Y15_N24 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|state.STORE    ; FF_X34_Y15_N17     ; 2       ; Write enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block:inst|spi_master1:inst4|MOSI~0        ; LCCOMB_X36_Y11_N18 ; 39      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block:inst|spi_master1:inst4|process_6~0   ; LCCOMB_X36_Y11_N24 ; 100     ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; IMU_Extraction_Block:inst|spi_master1:inst4|rtl           ; FF_X36_Y11_N5      ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Reset_Timer:inst1|Counter[0]~34                           ; LCCOMB_X31_Y25_N30 ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; Reset_Timer:inst1|Reset                                   ; FF_X31_Y25_N7      ; 20      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; UART_Receiver:inst15|clkcount~1                           ; LCCOMB_X30_Y25_N24 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; UART_Receiver:inst15|state.IDLE                           ; FF_X30_Y25_N15     ; 8       ; Latch enable ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; UART_TransmitterX:inst14|Selector5~0                      ; LCCOMB_X24_Y22_N14 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; UART_TransmitterX:inst14|Txd~8                            ; LCCOMB_X25_Y22_N18 ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; UART_TransmitterX:inst14|WideOr3~0                        ; LCCOMB_X27_Y22_N12 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; UART_TransmitterX:inst14|datArray~205                     ; LCCOMB_X24_Y23_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; UART_TransmitterX:inst14|datArray~207                     ; LCCOMB_X24_Y23_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; UART_TransmitterX:inst14|datArray~208                     ; LCCOMB_X24_Y23_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; UART_TransmitterX:inst14|datArray~209                     ; LCCOMB_X24_Y23_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; UART_TransmitterX:inst14|datArray~211                     ; LCCOMB_X25_Y22_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; UART_TransmitterX:inst14|datArray~212                     ; LCCOMB_X25_Y22_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; UART_TransmitterX:inst14|datArray~214                     ; LCCOMB_X25_Y22_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; accessControl:inst5|Decoder0~0                            ; LCCOMB_X30_Y16_N22 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; accessControl:inst5|Decoder0~1                            ; LCCOMB_X30_Y16_N8  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; accessControl:inst5|WideNor0~0                            ; LCCOMB_X30_Y15_N24 ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; accessControl:inst5|idx[0]~0                              ; LCCOMB_X30_Y16_N30 ; 31      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; spi_master1:inst11|MOSI~0                                 ; LCCOMB_X18_Y18_N30 ; 45      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; spi_master1:inst11|process_6~0                            ; LCCOMB_X17_Y22_N30 ; 100     ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; spi_master1:inst11|rtl                                    ; FF_X20_Y21_N13     ; 17      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -905,10 +903,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                            ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLK_50MHz                       ; PIN_R8         ; 7       ; 2                                    ; Global Clock         ; GCLK18           ; --                        ;
-; CLK_DIVIDER:inst20|CLK_OUT      ; FF_X30_Y14_N11 ; 1055    ; 139                                  ; Global Clock         ; GCLK19           ; --                        ;
-; Sw                              ; PIN_M1         ; 20      ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
-; UART_Receiver:inst15|state.IDLE ; FF_X29_Y30_N7  ; 8       ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
+; CLK_50MHz                       ; PIN_R8         ; 7       ; 1                                    ; Global Clock         ; GCLK18           ; --                        ;
+; CLK_DIVIDER:inst20|CLK_OUT      ; FF_X31_Y16_N21 ; 1087    ; 193                                  ; Global Clock         ; GCLK17           ; --                        ;
+; UART_Receiver:inst15|state.IDLE ; FF_X30_Y25_N15 ; 8       ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
 +---------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -917,8 +914,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                                             ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF  ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 12           ; 13           ; 12           ; 13           ; yes                    ; no                      ; yes                    ; no                      ; 156  ; 12                          ; 13                          ; 12                          ; 13                          ; 156                 ; 1    ; None ; M9K_X33_Y13_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; Single Clock ; 12           ; 12           ; 12           ; 12           ; yes                    ; no                      ; yes                    ; no                      ; 144  ; 12                          ; 12                          ; 12                          ; 12                          ; 144                 ; 1    ; None ; M9K_X33_Y11_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 12           ; 13           ; 12           ; 13           ; yes                    ; no                      ; yes                    ; no                      ; 156  ; 12                          ; 13                          ; 12                          ; 13                          ; 156                 ; 1    ; None ; M9K_X33_Y14_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; Single Clock ; 12           ; 12           ; 12           ; 12           ; yes                    ; no                      ; yes                    ; no                      ; 144  ; 12                          ; 12                          ; 12                          ; 12                          ; 144                 ; 1    ; None ; M9K_X33_Y15_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -928,51 +925,52 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 1,955 / 71,559 ( 3 % ) ;
-; C16 interconnects     ; 17 / 2,597 ( < 1 % )   ;
-; C4 interconnects      ; 681 / 46,848 ( 1 % )   ;
-; Direct links          ; 825 / 71,559 ( 1 % )   ;
-; Global clocks         ; 4 / 20 ( 20 % )        ;
-; Local interconnects   ; 1,183 / 24,624 ( 5 % ) ;
-; R24 interconnects     ; 34 / 2,496 ( 1 % )     ;
-; R4 interconnects      ; 908 / 62,424 ( 1 % )   ;
+; Block interconnects   ; 2,022 / 71,559 ( 3 % ) ;
+; C16 interconnects     ; 22 / 2,597 ( < 1 % )   ;
+; C4 interconnects      ; 734 / 46,848 ( 2 % )   ;
+; Direct links          ; 808 / 71,559 ( 1 % )   ;
+; Global clocks         ; 3 / 20 ( 15 % )        ;
+; Local interconnects   ; 1,205 / 24,624 ( 5 % ) ;
+; R24 interconnects     ; 32 / 2,496 ( 1 % )     ;
+; R4 interconnects      ; 893 / 62,424 ( 1 % )   ;
 +-----------------------+------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 12.67) ; Number of LABs  (Total = 138) ;
+; Number of Logic Elements  (Average = 12.10) ; Number of LABs  (Total = 148) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 2                             ;
+; 1                                           ; 9                             ;
 ; 2                                           ; 3                             ;
-; 3                                           ; 10                            ;
+; 3                                           ; 11                            ;
 ; 4                                           ; 4                             ;
-; 5                                           ; 6                             ;
-; 6                                           ; 2                             ;
-; 7                                           ; 3                             ;
-; 8                                           ; 2                             ;
-; 9                                           ; 1                             ;
-; 10                                          ; 1                             ;
+; 5                                           ; 7                             ;
+; 6                                           ; 0                             ;
+; 7                                           ; 1                             ;
+; 8                                           ; 0                             ;
+; 9                                           ; 3                             ;
+; 10                                          ; 4                             ;
 ; 11                                          ; 2                             ;
-; 12                                          ; 1                             ;
-; 13                                          ; 8                             ;
-; 14                                          ; 11                            ;
-; 15                                          ; 8                             ;
-; 16                                          ; 74                            ;
+; 12                                          ; 7                             ;
+; 13                                          ; 10                            ;
+; 14                                          ; 4                             ;
+; 15                                          ; 2                             ;
+; 16                                          ; 81                            ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 1.35) ; Number of LABs  (Total = 138) ;
+; LAB-wide Signals  (Average = 1.31) ; Number of LABs  (Total = 148) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 4                             ;
-; 1 Clock                            ; 107                           ;
-; 1 Clock enable                     ; 58                            ;
+; 1 Async. clear                     ; 3                             ;
+; 1 Clock                            ; 112                           ;
+; 1 Clock enable                     ; 63                            ;
+; 1 Sync. clear                      ; 2                             ;
 ; 1 Sync. load                       ; 1                             ;
-; 2 Clock enables                    ; 11                            ;
+; 2 Clock enables                    ; 8                             ;
 ; 2 Clocks                           ; 5                             ;
 +------------------------------------+-------------------------------+
 
@@ -980,127 +978,126 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 20.12) ; Number of LABs  (Total = 138) ;
+; Number of Signals Sourced  (Average = 19.50) ; Number of LABs  (Total = 148) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 0                             ;
+; 1                                            ; 7                             ;
 ; 2                                            ; 4                             ;
-; 3                                            ; 11                            ;
-; 4                                            ; 3                             ;
-; 5                                            ; 3                             ;
-; 6                                            ; 0                             ;
-; 7                                            ; 4                             ;
-; 8                                            ; 2                             ;
+; 3                                            ; 9                             ;
+; 4                                            ; 4                             ;
+; 5                                            ; 5                             ;
+; 6                                            ; 1                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 1                             ;
 ; 9                                            ; 3                             ;
-; 10                                           ; 0                             ;
-; 11                                           ; 2                             ;
-; 12                                           ; 1                             ;
-; 13                                           ; 2                             ;
+; 10                                           ; 2                             ;
+; 11                                           ; 0                             ;
+; 12                                           ; 2                             ;
+; 13                                           ; 0                             ;
 ; 14                                           ; 2                             ;
-; 15                                           ; 0                             ;
-; 16                                           ; 5                             ;
-; 17                                           ; 4                             ;
-; 18                                           ; 6                             ;
-; 19                                           ; 2                             ;
-; 20                                           ; 8                             ;
-; 21                                           ; 8                             ;
-; 22                                           ; 8                             ;
-; 23                                           ; 4                             ;
-; 24                                           ; 4                             ;
-; 25                                           ; 1                             ;
-; 26                                           ; 3                             ;
-; 27                                           ; 2                             ;
-; 28                                           ; 3                             ;
-; 29                                           ; 13                            ;
-; 30                                           ; 6                             ;
+; 15                                           ; 1                             ;
+; 16                                           ; 11                            ;
+; 17                                           ; 3                             ;
+; 18                                           ; 8                             ;
+; 19                                           ; 3                             ;
+; 20                                           ; 4                             ;
+; 21                                           ; 4                             ;
+; 22                                           ; 7                             ;
+; 23                                           ; 5                             ;
+; 24                                           ; 3                             ;
+; 25                                           ; 4                             ;
+; 26                                           ; 0                             ;
+; 27                                           ; 5                             ;
+; 28                                           ; 6                             ;
+; 29                                           ; 9                             ;
+; 30                                           ; 7                             ;
 ; 31                                           ; 3                             ;
-; 32                                           ; 21                            ;
+; 32                                           ; 24                            ;
 +----------------------------------------------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 9.77) ; Number of LABs  (Total = 138) ;
+; Number of Signals Sourced Out  (Average = 9.45) ; Number of LABs  (Total = 148) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
-; 1                                               ; 10                            ;
-; 2                                               ; 4                             ;
-; 3                                               ; 16                            ;
-; 4                                               ; 12                            ;
-; 5                                               ; 13                            ;
-; 6                                               ; 2                             ;
-; 7                                               ; 3                             ;
-; 8                                               ; 9                             ;
-; 9                                               ; 5                             ;
-; 10                                              ; 5                             ;
+; 1                                               ; 15                            ;
+; 2                                               ; 8                             ;
+; 3                                               ; 18                            ;
+; 4                                               ; 11                            ;
+; 5                                               ; 6                             ;
+; 6                                               ; 4                             ;
+; 7                                               ; 6                             ;
+; 8                                               ; 6                             ;
+; 9                                               ; 4                             ;
+; 10                                              ; 4                             ;
 ; 11                                              ; 4                             ;
-; 12                                              ; 1                             ;
-; 13                                              ; 4                             ;
+; 12                                              ; 7                             ;
+; 13                                              ; 2                             ;
 ; 14                                              ; 1                             ;
 ; 15                                              ; 3                             ;
-; 16                                              ; 40                            ;
-; 17                                              ; 0                             ;
-; 18                                              ; 0                             ;
+; 16                                              ; 42                            ;
+; 17                                              ; 1                             ;
+; 18                                              ; 2                             ;
 ; 19                                              ; 0                             ;
-; 20                                              ; 1                             ;
-; 21                                              ; 0                             ;
-; 22                                              ; 1                             ;
+; 20                                              ; 0                             ;
+; 21                                              ; 1                             ;
+; 22                                              ; 0                             ;
 ; 23                                              ; 0                             ;
 ; 24                                              ; 0                             ;
 ; 25                                              ; 0                             ;
-; 26                                              ; 1                             ;
+; 26                                              ; 0                             ;
 ; 27                                              ; 0                             ;
-; 28                                              ; 0                             ;
+; 28                                              ; 1                             ;
 ; 29                                              ; 0                             ;
 ; 30                                              ; 1                             ;
 ; 31                                              ; 0                             ;
-; 32                                              ; 2                             ;
+; 32                                              ; 1                             ;
 +-------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 12.86) ; Number of LABs  (Total = 138) ;
+; Number of Distinct Inputs  (Average = 12.35) ; Number of LABs  (Total = 148) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 1                             ;
-; 2                                            ; 2                             ;
-; 3                                            ; 22                            ;
-; 4                                            ; 7                             ;
-; 5                                            ; 11                            ;
-; 6                                            ; 4                             ;
-; 7                                            ; 3                             ;
-; 8                                            ; 6                             ;
-; 9                                            ; 6                             ;
-; 10                                           ; 2                             ;
-; 11                                           ; 2                             ;
-; 12                                           ; 11                            ;
-; 13                                           ; 6                             ;
+; 1                                            ; 0                             ;
+; 2                                            ; 6                             ;
+; 3                                            ; 25                            ;
+; 4                                            ; 11                            ;
+; 5                                            ; 12                            ;
+; 6                                            ; 3                             ;
+; 7                                            ; 4                             ;
+; 8                                            ; 5                             ;
+; 9                                            ; 4                             ;
+; 10                                           ; 6                             ;
+; 11                                           ; 1                             ;
+; 12                                           ; 12                            ;
+; 13                                           ; 2                             ;
 ; 14                                           ; 1                             ;
 ; 15                                           ; 1                             ;
-; 16                                           ; 9                             ;
-; 17                                           ; 6                             ;
+; 16                                           ; 7                             ;
+; 17                                           ; 8                             ;
 ; 18                                           ; 7                             ;
-; 19                                           ; 3                             ;
-; 20                                           ; 2                             ;
-; 21                                           ; 0                             ;
+; 19                                           ; 1                             ;
+; 20                                           ; 3                             ;
+; 21                                           ; 1                             ;
 ; 22                                           ; 3                             ;
-; 23                                           ; 3                             ;
-; 24                                           ; 1                             ;
+; 23                                           ; 0                             ;
+; 24                                           ; 2                             ;
 ; 25                                           ; 0                             ;
-; 26                                           ; 2                             ;
-; 27                                           ; 5                             ;
-; 28                                           ; 5                             ;
-; 29                                           ; 2                             ;
+; 26                                           ; 4                             ;
+; 27                                           ; 10                            ;
+; 28                                           ; 3                             ;
+; 29                                           ; 0                             ;
 ; 30                                           ; 0                             ;
-; 31                                           ; 0                             ;
-; 32                                           ; 0                             ;
-; 33                                           ; 0                             ;
+; 31                                           ; 1                             ;
+; 32                                           ; 1                             ;
+; 33                                           ; 2                             ;
 ; 34                                           ; 0                             ;
-; 35                                           ; 1                             ;
-; 36                                           ; 4                             ;
+; 35                                           ; 2                             ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -1161,9 +1158,9 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 25        ; 0            ; 25        ; 0            ; 0            ; 25        ; 25        ; 0            ; 25        ; 25        ; 0            ; 19           ; 0            ; 0            ; 6            ; 0            ; 19           ; 6            ; 0            ; 0            ; 0            ; 19           ; 0            ; 0            ; 0            ; 0            ; 0            ; 25        ; 0            ; 0            ;
+; Total Pass         ; 24        ; 0            ; 24        ; 0            ; 0            ; 24        ; 24        ; 0            ; 24        ; 24        ; 0            ; 19           ; 0            ; 0            ; 5            ; 0            ; 19           ; 5            ; 0            ; 0            ; 0            ; 19           ; 0            ; 0            ; 0            ; 0            ; 0            ; 24        ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 25           ; 0         ; 25           ; 25           ; 0         ; 0         ; 25           ; 0         ; 0         ; 25           ; 6            ; 25           ; 25           ; 19           ; 25           ; 6            ; 19           ; 25           ; 25           ; 25           ; 6            ; 25           ; 25           ; 25           ; 25           ; 25           ; 0         ; 25           ; 25           ;
+; Total Inapplicable ; 0         ; 24           ; 0         ; 24           ; 24           ; 0         ; 0         ; 24           ; 0         ; 0         ; 24           ; 5            ; 24           ; 24           ; 19           ; 24           ; 5            ; 19           ; 24           ; 24           ; 24           ; 5            ; 24           ; 24           ; 24           ; 24           ; 24           ; 0         ; 24           ; 24           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; CS                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; MSTR_CLK           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1186,7 +1183,6 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; Data_Request       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLK_50MHz          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; RxI                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Sw                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; MISO_MPU           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; MISO1_MPU          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; MISO               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1229,129 +1225,129 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                                                          ;
-+-------------------------------------------------------+----------------------------+-------------------+
-; Source Clock(s)                                       ; Destination Clock(s)       ; Delay Added in ns ;
-+-------------------------------------------------------+----------------------------+-------------------+
-; CLK_DIVIDER:inst20|CLK_OUT                            ; CLK_DIVIDER:inst20|CLK_OUT ; 114.0             ;
-; CLK_DIVIDER:inst20|CLK_OUT,I/O                        ; CLK_DIVIDER:inst20|CLK_OUT ; 7.2               ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; CLK_DIVIDER:inst20|CLK_OUT ; 4.6               ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; CLK_DIVIDER:inst20|CLK_OUT ; 4.6               ;
-; accessControl:inst5|idx[0]                            ; CLK_DIVIDER:inst20|CLK_OUT ; 4.4               ;
-; CLK_DIVIDER:inst20|CLK_OUT,accessControl:inst5|idx[0] ; CLK_DIVIDER:inst20|CLK_OUT ; 3.8               ;
-; CLK_50MHz                                             ; CLK_DIVIDER:inst20|CLK_OUT ; 3.8               ;
-+-------------------------------------------------------+----------------------------+-------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                               ;
++-------------------------------------------------------+---------------------------------+-------------------+
+; Source Clock(s)                                       ; Destination Clock(s)            ; Delay Added in ns ;
++-------------------------------------------------------+---------------------------------+-------------------+
+; CLK_DIVIDER:inst20|CLK_OUT                            ; CLK_DIVIDER:inst20|CLK_OUT      ; 84.6              ;
+; CLK_DIVIDER:inst20|CLK_OUT,I/O                        ; CLK_DIVIDER:inst20|CLK_OUT      ; 8.6               ;
+; CLK_DIVIDER:inst20|CLK_OUT                            ; UART_Receiver:inst15|state.IDLE ; 5.1               ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; CLK_DIVIDER:inst20|CLK_OUT      ; 4.5               ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; CLK_DIVIDER:inst20|CLK_OUT      ; 4.4               ;
+; CLK_50MHz                                             ; CLK_DIVIDER:inst20|CLK_OUT      ; 3.4               ;
+; CLK_DIVIDER:inst20|CLK_OUT,accessControl:inst5|idx[0] ; CLK_DIVIDER:inst20|CLK_OUT      ; 2.1               ;
++-------------------------------------------------------+---------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                   ;
-+-----------------------------------------------------------------------+-----------------------------------------------------+-------------------+
-; Source Register                                                       ; Destination Register                                ; Delay Added in ns ;
-+-----------------------------------------------------------------------+-----------------------------------------------------+-------------------+
-; UART_Receiver:inst15|state.IDLE                                       ; UART_Receiver:inst15|state.IDLE                     ; 3.068             ;
-; accessControl:inst5|idx[0]                                            ; accessControl:inst5|state.SEARCH                    ; 3.049             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.960             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.955             ;
-; IMU_Extraction_Block1:inst3|DEStx:inst15|state.W4BFFRtx               ; accessControl:inst5|state.SEARCH                    ; 2.712             ;
-; IMU_Extraction_Block1:inst3|DEStx:inst15|state.IDLE                   ; accessControl:inst5|state.SEARCH                    ; 2.712             ;
-; accessControl:inst5|idx[1]                                            ; accessControl:inst5|state.SEARCH                    ; 2.712             ;
-; accessControl:inst5|idx[2]                                            ; accessControl:inst5|state.SEARCH                    ; 2.712             ;
-; accessControl:inst5|idx[30]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[29]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[31]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[27]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[26]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[25]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[24]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[23]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[22]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[21]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[20]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[19]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[18]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[17]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[16]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[15]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[14]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[13]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[12]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[11]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[10]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[9]                                            ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[8]                                            ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[7]                                            ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[6]                                            ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[5]                                            ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[4]                                            ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[3]                                            ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; accessControl:inst5|idx[28]                                           ; accessControl:inst5|dataOut[0]                      ; 2.495             ;
-; IMU_Extraction_Block:inst|DEStx:inst15|state.W4BFFRtx                 ; accessControl:inst5|state.SEARCH                    ; 2.375             ;
-; IMU_Extraction_Block:inst|DEStx:inst15|state.IDLE                     ; accessControl:inst5|state.SEARCH                    ; 2.375             ;
-; UART_Receiver:inst15|state.Rxstpb                                     ; UART_Receiver:inst15|state.Rxdb                     ; 2.139             ;
-; UART_Receiver:inst15|bPointer[2]                                      ; UART_Receiver:inst15|state.Rxdb                     ; 2.139             ;
-; UART_Receiver:inst15|bPointer[1]                                      ; UART_Receiver:inst15|state.Rxdb                     ; 2.139             ;
-; UART_Receiver:inst15|bPointer[0]                                      ; UART_Receiver:inst15|state.Rxdb                     ; 2.139             ;
-; UART_Receiver:inst15|clkcount[0]                                      ; UART_Receiver:inst15|state.Rxdb                     ; 2.139             ;
-; UART_Receiver:inst15|clkcount[1]                                      ; UART_Receiver:inst15|state.Rxdb                     ; 2.139             ;
-; RxI                                                                   ; UART_Receiver:inst15|state.Rxdb                     ; 2.139             ;
-; UART_Receiver:inst15|clkcount[3]                                      ; UART_Receiver:inst15|state.Rxdb                     ; 2.139             ;
-; UART_Receiver:inst15|clkcount[2]                                      ; UART_Receiver:inst15|state.Rxdb                     ; 2.139             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[3]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[0]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[1]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[2]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[3]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[1]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[2]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[2]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[0]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[1]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[3]                    ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 2.125             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[3]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[2]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[1]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[3]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[0]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[1]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[2]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[2]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[0]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[1]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[3]                      ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 2.104             ;
-; CLK_DIVIDER:inst20|CLK_OUT                                            ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[0]  ; 1.988             ;
-; accessControl:inst5|strtTx[0]                                         ; IMU_Extraction_Block:inst|DEStx:inst15|state.STRTtx ; 1.896             ;
-; UART_Receiver:inst15|state.Rxstrb                                     ; UART_Receiver:inst15|state.Rxdb                     ; 1.514             ;
-; UART_Receiver:inst15|state.sndRequest                                 ; UART_Receiver:inst15|state.Rxdb                     ; 1.514             ;
-; UART_Receiver:inst15|state.Rxdb                                       ; UART_Receiver:inst15|state.sndRequest               ; 1.452             ;
-; accessControl:inst5|state.SEARCH                                      ; accessControl:inst5|idx[0]                          ; 1.417             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[1]   ; accessControl:inst5|dataOut[12]                     ; 1.388             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[3]   ; accessControl:inst5|dataOut[12]                     ; 1.388             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[4]   ; accessControl:inst5|dataOut[12]                     ; 1.388             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[2]   ; accessControl:inst5|dataOut[12]                     ; 1.388             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[0]   ; accessControl:inst5|dataOut[12]                     ; 1.388             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[5]   ; accessControl:inst5|dataOut[12]                     ; 1.388             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[7]   ; accessControl:inst5|dataOut[12]                     ; 1.388             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[8]   ; accessControl:inst5|dataOut[12]                     ; 1.388             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[6]   ; accessControl:inst5|dataOut[12]                     ; 1.388             ;
-; IMU_Extraction_Block1:inst3|DEStx:inst15|state.STRTtx                 ; accessControl:inst5|TRANSMIT                        ; 1.381             ;
-; IMU_Extraction_Block:inst|DEStx:inst15|state.STRTtx                   ; accessControl:inst5|TRANSMIT                        ; 1.381             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[1] ; accessControl:inst5|dataOut[12]                     ; 1.291             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[3] ; accessControl:inst5|dataOut[12]                     ; 1.291             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[4] ; accessControl:inst5|dataOut[12]                     ; 1.291             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[2] ; accessControl:inst5|dataOut[12]                     ; 1.291             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[0] ; accessControl:inst5|dataOut[12]                     ; 1.291             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[5] ; accessControl:inst5|dataOut[12]                     ; 1.291             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[7] ; accessControl:inst5|dataOut[12]                     ; 1.291             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[8] ; accessControl:inst5|dataOut[12]                     ; 1.291             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[6] ; accessControl:inst5|dataOut[12]                     ; 1.291             ;
-; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|state.SEND               ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]  ; 1.163             ;
-; IMU_Extraction_Block:inst|FIFObuffer:inst3|state.SEND                 ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]    ; 1.155             ;
-; IMU_Extraction_Block:inst|DEStx:inst15|state.RDY2SND                  ; IMU_Extraction_Block:inst|DEStx:inst15|state.IDLE   ; 1.150             ;
-; IMU_Extraction_Block:inst|DEStx:inst15|state.NXTtx                    ; IMU_Extraction_Block:inst|DEStx:inst15|state.IDLE   ; 1.150             ;
-+-----------------------------------------------------------------------+-----------------------------------------------------+-------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                                                      ;
++----------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------+-------------------+
+; Source Register                                                                                                                        ; Destination Register                                  ; Delay Added in ns ;
++----------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------+-------------------+
+; UART_Receiver:inst15|state.IDLE                                                                                                        ; UART_Receiver:inst15|state.IDLE                       ; 2.919             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]                                                                                       ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; 2.728             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 2.609             ;
+; RxI                                                                                                                                    ; UART_Receiver:inst15|state.Rxstrb                     ; 2.580             ;
+; accessControl:inst5|idx[0]                                                                                                             ; accessControl:inst5|TRANSMIT                          ; 2.477             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[1]                                                                                       ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; 2.269             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[3]                                                                                       ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; 2.269             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[1]                                                                                       ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; 2.269             ;
+; IMU_Extraction_Block1:inst3|DEStx:inst15|state.W4BFFRtx                                                                                ; accessControl:inst5|state.STRT                        ; 2.203             ;
+; IMU_Extraction_Block1:inst3|DEStx:inst15|state.IDLE                                                                                    ; accessControl:inst5|state.STRT                        ; 2.203             ;
+; accessControl:inst5|idx[1]                                                                                                             ; accessControl:inst5|state.STRT                        ; 2.203             ;
+; accessControl:inst5|idx[2]                                                                                                             ; accessControl:inst5|state.STRT                        ; 2.203             ;
+; UART_Receiver:inst15|state.Rxstpb                                                                                                      ; UART_Receiver:inst15|state.Rxdb                       ; 2.130             ;
+; UART_Receiver:inst15|bPointer[2]                                                                                                       ; UART_Receiver:inst15|state.Rxdb                       ; 2.130             ;
+; UART_Receiver:inst15|bPointer[1]                                                                                                       ; UART_Receiver:inst15|state.Rxdb                       ; 2.130             ;
+; UART_Receiver:inst15|bPointer[0]                                                                                                       ; UART_Receiver:inst15|state.Rxdb                       ; 2.130             ;
+; UART_Receiver:inst15|clkcount[0]                                                                                                       ; UART_Receiver:inst15|state.Rxdb                       ; 2.130             ;
+; UART_Receiver:inst15|clkcount[1]                                                                                                       ; UART_Receiver:inst15|state.Rxdb                       ; 2.130             ;
+; UART_Receiver:inst15|clkcount[3]                                                                                                       ; UART_Receiver:inst15|state.Rxdb                       ; 2.130             ;
+; UART_Receiver:inst15|clkcount[2]                                                                                                       ; UART_Receiver:inst15|state.Rxdb                       ; 2.130             ;
+; IMU_Extraction_Block:inst|DEStx:inst15|state.W4BFFRtx                                                                                  ; accessControl:inst5|state.STRT                        ; 1.945             ;
+; IMU_Extraction_Block:inst|DEStx:inst15|state.IDLE                                                                                      ; accessControl:inst5|state.STRT                        ; 1.945             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[3]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[0]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[1]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[2]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[3]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[1]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[2]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[2]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[0]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[1]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[3]                                                                                     ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 1.779             ;
+; accessControl:inst5|idx[30]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[29]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[28]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[27]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[26]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[25]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[24]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[23]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[22]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[21]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[20]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[19]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[18]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[17]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[16]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[15]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[14]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[13]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[12]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[11]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[10]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[9]                                                                                                             ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[8]                                                                                                             ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[7]                                                                                                             ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[6]                                                                                                             ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[5]                                                                                                             ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[4]                                                                                                             ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[3]                                                                                                             ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; accessControl:inst5|idx[31]                                                                                                            ; accessControl:inst5|dataOut[8]                        ; 1.564             ;
+; CLK_DIVIDER:inst20|CLK_OUT                                                                                                             ; IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[0]      ; 1.469             ;
+; UART_Receiver:inst15|state.Rxdb                                                                                                        ; UART_Receiver:inst15|state.Rxstpb                     ; 1.452             ;
+; UART_Receiver:inst15|state.Rxstrb                                                                                                      ; UART_Receiver:inst15|state.Rxstpb                     ; 1.452             ;
+; UART_Receiver:inst15|state.sndRequest                                                                                                  ; UART_Receiver:inst15|state.Rxdb                       ; 1.437             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[2]                                                                                       ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; 1.421             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[3]                                                                                       ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; 1.403             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[2]                                                                                       ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; 1.363             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[0]                                                                                       ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; 1.363             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|state.SEND                                                                                  ; IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]      ; 1.363             ;
+; accessControl:inst5|strtTx[0]                                                                                                          ; IMU_Extraction_Block:inst|DEStx:inst15|state.STRTtx   ; 1.350             ;
+; IMU_Extraction_Block1:inst3|DEStx:inst15|state.STRTtx                                                                                  ; accessControl:inst5|TRANSMIT                          ; 1.239             ;
+; IMU_Extraction_Block:inst|DEStx:inst15|state.STRTtx                                                                                    ; accessControl:inst5|TRANSMIT                          ; 1.239             ;
+; accessControl:inst5|state.SEARCH                                                                                                       ; accessControl:inst5|TRANSMIT                          ; 1.239             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[1]                                                                  ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[3]                                                                  ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[4]                                                                  ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[2]                                                                  ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[0]                                                                  ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[5]                                                                  ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[7]                                                                  ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[8]                                                                  ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[6]                                                                  ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[1]                                                                    ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[3]                                                                    ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[4]                                                                    ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[2]                                                                    ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[0]                                                                    ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[5]                                                                    ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[6]                                                                    ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[7]                                                                    ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0_bypass[8]                                                                    ; accessControl:inst5|dataOut[3]                        ; 1.063             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|state.SEND                                                                                ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[0]    ; 0.986             ;
+; IMU_Extraction_Block:inst|DEStx:inst15|state.RDY2SND                                                                                   ; IMU_Extraction_Block:inst|DEStx:inst15|state.IDLE     ; 0.879             ;
+; IMU_Extraction_Block:inst|DEStx:inst15|state.NXTtx                                                                                     ; IMU_Extraction_Block:inst|DEStx:inst15|state.IDLE     ; 0.879             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|empty                                                                                     ; IMU_Extraction_Block1:inst3|DESrx:inst|state.W4BFFRrx ; 0.792             ;
+; IMU_Extraction_Block:inst|FIFObuffer:inst3|empty                                                                                       ; IMU_Extraction_Block:inst|DESrx:inst|state.W4BFFRrx   ; 0.719             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[21]                                                                 ; accessControl:inst5|dataOut[13]                       ; 0.657             ;
+; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated|ram_block1a12~portb_address_reg0 ; accessControl:inst5|dataOut[13]                       ; 0.657             ;
++----------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
@@ -1393,29 +1389,28 @@ Info (176353): Automatically promoted node CLK_DIVIDER:inst20|CLK_OUT  File: C:/
         Info (176357): Destination node IMU_Extraction_Block1:inst3|spi_master1:inst4|CLKO~0 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/spi_master1.vhd Line: 20
         Info (176357): Destination node accessControl:inst5|idx[1] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 39
         Info (176357): Destination node accessControl:inst5|idx[2] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/accessControl.vhd Line: 39
-        Info (176357): Destination node IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[1] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
-        Info (176357): Destination node IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[0] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
-        Info (176357): Destination node IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[2] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
-        Info (176357): Destination node IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[3] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
         Info (176357): Destination node IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[1] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
+        Info (176357): Destination node IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[0] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
+        Info (176357): Destination node IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[2] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
+        Info (176357): Destination node IMU_Extraction_Block1:inst3|FIFObuffer:inst3|OS[3] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
+        Info (176357): Destination node IMU_Extraction_Block:inst|FIFObuffer:inst3|OS[1] File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/FIFObuffer.vhd Line: 39
         Info (176358): Non-global destination nodes limited to 10 nodes
-Info (176353): Automatically promoted node UART_Receiver:inst15|state.IDLE  File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 29
+Info (176353): Automatically promoted node UART_Receiver:inst15|state.IDLE  File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 28
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node UART_Receiver:inst15|Selector1~2 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 39
-        Info (176357): Destination node UART_Receiver:inst15|Selector0~4 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 39
-        Info (176357): Destination node UART_Receiver:inst15|Selector0~5 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 39
-        Info (176357): Destination node UART_Receiver:inst15|clkcount~1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 34
-        Info (176357): Destination node UART_Receiver:inst15|Selector1~3 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 39
-Info (176353): Automatically promoted node Sw~input (placed in PIN M1 (CLK3, DIFFCLK_1n))
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G0
+        Info (176357): Destination node UART_Receiver:inst15|Selector1~2 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 38
+        Info (176357): Destination node UART_Receiver:inst15|Selector2~5 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 38
+        Info (176357): Destination node UART_Receiver:inst15|Selector0~1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 38
+        Info (176357): Destination node UART_Receiver:inst15|clkcount~1 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 33
+        Info (176357): Destination node UART_Receiver:inst15|Selector1~3 File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 38
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "BTN" is assigned to location or region, but does not exist in design
     Warning (15706): Node "DoneTx" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+    Warning (15706): Node "Sw" is assigned to location or region, but does not exist in design
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1424,11 +1419,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:06
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 6% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
+    Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 2.27 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
+Info (11888): Total time spent on timing analysis during the Fitter is 2.51 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1436,9 +1431,9 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/output_files/Data_Extraction_System.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 6171 megabytes
-    Info: Processing ended: Wed Apr 24 00:27:32 2019
+Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 6172 megabytes
+    Info: Processing ended: Wed Apr 24 19:54:04 2019
     Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:37
 

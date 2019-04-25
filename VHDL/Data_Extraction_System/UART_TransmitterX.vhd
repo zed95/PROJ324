@@ -17,8 +17,6 @@ entity UART_TransmitterX is
 		DoneRx		: in std_logic;
 		dataIn		: in std_logic_vector(15 downto 0);
 		Start			: in std_logic;
-		sendRequest : out std_logic;
-		DoneTx		: out std_logic;
 		oTx			: out std_logic	
 	);
 
@@ -28,9 +26,10 @@ architecture UART_TransmitterX of UART_TransmitterX is
 TYPE storage_array IS ARRAY (0 TO 6) OF STD_LOGIC_VECTOR(15 DOWNTO 0); -- array of size Array_size which stores ADC data
 SIGNAL datArray: storage_array;
 
-type state_type is (IDLE, requestData, waitData, readData, prepareTx, Txstrb, Txdb, Txstpb, txDone);
+type state_type is (IDLE, waitData, readData, prepareTx, Txstrb, Txdb, Txstpb);
 	signal state : state_type := IDLE;
 	signal Txd : std_logic_vector(7 downto 0);
+	signal oTxState : std_logic := '1';
 begin
 
 
@@ -55,18 +54,11 @@ begin
 						state <= IDLE;
 					end if;
 			
-				when requestData =>
-					state <= waitData;
-				
 				when waitData =>
 					oTx <= '1';
 					if(to_integer(unsigned(dataIn)) /= 0) then
-						if(to_integer(unsigned(dataIn)) < 1 or to_integer(unsigned(dataIn)) > 6) then
-							state <= IDLE;
-						else
 							datArray(0) <= dataIn;
 							state <= readData;
-						end if;
 					else
 						state <= waitData;
 					end if;
@@ -101,13 +93,8 @@ begin
 						else
 							Txd <= datArray(idx)(15 downto 8);
 							flag := '0';
-							if(idx = 7) then
-								idx := 0;
-								state <= IDLE;
-							else	
 								idx := idx + 1;
 								state <= Txstrb;
-							end if;
 						end if;
 					end if;
 				else
@@ -144,51 +131,11 @@ begin
 					
 					if(clkcount = clocks_per_bit) then
 						clkcount := 0;
-						state <= txDone;
+						state <= prepareTx;
 					end if;
-					
-				when txDone =>
-					state <= prepareTx;
 				when others =>
 					state <= IDLE;
 			end case;
 		end if; --(rising_edge(clky))
 	end process;
-		
-	process (state)
-	begin
-			case state is
-			when IDLE =>
-				DoneTx <= '0';
-				sendRequest <= '0';
-			when requestData =>
-				DoneTx <= '0';
-				sendRequest <= '1';
-			when waitData =>
-				DoneTx <= '0';
-				sendRequest <= '0';
-			when readData =>
-				DoneTx <= '0';
-				sendRequest <= '0';
-			when prepareTx =>
-				DoneTx <= '0';
-				sendRequest <= '0';				
-			when Txstrb =>
-				DoneTx <= '0';
-				sendRequest <= '0';
-			when Txdb =>
-				DoneTx <= '0';
-				sendRequest <= '0';
-			when Txstpb =>
-				DoneTx <= '0';
-				sendRequest <= '0';
-			when txDone =>
-				DoneTx <= '1';
-				sendRequest <= '0';
-			when others =>
-				DoneTx <= '0';
-				sendRequest <= '0';
-			end case;
-	end process;
-
 end UART_TransmitterX;

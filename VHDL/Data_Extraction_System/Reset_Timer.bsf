@@ -21,51 +21,37 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 184 128)
-	(text "UART_TransmitterX" (rect 5 0 92 12)(font "Arial" ))
-	(text "inst" (rect 8 96 20 108)(font "Arial" ))
+	(rect 16 16 160 96)
+	(text "Reset_Timer" (rect 5 0 59 12)(font "Arial" ))
+	(text "inst" (rect 8 64 20 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "clk" (rect 0 0 10 12)(font "Arial" ))
-		(text "clk" (rect 21 27 31 39)(font "Arial" ))
+		(text "CLK" (rect 0 0 20 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 41 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "DoneRx" (rect 0 0 34 12)(font "Arial" ))
-		(text "DoneRx" (rect 21 43 55 55)(font "Arial" ))
+		(text "Input" (rect 0 0 18 12)(font "Arial" ))
+		(text "Input" (rect 21 43 39 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "dataIn[15..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "dataIn[15..0]" (rect 21 59 68 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "Start" (rect 0 0 18 12)(font "Arial" ))
-		(text "Start" (rect 21 75 39 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 1))
-	)
-	(port
-		(pt 168 32)
+		(pt 144 32)
 		(output)
-		(text "oTx" (rect 0 0 15 12)(font "Arial" ))
-		(text "oTx" (rect 132 27 147 39)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32)(line_width 1))
+		(text "Reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "Reset" (rect 99 27 123 39)(font "Arial" ))
+		(line (pt 144 32)(pt 128 32)(line_width 1))
 	)
 	(parameter
-		"clocks_per_bit"
-		"9"
+		"Reset_Time_us"
+		"1000000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 152 96)(line_width 1))
+		(rectangle (rect 16 16 128 64)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 184 -64 284 16))
+	(annotation_block (parameter)(rect 160 -64 260 16))
 )

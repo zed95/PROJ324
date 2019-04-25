@@ -215,9 +215,6 @@ set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/addressBlock
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/WC_Controller.vht -section_id WC_Controller_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/ID_Decoder.vht -section_id ID_Decoder_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/FIFObufferWC.vht -section_id FIFObufferWC_vhd_tst
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE checker.vhd
 set_global_assignment -name CDF_FILE output_files/Chain4.cdf
 set_location_assignment PIN_J13 -to DoneTx
@@ -225,4 +222,8 @@ set_global_assignment -name VHDL_FILE WC_Controller1.vhd
 set_global_assignment -name VHDL_FILE FIFObufferWC1.vhd
 set_global_assignment -name VHDL_FILE WC_ControllerRx.vhd
 set_global_assignment -name VHDL_FILE UART_TransmitterX.vhd
+set_global_assignment -name VHDL_FILE Reset_Timer.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

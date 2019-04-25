@@ -21,7 +21,7 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 200 128)
+	(rect 16 16 192 128)
 	(text "UART_Receiver" (rect 5 0 78 12)(font "Arial" ))
 	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
@@ -34,37 +34,30 @@ agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "strtRx" (rect 0 0 25 12)(font "Arial" ))
-		(text "strtRx" (rect 21 43 46 55)(font "Arial" ))
+		(text "iRx" (rect 0 0 14 12)(font "Arial" ))
+		(text "iRx" (rect 21 43 35 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "iRx" (rect 0 0 14 12)(font "Arial" ))
-		(text "iRx" (rect 21 59 35 71)(font "Arial" ))
+		(text "Reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "Reset" (rect 21 59 45 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
-		(pt 0 80)
-		(input)
-		(text "Reset" (rect 0 0 24 12)(font "Arial" ))
-		(text "Reset" (rect 21 75 45 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 1))
-	)
-	(port
-		(pt 184 32)
+		(pt 176 32)
 		(output)
 		(text "sendRequest" (rect 0 0 53 12)(font "Arial" ))
-		(text "sendRequest" (rect 110 27 163 39)(font "Arial" ))
-		(line (pt 184 32)(pt 168 32)(line_width 1))
+		(text "sendRequest" (rect 102 27 155 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 1))
 	)
 	(port
-		(pt 184 48)
+		(pt 176 48)
 		(output)
 		(text "oRx[7..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "oRx[7..0]" (rect 126 43 163 55)(font "Arial" ))
-		(line (pt 184 48)(pt 168 48)(line_width 3))
+		(text "oRx[7..0]" (rect 118 43 155 55)(font "Arial" ))
+		(line (pt 176 48)(pt 160 48)(line_width 3))
 	)
 	(parameter
 		"clocks_per_bit"
@@ -72,7 +65,7 @@ agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 168 96)(line_width 1))
+		(rectangle (rect 16 16 160 96)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 200 -64 300 16))
+	(annotation_block (parameter)(rect 192 -64 292 16))
 )

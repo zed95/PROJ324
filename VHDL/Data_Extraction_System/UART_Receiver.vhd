@@ -14,7 +14,6 @@ entity UART_Receiver is
 	port 
 	(
 		clk	   	: in std_logic;		--input clock
-		strtRx		: in std_logic;
 		iRx			: in std_logic;
 		Reset			: in std_logic;
 		sendRequest	: out std_logic;
