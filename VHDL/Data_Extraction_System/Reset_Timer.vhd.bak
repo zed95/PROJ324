@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity Reset_Timer is
-	generic (Reset_Time_us : integer := 1000
+	generic (Reset_Time_us : integer := 1000000
 				);		
 			
 	port 
