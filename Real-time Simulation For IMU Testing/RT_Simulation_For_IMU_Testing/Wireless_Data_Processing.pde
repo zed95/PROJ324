@@ -21,7 +21,9 @@ void Byte_to_Float() {
   //if(xfloat != yfloat || xfloat != zfloat || zfloat != yfloat) {
   //  println("Mismatch"); 
   //}
-  println(xfloat, yfloat, zfloat);
+  if(arrayOfBytes[0] == 2) {
+    println(xfloat, yfloat, zfloat);
+  }
   
 }//void Byte_to_Float()
 //===============================================Converting-Bytes-Back-To-Floats=============================================================
@@ -32,8 +34,9 @@ void serialEvent(Serial p) {
   
   //Values = p.readStringUntil('\n');    //Save the string number into variable x
   Values = p.read();    //Save the string number into variable x
-  if(Values == 1) {
+  if(Values == 1 || Values == 2 || Values == 3) {
     inOrder = 1;
+    //println("IMU = " + Values);
   }
   
   //Store data in array
