@@ -105,7 +105,9 @@ void checkTime() {
 
 
 void setup() {
+    size(1500, 1000, P3D);
   //Create CSV file to whicht he data will be saved.
+  initArm();
   initFile();  
   serialSetup();
   timeStart = millis();
@@ -121,10 +123,10 @@ void draw() {
      flag = 0;        
      myPort.write(65);
      timeStart = millis();
-     
      //Write the received data to file
     // write2File(Gyros[0], Gyros[1], Gyros[2]);      
   }
+  rotateArm();
   
   checkTime();
 }

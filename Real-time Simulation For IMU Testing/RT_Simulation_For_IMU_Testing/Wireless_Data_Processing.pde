@@ -1,6 +1,13 @@
 import processing.serial.*;
 Serial myPort;  // Create object from Serial class
 
+class IMU {
+  float x;
+  float y;
+  float z;
+}
+
+IMU IMU1, IMU2, IMU3;
 //=========================================================Serial-Setup======================================================================
 void serialSetup() {
   myPort = new Serial(this, "COM7", 115200);                        //Connect to the port which Nucleo is connected to
@@ -21,8 +28,28 @@ void Byte_to_Float() {
   //if(xfloat != yfloat || xfloat != zfloat || zfloat != yfloat) {
   //  println("Mismatch"); 
   //}
-  if(arrayOfBytes[0] == 2) {
-    println(xfloat, yfloat, zfloat);
+  switch(arrayOfBytes[0]) {
+    case 1:
+      IMU1.x = xfloat;
+      IMU1.y = yfloat;
+      IMU1.z = zfloat;
+    break;
+   
+    case 2:
+      IMU2.x = xfloat;
+      IMU2.y = yfloat;
+      IMU2.z = zfloat;     
+    break;
+    
+    case 3:
+      IMU3.x = xfloat;
+      IMU3.y = yfloat;
+      IMU3.z = zfloat; 
+    break;
+    
+    default:
+    break;
+    //println(xfloat, yfloat, zfloat);
   }
   
 }//void Byte_to_Float()
