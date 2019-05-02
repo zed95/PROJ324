@@ -11,10 +11,18 @@ class Rotation {
  float x;
  float y;
  float z;  
+ 
+ Rotation() {
+     x = 0;
+     y = 0;
+     z = 0;
+ }
 }
 
 //class objects for each part of the arm
-Rotation upperArmRot, foreArmRot, handRot;
+Rotation upperArmRot = new Rotation();
+Rotation foreArmRot = new Rotation();
+Rotation handRot = new Rotation();
 
 //Rotation using mouse for testing purposes.
 void mouseDragged(){
@@ -44,23 +52,23 @@ void rotateArm() {
     pushMatrix();
     //rotate everything by the upper arm rotation
     translate(width/2,height/3);    //Translate everything to middle of screen
-    rotateX(upperArmRot.x);
-    rotateY(upperArmRot.y);
-    rotateZ(upperArmRot.z);
+    rotateX((-upperArmRot.y + 90)*PI/180);
+    rotateY(upperArmRot.x*PI/180);
+    //rotateZ(upperArmRot.z*PI/180);
     shape(upperArm, 0, 0);          //Display
     
     //rotate forearm and hand by the rotation of forearm
     translate(0,height/4);          //Translate forearm and hand lower then the upper arm
-    rotateX(foreArmRot.x);
-    rotateY(foreArmRot.y);
-    rotateZ(foreArmRot.z);
+    rotateX((foreArmRot.y + upperArmRot.y)*PI/180);
+    rotateY((-foreArmRot.x-upperArmRot.x)*PI/180);
+    //rotateZ(foreArmRot.z*PI/180);
     shape(foreArm, 0, 0);          //Display
 
     //rotate hand by the rotation of the hand
     translate(0,height/5);          //Translate hand lower then the upper arm and forearm
-    rotateX(handRot.x);
-    rotateY(handRot.y);
-    rotateZ(handRot.z);
+    rotateX(handRot.y*PI/180);
+    rotateY(handRot.x*PI/180);
+    rotateZ(handRot.z*PI/180);
     shape(Hand, 0, 0);            //Display
   popMatrix(); 
   

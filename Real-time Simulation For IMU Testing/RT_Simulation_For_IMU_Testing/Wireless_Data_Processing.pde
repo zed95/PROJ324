@@ -2,15 +2,23 @@ import processing.serial.*;
 Serial myPort;  // Create object from Serial class
 
 class IMU {
-  float x;
-  float y;
-  float z;
+  float x = 0;
+  float y = 0;
+  float z = 0;
+  
+  IMU() {
+    x = 0;
+    y = 0;
+    z = 0;    
+  }
 }
 
-IMU IMU1, IMU2, IMU3;
+IMU IMU1 = new IMU();
+IMU IMU2 = new IMU();
+IMU IMU3= new IMU();
 //=========================================================Serial-Setup======================================================================
 void serialSetup() {
-  myPort = new Serial(this, "COM7", 115200);                        //Connect to the port which Nucleo is connected to
+  myPort = new Serial(this, "COM1", 115200);                        //Connect to the port which Nucleo is connected to
   myPort.write(65);                                                 //Send first byte to cause the FPGA to send data request
 }
 //=========================================================Serial-Setup======================================================================
@@ -33,12 +41,14 @@ void Byte_to_Float() {
       IMU1.x = xfloat;
       IMU1.y = yfloat;
       IMU1.z = zfloat;
+      println(xfloat, yfloat, zfloat);
     break;
    
     case 2:
       IMU2.x = xfloat;
       IMU2.y = yfloat;
-      IMU2.z = zfloat;     
+      IMU2.z = zfloat; 
+         //println(xfloat, yfloat, zfloat);
     break;
     
     case 3:
@@ -49,8 +59,8 @@ void Byte_to_Float() {
     
     default:
     break;
-    //println(xfloat, yfloat, zfloat);
   }
+
   
 }//void Byte_to_Float()
 //===============================================Converting-Bytes-Back-To-Floats=============================================================
