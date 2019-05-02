@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Apr 26 00:30:10 2019
+Analysis & Synthesis Status : Successful - Wed May 01 20:13:13 2019
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : Data_Extraction_System
-Top-level Entity Name : Reset_Timer
+Top-level Entity Name : Data_Extraction_System
 Family : Cyclone IV E
-Total logic elements : 45
-    Total combinational functions : 45
-    Dedicated logic registers : 33
-Total registers : 33
-Total pins : 3
+Total logic elements : 2,271
+    Total combinational functions : 2,088
+    Dedicated logic registers : 1,349
+Total registers : 1349
+Total pins : 28
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 300
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

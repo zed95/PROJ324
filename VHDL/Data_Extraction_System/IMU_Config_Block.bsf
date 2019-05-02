@@ -56,63 +56,8 @@ agreement for further details.
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(parameter
-		"XG_OFFSET_H"
-		"0001001100000000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"XG_OFFSET_L"
-		"0001010011110000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"YG_OFFSET_H"
-		"0001010111111111"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"YG_OFFSET_L"
-		"0001011011100001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ZG_OFFSET_H"
-		"0001011100000000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ZG_OFFSET_L"
-		"0001100001010001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"XA_OFFSET_H"
-		"0111011100000010"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"XA_OFFSET_L"
-		"0111100001100100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"YA_OFFSET_H"
-		"0111101000000001"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"YA_OFFSET_L"
-		"0111101100000110"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ZA_OFFSET_H"
-		"0111110100000100"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"ZA_OFFSET_L"
-		"0111111000100110"
+		"MAG_MODE"
+		"0000101000000110"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(drawing

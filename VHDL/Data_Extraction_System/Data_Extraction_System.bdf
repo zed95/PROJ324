@@ -54,7 +54,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 232 -96 400 -80)
+	(rect -128 -160 40 -144)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "MISO_MPU" (rect 5 0 60 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -70,7 +70,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 240 112 408 128)
+	(rect -120 48 48 64)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "MISO1_MPU" (rect 5 0 66 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -89,6 +89,22 @@ agreement for further details.
 	(rect 1584 -264 1752 -248)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "RxI" (rect 5 0 22 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -120 264 48 280)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "MISO2_MPU" (rect 5 0 67 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -278,7 +294,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 752 -96 928 -80)
+	(rect 392 -160 568 -144)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU_CS" (rect 90 0 132 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -294,7 +310,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 752 -80 931 -64)
+	(rect 392 -144 571 -128)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU_MSTR_CLK" (rect 90 0 173 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -310,7 +326,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 752 -64 928 -48)
+	(rect 392 -128 568 -112)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU_MOSI" (rect 90 0 145 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -342,7 +358,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 784 112 960 128)
+	(rect 424 48 600 64)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU1_CS" (rect 90 0 138 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -358,7 +374,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 784 128 969 144)
+	(rect 424 64 609 80)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU1_MSTR_CLK" (rect 90 0 179 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -374,7 +390,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 792 144 968 160)
+	(rect 432 80 608 96)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU1_MOSI" (rect 90 0 151 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -393,6 +409,54 @@ agreement for further details.
 	(rect 2184 -312 2360 -296)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Data_Request" (rect 90 0 157 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 424 264 600 280)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "MPU2_CS" (rect 90 0 138 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 424 280 609 296)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "MPU2_MSTR_CLK" (rect 90 0 179 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 432 296 608 312)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "MPU2_MOSI" (rect 90 0 151 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -531,7 +595,7 @@ agreement for further details.
 	(annotation_block (parameter)(rect -88 -560 88 -520))
 )
 (symbol
-	(rect 432 -168 728 -8)
+	(rect 72 -232 368 -72)
 	(text "IMU_Extraction_Block" (rect 5 0 132 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 139 24 156)(font "Intel Clear" ))
 	(port
@@ -609,7 +673,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 432 40 728 200)
+	(rect 72 -24 368 136)
 	(text "IMU_Extraction_Block1" (rect 5 0 140 19)(font "Intel Clear" (font_size 8)))
 	(text "inst3" (rect 8 139 30 156)(font "Intel Clear" ))
 	(port
@@ -849,7 +913,7 @@ agreement for further details.
 		(pt 168 32)
 		(output)
 		(text "oTx" (rect 0 0 17 12)(font "Arial" ))
-		(text "oTx" (rect 133 27 147 39)(font "Arial" ))
+		(text "oTx" (rect 133 27 150 39)(font "Arial" ))
 		(line (pt 168 32)(pt 152 32))
 	)
 	(parameter
@@ -891,14 +955,14 @@ agreement for further details.
 		(pt 176 32)
 		(output)
 		(text "sendRequest" (rect 0 0 64 12)(font "Arial" ))
-		(text "sendRequest" (rect 101 27 155 39)(font "Arial" ))
+		(text "sendRequest" (rect 101 27 165 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32))
 	)
 	(port
 		(pt 176 48)
 		(output)
 		(text "oRx[7..0]" (rect 0 0 46 12)(font "Arial" ))
-		(text "oRx[7..0]" (rect 117 43 155 55)(font "Arial" ))
+		(text "oRx[7..0]" (rect 117 43 163 55)(font "Arial" ))
 		(line (pt 176 48)(pt 160 48)(line_width 3))
 	)
 	(parameter
@@ -911,47 +975,83 @@ agreement for further details.
 	)
 	(annotation_block (parameter)(rect 1688 -360 1880 -320))
 )
-(connector
-	(text "CLK_1MHz" (rect 298 -120 351 -103)(font "Intel Clear" ))
-	(pt 288 -104)
-	(pt 432 -104)
-)
-(connector
-	(text "StrtTransmission[0]" (rect 298 -136 388 -119)(font "Intel Clear" ))
-	(pt 288 -120)
-	(pt 432 -120)
-)
-(connector
-	(pt 432 -88)
-	(pt 400 -88)
-)
-(connector
-	(text "BFR0[15..0]" (rect 738 -120 793 -103)(font "Intel Clear" ))
-	(pt 832 -104)
-	(pt 728 -104)
-	(bus)
-)
-(connector
-	(text "R2S[0]" (rect 738 -152 769 -135)(font "Intel Clear" ))
-	(pt 728 -136)
-	(pt 832 -136)
-)
-(connector
-	(pt 728 -88)
-	(pt 752 -88)
-)
-(connector
-	(pt 728 -72)
-	(pt 752 -72)
-)
-(connector
-	(pt 728 -56)
-	(pt 752 -56)
-)
-(connector
-	(text "txIMU[0]" (rect 738 -136 778 -119)(font "Intel Clear" ))
-	(pt 728 -120)
-	(pt 832 -120)
+(symbol
+	(rect 72 192 368 352)
+	(text "IMU_Extraction_Block2" (rect 5 0 140 19)(font "Intel Clear" (font_size 8)))
+	(text "inst2" (rect 8 139 30 156)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Finished_Transmitting" (rect 0 0 132 19)(font "Intel Clear" (font_size 8)))
+		(text "Finished_Transmitting" (rect 21 27 153 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Start_Transmission" (rect 0 0 114 19)(font "Intel Clear" (font_size 8)))
+		(text "Start_Transmission" (rect 21 43 135 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Clock_Input" (rect 0 0 69 19)(font "Intel Clear" (font_size 8)))
+		(text "Clock_Input" (rect 21 59 90 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "MISO_MPU" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "MISO_MPU" (rect 21 75 88 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 296 32)
+		(output)
+		(text "Ready_to_Send" (rect 0 0 94 19)(font "Intel Clear" (font_size 8)))
+		(text "Ready_to_Send" (rect 181 27 275 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 32)(pt 280 32))
+	)
+	(port
+		(pt 296 48)
+		(output)
+		(text "NucleoTx" (rect 0 0 54 19)(font "Intel Clear" (font_size 8)))
+		(text "NucleoTx" (rect 221 43 275 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 48)(pt 280 48))
+	)
+	(port
+		(pt 296 64)
+		(output)
+		(text "Buffer_Data[15..0]" (rect 0 0 110 19)(font "Intel Clear" (font_size 8)))
+		(text "Buffer_Data[15..0]" (rect 165 59 275 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 64)(pt 280 64)(line_width 3))
+	)
+	(port
+		(pt 296 80)
+		(output)
+		(text "MPU_CS" (rect 0 0 51 19)(font "Intel Clear" (font_size 8)))
+		(text "MPU_CS" (rect 224 75 275 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 80)(pt 280 80))
+	)
+	(port
+		(pt 296 96)
+		(output)
+		(text "MPU_MSTR_CLK" (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "MPU_MSTR_CLK" (rect 174 91 275 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 96)(pt 280 96))
+	)
+	(port
+		(pt 296 112)
+		(output)
+		(text "MPU_MOSI" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "MPU_MOSI" (rect 208 107 275 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 112)(pt 280 112))
+	)
+	(drawing
+		(rectangle (rect 16 16 280 144))
+	)
 )
 (connector
 	(text "CLK_1MHz" (rect -502 -144 -449 -127)(font "Intel Clear" ))
@@ -995,48 +1095,6 @@ agreement for further details.
 (connector
 	(pt 824 -328)
 	(pt 968 -328)
-)
-(connector
-	(pt 728 120)
-	(pt 784 120)
-)
-(connector
-	(pt 728 136)
-	(pt 784 136)
-)
-(connector
-	(pt 728 152)
-	(pt 792 152)
-)
-(connector
-	(text "BFR1[15..0]" (rect 762 88 817 105)(font "Intel Clear" ))
-	(pt 832 104)
-	(pt 728 104)
-	(bus)
-)
-(connector
-	(text "txIMU[1]" (rect 770 72 810 89)(font "Intel Clear" ))
-	(pt 728 88)
-	(pt 832 88)
-)
-(connector
-	(text "R2S[1]" (rect 778 56 809 73)(font "Intel Clear" ))
-	(pt 728 72)
-	(pt 832 72)
-)
-(connector
-	(text "StrtTransmission[1]" (rect 298 72 388 89)(font "Intel Clear" ))
-	(pt 288 88)
-	(pt 432 88)
-)
-(connector
-	(text "CLK_1MHz" (rect 298 88 351 105)(font "Intel Clear" ))
-	(pt 288 104)
-	(pt 432 104)
-)
-(connector
-	(pt 432 120)
-	(pt 408 120)
 )
 (connector
 	(text "txDat[15..0]" (rect 178 -480 232 -463)(font "Intel Clear" ))
@@ -1112,16 +1170,6 @@ agreement for further details.
 	(text "SPI_doneTx" (rect 834 -328 889 -311)(font "Intel Clear" ))
 	(pt 824 -312)
 	(pt 968 -312)
-)
-(connector
-	(text "SPI_doneTx" (rect 314 -152 369 -135)(font "Intel Clear" ))
-	(pt 432 -136)
-	(pt 312 -136)
-)
-(connector
-	(text "SPI_doneTx" (rect 314 56 369 73)(font "Intel Clear" ))
-	(pt 432 72)
-	(pt 312 72)
 )
 (connector
 	(pt 400 -360)
@@ -1258,6 +1306,147 @@ agreement for further details.
 (connector
 	(pt 2016 -304)
 	(pt 2016 -272)
+)
+(connector
+	(text "CLK_1MHz" (rect -62 -184 -9 -167)(font "Intel Clear" ))
+	(pt -72 -168)
+	(pt 72 -168)
+)
+(connector
+	(text "StrtTransmission[0]" (rect -62 -200 28 -183)(font "Intel Clear" ))
+	(pt -72 -184)
+	(pt 72 -184)
+)
+(connector
+	(pt 72 -152)
+	(pt 40 -152)
+)
+(connector
+	(text "BFR0[15..0]" (rect 378 -184 433 -167)(font "Intel Clear" ))
+	(pt 472 -168)
+	(pt 368 -168)
+	(bus)
+)
+(connector
+	(text "R2S[0]" (rect 378 -216 409 -199)(font "Intel Clear" ))
+	(pt 368 -200)
+	(pt 472 -200)
+)
+(connector
+	(pt 368 -152)
+	(pt 392 -152)
+)
+(connector
+	(pt 368 -136)
+	(pt 392 -136)
+)
+(connector
+	(pt 368 -120)
+	(pt 392 -120)
+)
+(connector
+	(text "txIMU[0]" (rect 378 -200 418 -183)(font "Intel Clear" ))
+	(pt 368 -184)
+	(pt 472 -184)
+)
+(connector
+	(pt 368 56)
+	(pt 424 56)
+)
+(connector
+	(pt 368 72)
+	(pt 424 72)
+)
+(connector
+	(pt 368 88)
+	(pt 432 88)
+)
+(connector
+	(text "BFR1[15..0]" (rect 402 24 457 41)(font "Intel Clear" ))
+	(pt 472 40)
+	(pt 368 40)
+	(bus)
+)
+(connector
+	(text "txIMU[1]" (rect 410 8 450 25)(font "Intel Clear" ))
+	(pt 368 24)
+	(pt 472 24)
+)
+(connector
+	(text "R2S[1]" (rect 418 -8 449 9)(font "Intel Clear" ))
+	(pt 368 8)
+	(pt 472 8)
+)
+(connector
+	(text "StrtTransmission[1]" (rect -62 8 28 25)(font "Intel Clear" ))
+	(pt -72 24)
+	(pt 72 24)
+)
+(connector
+	(text "CLK_1MHz" (rect -62 24 -9 41)(font "Intel Clear" ))
+	(pt -72 40)
+	(pt 72 40)
+)
+(connector
+	(pt 72 56)
+	(pt 48 56)
+)
+(connector
+	(text "SPI_doneTx" (rect -46 -216 9 -199)(font "Intel Clear" ))
+	(pt 72 -200)
+	(pt -48 -200)
+)
+(connector
+	(text "SPI_doneTx" (rect -46 -8 9 9)(font "Intel Clear" ))
+	(pt 72 8)
+	(pt -48 8)
+)
+(connector
+	(pt 368 272)
+	(pt 424 272)
+)
+(connector
+	(pt 368 288)
+	(pt 424 288)
+)
+(connector
+	(pt 368 304)
+	(pt 432 304)
+)
+(connector
+	(text "R2S[2]" (rect 418 208 449 225)(font "Intel Clear" ))
+	(pt 368 224)
+	(pt 472 224)
+)
+(connector
+	(text "txIMU[2]" (rect 410 224 450 241)(font "Intel Clear" ))
+	(pt 368 240)
+	(pt 472 240)
+)
+(connector
+	(text "BFR2[15..0]" (rect 402 240 457 257)(font "Intel Clear" ))
+	(pt 472 256)
+	(pt 368 256)
+	(bus)
+)
+(connector
+	(text "CLK_1MHz" (rect -62 240 -9 257)(font "Intel Clear" ))
+	(pt -72 256)
+	(pt 72 256)
+)
+(connector
+	(pt 72 272)
+	(pt 48 272)
+)
+(connector
+	(text "SPI_doneTx" (rect -46 208 9 225)(font "Intel Clear" ))
+	(pt 72 224)
+	(pt -48 224)
+)
+(connector
+	(text "StrtTransmission[2]" (rect -62 224 28 241)(font "Intel Clear" ))
+	(pt -72 240)
+	(pt 72 240)
 )
 (junction (pt 2104 -304))
 (junction (pt 2016 -304))

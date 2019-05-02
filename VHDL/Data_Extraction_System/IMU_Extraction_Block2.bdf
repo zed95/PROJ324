@@ -22,7 +22,7 @@ agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 848 432 1016 448)
+	(rect 1408 536 1576 552)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "MISO_MPU" (rect 5 0 60 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -38,7 +38,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 96 280 280 296)
+	(rect 656 384 840 400)
 	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
 	(text "Start_Transmission" (rect 5 0 94 17)(font "Intel Clear" ))
 	(pt 184 8)
@@ -54,7 +54,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 80 264 280 280)
+	(rect 640 368 840 384)
 	(text "INPUT" (rect 157 0 185 10)(font "Arial" (font_size 6)))
 	(text "Finished_Transmitting" (rect 5 0 108 17)(font "Intel Clear" ))
 	(pt 200 8)
@@ -70,9 +70,9 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect -296 416 -128 432)
+	(rect 464 512 632 528)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK_50MHz" (rect 5 0 65 12)(font "Arial" ))
+	(text "Clock_Input" (rect 5 0 61 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -86,7 +86,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1304 416 1480 432)
+	(rect 1864 520 2040 536)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU_CS" (rect 90 0 132 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -102,7 +102,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1304 432 1483 448)
+	(rect 1864 536 2043 552)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU_MSTR_CLK" (rect 90 0 173 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -118,7 +118,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1480 536 1656 552)
+	(rect 1864 568 2040 584)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "MPU_MOSI" (rect 90 0 145 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -134,7 +134,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 816 264 992 280)
+	(rect 1376 368 1552 384)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "NucleoTx" (rect 90 0 133 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -150,7 +150,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1960 400 2149 416)
+	(rect 2520 504 2709 520)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Buffer_Data[15..0]" (rect 90 0 183 12)(font "Arial" ))
 	(pt 0 8)
@@ -166,7 +166,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 816 232 992 248)
+	(rect 1376 336 1552 352)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Ready_to_Send" (rect 90 0 165 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -180,42 +180,161 @@ agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
-(pin
-	(output)
-	(rect 1328 352 1504 368)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "MPU1_CS" (rect 90 0 138 17)(font "Intel Clear" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
+(symbol
+	(rect 1152 528 1368 608)
+	(text "addressBlock" (rect 5 0 71 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
 	)
-)
-(pin
-	(output)
-	(rect 1480 592 1656 608)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "MPU1_MOSI" (rect 90 0 151 17)(font "Intel Clear" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
+	(port
+		(pt 0 48)
+		(input)
+		(text "NXTADD" (rect 0 0 43 12)(font "Arial" ))
+		(text "NXTADD" (rect 21 43 64 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
 	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "ADDRESS[15..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "ADDRESS[15..0]" (rect 124 27 208 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(parameter
+		"AccelxH"
+		"1011101100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelxL"
+		"1011110000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelyH"
+		"1011110100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelyL"
+		"1011111000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelzH"
+		"1011111100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AccelzL"
+		"1100000000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroxH"
+		"1100001100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroxL"
+		"1100010000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroyH"
+		"1100010100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyroyL"
+		"1100011000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyrozH"
+		"1100011100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"GyrozL"
+		"1100100000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Count"
+		"25"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 200 64))
+	)
+	(annotation_block (parameter)(rect 1152 488 1328 528))
 )
 (symbol
-	(rect 472 208 680 320)
+	(rect 1024 176 1232 288)
+	(text "DESrx" (rect 5 0 36 12)(font "Arial" ))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "bufferEmpty" (rect 0 0 63 12)(font "Arial" ))
+		(text "bufferEmpty" (rect 21 43 84 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "DONErx" (rect 0 0 41 12)(font "Arial" ))
+		(text "DONErx" (rect 21 59 62 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "EXTRACT" (rect 0 0 48 12)(font "Arial" ))
+		(text "EXTRACT" (rect 147 27 195 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "NEXT_ADD" (rect 0 0 56 12)(font "Arial" ))
+		(text "NEXT_ADD" (rect 140 43 196 55)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "STORE" (rect 0 0 36 12)(font "Arial" ))
+		(text "STORE" (rect 157 59 193 71)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64))
+	)
+	(parameter
+		"lastAddress"
+		"12"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
+	(annotation_block (parameter)(rect 1232 136 1408 176))
+)
+(symbol
+	(rect 1032 312 1240 424)
 	(text "DEStx" (rect 5 0 36 12)(font "Arial" ))
-	(text "inst15" (rect 8 96 36 113)(font "Intel Clear" ))
+	(text "inst15" (rect 8 96 37 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -270,68 +389,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 1648 376 1864 488)
-	(text "FIFObuffer" (rect 5 0 61 12)(font "Arial" ))
-	(text "inst16" (rect 8 96 36 113)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "storeData" (rect 0 0 48 12)(font "Arial" ))
-		(text "storeData" (rect 21 43 69 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "sendData" (rect 0 0 47 12)(font "Arial" ))
-		(text "sendData" (rect 21 59 68 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "dataIn[dw-1..0]" (rect 0 0 73 12)(font "Arial" ))
-		(text "dataIn[dw-1..0]" (rect 21 75 94 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 216 32)
-		(output)
-		(text "dataOut[dw-1..0]" (rect 0 0 81 12)(font "Arial" ))
-		(text "dataOut[dw-1..0]" (rect 127 27 208 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 3))
-	)
-	(port
-		(pt 216 48)
-		(output)
-		(text "empty" (rect 0 0 31 12)(font "Arial" ))
-		(text "empty" (rect 169 43 200 55)(font "Arial" ))
-		(line (pt 216 48)(pt 200 48))
-	)
-	(parameter
-		"Array_Size"
-		"12"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"dw"
-		"16"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 200 96))
-	)
-	(annotation_block (parameter)(rect 1864 312 2040 376))
-)
-(symbol
-	(rect 1048 392 1272 536)
+	(rect 1608 496 1832 640)
 	(text "spi_master1" (rect 5 0 65 12)(font "Arial" ))
 	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
 	(port
@@ -404,7 +462,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"delay"
-		"1000"
+		"40"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -420,40 +478,12 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 128))
 	)
-	(annotation_block (parameter)(rect 1048 288 1217 383))
+	(annotation_block (parameter)(rect 1600 392 1769 487))
 )
 (symbol
-	(rect -80 392 104 472)
-	(text "CLK_DIVIDER" (rect 5 0 78 12)(font "Arial" ))
-	(text "inst20" (rect 8 64 37 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK_IN" (rect 0 0 38 12)(font "Arial" ))
-		(text "CLK_IN" (rect 21 27 59 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 184 32)
-		(output)
-		(text "CLK_OUT" (rect 0 0 49 12)(font "Arial" ))
-		(text "CLK_OUT" (rect 122 27 171 39)(font "Arial" ))
-		(line (pt 184 32)(pt 168 32))
-	)
-	(parameter
-		"Count"
-		"25"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 168 64))
-	)
-	(annotation_block (parameter)(rect 104 352 280 392))
-)
-(symbol
-	(rect 464 72 672 184)
-	(text "DESrx" (rect 5 0 36 12)(font "Arial" ))
-	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(rect 2208 480 2424 592)
+	(text "FIFObuffer" (rect 5 0 61 12)(font "Arial" ))
+	(text "inst3" (rect 8 96 30 113)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -464,278 +494,205 @@ agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "bufferEmpty" (rect 0 0 63 12)(font "Arial" ))
-		(text "bufferEmpty" (rect 21 43 84 55)(font "Arial" ))
+		(text "storeData" (rect 0 0 48 12)(font "Arial" ))
+		(text "storeData" (rect 21 43 69 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "DONErx" (rect 0 0 41 12)(font "Arial" ))
-		(text "DONErx" (rect 21 59 62 71)(font "Arial" ))
+		(text "sendData" (rect 0 0 47 12)(font "Arial" ))
+		(text "sendData" (rect 21 59 68 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
-		(pt 208 32)
-		(output)
-		(text "EXTRACT" (rect 0 0 48 12)(font "Arial" ))
-		(text "EXTRACT" (rect 147 27 195 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32))
-	)
-	(port
-		(pt 208 48)
-		(output)
-		(text "NEXT_ADD" (rect 0 0 56 12)(font "Arial" ))
-		(text "NEXT_ADD" (rect 140 43 196 55)(font "Arial" ))
-		(line (pt 208 48)(pt 192 48))
-	)
-	(port
-		(pt 208 64)
-		(output)
-		(text "STORE" (rect 0 0 36 12)(font "Arial" ))
-		(text "STORE" (rect 157 59 193 71)(font "Arial" ))
-		(line (pt 208 64)(pt 192 64))
-	)
-	(parameter
-		"lastAddress"
-		"12"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 192 96))
-	)
-	(annotation_block (parameter)(rect 672 32 847 70))
-)
-(symbol
-	(rect 592 424 808 504)
-	(text "IMU_Config_Block" (rect 5 0 97 12)(font "Arial" ))
-	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
+		(pt 0 80)
 		(input)
-		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "NXTADD" (rect 0 0 43 12)(font "Arial" ))
-		(text "NXTADD" (rect 21 43 64 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
+		(text "dataIn[dw-1..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "dataIn[dw-1..0]" (rect 21 75 94 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
 		(pt 216 32)
 		(output)
-		(text "ADDRESS[15..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "ADDRESS[15..0]" (rect 124 27 208 39)(font "Arial" ))
+		(text "dataOut[dw-1..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "dataOut[dw-1..0]" (rect 127 27 208 39)(font "Arial" ))
 		(line (pt 216 32)(pt 200 32)(line_width 3))
 	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "empty" (rect 0 0 31 12)(font "Arial" ))
+		(text "empty" (rect 169 43 200 55)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48))
+	)
 	(parameter
-		"SSF_Accel"
-		"0001110000000000"
+		"Array_Size"
+		"12"
 		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
+		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"SSF_Gyro"
-		"0001101100000000"
+		"dw"
+		"16"
 		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
+		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"MAG_MODE"
-		"0000101000000110"
+		"noIMU"
+		"010"
 		""
 		(type "PARAMETER_UNSIGNED_BIN")	)
 	(drawing
-		(rectangle (rect 16 16 200 64))
+		(rectangle (rect 16 16 200 96))
 	)
-	(annotation_block (parameter)(rect 576 336 848 416))
+	(annotation_block (parameter)(rect 2216 392 2397 468))
 )
 (connector
-	(text "bfrSend" (rect 690 240 726 257)(font "Intel Clear" ))
-	(pt 680 256)
-	(pt 784 256)
+	(text "bfrSend" (rect 1250 344 1286 361)(font "Intel Clear" ))
+	(pt 1240 360)
+	(pt 1344 360)
 )
 (connector
-	(text "bfrEmpty" (rect 362 240 405 257)(font "Intel Clear" ))
-	(pt 472 256)
-	(pt 352 256)
+	(text "bfrEmpty" (rect 922 344 965 361)(font "Intel Clear" ))
+	(pt 1032 360)
+	(pt 912 360)
 )
 (connector
-	(text "CLK_1MHz" (rect 362 224 415 241)(font "Intel Clear" ))
-	(pt 472 240)
-	(pt 352 240)
+	(text "CLK_1MHz" (rect 922 328 975 345)(font "Intel Clear" ))
+	(pt 1032 344)
+	(pt 912 344)
 )
 (connector
-	(pt 680 272)
-	(pt 816 272)
+	(pt 1240 376)
+	(pt 1376 376)
 )
 (connector
-	(pt 472 288)
-	(pt 280 288)
+	(pt 1032 392)
+	(pt 840 392)
 )
 (connector
-	(pt 472 272)
-	(pt 280 272)
+	(pt 1032 376)
+	(pt 840 376)
 )
 (connector
-	(text "XTRACT" (rect 690 88 730 105)(font "Intel Clear" ))
-	(pt 672 104)
-	(pt 776 104)
+	(text "XTRACT" (rect 1250 192 1290 209)(font "Intel Clear" ))
+	(pt 1232 208)
+	(pt 1336 208)
 )
 (connector
-	(text "NXT_ADD" (rect 690 104 737 121)(font "Intel Clear" ))
-	(pt 672 120)
-	(pt 776 120)
+	(text "NXT_ADD" (rect 1250 208 1297 225)(font "Intel Clear" ))
+	(pt 1232 224)
+	(pt 1336 224)
 )
 (connector
-	(text "bfrStore" (rect 682 120 719 137)(font "Intel Clear" ))
-	(pt 672 136)
-	(pt 776 136)
+	(text "bfrStore" (rect 1242 224 1279 241)(font "Intel Clear" ))
+	(pt 1232 240)
+	(pt 1336 240)
 )
 (connector
-	(text "CLK_1MHz" (rect 354 88 407 105)(font "Intel Clear" ))
-	(pt 344 104)
-	(pt 464 104)
+	(text "CLK_1MHz" (rect 914 192 967 209)(font "Intel Clear" ))
+	(pt 904 208)
+	(pt 1024 208)
 )
 (connector
-	(text "bfrEmpty" (rect 354 104 397 121)(font "Intel Clear" ))
-	(pt 344 120)
-	(pt 464 120)
+	(text "bfrEmpty" (rect 914 208 957 225)(font "Intel Clear" ))
+	(pt 904 224)
+	(pt 1024 224)
 )
 (connector
-	(text "FIN" (rect 354 120 369 137)(font "Intel Clear" ))
-	(pt 344 136)
-	(pt 464 136)
+	(text "FIN" (rect 914 224 929 241)(font "Intel Clear" ))
+	(pt 904 240)
+	(pt 1024 240)
 )
 (connector
-	(text "CLK_1MHz" (rect 922 408 975 425)(font "Intel Clear" ))
-	(pt 1048 424)
-	(pt 912 424)
+	(text "CLK_1MHz" (rect 1482 512 1535 529)(font "Intel Clear" ))
+	(pt 1608 528)
+	(pt 1472 528)
 )
 (connector
-	(pt 1048 440)
-	(pt 1016 440)
+	(text "XTRACT" (rect 1482 560 1522 577)(font "Intel Clear" ))
+	(pt 1608 576)
+	(pt 1472 576)
 )
 (connector
-	(text "CLK_1MHz" (rect 498 440 551 457)(font "Intel Clear" ))
-	(pt 488 456)
-	(pt 592 456)
+	(pt 1608 544)
+	(pt 1576 544)
 )
 (connector
-	(text "NXT_ADD" (rect 498 456 545 473)(font "Intel Clear" ))
-	(pt 488 472)
-	(pt 592 472)
-)
-(connector
-	(text "CLK_1MHz" (rect 1530 392 1583 409)(font "Intel Clear" ))
-	(pt 1648 408)
-	(pt 1520 408)
-)
-(connector
-	(text "bfrStore" (rect 1530 408 1567 425)(font "Intel Clear" ))
-	(pt 1648 424)
-	(pt 1520 424)
-)
-(connector
-	(text "bfrSend" (rect 1530 424 1566 441)(font "Intel Clear" ))
-	(pt 1648 440)
-	(pt 1520 440)
-)
-(connector
-	(pt 1864 408)
-	(pt 1960 408)
+	(pt 1608 560)
+	(pt 1368 560)
 	(bus)
 )
 (connector
-	(pt 1768 520)
-	(pt 1960 520)
+	(text "CLK_1MHz" (rect 1058 544 1111 561)(font "Intel Clear" ))
+	(pt 1048 560)
+	(pt 1152 560)
 )
 (connector
-	(pt 1960 520)
-	(pt 1960 424)
+	(text "NXT_ADD" (rect 1058 560 1105 577)(font "Intel Clear" ))
+	(pt 1048 576)
+	(pt 1152 576)
 )
 (connector
-	(text "bfrEmpty" (rect 1874 408 1917 425)(font "Intel Clear" ))
-	(pt 1864 424)
-	(pt 1960 424)
+	(pt 1832 528)
+	(pt 1864 528)
 )
 (connector
-	(text "FIN" (rect 1282 472 1297 489)(font "Intel Clear" ))
-	(pt 1272 488)
-	(pt 1368 488)
+	(pt 1832 544)
+	(pt 1864 544)
 )
 (connector
-	(pt 1272 456)
-	(pt 1648 456)
+	(text "CLK_1MHz" (rect 2090 496 2143 513)(font "Intel Clear" ))
+	(pt 2208 512)
+	(pt 2080 512)
+)
+(connector
+	(text "bfrStore" (rect 2090 512 2127 529)(font "Intel Clear" ))
+	(pt 2208 528)
+	(pt 2080 528)
+)
+(connector
+	(text "bfrSend" (rect 2090 528 2126 545)(font "Intel Clear" ))
+	(pt 2208 544)
+	(pt 2080 544)
+)
+(connector
+	(pt 2424 512)
+	(pt 2520 512)
 	(bus)
 )
 (connector
-	(pt 680 240)
-	(pt 816 240)
+	(pt 2328 624)
+	(pt 2520 624)
 )
 (connector
-	(pt 808 456)
-	(pt 1048 456)
+	(pt 2520 624)
+	(pt 2520 528)
+)
+(connector
+	(text "bfrEmpty" (rect 2466 512 2509 529)(font "Intel Clear" ))
+	(pt 2424 528)
+	(pt 2520 528)
+)
+(connector
+	(text "FIN" (rect 1842 576 1857 593)(font "Intel Clear" ))
+	(pt 1832 592)
+	(pt 1928 592)
+)
+(connector
+	(pt 1832 576)
+	(pt 1864 576)
+)
+(connector
+	(text "CLK_1MHz" (rect 642 504 695 521)(font "Intel Clear" ))
+	(pt 632 520)
+	(pt 736 520)
+)
+(connector
+	(pt 1240 344)
+	(pt 1376 344)
+)
+(connector
+	(pt 2208 560)
+	(pt 1832 560)
 	(bus)
 )
-(connector
-	(text "XTRACT" (rect 922 456 962 473)(font "Intel Clear" ))
-	(pt 912 472)
-	(pt 1048 472)
-)
-(connector
-	(pt 1272 440)
-	(pt 1304 440)
-)
-(connector
-	(text "CLK_1MHz" (rect 106 408 159 425)(font "Intel Clear" ))
-	(pt 104 424)
-	(pt 248 424)
-)
-(connector
-	(pt -80 424)
-	(pt -128 424)
-)
-(connector
-	(pt 1472 472)
-	(pt 1472 544)
-)
-(connector
-	(pt 1472 544)
-	(pt 1480 544)
-)
-(connector
-	(pt 1416 600)
-	(pt 1480 600)
-)
-(connector
-	(pt 1416 600)
-	(pt 1416 472)
-)
-(connector
-	(pt 1272 472)
-	(pt 1416 472)
-)
-(connector
-	(pt 1416 472)
-	(pt 1472 472)
-)
-(connector
-	(pt 1288 360)
-	(pt 1328 360)
-)
-(connector
-	(pt 1288 360)
-	(pt 1288 424)
-)
-(connector
-	(pt 1272 424)
-	(pt 1288 424)
-)
-(connector
-	(pt 1288 424)
-	(pt 1304 424)
-)
-(junction (pt 1416 472))
-(junction (pt 1288 424))
