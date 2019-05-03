@@ -83,10 +83,10 @@ void checkTime() {
   Duration = millis() - timeStart;
   if(Duration > 1000) {
       myPort.write(7);
-      println("Here");
+      connectionStatus = "Disconnected";
       timeStart = millis();
   }
-  
+
 }
 
 
@@ -110,6 +110,8 @@ void draw() {
      flag = 0;        
      myPort.write(65);
      timeStart = millis();
+     connectionStatus = "Connected";
+     
      //Write the received data to file
     // write2File(Gyros[0], Gyros[1], Gyros[2]);      
   }

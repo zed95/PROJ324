@@ -3,6 +3,11 @@ PShape upperArm;
 PShape foreArm;
 PShape Hand;
 
+//Backgorund
+PImage Backgorund;
+
+String connectionStatus = "Disconnected";
+
 //variables for testing purposes
 float rotX, rotY;
 
@@ -33,6 +38,7 @@ void mouseDragged(){
 
 //Load the design into the shape objects and scale.
 void initArm() {
+  Backgorund = loadImage("Background2.jpg");
   upperArm = loadShape("Simulation_Components\\Upper Arm.obj");
   upperArm.scale(10.0);
   
@@ -42,6 +48,16 @@ void initArm() {
   Hand = loadShape("Simulation_Components\\Hand.obj");
 }
 
+void DisplayStatus(String Status) {
+  
+    pushMatrix();
+       translate(10, 30, 0);                //Translate the text to the specified position in the window
+       textSize(27);                            //Set text size
+       fill(0,0,0);                           //Set colour (RGB)
+       text("Status: " + Status, 0, 0);    //Text to be displayed
+    popMatrix(); 
+  
+}
 
 void DisplayAngle(float x, float y, float z, int xpos, int ypos, String armPart, int red, int green, int blue)
 {
@@ -49,21 +65,21 @@ void DisplayAngle(float x, float y, float z, int xpos, int ypos, String armPart,
   
    pushMatrix();
      translate(xpos, ypos, 0);                //Translate the text to the specified position in the window
-     textSize(24);                            //Set text size
+     textSize(27);                            //Set text size
      fill(red,green,blue);                           //Set colour (RGB)
      text(armPart + " x: " + x , 0, 0);    //Text to be displayed
    popMatrix();
    
    pushMatrix();
      translate(xpos, ypos + 30, 0);                //Translate the text to the specified position in the window
-     textSize(24);                            //Set text size
+     textSize(27);                            //Set text size
      fill(red,green,blue);                           //Set colour (RGB)
      text(armPart + " y: " + y , 0, 0);    //Text to be displayed
    popMatrix();
    
    pushMatrix();
      translate(xpos, ypos + 60, 0);                //Translate the text to the specified position in the window
-     textSize(24);                            //Set text size
+     textSize(27);                            //Set text size
      fill(red,green,blue);                           //Set colour (RGB)
      text(armPart + " z: " + z , 0, 0);    //Text to be displayed
    popMatrix();
@@ -75,7 +91,7 @@ void rotateArm() {
     getRotAngles();
     
     //Colour Background
-    background(204);
+    background(Backgorund);
     
     pushMatrix();
     //rotate everything by the upper arm rotation
@@ -101,9 +117,10 @@ void rotateArm() {
   popMatrix(); 
   
   
-DisplayAngle(upperArmRot.y, upperArmRot.x, upperArmRot.z, 10, 30, "Upper Arm", 255, 0, 0);
-DisplayAngle(foreArmRot.y, foreArmRot.x, foreArmRot.z, 10, 150, "Forearm", 0, 130, 0);
-DisplayAngle(handRot.y, handRot.x, handRot.z, 10, 270, "Hand", 0, 0, 170);
+DisplayStatus(connectionStatus);  
+DisplayAngle(upperArmRot.y, upperArmRot.x, upperArmRot.z, 10, 90, "Upper Arm", 255, 0, 0);
+DisplayAngle(foreArmRot.y, foreArmRot.x, foreArmRot.z, 10, 210, "Forearm", 0, 130, 0);
+DisplayAngle(handRot.y, handRot.x, handRot.z, 10, 330, "Hand", 0, 0, 170);
   
 }
 
