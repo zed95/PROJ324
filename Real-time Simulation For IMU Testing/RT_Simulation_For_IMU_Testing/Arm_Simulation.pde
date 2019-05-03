@@ -42,6 +42,34 @@ void initArm() {
   Hand = loadShape("Simulation_Components\\Hand.obj");
 }
 
+
+void DisplayAngle(float x, float y, float z, int xpos, int ypos, String armPart, int red, int green, int blue)
+{
+  //float n = (2*PI/360)*val*100;
+  
+   pushMatrix();
+     translate(xpos, ypos, 0);                //Translate the text to the specified position in the window
+     textSize(24);                            //Set text size
+     fill(red,green,blue);                           //Set colour (RGB)
+     text(armPart + " x: " + x , 0, 0);    //Text to be displayed
+   popMatrix();
+   
+   pushMatrix();
+     translate(xpos, ypos + 30, 0);                //Translate the text to the specified position in the window
+     textSize(24);                            //Set text size
+     fill(red,green,blue);                           //Set colour (RGB)
+     text(armPart + " y: " + y , 0, 0);    //Text to be displayed
+   popMatrix();
+   
+   pushMatrix();
+     translate(xpos, ypos + 60, 0);                //Translate the text to the specified position in the window
+     textSize(24);                            //Set text size
+     fill(red,green,blue);                           //Set colour (RGB)
+     text(armPart + " z: " + z , 0, 0);    //Text to be displayed
+   popMatrix();
+}
+
+
 void rotateArm() {
     //Calculate how much each part has to rotate in the simulation based on obtained data
     getRotAngles();
@@ -71,6 +99,11 @@ void rotateArm() {
     rotateZ(handRot.z*PI/180);
     shape(Hand, 0, 0);            //Display
   popMatrix(); 
+  
+  
+DisplayAngle(upperArmRot.y, upperArmRot.x, upperArmRot.z, 10, 30, "Upper Arm", 255, 0, 0);
+DisplayAngle(foreArmRot.y, foreArmRot.x, foreArmRot.z, 10, 150, "Forearm", 0, 130, 0);
+DisplayAngle(handRot.y, handRot.x, handRot.z, 10, 270, "Hand", 0, 0, 170);
   
 }
 

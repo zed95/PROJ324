@@ -77,19 +77,6 @@ int Duration;
 
 
 
-//------------------------------------Display-The-Angle-Data-Received------------------------------------------
-void DisplayAngle(float val, int xpos, int ypos, String axis )
-{
-  //float n = (2*PI/360)*val*100;
-  
-   pushMatrix();
-     translate(xpos, ypos, 0);                //Translate the text to the specified position in the window
-     textSize(14);                            //Set text size
-     fill(255,0,0);                           //Set colour (RGB)
-     text(axis + "-axis = " + val , 0, 0);    //Text to be displayed
-   popMatrix();
-}
-//------------------------------------Display-The-Angle-Data-Received------------------------------------------
 
 
 void checkTime() {
