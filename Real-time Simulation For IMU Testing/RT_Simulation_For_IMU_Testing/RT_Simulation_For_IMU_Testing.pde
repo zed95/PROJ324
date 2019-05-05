@@ -18,6 +18,7 @@ float xAngle = 0;
 float yAngle = 0;
 float zAngle = 0;
 int Values;
+String oData;
 float[] Gyros;
 
 
@@ -53,23 +54,23 @@ int Duration;
 ///*
 //  -Find a way to not include the serial data that is a null into the csv file as this messes up the data set.
 //*/
-//void processSerialData() {
+void processSerialData() {
+  if(myPort.available() > 0) {
+    oData = myPort.readStringUntil('\n');
+      if(oData == null) {                      //Make the current value equal to the previous value when null is received.
 
-//      if(Values == null) {                      //Make the current value equal to the previous value when null is received.
-//         Values = "0,0,0"; 
-//         Gyros[0] = Gyros[0];
-//         Gyros[1] = Gyros[1];
-//         Gyros[2] = Gyros[2];
-//      }
-//      else {
-//       /*
-//          -Split the string into parts when a comma is encountered
-//          -Convert each number string into float
-//          -store each number converted into an array.
-//      */
-//       Gyros = float(split(Values, ','));      
-//      }
-//}
+      }
+      else {
+       /*
+          -Split the string into parts when a comma is encountered
+          -Convert each number string into float
+          -store each number converted into an array.
+      */
+       Gyros = float(split(oData, ','));    
+      }
+  }
+  write2File(Gyros[0], Gyros[1], Gyros[2]);  
+}
 ////--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
 
 
@@ -102,9 +103,9 @@ void setup() {
 
 //Place all that in a function
 void draw() {
+  processSerialData();
   if(flag == 1) {
      //extract the values from a string, convert to a float and place into an array.
-     //processSerialData();
      //Clear the new data flag
      Byte_to_Float();
      flag = 0;        
@@ -113,10 +114,9 @@ void draw() {
      connectionStatus = "Connected";
      
      //Write the received data to file
-    // write2File(Gyros[0], Gyros[1], Gyros[2]);      
+       
   }
   rotateArm();
-  
   checkTime();
 }
 
@@ -135,37 +135,4 @@ void draw() {
   
 //  Phidget1 = new otPhidget();                                     //Create object to manipulate using the incoming data
 //  bg = loadImage("Background1.jpg");                               //save the background image in bg
-//}
-
-
-
-//void draw()
-//{
-//    background(bg);                           //Display background
-//    readSerialData();                         //Read the serial port 
-//    delay(50);                                //give the poert
-//    CurrTime = millis();
-//    dt = CurrTime - PrevTime;
-//    PrevTime = CurrTime;
-    
-  
-    
-//// nums[0] is now 8, nums[1] is now 67...
-//   // println(xVal);
-//     xAngle = Gyros[0];
-//     yAngle = Gyros[1];
-//     zAngle = Gyros[2];
-     
-    
-//    DisplayAngle(xAngle, 300, 425, "x");        //Display angle x in the simulation
-//    DisplayAngle(yAngle, 300, 455, "y");        //Display angle y in the simulation
-//    DisplayAngle(zAngle, 300, 485, "z");        //Display angle z in the simulation
-    
-//    pushMatrix();                              //Create a new coordinate frame to maniuplate for Phidget2
-//      translate(width/2, height/2, 0);         //Translate the created coordinate frame which is occupied by the Phidget2 to 200x, 250y
-//      rotateX((2*PI/360)*xAngle);                //Rotate object to the specified angle in the x-axis created coordinate frame
-//      rotateY((2*PI/360)*zAngle);                //Rotate object to the specified angle in the y-axis in the created coordinate frame
-//      rotateZ((2*PI/360)*yAngle);                //Rotate object to the specified angle in the z-axis in the created coordinate frame
-//      Phidget1.display();                      //Now that commands to manipulate the object have been specified, display the object in the created coordinate frame
-//    popMatrix();                               //Return to the original coordinate frame
 //}
