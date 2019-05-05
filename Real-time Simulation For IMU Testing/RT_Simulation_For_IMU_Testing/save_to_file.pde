@@ -9,13 +9,18 @@ void initFile() {
   dataIMU.addColumn("z-axis");
 }
 
-void write2File(float xdat, float ydat, float zdat) {
+void write2File(float cfx, float cfy, float cfz, float gx, float gy, float gz, float ax, float ay, float az) {
  TableRow newRow = dataIMU.addRow();
-  newRow.setFloat("x-axis", xdat);
-  newRow.setFloat("y-axis", ydat);
-  newRow.setFloat("z-axis", zdat);
+  newRow.setFloat("cfx-axis", cfx);
+  newRow.setFloat("cfy-axis", cfy);
+  newRow.setFloat("cfz-axis", cfz);
+  newRow.setFloat("gx-axis", gx);
+  newRow.setFloat("gy-axis", gy);
+  newRow.setFloat("gz-axis", gz);
+  newRow.setFloat("ax-axis", ax);
+  newRow.setFloat("ay-axis", ay);
+  newRow.setFloat("az-axis", az);
 }
-
 void saveFile() {
   saveTable(dataIMU, "data/IMUdata.csv");
 }

@@ -50,7 +50,7 @@ int Duration;
 
 
 
-////--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
+//--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
 ///*
 //  -Find a way to not include the serial data that is a null into the csv file as this messes up the data set.
 //*/
@@ -69,9 +69,9 @@ void processSerialData() {
        Gyros = float(split(oData, ','));    
       }
   }
-  write2File(Gyros[0], Gyros[1], Gyros[2]);  
+  write2File(Gyros[0], Gyros[1], Gyros[2], Gyros[3], Gyros[4], Gyros[5], Gyros[6], Gyros[7], Gyros[8]);  
 }
-////--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
+//--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
 
 
 
@@ -103,7 +103,7 @@ void setup() {
 
 //Place all that in a function
 void draw() {
-  processSerialData();
+ // processSerialData();
   if(flag == 1) {
      //extract the values from a string, convert to a float and place into an array.
      //Clear the new data flag

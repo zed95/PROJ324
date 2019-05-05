@@ -18,7 +18,7 @@ IMU IMU2 = new IMU();
 IMU IMU3= new IMU();
 //=========================================================Serial-Setup======================================================================
 void serialSetup() {
-  myPort = new Serial(this, "COM6", 115200);                        //Connect to the port which Nucleo is connected to
+  myPort = new Serial(this, "COM1", 115200);                        //Connect to the port which Nucleo is connected to
   myPort.write(65);                                                 //Send first byte to cause the FPGA to send data request
 }
 //=========================================================Serial-Setup======================================================================
@@ -66,34 +66,34 @@ void Byte_to_Float() {
 //===============================================Converting-Bytes-Back-To-Floats=============================================================
 
 ////===============================================Serial-Interrupt-Service-Routine============================================================
-////Called when new data arrives from serial port
-//void serialEvent(Serial p) { 
+//Called when new data arrives from serial port
+void serialEvent(Serial p) { 
   
-//  //Values = p.readStringUntil('\n');    //Save the string number into variable x
-//  Values = p.read();    //Save the string number into variable x
-//  if(Values == 1 || Values == 2 || Values == 3) {
-//    inOrder = 1;
-//    //println("IMU = " + Values);
-//  }
+  //Values = p.readStringUntil('\n');    //Save the string number into variable x
+  Values = p.read();    //Save the string number into variable x
+  if(Values == 1 || Values == 2 || Values == 3) {
+    inOrder = 1;
+    //println("IMU = " + Values);
+  }
   
-//  //Store data in array
-//  if(inOrder == 1) {
-//    arrayOfBytes[arrPointer] = byte(Values);      //Convert to int then to char and then store in array
-//    arrPointer++;
-//  }
+  //Store data in array
+  if(inOrder == 1) {
+    arrayOfBytes[arrPointer] = byte(Values);      //Convert to int then to char and then store in array
+    arrPointer++;
+  }
   
-//  if(arrPointer == 1) {
-//   //  println("===Start==="); 
-//  }
+  if(arrPointer == 1) {
+   //  println("===Start==="); 
+  }
   
-//    //println(Values);
+    //println(Values);
   
-//  if(arrPointer == 13) {
-//    flag = 1;                           //Raise the new data flag
-//    arrPointer = 0;
-//    inOrder = 0;
-//  //  println("====END==="); 
-//  }
+  if(arrPointer == 13) {
+    flag = 1;                           //Raise the new data flag
+    arrPointer = 0;
+    inOrder = 0;
+  //  println("====END==="); 
+  }
   
-//} 
+} 
 ////===============================================Serial-Interrupt-Service-Routine============================================================
