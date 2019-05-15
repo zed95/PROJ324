@@ -29,12 +29,6 @@ Rotation upperArmRot = new Rotation();
 Rotation foreArmRot = new Rotation();
 Rotation handRot = new Rotation();
 
-//Rotation using mouse for testing purposes.
-void mouseDragged(){
-    rotY -= (mouseX - pmouseX) * 0.01;
-    rotX -= (mouseY - pmouseY) * 0.01;
-}
-
 
 //Load the design into the shape objects and scale.
 void initArm() {
@@ -96,7 +90,7 @@ void rotateArm() {
     pushMatrix();
     //rotate everything by the upper arm rotation
     translate(width/2,height/3);    //Translate everything to middle of screen
-    rotateX((-upperArmRot.y + 90)*PI/180);
+    rotateX((-upperArmRot.y + 90)*PI/180);                      //Add 90 offset to make zero position the positon where the IMU reads 0 
     rotateY(upperArmRot.x*PI/180);
     //rotateZ(upperArmRot.z*PI/180);
     shape(upperArm, 0, 0);          //Display
@@ -111,7 +105,7 @@ void rotateArm() {
     //rotate hand by the rotation of the hand
     translate(0,height/5);          //Translate hand lower then the upper arm and forearm
     rotateX(handRot.y*PI/180);
-    rotateY(handRot.x*PI/180);
+    rotateY((180 + handRot.x)*PI/180);
     rotateZ(handRot.z*PI/180);
     shape(Hand, 0, 0);            //Display
   popMatrix(); 
@@ -120,7 +114,7 @@ void rotateArm() {
 DisplayStatus(connectionStatus);  
 DisplayAngle(upperArmRot.y, upperArmRot.x, upperArmRot.z, 10, 90, "Upper Arm", 255, 0, 0);
 DisplayAngle(foreArmRot.y, foreArmRot.x, foreArmRot.z, 10, 210, "Forearm", 0, 130, 0);
-DisplayAngle(handRot.y, handRot.x, handRot.z, 10, 330, "Hand", 0, 0, 170);
+DisplayAngle(IMU3.y, IMU3.x, IMU3.z, 10, 330, "Hand", 0, 0, 170);
   
 }
 

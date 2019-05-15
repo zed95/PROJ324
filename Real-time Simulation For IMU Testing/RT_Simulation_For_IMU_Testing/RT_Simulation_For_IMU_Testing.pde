@@ -5,7 +5,7 @@ float xVal = 0;
 float yVal = 0;
 float zVal = 0;
 
-otPhidget Phidget1;
+
 PImage bg;
 
 //---------Timer-Variables----------//
@@ -14,12 +14,10 @@ int CurrTime = 0;
 int dt = 0;
 //---------Timer-Variables----------//
 
-float xAngle = 0;
-float yAngle = 0;
-float zAngle = 0;
+
 int Values;
 String oData;
-float[] Gyros;
+float[] Gyros = new float[9];
 
 
 
@@ -28,7 +26,6 @@ float[] arrayOfFloats = new float[num];
 float[] arrayOfFloats1 = new float[num];
 
 
-float xx, y, z;
 int flag = 0;
 int counter = 0;
 
@@ -66,10 +63,10 @@ void processSerialData() {
           -Convert each number string into float
           -store each number converted into an array.
       */
-       Gyros = float(split(oData, ','));    
+       Gyros = float(split(oData, ','));  
+        write2File(Gyros[0], Gyros[1], Gyros[2], Gyros[3], Gyros[4], Gyros[5], Gyros[6], Gyros[7], Gyros[8]);  
       }
   }
-  write2File(Gyros[0], Gyros[1], Gyros[2], Gyros[3], Gyros[4], Gyros[5], Gyros[6], Gyros[7], Gyros[8]);  
 }
 //--------------------------------------Read-Data-From-Serial-Port--------------------------------------------
 
@@ -77,62 +74,39 @@ void processSerialData() {
 
 
 
-
-
-
 void checkTime() {
   Duration = millis() - timeStart;
-  if(Duration > 1000) {
-      myPort.write(7);
-      connectionStatus = "Disconnected";
-      timeStart = millis();
+  if(Duration > 1000) {                    //Id no data has been read in 1 second then the connection is considerred lost
+      myPort.write(7);                     //send dummy byte to try to restart the communication
+      connectionStatus = "Disconnected";  //Display this in the simulation in the status
+      timeStart = millis();               //Start counting again
   }
 
 }
-
 
 
 void setup() {
-    size(1500, 1000, P3D);
-  //Create CSV file to whicht he data will be saved.
+  size(1500, 1000, P3D);
+  //Initialise arm objects
   initArm();
+  //Create CSV file to whicht he data will be saved.
   initFile();  
+  //setup serial communication
   serialSetup();
+  //start counting
   timeStart = millis();
 }
 
-//Place all that in a function
 void draw() {
- // processSerialData();
+  //processSerialData();            //Used for saving data to file.
   if(flag == 1) {
-     //extract the values from a string, convert to a float and place into an array.
-     //Clear the new data flag
-     Byte_to_Float();
-     flag = 0;        
-     myPort.write(65);
-     timeStart = millis();
-     connectionStatus = "Connected";
+     Byte_to_Float();              //convert the received data back to floating point
+     flag = 0;                     //clear the new data flag
+     myPort.write(65);             //send dummy byte to send another request for data
+     timeStart = millis();         //restart the counter which is used to count if 1 second has passed.
+     connectionStatus = "Connected";  //if the new data was recevied then the status is considered connected
      
-     //Write the received data to file
-       
   }
-  rotateArm();
-  checkTime();
+  rotateArm();      //Rotate the arm based on received data
+  checkTime();      //check whether more than 1 second has passed
 }
-
-
-//void setup()
-//{
-//  size(700,500,P3D); 
-//  // I know that the first port in the serial list on my mac
-//  // is Serial.list()[0].
-//  // On Windows machines, this generally opens COM1.
-//  // Open whatever port is the one you're using.
-//  //String portName = Serial.list()[0];                           //change the 0 to a 1 or 2 etc. to match your port
-//  PrevTime = millis();
-  
-//  myPort = new Serial(this, "COM6", 115200);                        //Connect to the port which Nucleo is connected to
-  
-//  Phidget1 = new otPhidget();                                     //Create object to manipulate using the incoming data
-//  bg = loadImage("Background1.jpg");                               //save the background image in bg
-//}
