@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed May 01 20:13:34 2019
+Fitter Status : Successful - Tue May 14 21:06:54 2019
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : Data_Extraction_System
 Top-level Entity Name : Data_Extraction_System
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 2,204 / 22,320 ( 10 % )
-    Total combinational functions : 2,089 / 22,320 ( 9 % )
-    Dedicated logic registers : 1,349 / 22,320 ( 6 % )
-Total registers : 1349
+Total logic elements : 2,296 / 22,320 ( 10 % )
+    Total combinational functions : 2,163 / 22,320 ( 10 % )
+    Dedicated logic registers : 1,421 / 22,320 ( 6 % )
+Total registers : 1421
 Total pins : 28 / 154 ( 18 % )
 Total virtual pins : 0
-Total memory bits : 300 / 608,256 ( < 1 % )
+Total memory bits : 456 / 608,256 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

@@ -100,11 +100,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "MISO_MPU",
+					"name" : "MISO2_MPU",
 					"strict" : false
 				},
 				{
 					"name" : "MISO1_MPU",
+					"strict" : false
+				},
+				{
+					"name" : "MISO_MPU",
 					"strict" : false
 				},
 				{

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Data_Extraction_System
-Wed May 01 20:13:13 2019
+Tue May 14 21:06:33 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -33,36 +33,38 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
  25. Inverted Register Statistics
  26. Registers Added for RAM Pass-Through Logic
  27. Multiplexer Restructuring Statistics (Restructuring Performed)
- 28. Source assignments for IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated
- 29. Source assignments for IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated
- 30. Parameter Settings for User Entity Instance: spi_master1:inst11
- 31. Parameter Settings for User Entity Instance: CLK_DIVIDER:inst20
- 32. Parameter Settings for User Entity Instance: accessControl:inst5
- 33. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|spi_master1:inst4
- 34. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DESrx:inst
- 35. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3
- 36. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DEStx:inst15
- 37. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst2
- 38. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst5
- 39. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|spi_master1:inst4
- 40. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|DESrx:inst
- 41. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|FIFObuffer:inst3
- 42. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|DEStx:inst15
- 43. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|addressBlock:inst2
- 44. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|spi_master1:inst4
- 45. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|DESrx:inst
- 46. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|FIFObuffer:inst3
- 47. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|DEStx:inst15
- 48. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|addressBlock:inst2
- 49. Parameter Settings for User Entity Instance: UART_Receiver:inst15
- 50. Parameter Settings for User Entity Instance: Reset_Timer:inst1
- 51. Parameter Settings for User Entity Instance: UART_TransmitterX:inst14
- 52. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0
- 53. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0
- 54. altsyncram Parameter Settings by Entity Instance
- 55. Post-Synthesis Netlist Statistics for Top Partition
- 56. Elapsed Time Per Partition
- 57. Analysis & Synthesis Messages
+ 28. Source assignments for IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated
+ 29. Source assignments for IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated
+ 30. Source assignments for IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated
+ 31. Parameter Settings for User Entity Instance: spi_master1:inst11
+ 32. Parameter Settings for User Entity Instance: CLK_DIVIDER:inst20
+ 33. Parameter Settings for User Entity Instance: accessControl:inst5
+ 34. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|spi_master1:inst4
+ 35. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DESrx:inst
+ 36. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3
+ 37. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|DEStx:inst15
+ 38. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst2
+ 39. Parameter Settings for User Entity Instance: IMU_Extraction_Block:inst|addressBlock:inst5
+ 40. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|spi_master1:inst4
+ 41. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|DESrx:inst
+ 42. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|FIFObuffer:inst3
+ 43. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|DEStx:inst15
+ 44. Parameter Settings for User Entity Instance: IMU_Extraction_Block1:inst3|addressBlock:inst2
+ 45. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|spi_master1:inst4
+ 46. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|DESrx:inst
+ 47. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|FIFObuffer:inst3
+ 48. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|DEStx:inst15
+ 49. Parameter Settings for User Entity Instance: IMU_Extraction_Block2:inst2|addressBlock:inst2
+ 50. Parameter Settings for User Entity Instance: UART_Receiver:inst15
+ 51. Parameter Settings for User Entity Instance: Reset_Timer:inst1
+ 52. Parameter Settings for User Entity Instance: UART_TransmitterX:inst14
+ 53. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0
+ 54. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0
+ 55. Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0
+ 56. altsyncram Parameter Settings by Entity Instance
+ 57. Post-Synthesis Netlist Statistics for Top Partition
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
 
 
 
@@ -89,18 +91,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 01 20:13:13 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 14 21:06:33 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; Data_Extraction_System                      ;
 ; Top-level Entity Name              ; Data_Extraction_System                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,271                                       ;
-;     Total combinational functions  ; 2,088                                       ;
-;     Dedicated logic registers      ; 1,349                                       ;
-; Total registers                    ; 1349                                        ;
+; Total logic elements               ; 2,370                                       ;
+;     Total combinational functions  ; 2,161                                       ;
+;     Dedicated logic registers      ; 1,421                                       ;
+; Total registers                    ; 1421                                        ;
 ; Total pins                         ; 28                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 300                                         ;
+; Total memory bits                  ; 456                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -205,7 +207,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 ;     Processor 5            ;   0.1%      ;
@@ -254,31 +256,31 @@ agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 2,271                      ;
+; Estimated Total logic elements              ; 2,370                      ;
 ;                                             ;                            ;
-; Total combinational functions               ; 2088                       ;
+; Total combinational functions               ; 2161                       ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 736                        ;
-;     -- 3 input functions                    ; 253                        ;
-;     -- <=2 input functions                  ; 1099                       ;
+;     -- 4 input functions                    ; 747                        ;
+;     -- 3 input functions                    ; 276                        ;
+;     -- <=2 input functions                  ; 1138                       ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 1178                       ;
-;     -- arithmetic mode                      ; 910                        ;
+;     -- normal mode                          ; 1220                       ;
+;     -- arithmetic mode                      ; 941                        ;
 ;                                             ;                            ;
-; Total registers                             ; 1349                       ;
-;     -- Dedicated logic registers            ; 1349                       ;
+; Total registers                             ; 1421                       ;
+;     -- Dedicated logic registers            ; 1421                       ;
 ;     -- I/O registers                        ; 0                          ;
 ;                                             ;                            ;
 ; I/O pins                                    ; 28                         ;
-; Total memory bits                           ; 300                        ;
+; Total memory bits                           ; 456                        ;
 ;                                             ;                            ;
 ; Embedded Multiplier 9-bit elements          ; 0                          ;
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; CLK_DIVIDER:inst20|CLK_OUT ;
-; Maximum fan-out                             ; 1371                       ;
-; Total fan-out                               ; 9870                       ;
-; Average fan-out                             ; 2.81                       ;
+; Maximum fan-out                             ; 1456                       ;
+; Total fan-out                               ; 10408                      ;
+; Average fan-out                             ; 2.83                       ;
 +---------------------------------------------+----------------------------+
 
 
@@ -287,34 +289,36 @@ agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name            ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |Data_Extraction_System                      ; 2088 (0)            ; 1349 (0)                  ; 300         ; 0            ; 0       ; 0         ; 28   ; 0            ; |Data_Extraction_System                                                                                                       ; Data_Extraction_System ; work         ;
+; |Data_Extraction_System                      ; 2161 (0)            ; 1421 (0)                  ; 456         ; 0            ; 0       ; 0         ; 28   ; 0            ; |Data_Extraction_System                                                                                                       ; Data_Extraction_System ; work         ;
 ;    |CLK_DIVIDER:inst20|                      ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|CLK_DIVIDER:inst20                                                                                    ; CLK_DIVIDER            ; work         ;
-;    |IMU_Extraction_Block1:inst3|             ; 518 (0)             ; 344 (0)                   ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3                                                                           ; IMU_Extraction_Block1  ; work         ;
+;    |IMU_Extraction_Block1:inst3|             ; 519 (0)             ; 344 (0)                   ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3                                                                           ; IMU_Extraction_Block1  ; work         ;
 ;       |DESrx:inst|                           ; 50 (50)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DESrx:inst                                                                ; DESrx                  ; work         ;
 ;       |DEStx:inst15|                         ; 56 (56)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15                                                              ; DEStx                  ; work         ;
-;       |FIFObuffer:inst3|                     ; 40 (40)             ; 37 (37)                   ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3                                                          ; FIFObuffer             ; work         ;
+;       |FIFObuffer:inst3|                     ; 41 (41)             ; 37 (37)                   ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3                                                          ; FIFObuffer             ; work         ;
 ;          |altsyncram:datArray_rtl_0|         ; 0 (0)               ; 0 (0)                     ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0                                ; altsyncram             ; work         ;
 ;             |altsyncram_ecc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated ; altsyncram_ecc1        ; work         ;
-;       |addressBlock:inst2|                   ; 108 (108)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|addressBlock:inst2                                                        ; addressBlock           ; work         ;
-;       |spi_master1:inst4|                    ; 264 (264)           ; 192 (192)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|spi_master1:inst4                                                         ; spi_master1            ; work         ;
-;    |IMU_Extraction_Block2:inst2|             ; 407 (0)             ; 241 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2                                                                           ; IMU_Extraction_Block2  ; work         ;
+;       |addressBlock:inst2|                   ; 107 (107)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|addressBlock:inst2                                                        ; addressBlock           ; work         ;
+;       |spi_master1:inst4|                    ; 265 (265)           ; 192 (192)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|spi_master1:inst4                                                         ; spi_master1            ; work         ;
+;    |IMU_Extraction_Block2:inst2|             ; 471 (0)             ; 312 (0)                   ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2                                                                           ; IMU_Extraction_Block2  ; work         ;
 ;       |DESrx:inst|                           ; 50 (50)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|DESrx:inst                                                                ; DESrx                  ; work         ;
 ;       |DEStx:inst15|                         ; 56 (56)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|DEStx:inst15                                                              ; DEStx                  ; work         ;
-;       |FIFObuffer:inst3|                     ; 34 (34)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3                                                          ; FIFObuffer             ; work         ;
-;       |addressBlock:inst2|                   ; 106 (106)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|addressBlock:inst2                                                        ; addressBlock           ; work         ;
-;       |spi_master1:inst4|                    ; 161 (161)           ; 111 (111)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|spi_master1:inst4                                                         ; spi_master1            ; work         ;
-;    |IMU_Extraction_Block:inst|               ; 477 (0)             ; 311 (0)                   ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst                                                                             ; IMU_Extraction_Block   ; work         ;
+;       |FIFObuffer:inst3|                     ; 40 (40)             ; 37 (37)                   ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3                                                          ; FIFObuffer             ; work         ;
+;          |altsyncram:datArray_rtl_0|         ; 0 (0)               ; 0 (0)                     ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0                                ; altsyncram             ; work         ;
+;             |altsyncram_ecc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 156         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated ; altsyncram_ecc1        ; work         ;
+;       |addressBlock:inst2|                   ; 105 (105)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|addressBlock:inst2                                                        ; addressBlock           ; work         ;
+;       |spi_master1:inst4|                    ; 220 (220)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|spi_master1:inst4                                                         ; spi_master1            ; work         ;
+;    |IMU_Extraction_Block:inst|               ; 470 (0)             ; 311 (0)                   ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst                                                                             ; IMU_Extraction_Block   ; work         ;
 ;       |DESrx:inst|                           ; 50 (50)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|DESrx:inst                                                                  ; DESrx                  ; work         ;
 ;       |DEStx:inst15|                         ; 56 (56)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15                                                                ; DEStx                  ; work         ;
 ;       |FIFObuffer:inst3|                     ; 36 (36)             ; 36 (36)                   ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3                                                            ; FIFObuffer             ; work         ;
 ;          |altsyncram:datArray_rtl_0|         ; 0 (0)               ; 0 (0)                     ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0                                  ; altsyncram             ; work         ;
 ;             |altsyncram_ccc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 144         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated   ; altsyncram_ccc1        ; work         ;
-;       |addressBlock:inst2|                   ; 116 (116)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2                                                          ; addressBlock           ; work         ;
-;       |spi_master1:inst4|                    ; 219 (219)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|spi_master1:inst4                                                           ; spi_master1            ; work         ;
+;       |addressBlock:inst2|                   ; 108 (108)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2                                                          ; addressBlock           ; work         ;
+;       |spi_master1:inst4|                    ; 220 (220)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|IMU_Extraction_Block:inst|spi_master1:inst4                                                           ; spi_master1            ; work         ;
 ;    |Reset_Timer:inst1|                       ; 45 (45)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|Reset_Timer:inst1                                                                                     ; Reset_Timer            ; work         ;
 ;    |UART_Receiver:inst15|                    ; 51 (51)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|UART_Receiver:inst15                                                                                  ; UART_Receiver          ; work         ;
 ;    |UART_TransmitterX:inst14|                ; 210 (210)           ; 168 (168)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|UART_TransmitterX:inst14                                                                              ; UART_TransmitterX      ; work         ;
-;    |accessControl:inst5|                     ; 95 (95)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|accessControl:inst5                                                                                   ; accessControl          ; work         ;
+;    |accessControl:inst5|                     ; 110 (110)           ; 50 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|accessControl:inst5                                                                                   ; accessControl          ; work         ;
 ;    |spi_master1:inst11|                      ; 276 (276)           ; 176 (176)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Data_Extraction_System|spi_master1:inst11                                                                                    ; spi_master1            ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -326,6 +330,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 12           ; 13           ; 12           ; 13           ; 156  ; None ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 12           ; 13           ; 12           ; 13           ; 156  ; None ;
 ; IMU_Extraction_Block:inst|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ccc1:auto_generated|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 12           ; 12           ; 12           ; 12           ; 144  ; None ;
 +------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
@@ -531,6 +536,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; IMU_Extraction_Block1:inst3|addressBlock:inst2|ADDRESS[0..7]    ; Stuck at GND due to stuck port data_in                                      ;
 ; IMU_Extraction_Block:inst|addressBlock:inst2|ADDRESS[0..7]      ; Stuck at GND due to stuck port data_in                                      ;
 ; IMU_Extraction_Block2:inst2|addressBlock:inst2|ADDRESS[12]      ; Merged with IMU_Extraction_Block2:inst2|addressBlock:inst2|ADDRESS[13]      ;
+; IMU_Extraction_Block2:inst2|spi_master1:inst4|rxd               ; Merged with IMU_Extraction_Block2:inst2|spi_master1:inst4|txCPHA            ;
 ; IMU_Extraction_Block1:inst3|addressBlock:inst2|ADDRESS[12]      ; Merged with IMU_Extraction_Block1:inst3|addressBlock:inst2|ADDRESS[13]      ;
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|rxd               ; Merged with IMU_Extraction_Block1:inst3|spi_master1:inst4|txCPHA            ;
 ; IMU_Extraction_Block:inst|addressBlock:inst2|ADDRESS[12]        ; Merged with IMU_Extraction_Block:inst|addressBlock:inst2|ADDRESS[13]        ;
@@ -539,7 +545,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; spi_master1:inst11|txCPHA                                       ; Merged with spi_master1:inst11|rtc                                          ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|txCPHA              ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|rtc                 ;
 ; spi_master1:inst11|state_tr                                     ; Merged with spi_master1:inst11|state_clk                                    ;
-; accessControl:inst5|dataOut[14,15]                              ; Merged with accessControl:inst5|dataOut[10]                                 ;
+; accessControl:inst5|dataOut[15]                                 ; Merged with accessControl:inst5|dataOut[10]                                 ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|state_tr            ; Merged with IMU_Extraction_Block:inst|spi_master1:inst4|state_clk           ;
 ; IMU_Extraction_Block2:inst2|spi_master1:inst4|delay_counter[31] ; Merged with IMU_Extraction_Block1:inst3|spi_master1:inst4|delay_counter[31] ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|delay_counter[31]   ; Merged with IMU_Extraction_Block1:inst3|spi_master1:inst4|delay_counter[31] ;
@@ -801,12 +807,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1349  ;
+; Total registers                              ; 1421  ;
 ; Number of registers using Synchronous Clear  ; 32    ;
-; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 933   ;
+; Number of registers using Clock Enable       ; 974   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -826,13 +832,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; IMU_Extraction_Block2:inst2|spi_master1:inst4|CSU    ; 1       ;
 ; UART_TransmitterX:inst14|idx[0]                      ; 66      ;
 ; spi_master1:inst11|pstate                            ; 1       ;
-; IMU_Extraction_Block:inst|spi_master1:inst4|PP[4]    ; 1       ;
+; IMU_Extraction_Block2:inst2|spi_master1:inst4|PP[4]  ; 1       ;
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|PP[4]  ; 1       ;
+; IMU_Extraction_Block:inst|spi_master1:inst4|PP[4]    ; 1       ;
 ; IMU_Extraction_Block:inst|spi_master1:inst4|pstate   ; 1       ;
 ; spi_master1:inst11|PP[4]                             ; 1       ;
 ; IMU_Extraction_Block1:inst3|spi_master1:inst4|pstate ; 1       ;
 ; IMU_Extraction_Block2:inst2|spi_master1:inst4|pstate ; 1       ;
-; Total number of inverted registers = 16              ;         ;
+; Total number of inverted registers = 17              ;         ;
 +------------------------------------------------------+---------+
 
 
@@ -841,6 +848,28 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------------------------------+-------------------------------------------------------------+
 ; Register Name                                                          ; RAM Name                                                    ;
 +------------------------------------------------------------------------+-------------------------------------------------------------+
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[0]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[1]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[2]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[3]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[4]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[5]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[6]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[7]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[8]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[9]  ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[10] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[11] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[12] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[13] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[14] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[15] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[16] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[17] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[18] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[19] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[20] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
+; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0_bypass[21] ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0 ;
 ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[0]  ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0 ;
 ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[1]  ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0 ;
 ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0_bypass[2]  ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0 ;
@@ -892,37 +921,46 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|UART_TransmitterX:inst14|clkcount[1]                    ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Data_Extraction_System|Reset_Timer:inst1|Counter[31]                           ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Data_Extraction_System|accessControl:inst5|idx[2]                              ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3|OS[3]      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3|FS[3]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|UART_TransmitterX:inst14|clkcount[2]                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Data_Extraction_System|Reset_Timer:inst1|Counter[17]                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Data_Extraction_System|accessControl:inst5|idx[0]                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3|FS[2]      ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|FS[3]      ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|FS[0]        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|UART_Receiver:inst15|clkcount[3]                        ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3|NS[3]      ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[2]      ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[3]        ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 31 LEs               ; 124 LEs                ; Yes        ; |Data_Extraction_System|UART_TransmitterX:inst14|idx[9]                         ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |Data_Extraction_System|accessControl:inst5|dataOut[0]                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|UART_Receiver:inst15|clkcount[1]                        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3|NS[2]      ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|NS[3]      ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|NS[0]        ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 31 LEs               ; 124 LEs                ; Yes        ; |Data_Extraction_System|UART_TransmitterX:inst14|idx[16]                        ;
+; 7:1                ; 12 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |Data_Extraction_System|accessControl:inst5|dataOut[0]                          ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|addressBlock:inst2|addNo      ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|addressBlock:inst2|addNo    ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|addressBlock:inst2|addNo    ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3|state      ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|state      ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|state        ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Data_Extraction_System|accessControl:inst5|Mux1                                ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|Selector29 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Data_Extraction_System|accessControl:inst5|Mux0                                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|FIFObuffer:inst3|Selector26 ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|FIFObuffer:inst3|Selector26 ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|FIFObuffer:inst3|Selector28   ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|UART_Receiver:inst15|Selector1                          ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|UART_Receiver:inst15|Selector4                          ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |Data_Extraction_System|UART_Receiver:inst15|Selector0                          ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|DEStx:inst15|Selector0      ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|Selector4      ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|Selector4        ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|DEStx:inst15|Selector5      ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|Selector2      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block2:inst2|DEStx:inst15|Selector2      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block1:inst3|DEStx:inst15|Selector5      ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Data_Extraction_System|IMU_Extraction_Block:inst|DEStx:inst15|Selector2        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0|altsyncram_ecc1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
@@ -1226,6 +1264,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0 ;
++------------------------------------+----------------------+-------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                        ;
++------------------------------------+----------------------+-------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                     ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                     ;
+; WIDTH_A                            ; 13                   ; Untyped                                                     ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                                     ;
+; NUMWORDS_A                         ; 12                   ; Untyped                                                     ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                     ;
+; WIDTH_B                            ; 13                   ; Untyped                                                     ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                                     ;
+; NUMWORDS_B                         ; 12                   ; Untyped                                                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                     ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                     ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                     ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                     ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                     ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                     ;
+; CBXI_PARAMETER                     ; altsyncram_ecc1      ; Untyped                                                     ;
++------------------------------------+----------------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0 ;
 +------------------------------------+----------------------+-------------------------------------------------------------+
 ; Parameter Name                     ; Value                ; Type                                                        ;
@@ -1352,7 +1451,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+------------------------------------------------------------------------+
 ; Name                                      ; Value                                                                  ;
 +-------------------------------------------+------------------------------------------------------------------------+
-; Number of entity instances                ; 2                                                                      ;
+; Number of entity instances                ; 3                                                                      ;
+; Entity Instance                           ; IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                              ;
+;     -- WIDTH_A                            ; 13                                                                     ;
+;     -- NUMWORDS_A                         ; 12                                                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                           ;
+;     -- WIDTH_B                            ; 13                                                                     ;
+;     -- NUMWORDS_B                         ; 12                                                                     ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                              ;
 ; Entity Instance                           ; IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                              ;
 ;     -- WIDTH_A                            ; 13                                                                     ;
@@ -1384,26 +1494,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 1349                        ;
+; cycloneiii_ff         ; 1421                        ;
 ;     CLR               ; 16                          ;
-;     ENA               ; 921                         ;
+;     ENA               ; 950                         ;
 ;     ENA CLR           ; 4                           ;
-;     ENA SLD           ; 8                           ;
+;     ENA SLD           ; 20                          ;
 ;     SCLR              ; 32                          ;
-;     plain             ; 368                         ;
-; cycloneiii_lcell_comb ; 2088                        ;
-;     arith             ; 910                         ;
-;         2 data inputs ; 909                         ;
+;     plain             ; 399                         ;
+; cycloneiii_lcell_comb ; 2161                        ;
+;     arith             ; 941                         ;
+;         2 data inputs ; 940                         ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 1178                        ;
-;         1 data inputs ; 53                          ;
-;         2 data inputs ; 137                         ;
-;         3 data inputs ; 252                         ;
-;         4 data inputs ; 736                         ;
-; cycloneiii_ram_block  ; 25                          ;
+;     normal            ; 1220                        ;
+;         1 data inputs ; 56                          ;
+;         2 data inputs ; 142                         ;
+;         3 data inputs ; 275                         ;
+;         4 data inputs ; 747                         ;
+; cycloneiii_ram_block  ; 38                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.70                       ;
-; Average LUT depth     ; 5.54                        ;
+; Max LUT depth         ; 12.10                       ;
+; Average LUT depth     ; 5.52                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1422,7 +1532,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed May 01 20:12:57 2019
+    Info: Processing started: Tue May 14 21:06:18 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Data_Extraction_System -c Data_Extraction_System
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1660,11 +1770,27 @@ Info (10041): Inferred latch for "oRx[6]" at UART_Receiver.vhd(91) File: C:/User
 Info (10041): Inferred latch for "oRx[7]" at UART_Receiver.vhd(91) File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_Receiver.vhd Line: 91
 Info (12128): Elaborating entity "Reset_Timer" for hierarchy "Reset_Timer:inst1"
 Info (12128): Elaborating entity "UART_TransmitterX" for hierarchy "UART_TransmitterX:inst14"
+Warning (276020): Inferred RAM node "IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "IMU_Extraction_Block:inst|FIFObuffer:inst3|datArray_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "UART_TransmitterX:inst14|datArray" is uninferred due to inappropriate RAM size File: C:/Users/Zed/Desktop/PROJ324 - Project Folder/PROJ324/VHDL/Data_Extraction_System/UART_TransmitterX.vhd Line: 27
-Info (19000): Inferred 2 megafunctions from design logic
+Info (19000): Inferred 3 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "IMU_Extraction_Block2:inst2|FIFObuffer:inst3|datArray_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 13
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 12
+        Info (286033): Parameter WIDTH_B set to 13
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 12
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
     Info (276029): Inferred altsyncram megafunction from the following design logic: "IMU_Extraction_Block1:inst3|FIFObuffer:inst3|datArray_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 13
@@ -1695,8 +1821,8 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-Info (12130): Elaborated megafunction instantiation "IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0"
-Info (12133): Instantiated megafunction "IMU_Extraction_Block1:inst3|FIFObuffer:inst3|altsyncram:datArray_rtl_0" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0"
+Info (12133): Instantiated megafunction "IMU_Extraction_Block2:inst2|FIFObuffer:inst3|altsyncram:datArray_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTH_A" = "13"
     Info (12134): Parameter "WIDTHAD_A" = "4"
@@ -1741,17 +1867,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 112 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "MISO2_MPU"
-Info (21057): Implemented 2918 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3072 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 2865 logic cells
-    Info (21064): Implemented 25 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Wed May 01 20:13:13 2019
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:27
+    Info (21061): Implemented 3006 logic cells
+    Info (21064): Implemented 38 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Tue May 14 21:06:33 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:25
 
 

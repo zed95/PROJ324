@@ -1,5 +1,5 @@
 Flow report for Data_Extraction_System
-Wed May 01 20:13:48 2019
+Tue May 14 21:07:08 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 01 20:13:48 2019       ;
+; Flow Status                        ; Successful - Tue May 14 21:07:08 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; Data_Extraction_System                      ;
 ; Top-level Entity Name              ; Data_Extraction_System                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,204 / 22,320 ( 10 % )                     ;
-;     Total combinational functions  ; 2,089 / 22,320 ( 9 % )                      ;
-;     Dedicated logic registers      ; 1,349 / 22,320 ( 6 % )                      ;
-; Total registers                    ; 1349                                        ;
+; Total logic elements               ; 2,296 / 22,320 ( 10 % )                     ;
+;     Total combinational functions  ; 2,163 / 22,320 ( 10 % )                     ;
+;     Dedicated logic registers      ; 1,421 / 22,320 ( 6 % )                      ;
+; Total registers                    ; 1421                                        ;
 ; Total pins                         ; 28 / 154 ( 18 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 300 / 608,256 ( < 1 % )                     ;
+; Total memory bits                  ; 456 / 608,256 ( < 1 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 05/01/2019 20:12:57    ;
+; Start date & time ; 05/14/2019 21:06:18    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; Data_Extraction_System ;
 +-------------------+------------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+----------------------------------------------------+---------------+-------------+------------------------------------+
 ; Assignment Name                      ; Value                                              ; Default Value ; Entity Name ; Section Id                         ;
 +--------------------------------------+----------------------------------------------------+---------------+-------------+------------------------------------+
-; COMPILER_SIGNATURE_ID                ; 247207024423183.155673797711832                    ; --            ; --          ; --                                 ;
+; COMPILER_SIGNATURE_ID                ; 247207024423183.155786437810672                    ; --            ; --          ; --                                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; SendData1_vhd_tst                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; tst_vhd_tst                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                 ; --            ; --          ; UART_Transmitter_vhd_tst           ;
@@ -199,12 +199,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 4880 MB             ; 00:00:27                           ;
-; Fitter                    ; 00:00:20     ; 1.3                     ; 6182 MB             ; 00:00:42                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4702 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.6                     ; 4920 MB             ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4683 MB             ; 00:00:03                           ;
-; Total                     ; 00:00:45     ; --                      ; --                  ; 00:01:18                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4889 MB             ; 00:00:25                           ;
+; Fitter                    ; 00:00:20     ; 1.3                     ; 6177 MB             ; 00:00:43                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4703 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.6                     ; 4919 MB             ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4685 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:43     ; --                      ; --                  ; 00:01:17                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
